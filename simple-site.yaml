@@ -4,8 +4,9 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-         - 'user://themes/simple-site'
-         - 'user://themes/quark'
+         - user/themes/simple-theme
+         - user/themes/quark-open-publishing
+         - user/themes/quark
 
 enabled: true
 production-mode: true
