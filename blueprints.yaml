@@ -1,0 +1,18 @@
+name: Simple Site
+slug: simple-site
+type: theme
+version: 0.1.0
+description: -
+icon: rebel
+author:
+  name: Nicholas
+  email: nicholas@crabston.ch
+homepage: https://github.com/Crabston/grav-theme-simple-site
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/Crabston/grav-theme-simple-site/issues
+readme: https://github.com/Crabston/grav-theme-simple-site/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
