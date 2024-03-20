@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'main';
+@use 'elements';
+@use 'pages';
+@use 'sizes';
+@use 'header-footer';
+@use 'navigation';
+@use 'table';
+
+// css reset
+* {
+	box-sizing: border-box;
+}

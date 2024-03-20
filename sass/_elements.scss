@@ -1,0 +1,93 @@
+@import 'variables';
+
+// hero
+.hero {
+	height: 30rem;
+	padding: 3rem 0;
+	justify-self: center;
+
+	.container {
+		padding: 0;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		max-width: none;
+	}
+
+	h1,
+	h2 {
+		font-size: 2rem;
+		margin: 0;
+		padding: 1rem;
+		text-align: center;
+		background-color: #000000B2;
+		color: #ffffff !important;
+	}
+}
+
+// 
+section {
+	width: 100%;
+}
+
+#start {
+	background-color: #ffffff;
+}
+
+// overlays
+.image-overlay {
+	.overlay-dark & {
+		background-color: $overlay-dark;
+	}
+
+	.overlay-dark-gradient & {
+		background: linear-gradient(to bottom, $overlay-dark-grad-from, $overlay-dark-grad-to);
+	}
+}
+
+.p3 {
+	.image-overlay {
+		.overlay-dark & {
+			background-color: #00000066;
+		}
+
+		.g-hero & {
+			background-color: #00006666;
+		}
+	}
+
+	.text-light {
+
+		h1,
+		h2 {
+			color: #fff;
+		}
+	}
+}
+
+// owl carousel
+.owl-carousel {
+	h4 {
+		font-weight: bold;
+		margin-top: 10px;
+	}
+
+	p {
+		font-size: 1.1rem;
+		font-style: italic;
+	}
+}
+
+// sponsors
+.sponsoren-list {
+	p {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	img {
+		padding: 1rem;
+		align-self: center;
+		justify-self: center;
+	}
+}

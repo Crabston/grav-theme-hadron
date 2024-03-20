@@ -1,0 +1,52 @@
+@import 'variables';
+
+.web-title {
+	font-size: 1rem;
+	color: white;
+	margin-left: 1rem;
+}
+
+#header,
+#footer,
+.header-dark #header,
+.header-dark #header:not(.scrolled) {
+	background-color: $sec-color;
+}
+
+#header {
+	border: 0;
+	height: 4rem;
+	padding: 0.5rem;
+
+	.container {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	nav {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+
+	.navbar-section {
+		width: fit-content;
+		height: 3rem;
+	}
+
+	.logo img {
+		height: 3rem;
+	}
+}
+
+#footer {
+	margin-top: 2rem;
+	color: white;
+	font-size: 0.9rem;
+
+	a {
+		color: white;
+	}
+}

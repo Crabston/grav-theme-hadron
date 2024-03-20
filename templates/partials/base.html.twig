@@ -1,0 +1,94 @@
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set grid_size = theme_var('grid-size') %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% use 'blocks/base.html.twig' %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head deferred %}
+    <meta charset="utf-8" />
+    <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+{% endblock head %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+    {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
+    {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
+    {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+    {% do assets.addCss('theme://css/custom.css') %}
+    {% do assets.addCss('theme://css/line-awesome.min.css') %}
+    {% do assets.addCss('theme://css/animate.min.css') %}
+    {% do assets.addCss('theme://css/icons.min.css') %}
+{% endblock %}
+
+{% block javascripts %}
+    {% do assets.addJs('jquery', 101) %}
+    {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+
+    {# JQuery mobile #}
+    {% do assets.addJs('theme://js/jquery.mobile.custom.min.js', {group:'bottom'}) %}
+
+    {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+
+    {% do assets.addJs('theme://js/table.js', { group: 'bottom' }) %}
+{% endblock %}
+
+{% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+{% endblock %}
+
+
+</head>
+<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+    <div id="page-wrapper">
+        {% block header %}
+            {% include 'partials/header.html.twig' %}
+        {% endblock %}
+
+        {% block hero %}{% endblock %}
+
+        <section id="start">
+        {% block body %}
+            <section id="body-wrapper" class="section">
+                <section class="container {{ grid_size }}">
+                    {% block messages %}
+                        {% include 'partials/messages.html.twig' ignore missing %}
+                    {% endblock %}
+                    {{ block('content_surround') }}
+                </section>
+            </section>
+        {% endblock %}
+        </section>
+    </div>
+
+    {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+
+    {% block mobile %}
+    <div class="mobile-container">
+        <div class="overlay" id="overlay">
+            <div class="mobile-logo">
+                {% include 'partials/logo.html.twig' with {mobile: true} %}
+            </div>
+            <nav class="overlay-menu">
+                {% include 'partials/navigation.html.twig' with {tree: true} %}
+            </nav>
+        </div>
+    </div>
+    {% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+</body>
+</html>
