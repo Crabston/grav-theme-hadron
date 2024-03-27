@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class SimpleSite extends QuarkOpenPublishing
+class Minimal extends QuarkOpenPublishing
 {
     // Access plugin events in this class
 }

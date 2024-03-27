@@ -4,7 +4,7 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-         - user/themes/simple-theme
+         - user/themes/minimal
          - user/themes/quark-open-publishing
          - user/themes/quark
 
