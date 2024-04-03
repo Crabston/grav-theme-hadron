@@ -1,0 +1,30 @@
+name: Simple Site
+slug: simple-site
+type: theme
+version: 0.1.0
+description: 'Simple Default Theme for Grav CMS, depending on Quark and Quark Open Publishing'
+icon: star
+author:
+  name: 'Crabston'
+  email: contact@crabston.dev
+  url: 'https://crabston.dev'
+homepage: https://github.com/Crabston/grav-theme-simple-site
+demo: https://grav.demo.crabston.dev
+keywords: grav, theme, etc
+bugs: https://github.com/Crabston/grav-theme-simple-site/issues
+readme: https://github.com/Crabston/grav-theme-simple-site/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+  - email-sendgrid
+  - featherlight
+  - lightbox-gallery
+  - youtube
+  - sitemap
+  - shortcode-core
+  - shortcode-gallery-plusplus
+  - shortcode-owl-carousel
+  - shortcode-ui
+  - quark
+  - quark-open-publishing

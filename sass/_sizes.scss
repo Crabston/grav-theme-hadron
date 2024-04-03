@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+	.hero {
+		height: 20rem;
+	}
+
+	#desktop-navigation {
+		display: none !important;
+	}
+
+	#mobile-menu {
+		display: flex !important;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	#desktop-navigation {
+		display: flex !important;
+	}
+
+	#mobile-menu {
+		display: none !important;
+	}
+}

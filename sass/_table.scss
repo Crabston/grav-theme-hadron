@@ -1,0 +1,84 @@
+@import 'variables';
+
+// desktop
+table {
+	border-spacing: unset;
+
+	th {
+		background-color: $prim-color;
+		color: #ffffff;
+	}
+
+	th,
+	td {
+		padding: 0.2rem 0.5rem;
+	}
+
+	tr:nth-child(even) {
+		background-color: #dcdcdc;
+	}
+
+	.text-align-center {
+		text-align: center;
+	}
+
+	.text-align-right {
+		text-align: right;
+	}
+
+	.text-align-left {
+		text-align: left;
+	}
+}
+
+// mobile
+@media screen and (max-width: 600px) {
+	table {
+		border: 0;
+
+		caption {
+			font-size: 1.3em;
+		}
+
+		thead {
+			border: none;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+
+		tr {
+			border-bottom: 3px solid $sec-color;
+			display: block;
+			margin-bottom: .625em;
+		}
+
+		td {
+			border-bottom: 1px solid #dddddd;
+			display: block;
+			font-size: .8em;
+
+			::before {
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: $sec-color;
+			}
+
+			:last-child {
+				border-bottom: 0;
+			}
+		}
+
+		.text-align-center,
+		.text-align-right,
+		.text-align-left {
+			text-align: right;
+		}
+	}
+}
