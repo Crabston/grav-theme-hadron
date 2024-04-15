@@ -19,6 +19,12 @@ table th {
 table th, table td {
   padding: 0.2rem 0.5rem;
 }
+table td::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 table tr:nth-child(even) {
   background-color: #dcdcdc;
 }
@@ -32,15 +38,20 @@ table .text-align-left {
   text-align: left;
 }
 
+@media screen and (min-width: 601px) {
+  table td::before {
+    display: none;
+  }
+}
 @media screen and (max-width: 600px) {
-  table {
+  .table-responsive table {
     border: 0;
     width: 100%;
   }
-  table caption {
+  .table-responsive table caption {
     font-size: 1.3em;
   }
-  table thead {
+  .table-responsive table thead {
     border: none;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -50,27 +61,20 @@ table .text-align-left {
     position: absolute;
     width: 1px;
   }
-  table tr {
+  .table-responsive table tr {
     border-bottom: 3px solid #4063cb;
     display: block;
     margin-bottom: 0.625em;
   }
-  table td {
+  .table-responsive table td {
     border-bottom: 1px solid #dddddd;
     display: block;
     font-size: 0.8em;
   }
-  table td ::before {
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #4063cb;
-  }
-  table td :last-child {
+  .table-responsive table td :last-child {
     border-bottom: 0;
   }
-  table .text-align-center, table .text-align-right, table .text-align-left {
+  .table-responsive table .text-align-center, .table-responsive table .text-align-right, .table-responsive table .text-align-left {
     text-align: right;
   }
 }

@@ -11,13 +11,13 @@
 }
 
 .f {
-    display: flex;
+	display: flex;
 
-    &.col { flex-direction: column; }
+	&.col { flex-direction: column; }
 
-    &.row { flex-direction: row; }
+	&.row { flex-direction: row; }
 
-    &.c { justify-content: center; }
+	&.c { justify-content: center; }
 
-    &.a { align-items: center; }
+	&.a { align-items: center; }
 }

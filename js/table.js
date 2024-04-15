@@ -15,7 +15,7 @@ const addResponsiveToAllTables = () => {
         tableRows.forEach(tr => getAllTableDataFromTableRows(tr).forEach((td, i) => td.setAttribute("data-label", tableHeaderTexts[i])));
     });
 };
-const getAllTables = () => document.querySelectorAll("table");
+const getAllTables = () => document.querySelectorAll(".table-responsive table");
 const getAllTableHeadersFromTable = (table) => table.querySelectorAll("th");
 const getAllTableRowsFromTable = (table) => table.querySelectorAll("tr");
 const getAllTextFromTableHeaders = (tableHeaderArr) => {

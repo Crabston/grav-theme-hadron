@@ -15,7 +15,7 @@ const addResponsiveToAllTables = (): void => {
 	});
 };
 
-const getAllTables = (): NodeListOf<HTMLTableElement> => document.querySelectorAll("table");
+const getAllTables = (): NodeListOf<HTMLTableElement> => document.querySelectorAll(".table-responsive table");
 const getAllTableHeadersFromTable = (table: HTMLTableElement): NodeListOf<HTMLTableCellElement> => table.querySelectorAll("th");
 const getAllTableRowsFromTable = (table: HTMLTableElement): NodeListOf<HTMLTableRowElement> => table.querySelectorAll("tr");
 
