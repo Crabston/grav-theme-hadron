@@ -26,6 +26,11 @@
 nav.navbar {
 	display: flex;
 	justify-content: space-between;
+
+    .navbar-brand{
+        display: flex;
+        align-items: center;
+    }
 }
 
 .navigation {
