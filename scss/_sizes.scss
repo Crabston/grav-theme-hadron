@@ -1,23 +1,16 @@
-@media screen and (max-width: 600px) {
-	.hero {
-		height: 20rem;
-	}
+// sizes
 
-	#desktop-navigation {
-		display: none !important;
-	}
-
-	#mobile-menu {
-		display: flex !important;
-	}
+// desktop
+@media screen and (min-width: 901px) {
+	// ...
 }
 
-@media screen and (min-width: 601px) {
-	#desktop-navigation {
-		display: flex !important;
-	}
+// tablet
+@media screen and (max-width: 900px) {
+	// ...
+}
 
-	#mobile-menu {
-		display: none !important;
-	}
+// mobile
+@media screen and (max-width: 600px) {
+	// ...
 }

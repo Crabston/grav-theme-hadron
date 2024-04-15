@@ -1,4 +1,3 @@
-const setTablesFullWidth = () => getAllTables().forEach(table => table.style.width = table.parentElement.clientWidth - 20 + "px");
 const loadStyles = () => loadTableStyles();
 const fillEmptyCells = () => {
     const nbsp = "\xa0";
@@ -42,9 +41,5 @@ const loadTableStyles = () => {
 const getAllTableData = () => document.querySelectorAll("td");
 const getAllTableHeaders = () => document.querySelectorAll("th");
 addResponsiveToAllTables();
-setTablesFullWidth();
 loadStyles();
 fillEmptyCells();
-onresize = (event) => {
-    setTablesFullWidth();
-};
