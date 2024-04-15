@@ -1,3 +1,14 @@
+.bg-gray {
+  background-color: #ffffff !important;
+}
+
+section.modular-text {
+  padding: 1rem;
+}
+section.modular-text h2 {
+  margin-top: 1rem;
+}
+
 table {
   border-spacing: unset;
 }
@@ -78,6 +89,14 @@ table .text-align-left {
   padding: 1rem;
   align-self: center;
   justify-self: center;
+}
+
+#footer {
+  margin-top: 3rem;
+  padding: 1rem;
+}
+#footer p {
+  margin: 0;
 }
 
 #header nav.navbar .navbar-brand,

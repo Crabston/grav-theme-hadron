@@ -5,25 +5,25 @@
 
 // overlays
 .image-overlay {
-    .overlay-dark & {
-        background-color: $overlay-dark;
-    }
+	.overlay-dark & {
+		background-color: $overlay-dark;
+	}
 
-    .overlay-dark-gradient & {
-        background: linear-gradient(to bottom, $overlay-dark-grad-from, $overlay-dark-grad-to);
-    }
+	.overlay-dark-gradient & {
+		background: linear-gradient(to bottom, $overlay-dark-grad-from, $overlay-dark-grad-to);
+	}
 }
 
 // sponsors
 .sponsoren-list {
-    p {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+	p {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 
-    img {
-        padding: 1rem;
-        align-self: center;
-        justify-self: center;
-    }
+	img {
+		padding: 1rem;
+		align-self: center;
+		justify-self: center;
+	}
 }
