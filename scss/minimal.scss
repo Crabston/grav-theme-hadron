@@ -1,0 +1,23 @@
+@use 'overrides';
+@use 'variables';
+@use 'elements';
+@use 'sizes';
+@use 'header-footer';
+@use 'navigation';
+
+// css reset
+* {
+	box-sizing: border-box;
+}
+
+.f {
+	display: flex;
+
+	&.col { flex-direction: column; }
+
+	&.row { flex-direction: row; }
+
+	&.c { justify-content: center; }
+
+	&.a { align-items: center; }
+}

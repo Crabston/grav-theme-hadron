@@ -1,0 +1,28 @@
+// navigation
+@import 'variables';
+
+// navigation general
+#header nav.navbar,
+.mobile-container .mobile-logo {
+
+	// brand
+	.navbar-brand {
+		gap: 1rem;
+
+		.title { font-size: 1.5rem; }
+
+		&:hover { text-decoration: none; }
+	}
+}
+
+// mobile navigation
+.mobile-container .mobile-logo {
+	margin-top: .7rem;
+
+	img {margin-top: 0;}
+}
+
+// mobile navigation menu button
+.mobile-menu .button_container span {
+	background: $sec-text-color;
+}
