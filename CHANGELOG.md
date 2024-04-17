@@ -1,5 +1,7 @@
-# v0.1.0
-##  03/20/2024
+# v1.0.0
+##  2024-04-17
 
 1. [](#new)
     * Initial release
+        * responsive tables
+        * healthcheck plugin
