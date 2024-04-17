@@ -89,10 +89,13 @@ table .text-align-left {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.sponsoren-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .sponsoren-list img {
   padding: 1rem;
-  align-self: center;
-  justify-self: center;
 }
 
 #footer {

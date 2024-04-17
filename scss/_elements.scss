@@ -21,9 +21,11 @@
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
-	img {
-		padding: 1rem;
-		align-self: center;
-		justify-self: center;
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+
+	img { padding: 1rem; }
 }
