@@ -1,23 +1,37 @@
-const loadStyles = (): void => loadTableStyles();
-const fillEmptyCells = () => {
-	const nbsp = "\xa0";
-	getAllTableData().forEach(cell => { if (cell.innerText === "") cell.innerText = nbsp; });
-}
-const addResponsiveToAllTables = (): void => {
-	const tables = getAllTables();
-	tables.forEach(table => {
-		const tableHeaders = getAllTableHeadersFromTable(table);
-		const tableHeaderTexts = getAllTextFromTableHeaders(tableHeaders);
-		const tableRows = getAllTableRowsFromTable(table);
-		const cells = [...getAllTableData(), ...getAllTableHeaders()];
-		cells.forEach(cell => getStyleAttributesAndRewrite(cell));
-		tableRows.forEach(tr => getAllTableDataFromTableRows(tr).forEach((td, i) => td.setAttribute("data-label", tableHeaderTexts[i])));
+const fillEmptyCells = (table: HTMLTableElement) => {
+	const NBSP = "\xa0";
+	getAllTableDataCells(table).forEach(cell => { if (cell.innerText === "") cell.innerText = NBSP; });
+};
+
+const loadTableStyles = (table: HTMLTableElement): void => {
+	const cells = [...getAllTableDataCells(table), ...getAllTableHeaderCells(table)];
+	cells.forEach(cell => {
+		const textAlign = cell.dataset.textAlign;
+		if (textAlign) cell.setAttribute("class", "text-align-" + textAlign);
 	});
 };
 
-const getAllTables = (): NodeListOf<HTMLTableElement> => document.querySelectorAll(".table-responsive table");
-const getAllTableHeadersFromTable = (table: HTMLTableElement): NodeListOf<HTMLTableCellElement> => table.querySelectorAll("th");
-const getAllTableRowsFromTable = (table: HTMLTableElement): NodeListOf<HTMLTableRowElement> => table.querySelectorAll("tr");
+const addResponsiveToAllTables = (): void => {
+	const tables = document.querySelectorAll(".table-responsive table") as NodeListOf<HTMLTableElement>;
+	tables.forEach(table => {
+		const cells = [
+			...getAllTableDataCells(table),
+			...getAllTableHeaderCells(table),
+		];
+		cells.forEach(cell => getStyleAttributesAndRewrite(cell));
+
+		const tableHeaders = table.querySelectorAll("th");
+		const tableHeaderTexts = getAllTextFromTableHeaders(tableHeaders);
+
+		const tableRows = table.querySelectorAll("tr");
+		tableRows
+			.forEach(tr => tr.querySelectorAll("td")
+				.forEach((td, i) => td.setAttribute("data-label", tableHeaderTexts[i])));
+
+		loadTableStyles(table);
+		fillEmptyCells(table);
+	});
+};
 
 const getAllTextFromTableHeaders = (tableHeaderArr: NodeListOf<HTMLTableCellElement>): string[] => {
 	const tableHeaderTextArr = [];
@@ -25,27 +39,13 @@ const getAllTextFromTableHeaders = (tableHeaderArr: NodeListOf<HTMLTableCellElem
 	return tableHeaderTextArr;
 };
 
-const getAllTableDataFromTableRows = (tableRow: HTMLTableRowElement): NodeListOf<HTMLTableCellElement> => tableRow.querySelectorAll("td");
-
 const getStyleAttributesAndRewrite = (cell: HTMLTableCellElement): void => {
 	const styleAttr = cell.getAttribute("style").split(": ")[1].split(";")[0];
 	if (styleAttr) cell.setAttribute("data-text-align", styleAttr);
 	cell.setAttribute("style", "");
 };
 
-
-const loadTableStyles = (): void => {
-	const cells = [...getAllTableData(), ...getAllTableHeaders()];
-	cells.forEach(cell => {
-		const textAlign = cell.dataset.textAlign;
-		if (textAlign) cell.setAttribute("class", "text-align-" + textAlign);
-	});
-
-};
-
-const getAllTableData = (): NodeListOf<HTMLTableCellElement> => document.querySelectorAll("td");
-const getAllTableHeaders = (): NodeListOf<HTMLTableCellElement> => document.querySelectorAll("th");
+const getAllTableDataCells = (table: HTMLTableElement): NodeListOf<HTMLTableCellElement> => table.querySelectorAll("td");
+const getAllTableHeaderCells = (table: HTMLTableElement): NodeListOf<HTMLTableCellElement> => table.querySelectorAll("th");
 
 addResponsiveToAllTables();
-loadStyles();
-fillEmptyCells();
