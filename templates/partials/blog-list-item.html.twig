@@ -1,0 +1,59 @@
+{% if page.header.hide_from_post_list != true %}
+  <div class="card">
+      {% set image = page.media.images|first %}
+      {% if image and ((page.header.header_image is not defined) or (page.header.header_image))  %}
+      <div class="card-image">
+
+        {# support image credit tag with optional image meta file - hibbittsdesign.org #}
+          {% set image_alt_text = page.header.header_image_alt_text %}
+          {% if page.header.header_image_credit %}
+            {% set image_credit = page.header.header_image_credit %}
+            {% set image_creditlink = page.header.header_image_creditlink %}
+          {% elseif header_image_media.meta.header_image_credit  %}
+            {% set image_credit = header_image_media.meta.header_image_credit %}
+            {% set image_creditlink = header_image_media.meta.header_image_creditlink %}
+            {% set image_alt_text = header_image_media.meta.header_image_alt_text %}
+          {% endif %}
+          {% if image_credit %}
+            <div class="image-credit-wrapper"><span class="image-credit">
+              {% if image_creditlink %}
+                Image: <a class="newwindow external-link" href="{{ image_creditlink }}">
+                {{ image_credit }}</a></span>
+                <a href="{{ page.url }}"><img src="{{ image.cropZoom(1400,400).url }}" alt="{{ image_alt_text }}"></a>
+              {% else %}
+                Image: {{ image_credit }}</span>
+                <a href="{{ page.url }}"><img src="{{ image.cropZoom(1400,400).url }}" alt="{{ image_alt_text }}"></a>
+              {% endif %}
+            </div>
+          {% else %}
+            <a href="{{ page.url }}"><img src="{{ image.cropZoom(1400,400).url }}" alt="{{ image_alt_text }}"></a>
+          {% endif %}
+
+      </div>
+      {% endif %}
+      <div class="card-header">
+          <div class="card-subtitle text-gray">
+              {% include 'partials/blog/date.html.twig' %}
+              {% if config.plugins.readingtime.enabled %}
+                <span class="blogitem__readingtime">{% include 'partials/blog/readingtime.html.twig' %}</span>
+              {% endif %}
+      </div>
+          <div class="card-title">
+          {% include 'partials/blog/title.html.twig' with {title_level: 'h5'} %}
+          </div>
+      </div>
+      <div class="card-body">
+          {% if page.summary != page.content %}
+              {{ page.summary|raw }}
+              {% if page.header.continue_link is same as(true) %}
+                <a href="{{ page.url }}" title="{{ page.title }}" class="btn btn-primary">{{ 'THEME_QUARK.BLOG.ITEM.CONTINUE_READING'|t }}</a>
+              {% endif %}
+          {% else %}
+              {{ page.content|raw }}
+          {% endif %}
+      </div>
+      <div class="card-footer">
+          {% include 'partials/blog/taxonomy.html.twig' %}
+      </div>
+  </div>
+{% endif %}
