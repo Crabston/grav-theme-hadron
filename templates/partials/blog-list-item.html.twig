@@ -44,6 +44,7 @@
       </div>
       <div class="card-body">
           {% if page.summary != page.content %}
+              {# only show summary content without styles #}
               {{ page.summary|striptags|raw }}
               {% if page.header.continue_link is same as(true) %}
                 <a href="{{ page.url }}" title="{{ page.title }}" class="btn btn-primary">{{ 'THEME_QUARK.BLOG.ITEM.CONTINUE_READING'|t }}</a>
