@@ -18,6 +18,42 @@ TEMPLATE:
     METADATA_ITEMS:
       LABEL: Metadaten Elemente
 
+  ITEM:
+    CONTENT:
+      DEFAULT: 'Deine Seitenzusammenfassung kommt hierhin.\n\n===\n\nDein Seiteninhalt kommt hierhin.'
+    BLOG:
+      TITLE: Blog Item
+      HEADER_IMAGE_SECTION:
+        TITLE: Header Bild
+      HEADER_IMAGE:
+        LABEL: Zeige Header Bild
+        HELP: Aktiviert die Anzeige eines Header Bildes
+      HEADER_IMAGE_FILE:
+        LABEL: Bild Datei
+        HELP: Bild Dateiname, der im Seitenordner existiert. Wenn nicht angegeben, wird das erste gefundene Bild verwendet.
+        PLACEHOLDER: 'Zum Beispiel: bild.jpg'
+      HEADER_IMAGE_WIDTH:
+        LABEL: Bild Breite
+        HELP: Header Breite in px
+        PLACEHOLDER: Standard ist 900
+      HEADER_IMAGE_HEIGHT:
+        LABEL: Bild Höhe
+        HELP: Header Höhe in px
+        PLACEHOLDER: Standard ist 300
+      SUMMARY_SECTION:
+        TITLE: Zusammenfassung
+      SUMMARY:
+        LABEL: Zeige Zusammenfassung
+      SUMMARY_FORMAT:
+        LABEL: Format
+        OPTIONS:
+          SHORT: Verwende das erste Vorkommen von Trennzeichen oder Länge
+          LONG: Zusammenfassungstrennzeichen wird ignoriert
+        SUMMARY_SIZE:
+          LABEL: Länge
+        SUMMARY_DELIMITER:
+          LABEL: Zusammenfassungstrennzeichen
+
 THEME_LOCAL:
   OPEN_PUBLISHING:
     TITLE: Open Publishing Optionen

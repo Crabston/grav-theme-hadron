@@ -18,6 +18,42 @@ TEMPLATE:
     METADATA_ITEMS:
       LABEL: Metadata Items
 
+  ITEM:
+    CONTENT:
+      DEFAULT: "Your page summary goes here.\n\n===\n\nYour page content goes here."
+    BLOG:
+      TITLE: Blog Item
+      HEADER_IMAGE_SECTION:
+        TITLE: Header Image
+      HEADER_IMAGE:
+        LABEL: Display Header Image
+        HELP: Enables displaying of a header image
+      HEADER_IMAGE_FILE:
+        LABEL: Image File
+        HELP: Image filename that exists in the page folder. If not provided, will use the first image found.
+        PLACEHOLDER: 'For example: image.jpg'
+      HEADER_IMAGE_WIDTH:
+        LABEL: Image Width
+        HELP: Header width in px
+        PLACEHOLDER: Default is 900
+      HEADER_IMAGE_HEIGHT:
+        LABEL: Image Height
+        HELP: Header height in px
+        PLACEHOLDER: Default is 300
+      SUMMARY_SECTION:
+        TITLE: Summary
+      SUMMARY:
+        LABEL: Display Summary
+      SUMMARY_FORMAT:
+        LABEL: Format
+        OPTIONS:
+          SHORT: Use the first occurrence of delimiter or size
+          LONG: Summary delimiter will be ignored
+        SUMMARY_SIZE:
+          LABEL: Size
+        SUMMARY_DELIMITER:
+          LABEL: Summary delimiter
+
 THEME_LOCAL:
   OPEN_PUBLISHING:
     TITLE: Open Publishing Options
