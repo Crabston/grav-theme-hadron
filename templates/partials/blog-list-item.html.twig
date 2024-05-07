@@ -1,6 +1,11 @@
 {% if page.header.hide_from_post_list != true %}
   <div class="card">
-      {% set image = page.media.images|first %}
+      {# show header image if set in frontmatter #}
+      {% if page.header.header_image_file %}
+        {% set image = page.media[page.header.header_image_file] %}
+      {% else %}
+        {% set image = page.media.images|first %}
+      {% endif %}
       {% if image and ((page.header.header_image is not defined) or (page.header.header_image))  %}
       <div class="card-image">
 
