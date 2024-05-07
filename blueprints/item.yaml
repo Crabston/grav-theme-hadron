@@ -63,12 +63,10 @@ form:
                 min: 0
                 max: 5000
 
-
             summary:
               type: section
               title: TEMPLATE.ITEM.BLOG.SUMMARY_SECTION.TITLE
               underline: true
-
 
             header.summary.enabled:
               type: toggle
@@ -104,39 +102,6 @@ form:
               label: TEMPLATE.ITEM.BLOG.SUMMARY_FORMAT.SUMMARY_DELIMITER.LABEL
               classes: large
               placeholder: ===
-
-            # TODO: remove if not needed
-            #openpublishingspace1:
-            #  type: section
-            #  title: Title Icon
-            #  underline: true
-            #
-            #header.post_icon:
-            #  type: text
-            #  size: small
-            #  label: Font Awesome Icon for Blog Item
-            #  description: Short name, e.g. 'newspaper-o'.
-            #  help: Optional Font Awesome icon to override the default blog item title icon
-            #  default: null
-            #  validate:
-            #    type: text
-            #
-            #openpublishingspace2:
-            #  type: section
-            #  title: Display in Blog List
-            #  underline: true
-            #
-            #header.hide_from_post_list:
-            #  type: toggle
-            #  label: Display this Item in Blog List
-            #  help: Determines if this page (i.e. post) will appear in the blog index
-            #  default: 0
-            #  highlight: 0
-            #  options:
-            #    0: Yes
-            #    1: No
-            #  validate:
-            #    type: bool
 
           import@:
             type: partials/blog-bits

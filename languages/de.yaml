@@ -3,6 +3,29 @@ PLUGIN_SITEMAP:
 
 TEMPLATE:
   BLOG:
+    TITLE: Blog Konfiguration
+    CONTENT:
+      TITLE: Inhalt Definition
+    CONTENT_ITEMS:
+      LABEL: Elemente
+    CONTENT_LIMIT:
+      LABEL: Maximale Anzahl Elemente
+    CONTENT_ORDER_BY:
+      LABEL: Sortieren nach
+      OPTIONS:
+        FOLDER: Ordner
+        TITLE: Titel
+        DATE: Datum
+        DEFAULT: Standard
+    CONTENT_ORDER_DIR:
+      LABEL: Reihenfolge
+      OPTIONS:
+        ASC: Aufsteigend
+        DESC: Absteigend
+    CONTENT_PAGINATION:
+      LABEL: Seitennummerierung
+    CONTENT_TAXONOMY_FILTER:
+      LABEL: URL Taxonomie Filter
     APPEARANCE:
       TITLE: Erscheinungsbild
     BRICKLAYER_LAYOUT:

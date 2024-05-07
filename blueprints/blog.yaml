@@ -9,7 +9,69 @@ form:
       type: tabs
       fields:
         blog:
+          title: TEMPLATE.BLOG.TITLE
           fields:
+
+            content_title:
+              type: spacer
+              title: TEMPLATE.BLOG.CONTENT.TITLE
+
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: TEMPLATE.BLOG.CONTENT_ITEMS.LABEL
+              default: '@self.children'
+              validate:
+                type: yaml
+
+            header.content.limit:
+              type: text
+              label: TEMPLATE.BLOG.CONTENT_LIMIT.LABEL
+              default: 5
+              validate:
+                required: true
+                type: int
+                min: 1
+
+            header.content.order.by:
+              type: select
+              label: TEMPLATE.BLOG.CONTENT_ORDER_BY.LABEL
+              default: date
+              options:
+                folder: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.FOLDER
+                title: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.TITLE
+                date: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.DATE
+                default: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.DEFAULT
+
+            header.content.order.dir:
+              type: select
+              label: TEMPLATE.BLOG.CONTENT_ORDER_DIR.LABEL
+              default: desc
+              options:
+                asc: TEMPLATE.BLOG.CONTENT_ORDER_DIR.OPTIONS.ASC
+                desc: TEMPLATE.BLOG.CONTENT_ORDER_DIR.OPTIONS.DESC
+
+            header.content.pagination:
+              type: toggle
+              label: TEMPLATE.BLOG.CONTENT_PAGINATION.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.content.url_taxonomy_filters:
+              type: toggle
+              label: TEMPLATE.BLOG.CONTENT_TAXONOMY_FILTER.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
 
             appearance:
               type: section
