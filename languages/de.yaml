@@ -1,3 +1,6 @@
+PLUGIN_SITEMAP:
+  HEADER_IGNORE: Ignoriere Seite in Sitemap
+
 THEME_LOCAL:
   OPEN_PUBLISHING:
     TITLE: Open Publishing Optionen
