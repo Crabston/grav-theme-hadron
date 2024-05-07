@@ -52,6 +52,7 @@ form:
                 desc: TEMPLATE.BLOG.CONTENT_ORDER_DIR.OPTIONS.DESC
 
             header.content.pagination:
+              replace-options@: true
               type: toggle
               label: TEMPLATE.BLOG.CONTENT_PAGINATION.LABEL
               highlight: 1
@@ -63,6 +64,7 @@ form:
                 type: bool
 
             header.content.url_taxonomy_filters:
+              replace-options@: true
               type: toggle
               label: TEMPLATE.BLOG.CONTENT_TAXONOMY_FILTER.LABEL
               highlight: 1
@@ -79,6 +81,7 @@ form:
               underline: true
 
             header.bricklayer_layout:
+              replace-options@: true
               type: toggle
               label: TEMPLATE.BLOG.BRICKLAYER_LAYOUT.LABEL
               highlight: 1
@@ -90,6 +93,7 @@ form:
                 type: bool
 
             header.display_post_summary.enabled:
+              replace-options@: true
               type: toggle
               label: TEMPLATE.BLOG.POST_SUMMARY.LABEL
               highlight: 1
