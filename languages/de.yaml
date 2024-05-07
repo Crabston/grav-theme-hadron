@@ -1,94 +1,94 @@
 THEME_LOCAL:
   OPEN_PUBLISHING:
-    TITLE: Open Publishing Options
+    TITLE: Open Publishing Optionen
     CHROMELESS:
-      TITLE: Chromeless Site (i.e. Embedded)
+      TITLE: Eingebettete Website (Chromeless)
       ENABLE_CHROMELESS:
-        LABEL: Hide Site Menu, Sidebar and Footer
+        LABEL: Verstecke Menü, Seitenleiste und Fusszeile
     H5P:
       TITLE: H5P Setup
       EMBED_URL:
-        LABEL: H5P Embed Source URL
-        HELP: Enter the embed source URL path up to, but not including, the H5P Content ID.
-        DESCRIPTION: H5P embed source URL path up to, but not including, the Content ID. For example, https://h5p.org/h5p/embed/ or https://[organization].h5p.com/content/.
+        LABEL: H5P Quelle URL einbetten
+        HELP: Gib die URL der Quelle ein, bis, aber nicht einschliesslich, der H5P Content ID.
+        DESCRIPTION: URL der Quelle, bis, aber nicht einschliesslich, der H5P Content ID. Zum Beispiel https://h5p.org/h5p/embed/ oder https://[organization].h5p.com/content/.
     MENU:
-      TITLE: Menu
+      TITLE: Menü
       DISPLAY_DROPDOWNS:
-        LABEL: Display Dropdowns in Menu
+        LABEL: Zeige Dropdowns im Menü
   QUARK_OPTIONS:
-    TITLE: Quark Options
+    TITLE: Quark Optionen
     PRODUCTION_MODE:
-      LABEL: Production mode
-      HELP: When enabled, Quark will render with minified CSS
+      LABEL: Produktionsmodus
+      HELP: Wenn aktiviert, wird Quark mit minimiertem CSS angezeigt
     GRID_SIZE:
-      LABEL: Grid size
-      HELP: The maximum width of the theme
+      LABEL: Grid Grösse
+      HELP: Die maximale Grösse des Themes
       OPTIONS:
-        NONE: None (full width)
-        GRID_XL: Extra Large
-        GRID_LG: Large
-        GRID_MD: Medium
+        NONE: Keine (volle Breite)
+        GRID_XL: Extra Breit
+        GRID_LG: Breit
+        GRID_MD: Mittel
     HEADER:
-      TITLE: Header Defaults
+      TITLE: Header Standards
       CUSTOM_LOGO:
-        LABEL: Custom Logo
-        DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
+        LABEL: Benutzerdefiniertes Logo
+        DESCRIPTION: Wird verwendet anstelle des Standardlogos `theme://images/grav-logo.svg`
       CUSTOM_LOGO_MOBILE:
-        LABEL: Mobile Custom Logo
+        LABEL: Mobiles benutzerdefiniertes Logo
       HEADER_FIXED:
-        LABEL: Fixed header
-        HELP: When enabled, the header will be fixed at the top of the browser
+        LABEL: Fester Header
+        HELP: Wenn aktiviert, wird der Header oben im Browser fixiert
       HEADER_ANIMATED:
-        LABEL: Animate header
-        HELP: When enabled, the header will animate on scroll
+        LABEL: Header animieren
+        HELP: Wenn aktiviert, wird der Header beim Scrollen animiert
       HEADER_DARK:
-        LABEL: Dark Style
-        HELP: When enabled, a dark-friendly style will be used
+        LABEL: Dunkler Stil
+        HELP: Wenn aktiviert, wird ein dunkler Stil verwendet
       HEADER_TRANSPARENT:
-        LABEL: Transparent Header
-        HELP: When enabled, the header will be transparent
+        LABEL: Transparenter Header
+        HELP: Wenn aktiviert, wird der Header transparent
     FOOTER:
-      TITLE: Footer Defaults
+      TITLE: Footer Standards
       STICKY_FOOTER:
         LABEL: Sticky Footer
-        HELP: When enabled, the footer will stick to the bottom of the browser
+        HELP: Wenn aktiviert, wird der Footer am unteren Rand des Browsers fixiert
     BLOG:
-      TITLE: Blog Defaults
+      TITLE: Blog Standards
       BLOG_PAGE:
-        LABEL: Blog Page
-        HELP: The route to the blog page when working with blog sidebar
+        LABEL: Blog Seite
+        HELP: Der Pfad zur Blogseite bei Verwendung der Blog-Seitenleiste
       HERO_CLASSES:
-        LABEL: Hero Classes
-        DESCRIPTION: There are several Hero class options that can be listed here (space separated):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Please consult the [Quark documentation](https://github.com/getgrav/grav-theme-quark#hero-options) for more details.
+        LABEL: Hero Klassen
+        DESCRIPTION: Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark-Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.
     SPECTRE:
-      TITLE: Spectre.css Options
+      TITLE: Spectre.css Optionen
       EXPERIMENTAL:
-        LABEL: Experimental CSS
-        HELP: When enabled, the `spectre-exp.css` file will be included
+        LABEL: Experimentelles CSS
+        HELP: Wenn aktiviert, wird die `spectre-exp.css` Datei eingebunden
       ICONS:
         LABEL: Icons CSS
-        HELP: When enabled, the `spectre-icons.css` file will be included
+        HELP: Wenn aktiviert, wird die `spectre-icons.css` Datei eingebunden
   CUSTOM_MENU:
-    TITLE: Custom Menu Items
+    TITLE: Benutzerdefinierte Menüeinträge
     DISPLAY:
-      LABEL: Display Custom Menu Items
-      HELP: Determines if any defined custom menu entries are displayed in the menubar.
+      LABEL: Zeige benutzerdefinierte Menüeinträge
+      HELP: Wenn aktiviert, werden benutzerdefinierte Menüeinträge angezeigt
     MENU:
-      LABEL: Custom Menu Items
+      LABEL: Benutzerdefinierte Menüeinträge
       FIELDS:
         TEXT:
           LABEL: Text
-          DESCRIPTION: Text label for menu item.
+          DESCRIPTION: Textbeschriftung für Menüeintrag
         ICON:
           LABEL: Icon
-          DESCRIPTION: Font Awesome icon for menu item.
+          DESCRIPTION: Font Awesome Icon für Menüeintrag
         URL:
           LABEL: URL
-          DESCRIPTION: URL for menu item.
+          DESCRIPTION: URL für Menüeintrag
         TARGET:
-          LABEL: Target
+          LABEL: Ziel
           OPTIONS:
-            BLANK: Open in a new window
-            PARENT: Open in the parent frame
-            TOP: Open in the full body of the window
-            SELF: Open in the same frame as clicked
+            BLANK: In einem neuen Fenster öffnen
+            PARENT: Im übergeordneten Fenster öffnen
+            TOP: Im gesamten Fenster öffnen
+            SELF: Im selben Fenster öffnen
