@@ -11,12 +11,6 @@ form:
       fields:
         content:
           fields:
-            header.title:
-              replace@: true
-              type: text
-              size: long
-              label: TEMPLATE.MODULAR.ALERT.CONTENT_TITLE.LABEL
-
             header.alert_color:
               ordering@: 1
               type: select
