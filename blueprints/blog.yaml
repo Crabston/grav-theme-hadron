@@ -1,0 +1,58 @@
+title: Blog Metadata
+'@extends':
+  type: blog
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      fields:
+        blog:
+          fields:
+
+            appearance:
+              type: section
+              title: TEMPLATE.BLOG.APPEARANCE.TITLE
+              underline: true
+
+            header.bricklayer_layout:
+              type: toggle
+              label: TEMPLATE.BLOG.BRICKLAYER_LAYOUT.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.display_post_summary.enabled:
+              type: toggle
+              label: TEMPLATE.BLOG.POST_SUMMARY.LABEL
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.post_icon:
+              type: text
+              size: small
+              label: TEMPLATE.BLOG.POST_ICON.LABEL
+              description: TEMPLATE.BLOG.POST_ICON.DESCRIPTION
+              help: TEMPLATE.BLOG.POST_ICON.HELP
+              validate:
+                type: text
+
+            metadata:
+              type: section
+              title: TEMPLATE.BLOG.METADATA.TITLE
+              underline: true
+
+            header.metadata:
+              type: array
+              label: TEMPLATE.BLOG.METADATA_ITEMS.LABEL
+              required: true

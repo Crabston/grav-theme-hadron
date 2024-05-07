@@ -1,6 +1,23 @@
 PLUGIN_SITEMAP:
   HEADER_IGNORE: Ignore Page in Sitemap
 
+TEMPLATE:
+  BLOG:
+    APPEARANCE:
+      TITLE: Appearance
+    BRICKLAYER_LAYOUT:
+      LABEL: Use Bricklayer Layout
+    POST_SUMMARY:
+      LABEL: Hide Summaries on Blog Post Pages
+    POST_ICON:
+      LABEL: Default Blog Item Font Awesome Icon
+      DESCRIPTION: Short name, e.g. 'newspaper-o'.
+      HELP: Determines the default Font Awesome icon used for the blog posts.
+    METADATA:
+      TITLE: Page Metadata
+    METADATA_ITEMS:
+      LABEL: Metadata Items
+
 THEME_LOCAL:
   OPEN_PUBLISHING:
     TITLE: Open Publishing Options
