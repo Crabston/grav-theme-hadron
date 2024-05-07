@@ -80,16 +80,6 @@ TEMPLATE:
       SHOW_PAGINATION:
         LABEL: Show Pagination
   MODULAR:
-    TEXT:
-      MEDIA_ORDER:
-        LABEL: Page Media (first one will be displayed next to your content)
-      IMAGE_ALIGN:
-        LABEL: Image position
-        OPTIONS:
-          left: Left
-          right: Right
-      FILE_UPLOAD:
-        LABEL: Upload File
     ALERT:
       CONTENT_TITLE:
         LABEL: Page Title

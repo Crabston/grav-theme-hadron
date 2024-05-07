@@ -80,16 +80,6 @@ TEMPLATE:
       SHOW_PAGINATION:
         LABEL: Zeige Seitennummerierung
   MODULAR:
-    TEXT:
-      MEDIA_ORDER:
-        LABEL: Seiten Medienreihenfolge (das Erste wird neben dem Inhalt angezeigt)
-      IMAGE_ALIGN:
-        LABEL: Bildausrichtung
-        OPTIONS:
-          left: Links
-          right: Rechts
-      FILE_UPLOAD:
-        LABEL: Datei hochladen
     ALERT:
       CONTENT_TITLE:
         LABEL: Titel
