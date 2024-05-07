@@ -17,7 +17,6 @@ TEMPLATE:
       TITLE: Seiten Metadaten
     METADATA_ITEMS:
       LABEL: Metadaten Elemente
-
   ITEM:
     CONTENT:
       DEFAULT: 'Deine Seitenzusammenfassung kommt hierhin.\n\n===\n\nDein Seiteninhalt kommt hierhin.'
@@ -53,6 +52,33 @@ TEMPLATE:
           LABEL: Länge
         SUMMARY_DELIMITER:
           LABEL: Zusammenfassungstrennzeichen
+  PARTIALS:
+    BLOG_BITS:
+      HERO_TITLE:
+        TITLE: Hero Abschnitt
+      HERO_CLASSES:
+        LABEL: Hero Klassen
+        DESCRIPTION: Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.
+      HERO_IMAGE:
+        LABEL: Hero Bild
+        DESCRIPTION: Wenn nicht angegeben, wird das erste Bild im Seitenordner verwendet
+      HERO_IMAGE_ALT_TEXT:
+        LABEL: Bild Alternativtext
+      HERO_IMAGE_CREDIT:
+        LABEL: Bildunterschrift
+      HERO_IMAGE_CREDITLINK:
+        LABEL: Bildunterschrift URL
+      TOGGLES_TITLE:
+        TITLE: Konfiguration
+      BLOG_URL:
+        LABEL: Blog URL
+        HELP: Der Pfad zu dieser Hauptblogseite, die diese Konfiguration enthält
+      SHOW_SIDEBAR:
+        LABEL: Zeige Seitenleiste
+      SHOW_BREADCRUMBS:
+        LABEL: Zeige Breadcrumbs
+      SHOW_PAGINATION:
+        LABEL: Zeige Seitennummerierung
 
 THEME_LOCAL:
   OPEN_PUBLISHING:
@@ -115,7 +141,7 @@ THEME_LOCAL:
         HELP: Der Pfad zur Blogseite bei Verwendung der Blog-Seitenleiste
       HERO_CLASSES:
         LABEL: Hero Klassen
-        DESCRIPTION: Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark-Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.
+        DESCRIPTION: Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.
     SPECTRE:
       TITLE: Spectre.css Optionen
       EXPERIMENTAL:

@@ -17,7 +17,6 @@ TEMPLATE:
       TITLE: Page Metadata
     METADATA_ITEMS:
       LABEL: Metadata Items
-
   ITEM:
     CONTENT:
       DEFAULT: "Your page summary goes here.\n\n===\n\nYour page content goes here."
@@ -53,6 +52,33 @@ TEMPLATE:
           LABEL: Size
         SUMMARY_DELIMITER:
           LABEL: Summary delimiter
+  PARTIALS:
+    BLOG_BITS:
+      HERO_TITLE:
+        TITLE: Hero Section
+      HERO_CLASSES:
+        LABEL: Hero Classes
+        DESCRIPTION: 'There are several Hero class options that can be listed here (space separated):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Please consult the [Quark documentation](https://github.com/getgrav/grav-theme-quark#hero-options) for more details.'
+      HERO_IMAGE:
+        LABEL: Hero Image
+        DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
+      HERO_IMAGE_ALT_TEXT:
+        LABEL: Image Alternative Text
+      HERO_IMAGE_CREDIT:
+        LABEL: Image Caption
+      HERO_IMAGE_CREDITLINK:
+        LABEL: Image Caption URL
+      TOGGLES_TITLE:
+        TITLE: Configuration
+      BLOG_URL:
+        LABEL: Blog Route
+        HELP: The route to this main blog page that contains this configuration
+      SHOW_SIDEBAR:
+        LABEL: Show Sidebar
+      SHOW_BREADCRUMBS:
+        LABEL: Show Breadcrumbs
+      SHOW_PAGINATION:
+        LABEL: Show Pagination
 
 THEME_LOCAL:
   OPEN_PUBLISHING:
