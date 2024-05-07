@@ -2,6 +2,9 @@ PLUGIN_SITEMAP:
   HEADER_IGNORE: Ignoriere Seite in Sitemap
 
 TEMPLATE:
+  DEFAULT:
+    BODY_CLASSES:
+      DESCRIPTION: 'Verfügbare Klassen im Quark Theme (Leerzeichen getrennt):<br />`header-fixed`, `header-animated`, `header-dark`, `header-transparent`, `sticky-footer`'
   BLOG:
     TITLE: Blog Konfiguration
     CONTENT:
