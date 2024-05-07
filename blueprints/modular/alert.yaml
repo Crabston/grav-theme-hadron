@@ -1,0 +1,44 @@
+title: Alert Style Options
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            header.title:
+              replace@: true
+              type: text
+              size: long
+              label: TEMPLATE.MODULAR.ALERT.CONTENT_TITLE.LABEL
+
+            header.alert_color:
+              ordering@: 1
+              type: select
+              size: small
+              label: TEMPLATE.MODULAR.ALERT.ALERT_COLOR.LABEL
+              default: blue
+              options:
+                yellow: TEMPLATE.MODULAR.ALERT.ALERT_COLOR.OPTIONS.YELLOW
+                red: TEMPLATE.MODULAR.ALERT.ALERT_COLOR.OPTIONS.RED
+                blue: TEMPLATE.MODULAR.ALERT.ALERT_COLOR.OPTIONS.BLUE
+                green: TEMPLATE.MODULAR.ALERT.ALERT_COLOR.OPTIONS.GREEN
+
+        options:
+          fields:
+            publishing:
+              fields:
+                header.published:
+                  default: 1
+
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.visible:
+                  default: 0

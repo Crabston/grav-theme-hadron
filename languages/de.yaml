@@ -90,6 +90,16 @@ TEMPLATE:
           right: Rechts
       FILE_UPLOAD:
         LABEL: Datei hochladen
+    ALERT:
+      CONTENT_TITLE:
+        LABEL: Titel
+      ALERT_COLOR:
+        LABEL: Mitteilungsfarbe
+        OPTIONS:
+          YELLOW: Gelb
+          RED: Rot
+          BLUE: Blau
+          GREEN: Grün
 
 THEME_LOCAL:
   OPEN_PUBLISHING:

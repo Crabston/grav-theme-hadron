@@ -90,6 +90,16 @@ TEMPLATE:
           right: Right
       FILE_UPLOAD:
         LABEL: Upload File
+    ALERT:
+      CONTENT_TITLE:
+        LABEL: Page Title
+      ALERT_COLOR:
+        LABEL: Alert Color
+        OPTIONS:
+          YELLOW: Yellow
+          RED: Red
+          BLUE: Blue
+          GREEN: Green
 
 THEME_LOCAL:
   OPEN_PUBLISHING:
