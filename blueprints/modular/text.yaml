@@ -1,36 +1,30 @@
 title: Text
 '@extends': default
 
-custom_file:
-  name: myfile
-  type: file
-  label: A Label
-  destination: 'plugins://'
-  multiple: true
-  autofocus: false
-  accept:
-    - image/*
-
 form:
   fields:
     tabs:
       fields:
         content:
           fields:
+
             header.media_order:
-              label: Page Media (first one will be displayed next to your content)
+              label: TEMPLATE.MODULAR.TEXT.MEDIA_ORDER.LABEL
+
             header.image_align:
               type: select
-              label: Image position
+              label: TEMPLATE.MODULAR.TEXT.IMAGE_ALIGN.LABEL
               classes: fancy
               default: left
               options:
-                'left': 'Left'
-                'right': 'Right'
+                left: TEMPLATE.MODULAR.TEXT.IMAGE_ALIGN.OPTIONS.LEFT
+                right: TEMPLATE.MODULAR.TEXT.IMAGE_ALIGN.OPTIONS.RIGHT
+
+            # TODO: needed?
             fileupload:
               type: mediapicker
               # type: file
-              label: Bild hochladen
+              label: TEMPLATE.MODULAR.TEXT.FILE_UPLOAD.LABEL
               destination: 'page://images'
               multiple: false
               avoid_overwriting: true
