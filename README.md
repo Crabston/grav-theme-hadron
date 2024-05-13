@@ -1,6 +1,6 @@
 # Minimal Theme
 
-The **Minimal** Theme is for [Grav CMS](http://github.com/getgrav/grav). 
+The **Minimal** Theme is for [Grav CMS](http://github.com/getgrav/grav).
 
 ## Description
 
@@ -11,3 +11,6 @@ Simple Theme for Grav CMS, depending on Quark and Quark Open Publishing. Minimal
 ## Features
 
 - makes tables responsive on small screens
+- german translations for everything
+- enhanced blog options
+- more enhancements to the Quark and Quark Open Publishing theme
