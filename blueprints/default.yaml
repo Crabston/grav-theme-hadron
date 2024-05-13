@@ -1,0 +1,18 @@
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+
+        options:
+          type: tab
+          fields:
+            gitsyncoptions:
+              unset@: true
+            header.hide_git_sync_repo_link:
+              unset@: true
