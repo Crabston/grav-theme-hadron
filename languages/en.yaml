@@ -143,6 +143,13 @@ TEMPLATE:
           RED: Red
           BLUE: Blue
           GREEN: Green
+    HERO:
+      HERO_CLASSES:
+        LABEL: Hero Classes
+        DESCRIPTION: 'There are several Hero class options that can be listed here (space separated):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Please consult the [Quark documentation](https://github.com/getgrav/grav-theme-quark#hero-options) for more details.'
+      HERO_IMAGE:
+        LABEL: Hero Image
+        DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
 
 THEME_LOCAL:
   OPEN_PUBLISHING:
