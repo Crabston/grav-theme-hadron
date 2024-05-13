@@ -9,22 +9,8 @@ TEMPLATE:
     TITLE: Blog Config
     CONTENT:
       TITLE: Content Definition
-    CONTENT_ITEMS:
-      LABEL: Items
     CONTENT_LIMIT:
       LABEL: Max Item Count
-    CONTENT_ORDER_BY:
-      LABEL: Order By
-      OPTIONS:
-        FOLDER: Folder
-        TITLE: Title
-        DATE: Date
-        DEFAULT: Default
-    CONTENT_ORDER_DIR:
-      LABEL: Order
-      OPTIONS:
-        ASC: Ascending
-        DESC: Descending
     CONTENT_PAGINATION:
       LABEL: Pagination
     CONTENT_TAXONOMY_FILTER:
@@ -103,7 +89,7 @@ TEMPLATE:
         OPTIONS:
           ASC: Ascending
           DESC: Descending
-    BLOG_BITS:
+    BLOG:
       HERO_TITLE:
         TITLE: Hero Section
       HERO_CLASSES:

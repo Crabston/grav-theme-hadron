@@ -19,7 +19,7 @@ form:
             header.content.items:
               type: textarea
               yaml: true
-              label: TEMPLATE.BLOG.CONTENT_ITEMS.LABEL
+              label: PLUGIN_ADMIN.ITEMS
               default: '@self.children'
               validate:
                 type: yaml
@@ -35,21 +35,23 @@ form:
 
             header.content.order.by:
               type: select
-              label: TEMPLATE.BLOG.CONTENT_ORDER_BY.LABEL
+              label: PLUGIN_ADMIN.ORDER_BY
               default: date
+              size: small
               options:
-                folder: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.FOLDER
-                title: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.TITLE
-                date: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.DATE
-                default: TEMPLATE.BLOG.CONTENT_ORDER_BY.OPTIONS.DEFAULT
+                folder: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.FOLDER
+                title: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.TITLE
+                date: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.DATE
+                default: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.DEFAULT
 
             header.content.order.dir:
               type: select
-              label: TEMPLATE.BLOG.CONTENT_ORDER_DIR.LABEL
+              label: PLUGIN_ADMIN.ORDER
               default: desc
+              size: small
               options:
-                asc: TEMPLATE.BLOG.CONTENT_ORDER_DIR.OPTIONS.ASC
-                desc: TEMPLATE.BLOG.CONTENT_ORDER_DIR.OPTIONS.DESC
+                asc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.ASC
+                desc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.DESC
 
             header.content.pagination:
               replace-options@: true
