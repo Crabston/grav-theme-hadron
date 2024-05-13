@@ -1,0 +1,81 @@
+title: Sections Page Options
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        options:
+          type: tab
+
+          fields:
+
+            pagetitle:
+              type: section
+              title: TEMPLATE.SECTIONS.PAGE_TITLE.TITLE
+              underline: true
+
+            header.hide_page_title:
+              type: toggle
+              label: TEMPLATE.SECTIONS.HIDE_PAGE_TITLE.LABEL
+              help: TEMPLATE.SECTIONS.HIDE_PAGE_TITLE.HELP
+              default: 0
+              highlight: 0
+              options:
+                0: PLUGIN_ADMIN.YES
+                1: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+
+            sectionpages:
+              type: tab
+              title: TEMPLATE.SECTIONS.SECTION_PAGES.TITLE
+
+        sectionpages:
+          type: tab
+          title: TEMPLATE.SECTIONS.SECTION_PAGES.TITLE
+
+          fields:
+
+            header.content.items:
+              type: hidden
+              default: '@self.children'
+
+            header.content.order.by:
+              type: select
+              label: TEMPLATE.SECTIONS.ORDER_BY.LABEL
+              default: date
+              options:
+                folder: TEMPLATE.SECTIONS.ORDER_BY.OPTIONS.FOLDER
+                title: TEMPLATE.SECTIONS.ORDER_BY.OPTIONS.TITLE
+                date: TEMPLATE.SECTIONS.ORDER_BY.OPTIONS.DATE
+                default: TEMPLATE.SECTIONS.ORDER_BY.OPTIONS.DEFAULT
+
+            header.content.order.dir:
+              type: select
+              label: TEMPLATE.SECTIONS.ORDER_DIR.LABEL
+              default: asc
+              options:
+                asc: TEMPLATE.SECTIONS.ORDER_DIR.OPTIONS.ASC
+                desc: TEMPLATE.SECTIONS.ORDER_DIR.OPTIONS.DESC
+
+            appearance:
+              type: section
+              title: TEMPLATE.SECTIONS.SECTION_CONFIG.TITLE
+              underline: true
+
+            header.hide_next_prev_page_buttons:
+              type: toggle
+              label: TEMPLATE.SECTIONS.HIDE_NEXT_PREV_BUTTONS.LABEL
+              default: 0
+              highlight: 0
+              options:
+                0: PLUGIN_ADMIN.YES
+                1: PLUGIN_ADMIN.NO
+              validate:
+                type: bool

@@ -78,6 +78,44 @@ TEMPLATE:
           LABEL: Size
         SUMMARY_DELIMITER:
           LABEL: Summary delimiter
+  SECTIONS:
+    PAGE_TITLE:
+      TITLE: Page Title
+    HIDE_PAGE_TITLE:
+      LABEL: Display Title at top of Page
+      HELP: Determines if the page title is displayed at the top of a page
+    SECTION_PAGES:
+      TITLE: Section Pages
+    SECTION_CONFIG:
+      TITLE: Sections Config
+    ORDER_BY:
+      LABEL: Order By
+      OPTIONS:
+        FOLDER: Folder
+        TITLE: Title
+        DATE: Date
+        DEFAULT: Default
+    ORDER_DIR:
+      LABEL: Order
+      OPTIONS:
+        ASC: Ascending
+        DESC: Descending
+    APPEARANCE:
+      TITLE: Appearance
+    HIDE_NEXT_PREV_BUTTONS:
+      LABEL: Hide Next/Previous Buttons
+  SECTION:
+    PAGE_TITLE:
+      TITLE: Page Title
+    HIDE_PAGE_TITLE:
+      LABEL: Display Title at top of Page
+      HELP: Determines if the page title is displayed at the top of a page
+  SUBSECTION:
+    PAGE_TITLE:
+      TITLE: Page Title
+    HIDE_PAGE_TITLE:
+      LABEL: Display Title at top of Page
+      HELP: Determines if the page title is displayed at the top of a page
   PARTIALS:
     BLOG_BITS:
       HERO_TITLE:
