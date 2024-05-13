@@ -1,0 +1,236 @@
+PLUGIN_SITEMAP:
+  HEADER_IGNORE: Ignoriere Seite in Sitemap
+
+TEMPLATE:
+  DEFAULT:
+    BODY_CLASSES:
+      DESCRIPTION: 'Verfügbare Klassen im Quark Theme (Leerzeichen getrennt):<br />`header-fixed`, `header-animated`, `header-dark`, `header-transparent`, `sticky-footer`'
+  BLOG:
+    TITLE: Blog Konfiguration
+    CONTENT:
+      TITLE: Inhalt Definition
+    CONTENT_LIMIT:
+      LABEL: Maximale Anzahl Elemente
+    CONTENT_PAGINATION:
+      LABEL: Seitennummerierung
+    CONTENT_TAXONOMY_FILTER:
+      LABEL: URL Taxonomie Filter
+    APPEARANCE:
+      TITLE: Erscheinungsbild
+    BRICKLAYER_LAYOUT:
+      LABEL: Verwende Bricklayer Layout
+    POST_SUMMARY:
+      LABEL: Verstecke Zusammenfassungen auf Blog beitragsseiten
+    POST_ICON:
+      LABEL: Standard Blog Element Font Awesome Icon
+      DESCRIPTION: Kurzer Name, z.B. 'newspaper-o'.
+      HELP: Bestimmt das Standard Font Awesome Icon für die Blog Beiträge.
+    METADATA:
+      TITLE: Seiten Metadaten
+    METADATA_ITEMS:
+      LABEL: Metadaten Elemente
+  ITEM:
+    CONTENT:
+      DEFAULT: 'Deine Seitenzusammenfassung kommt hierhin.\n\n===\n\nDein Seiteninhalt kommt hierhin.'
+    BLOG:
+      TITLE: Blog Item
+      HEADER_IMAGE_SECTION:
+        TITLE: Header Bild
+      HEADER_IMAGE:
+        LABEL: Zeige Header Bild
+        HELP: Aktiviert die Anzeige eines Header Bildes
+      HEADER_IMAGE_FILE:
+        LABEL: Bild Datei
+        HELP: Bild Dateiname, der im Seitenordner existiert. Wenn nicht angegeben, wird das erste gefundene Bild verwendet.
+        PLACEHOLDER: 'Zum Beispiel: bild.jpg'
+      HEADER_IMAGE_WIDTH:
+        LABEL: Bild Breite
+        HELP: Header Breite in px
+        PLACEHOLDER: Standard ist 900
+      HEADER_IMAGE_HEIGHT:
+        LABEL: Bild Höhe
+        HELP: Header Höhe in px
+        PLACEHOLDER: Standard ist 300
+      SUMMARY_SECTION:
+        TITLE: Zusammenfassung
+      SUMMARY:
+        LABEL: Zeige Zusammenfassung
+      SUMMARY_FORMAT:
+        LABEL: Format
+        OPTIONS:
+          SHORT: Verwende das erste Vorkommen von Trennzeichen oder Länge
+          LONG: Zusammenfassungstrennzeichen wird ignoriert
+        SUMMARY_SIZE:
+          LABEL: Länge
+        SUMMARY_DELIMITER:
+          LABEL: Zusammenfassungstrennzeichen
+  SECTIONS:
+    SECTION_PAGES:
+      TITLE: Sektionen
+    SECTION_CONFIG:
+      TITLE: Abschnitt Konfiguration
+    APPEARANCE:
+      TITLE: Erscheinungsbild
+    HIDE_NEXT_PREV_BUTTONS:
+      LABEL: Verstecke Nächste/Vorherige Schaltflächen
+  PARTIALS:
+    COLLECTION:
+      ITEMS:
+        LABEL: Elemente
+      ORDER_BY:
+        LABEL: Sortieren nach
+        OPTIONS:
+          FOLDER: Ordner
+          TITLE: Titel
+          DATE: Datum
+          DEFAULT: Standard
+      ORDER_DIR:
+        LABEL: Reihenfolge
+        OPTIONS:
+          ASC: Aufsteigend
+          DESC: Absteigend
+    BLOG:
+      HERO_TITLE:
+        TITLE: Hero Abschnitt
+      HERO_CLASSES:
+        LABEL: Hero Klassen
+        DESCRIPTION: Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.
+      HERO_IMAGE:
+        LABEL: Hero Bild
+        DESCRIPTION: Wenn nicht angegeben, wird das erste Bild im Seitenordner verwendet
+      HERO_IMAGE_ALT_TEXT:
+        LABEL: Bild Alternativtext
+      HERO_IMAGE_CREDIT:
+        LABEL: Bildunterschrift
+      HERO_IMAGE_CREDITLINK:
+        LABEL: Bildunterschrift URL
+      TOGGLES_TITLE:
+        TITLE: Konfiguration
+      BLOG_URL:
+        LABEL: Blog URL
+        HELP: Der Pfad zu dieser Hauptblogseite, die diese Konfiguration enthält
+      SHOW_SIDEBAR:
+        LABEL: Zeige Seitenleiste
+      SHOW_BREADCRUMBS:
+        LABEL: Zeige Breadcrumbs
+      SHOW_PAGINATION:
+        LABEL: Zeige Seitennummerierung
+    SECTION:
+      PAGE_TITLE:
+        TITLE: Seitentitel
+      HIDE_PAGE_TITLE:
+        LABEL: Titel am oberen Rand der Seite anzeigen
+        HELP: Bestimmt, ob der Seitentitel am oberen Rand einer Seite angezeigt wird
+  MODULAR:
+    ALERT:
+      CONTENT_TITLE:
+        LABEL: Titel
+      ALERT_COLOR:
+        LABEL: Mitteilungsfarbe
+        OPTIONS:
+          YELLOW: Gelb
+          RED: Rot
+          BLUE: Blau
+          GREEN: Grün
+    HERO:
+      HERO_CLASSES:
+        LABEL: Hero Klassen
+        DESCRIPTION: 'Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.'
+      HERO_IMAGE:
+        LABEL: Hero Bild
+        DESCRIPTION: Wenn nicht angegeben, wird das erste Bild im Seitenordner verwendet
+
+THEME_LOCAL:
+  OPEN_PUBLISHING:
+    TITLE: Open Publishing Optionen
+    CHROMELESS:
+      TITLE: Eingebettete Website (Chromeless)
+      ENABLE_CHROMELESS:
+        LABEL: Verstecke Menü, Seitenleiste und Fusszeile
+    H5P:
+      TITLE: H5P Setup
+      EMBED_URL:
+        LABEL: H5P Quelle URL einbetten
+        HELP: Gib die URL der Quelle ein, bis, aber nicht einschliesslich, der H5P Content ID.
+        DESCRIPTION: URL der Quelle, bis, aber nicht einschliesslich, der H5P Content ID. Zum Beispiel https://h5p.org/h5p/embed/ oder https://[organization].h5p.com/content/.
+    MENU:
+      TITLE: Menü
+      DISPLAY_DROPDOWNS:
+        LABEL: Zeige Dropdowns im Menü
+  QUARK_OPTIONS:
+    TITLE: Quark Optionen
+    PRODUCTION_MODE:
+      LABEL: Produktionsmodus
+      HELP: Wenn aktiviert, wird Quark mit minimiertem CSS angezeigt
+    GRID_SIZE:
+      LABEL: Grid Grösse
+      HELP: Die maximale Grösse des Themes
+      OPTIONS:
+        NONE: Keine (volle Breite)
+        GRID_XL: Extra Breit
+        GRID_LG: Breit
+        GRID_MD: Mittel
+    HEADER:
+      TITLE: Header Standards
+      CUSTOM_LOGO:
+        LABEL: Benutzerdefiniertes Logo
+        DESCRIPTION: Wird verwendet anstelle des Standardlogos `theme://images/grav-logo.svg`
+      CUSTOM_LOGO_MOBILE:
+        LABEL: Mobiles benutzerdefiniertes Logo
+      HEADER_FIXED:
+        LABEL: Fester Header
+        HELP: Wenn aktiviert, wird der Header oben im Browser fixiert
+      HEADER_ANIMATED:
+        LABEL: Header animieren
+        HELP: Wenn aktiviert, wird der Header beim Scrollen animiert
+      HEADER_DARK:
+        LABEL: Dunkler Stil
+        HELP: Wenn aktiviert, wird ein dunkler Stil verwendet
+      HEADER_TRANSPARENT:
+        LABEL: Transparenter Header
+        HELP: Wenn aktiviert, wird der Header transparent
+    FOOTER:
+      TITLE: Footer Standards
+      STICKY_FOOTER:
+        LABEL: Sticky Footer
+        HELP: Wenn aktiviert, wird der Footer am unteren Rand des Browsers fixiert
+    BLOG:
+      TITLE: Blog Standards
+      BLOG_PAGE:
+        LABEL: Blog Seite
+        HELP: Der Pfad zur Blogseite bei Verwendung der Blog-Seitenleiste
+      HERO_CLASSES:
+        LABEL: Hero Klassen
+        DESCRIPTION: Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.
+    SPECTRE:
+      TITLE: Spectre.css Optionen
+      EXPERIMENTAL:
+        LABEL: Experimentelles CSS
+        HELP: Wenn aktiviert, wird die `spectre-exp.css` Datei eingebunden
+      ICONS:
+        LABEL: Icons CSS
+        HELP: Wenn aktiviert, wird die `spectre-icons.css` Datei eingebunden
+  CUSTOM_MENU:
+    TITLE: Benutzerdefinierte Menüeinträge
+    DISPLAY:
+      LABEL: Zeige benutzerdefinierte Menüeinträge
+      HELP: Wenn aktiviert, werden benutzerdefinierte Menüeinträge angezeigt
+    MENU:
+      LABEL: Benutzerdefinierte Menüeinträge
+      FIELDS:
+        TEXT:
+          LABEL: Text
+          DESCRIPTION: Textbeschriftung für Menüeintrag
+        ICON:
+          LABEL: Icon
+          DESCRIPTION: Font Awesome Icon für Menüeintrag
+        URL:
+          LABEL: URL
+          DESCRIPTION: URL für Menüeintrag
+        TARGET:
+          LABEL: Ziel
+          OPTIONS:
+            BLANK: In einem neuen Fenster öffnen
+            PARENT: Im übergeordneten Fenster öffnen
+            TOP: Im gesamten Fenster öffnen
+            SELF: Im selben Fenster öffnen

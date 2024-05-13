@@ -1,0 +1,236 @@
+PLUGIN_SITEMAP:
+  HEADER_IGNORE: Ignore Page in Sitemap
+
+TEMPLATE:
+  DEFAULT:
+    BODY_CLASSES:
+      DESCRIPTION: 'Available classes in Quark Theme (space separated):<br />`header-fixed`, `header-animated`, `header-dark`, `header-transparent`, `sticky-footer`'
+  BLOG:
+    TITLE: Blog Config
+    CONTENT:
+      TITLE: Content Definition
+    CONTENT_LIMIT:
+      LABEL: Max Item Count
+    CONTENT_PAGINATION:
+      LABEL: Pagination
+    CONTENT_TAXONOMY_FILTER:
+      LABEL: URL Taxonomy Filter
+    APPEARANCE:
+      TITLE: Appearance
+    BRICKLAYER_LAYOUT:
+      LABEL: Use Bricklayer Layout
+    POST_SUMMARY:
+      LABEL: Hide Summaries on Blog Post Pages
+    POST_ICON:
+      LABEL: Default Blog Item Font Awesome Icon
+      DESCRIPTION: Short name, e.g. 'newspaper-o'.
+      HELP: Determines the default Font Awesome icon used for the blog posts.
+    METADATA:
+      TITLE: Page Metadata
+    METADATA_ITEMS:
+      LABEL: Metadata Items
+  ITEM:
+    CONTENT:
+      DEFAULT: "Your page summary goes here.\n\n===\n\nYour page content goes here."
+    BLOG:
+      TITLE: Blog Item
+      HEADER_IMAGE_SECTION:
+        TITLE: Header Image
+      HEADER_IMAGE:
+        LABEL: Display Header Image
+        HELP: Enables displaying of a header image
+      HEADER_IMAGE_FILE:
+        LABEL: Image File
+        HELP: Image filename that exists in the page folder. If not provided, will use the first image found.
+        PLACEHOLDER: 'For example: image.jpg'
+      HEADER_IMAGE_WIDTH:
+        LABEL: Image Width
+        HELP: Header width in px
+        PLACEHOLDER: Default is 900
+      HEADER_IMAGE_HEIGHT:
+        LABEL: Image Height
+        HELP: Header height in px
+        PLACEHOLDER: Default is 300
+      SUMMARY_SECTION:
+        TITLE: Summary
+      SUMMARY:
+        LABEL: Display Summary
+      SUMMARY_FORMAT:
+        LABEL: Format
+        OPTIONS:
+          SHORT: Use the first occurrence of delimiter or size
+          LONG: Summary delimiter will be ignored
+        SUMMARY_SIZE:
+          LABEL: Size
+        SUMMARY_DELIMITER:
+          LABEL: Summary delimiter
+  SECTIONS:
+    SECTION_PAGES:
+      TITLE: Section Pages
+    SECTION_CONFIG:
+      TITLE: Sections Config
+    APPEARANCE:
+      TITLE: Appearance
+    HIDE_NEXT_PREV_BUTTONS:
+      LABEL: Hide Next/Previous Buttons
+  PARTIALS:
+    COLLECTION:
+      ITEMS:
+        LABEL: Items
+      ORDER_BY:
+        LABEL: Order By
+        OPTIONS:
+          FOLDER: Folder
+          TITLE: Title
+          DATE: Date
+          DEFAULT: Default
+      ORDER_DIR:
+        LABEL: Order
+        OPTIONS:
+          ASC: Ascending
+          DESC: Descending
+    BLOG:
+      HERO_TITLE:
+        TITLE: Hero Section
+      HERO_CLASSES:
+        LABEL: Hero Classes
+        DESCRIPTION: 'There are several Hero class options that can be listed here (space separated):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Please consult the [Quark documentation](https://github.com/getgrav/grav-theme-quark#hero-options) for more details.'
+      HERO_IMAGE:
+        LABEL: Hero Image
+        DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
+      HERO_IMAGE_ALT_TEXT:
+        LABEL: Image Alternative Text
+      HERO_IMAGE_CREDIT:
+        LABEL: Image Caption
+      HERO_IMAGE_CREDITLINK:
+        LABEL: Image Caption URL
+      TOGGLES_TITLE:
+        TITLE: Configuration
+      BLOG_URL:
+        LABEL: Blog Route
+        HELP: The route to this main blog page that contains this configuration
+      SHOW_SIDEBAR:
+        LABEL: Show Sidebar
+      SHOW_BREADCRUMBS:
+        LABEL: Show Breadcrumbs
+      SHOW_PAGINATION:
+        LABEL: Show Pagination
+    SECTION:
+      PAGE_TITLE:
+        TITLE: Page Title
+      HIDE_PAGE_TITLE:
+        LABEL: Display Title at top of Page
+        HELP: Determines if the page title is displayed at the top of a page
+  MODULAR:
+    ALERT:
+      CONTENT_TITLE:
+        LABEL: Page Title
+      ALERT_COLOR:
+        LABEL: Alert Color
+        OPTIONS:
+          YELLOW: Yellow
+          RED: Red
+          BLUE: Blue
+          GREEN: Green
+    HERO:
+      HERO_CLASSES:
+        LABEL: Hero Classes
+        DESCRIPTION: 'There are several Hero class options that can be listed here (space separated):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Please consult the [Quark documentation](https://github.com/getgrav/grav-theme-quark#hero-options) for more details.'
+      HERO_IMAGE:
+        LABEL: Hero Image
+        DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
+
+THEME_LOCAL:
+  OPEN_PUBLISHING:
+    TITLE: Open Publishing Options
+    CHROMELESS:
+      TITLE: Chromeless Site (i.e. Embedded)
+      ENABLE_CHROMELESS:
+        LABEL: Hide Site Menu, Sidebar and Footer
+    H5P:
+      TITLE: H5P Setup
+      EMBED_URL:
+        LABEL: H5P Embed Source URL
+        HELP: Enter the embed source URL path up to, but not including, the H5P Content ID.
+        DESCRIPTION: H5P embed source URL path up to, but not including, the Content ID. For example, https://h5p.org/h5p/embed/ or https://[organization].h5p.com/content/.
+    MENU:
+      TITLE: Menu
+      DISPLAY_DROPDOWNS:
+        LABEL: Display Dropdowns in Menu
+  QUARK_OPTIONS:
+    TITLE: Quark Options
+    PRODUCTION_MODE:
+      LABEL: Production mode
+      HELP: When enabled, Quark will render with minified CSS
+    GRID_SIZE:
+      LABEL: Grid size
+      HELP: The maximum width of the theme
+      OPTIONS:
+        NONE: None (full width)
+        GRID_XL: Extra Large
+        GRID_LG: Large
+        GRID_MD: Medium
+    HEADER:
+      TITLE: Header Defaults
+      CUSTOM_LOGO:
+        LABEL: Custom Logo
+        DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
+      CUSTOM_LOGO_MOBILE:
+        LABEL: Mobile Custom Logo
+      HEADER_FIXED:
+        LABEL: Fixed header
+        HELP: When enabled, the header will be fixed at the top of the browser
+      HEADER_ANIMATED:
+        LABEL: Animate header
+        HELP: When enabled, the header will animate on scroll
+      HEADER_DARK:
+        LABEL: Dark Style
+        HELP: When enabled, a dark-friendly style will be used
+      HEADER_TRANSPARENT:
+        LABEL: Transparent Header
+        HELP: When enabled, the header will be transparent
+    FOOTER:
+      TITLE: Footer Defaults
+      STICKY_FOOTER:
+        LABEL: Sticky Footer
+        HELP: When enabled, the footer will stick to the bottom of the browser
+    BLOG:
+      TITLE: Blog Defaults
+      BLOG_PAGE:
+        LABEL: Blog Page
+        HELP: The route to the blog page when working with blog sidebar
+      HERO_CLASSES:
+        LABEL: Hero Classes
+        DESCRIPTION: There are several Hero class options that can be listed here (space separated):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Please consult the [Quark documentation](https://github.com/getgrav/grav-theme-quark#hero-options) for more details.
+    SPECTRE:
+      TITLE: Spectre.css Options
+      EXPERIMENTAL:
+        LABEL: Experimental CSS
+        HELP: When enabled, the `spectre-exp.css` file will be included
+      ICONS:
+        LABEL: Icons CSS
+        HELP: When enabled, the `spectre-icons.css` file will be included
+  CUSTOM_MENU:
+    TITLE: Custom Menu Items
+    DISPLAY:
+      LABEL: Display Custom Menu Items
+      HELP: Determines if any defined custom menu entries are displayed in the menubar.
+    MENU:
+      LABEL: Custom Menu Items
+      FIELDS:
+        TEXT:
+          LABEL: Text
+          DESCRIPTION: Text label for menu item.
+        ICON:
+          LABEL: Icon
+          DESCRIPTION: Font Awesome icon for menu item.
+        URL:
+          LABEL: URL
+          DESCRIPTION: URL for menu item.
+        TARGET:
+          LABEL: Target
+          OPTIONS:
+            BLANK: Open in a new window
+            PARENT: Open in the parent frame
+            TOP: Open in the full body of the window
+            SELF: Open in the same frame as clicked

@@ -1,0 +1,65 @@
+title: Sections Page Options
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        options:
+          type: tab
+
+          import@:
+            type: partials/section
+            context: blueprints://pages
+
+        sectionpages:
+          type: tab
+          title: TEMPLATE.SECTIONS.SECTION_PAGES.TITLE
+
+          fields:
+
+            header.content.items:
+              type: hidden
+              label: PLUGIN_ADMIN.ITEMS
+              default: '@self.children'
+
+            header.content.order.by:
+              type: select
+              label: PLUGIN_ADMIN.ORDER_BY
+              default: date
+              size: small
+              options:
+                folder: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.FOLDER
+                title: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.TITLE
+                date: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.DATE
+                default: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.DEFAULT
+
+            header.content.order.dir:
+              type: select
+              label: PLUGIN_ADMIN.ORDER
+              default: desc
+              size: small
+              options:
+                asc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.ASC
+                desc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.DESC
+
+            appearance:
+              type: section
+              title: TEMPLATE.SECTIONS.SECTION_CONFIG.TITLE
+              underline: true
+
+            header.hide_next_prev_page_buttons:
+              type: toggle
+              label: TEMPLATE.SECTIONS.HIDE_NEXT_PREV_BUTTONS.LABEL
+              default: 0
+              highlight: 0
+              options:
+                0: PLUGIN_ADMIN.YES
+                1: PLUGIN_ADMIN.NO
+              validate:
+                type: bool

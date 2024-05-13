@@ -1,0 +1,126 @@
+title: Blog Metadata
+'@extends':
+  type: blog
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      fields:
+        blog:
+          title: TEMPLATE.BLOG.TITLE
+          fields:
+
+            content_title:
+              type: spacer
+              title: TEMPLATE.BLOG.CONTENT.TITLE
+
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: PLUGIN_ADMIN.ITEMS
+              default: '@self.children'
+              validate:
+                type: yaml
+
+            header.content.limit:
+              type: text
+              label: TEMPLATE.BLOG.CONTENT_LIMIT.LABEL
+              default: 5
+              validate:
+                required: true
+                type: int
+                min: 1
+
+            header.content.order.by:
+              type: select
+              label: PLUGIN_ADMIN.ORDER_BY
+              default: date
+              size: small
+              options:
+                folder: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.FOLDER
+                title: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.TITLE
+                date: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.DATE
+                default: TEMPLATE.PARTIALS.COLLECTION.ORDER_BY.OPTIONS.DEFAULT
+
+            header.content.order.dir:
+              type: select
+              label: PLUGIN_ADMIN.ORDER
+              default: desc
+              size: small
+              options:
+                asc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.ASC
+                desc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.DESC
+
+            header.content.pagination:
+              replace-options@: true
+              type: toggle
+              label: TEMPLATE.BLOG.CONTENT_PAGINATION.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.content.url_taxonomy_filters:
+              replace-options@: true
+              type: toggle
+              label: TEMPLATE.BLOG.CONTENT_TAXONOMY_FILTER.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            appearance:
+              type: section
+              title: TEMPLATE.BLOG.APPEARANCE.TITLE
+              underline: true
+
+            header.bricklayer_layout:
+              replace-options@: true
+              type: toggle
+              label: TEMPLATE.BLOG.BRICKLAYER_LAYOUT.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.display_post_summary.enabled:
+              replace-options@: true
+              type: toggle
+              label: TEMPLATE.BLOG.POST_SUMMARY.LABEL
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.post_icon:
+              type: text
+              size: small
+              label: TEMPLATE.BLOG.POST_ICON.LABEL
+              description: TEMPLATE.BLOG.POST_ICON.DESCRIPTION
+              help: TEMPLATE.BLOG.POST_ICON.HELP
+              validate:
+                type: text
+
+            metadata:
+              type: section
+              title: TEMPLATE.BLOG.METADATA.TITLE
+              underline: true
+
+            header.metadata:
+              type: array
+              label: TEMPLATE.BLOG.METADATA_ITEMS.LABEL
+              required: true

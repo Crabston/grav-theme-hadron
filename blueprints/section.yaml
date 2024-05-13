@@ -1,0 +1,18 @@
+title: Section Page Options
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        options:
+          type: tab
+
+          import@:
+            type: partials/section
+            context: blueprints://pages

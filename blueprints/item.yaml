@@ -1,0 +1,108 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          fields:
+            content:
+              markdown: true
+              default: TEMPLATE.ITEM.CONTENT.DEFAULT
+
+        blog:
+          type: tab
+          title: TEMPLATE.ITEM.BLOG.TITLE
+          fields:
+
+            header_image:
+              type: section
+              title: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_SECTION.TITLE
+              underline: true
+
+            header.header_image:
+              type: toggle
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.HEADER_IMAGE.LABEL
+              help: TEMPLATE.ITEM.BLOG.HEADER_IMAGE.HELP
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+
+            header.header_image_file:
+              type: text
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_FILE.LABEL
+              size: medium
+              help: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_FILE.HELP
+              placeholder: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_FILE.PLACEHOLDER
+
+            header.header_image_width:
+              type: text
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_WIDTH.LABEL
+              size: small
+              help: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_WIDTH.HELP
+              placeholder: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_WIDTH.PLACEHOLDER
+              validate:
+                type: int
+                min: 0
+                max: 5000
+
+            header.header_image_height:
+              type: text
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_HEIGHT.LABEL
+              size: small
+              help: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_HEIGHT.HELP
+              placeholder: TEMPLATE.ITEM.BLOG.HEADER_IMAGE_HEIGHT.PLACEHOLDER
+              validate:
+                type: int
+                min: 0
+                max: 5000
+
+            summary:
+              type: section
+              title: TEMPLATE.ITEM.BLOG.SUMMARY_SECTION.TITLE
+              underline: true
+
+            header.summary.enabled:
+              type: toggle
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.SUMMARY.LABEL
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+
+            header.summary.format:
+              type: select
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.SUMMARY_FORMAT.LABEL
+              classes: fancy
+              options:
+                short: TEMPLATE.ITEM.BLOG.SUMMARY_FORMAT.OPTIONS.SHORT
+                long: TEMPLATE.ITEM.BLOG.SUMMARY_FORMAT.OPTIONS.LONG
+
+            header.summary.size:
+              type: text
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.SUMMARY_FORMAT.SUMMARY_SIZE.LABEL
+              classes: large
+              placeholder: 300
+              validate:
+                type: int
+                min: 1
+
+            header.summary.delimiter:
+              type: text
+              toggleable: true
+              label: TEMPLATE.ITEM.BLOG.SUMMARY_FORMAT.SUMMARY_DELIMITER.LABEL
+              classes: large
+              placeholder: ===
+
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages

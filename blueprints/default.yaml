@@ -5,8 +5,6 @@
 form:
   fields:
     tabs:
-      type: tabs
-      active: 1
       fields:
 
         options:
@@ -16,3 +14,13 @@ form:
               unset@: true
             header.hide_git_sync_repo_link:
               unset@: true
+
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      markdown: true
+                      description: TEMPLATE.DEFAULT.BODY_CLASSES.DESCRIPTION

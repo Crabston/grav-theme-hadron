@@ -1,0 +1,18 @@
+form:
+  fields:
+    pagetitle:
+      type: section
+      title: TEMPLATE.PARTIALS.SECTION.PAGE_TITLE.TITLE
+      underline: true
+
+    header.hide_page_title:
+      type: toggle
+      label: TEMPLATE.PARTIALS.SECTION.HIDE_PAGE_TITLE.LABEL
+      help: TEMPLATE.PARTIALS.SECTION.HIDE_PAGE_TITLE.HELP
+      default: 0
+      highlight: 0
+      options:
+        0: PLUGIN_ADMIN.YES
+        1: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
