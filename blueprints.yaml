@@ -1,7 +1,7 @@
 name: Minimal
 slug: minimal
 type: theme
-version: 1.0.0
+version: 1.1.0
 description: 'Simple Theme for Grav CMS, depending on Quark and Quark Open Publishing. Minimalistic, clean and responsive. Enhances the Quark theme with additional features and styles.'
 icon: star
 author:
