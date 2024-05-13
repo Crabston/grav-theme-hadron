@@ -13,28 +13,9 @@ form:
         options:
           type: tab
 
-          fields:
-
-            pagetitle:
-              type: section
-              title: TEMPLATE.SECTIONS.PAGE_TITLE.TITLE
-              underline: true
-
-            header.hide_page_title:
-              type: toggle
-              label: TEMPLATE.SECTIONS.HIDE_PAGE_TITLE.LABEL
-              help: TEMPLATE.SECTIONS.HIDE_PAGE_TITLE.HELP
-              default: 0
-              highlight: 0
-              options:
-                0: PLUGIN_ADMIN.YES
-                1: PLUGIN_ADMIN.NO
-              validate:
-                type: bool
-
-            sectionpages:
-              type: tab
-              title: TEMPLATE.SECTIONS.SECTION_PAGES.TITLE
+          import@:
+            type: partials/section-bits
+            context: blueprints://pages
 
         sectionpages:
           type: tab

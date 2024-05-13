@@ -79,11 +79,6 @@ TEMPLATE:
         SUMMARY_DELIMITER:
           LABEL: Zusammenfassungstrennzeichen
   SECTIONS:
-    PAGE_TITLE:
-      TITLE: Seitentitel
-    HIDE_PAGE_TITLE:
-      LABEL: Titel am oberen Rand der Seite anzeigen
-      HELP: Bestimmt, ob der Seitentitel am oberen Rand einer Seite angezeigt wird
     SECTION_PAGES:
       TITLE: Sektionen
     SECTION_CONFIG:
@@ -104,13 +99,7 @@ TEMPLATE:
       TITLE: Erscheinungsbild
     HIDE_NEXT_PREV_BUTTONS:
       LABEL: Verstecke Nächste/Vorherige Schaltflächen
-  SECTION:
-    PAGE_TITLE:
-      TITLE: Seitentitel
-    HIDE_PAGE_TITLE:
-      LABEL: Titel am oberen Rand der Seite anzeigen
-      HELP: Bestimmt, ob der Seitentitel am oberen Rand einer Seite angezeigt wird
-  SUBSECTION:
+  SECTION_BITS:
     PAGE_TITLE:
       TITLE: Seitentitel
     HIDE_PAGE_TITLE:

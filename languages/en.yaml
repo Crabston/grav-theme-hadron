@@ -79,11 +79,6 @@ TEMPLATE:
         SUMMARY_DELIMITER:
           LABEL: Summary delimiter
   SECTIONS:
-    PAGE_TITLE:
-      TITLE: Page Title
-    HIDE_PAGE_TITLE:
-      LABEL: Display Title at top of Page
-      HELP: Determines if the page title is displayed at the top of a page
     SECTION_PAGES:
       TITLE: Section Pages
     SECTION_CONFIG:
@@ -104,13 +99,7 @@ TEMPLATE:
       TITLE: Appearance
     HIDE_NEXT_PREV_BUTTONS:
       LABEL: Hide Next/Previous Buttons
-  SECTION:
-    PAGE_TITLE:
-      TITLE: Page Title
-    HIDE_PAGE_TITLE:
-      LABEL: Display Title at top of Page
-      HELP: Determines if the page title is displayed at the top of a page
-  SUBSECTION:
+  SECTION_BITS:
     PAGE_TITLE:
       TITLE: Page Title
     HIDE_PAGE_TITLE:
