@@ -14,5 +14,5 @@ form:
           type: tab
 
           import@:
-            type: partials/section-bits
+            type: partials/section
             context: blueprints://pages

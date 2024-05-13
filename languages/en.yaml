@@ -83,29 +83,26 @@ TEMPLATE:
       TITLE: Section Pages
     SECTION_CONFIG:
       TITLE: Sections Config
-    ORDER_BY:
-      LABEL: Order By
-      OPTIONS:
-        FOLDER: Folder
-        TITLE: Title
-        DATE: Date
-        DEFAULT: Default
-    ORDER_DIR:
-      LABEL: Order
-      OPTIONS:
-        ASC: Ascending
-        DESC: Descending
     APPEARANCE:
       TITLE: Appearance
     HIDE_NEXT_PREV_BUTTONS:
       LABEL: Hide Next/Previous Buttons
-  SECTION_BITS:
-    PAGE_TITLE:
-      TITLE: Page Title
-    HIDE_PAGE_TITLE:
-      LABEL: Display Title at top of Page
-      HELP: Determines if the page title is displayed at the top of a page
   PARTIALS:
+    COLLECTION:
+      ITEMS:
+        LABEL: Items
+      ORDER_BY:
+        LABEL: Order By
+        OPTIONS:
+          FOLDER: Folder
+          TITLE: Title
+          DATE: Date
+          DEFAULT: Default
+      ORDER_DIR:
+        LABEL: Order
+        OPTIONS:
+          ASC: Ascending
+          DESC: Descending
     BLOG_BITS:
       HERO_TITLE:
         TITLE: Hero Section
@@ -132,6 +129,12 @@ TEMPLATE:
         LABEL: Show Breadcrumbs
       SHOW_PAGINATION:
         LABEL: Show Pagination
+    SECTION:
+      PAGE_TITLE:
+        TITLE: Page Title
+      HIDE_PAGE_TITLE:
+        LABEL: Display Title at top of Page
+        HELP: Determines if the page title is displayed at the top of a page
   MODULAR:
     ALERT:
       CONTENT_TITLE:

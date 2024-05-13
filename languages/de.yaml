@@ -83,29 +83,26 @@ TEMPLATE:
       TITLE: Sektionen
     SECTION_CONFIG:
       TITLE: Abschnitt Konfiguration
-    ORDER_BY:
-      LABEL: Sortieren nach
-      OPTIONS:
-        FOLDER: Ordner
-        TITLE: Titel
-        DATE: Datum
-        DEFAULT: Standard
-    ORDER_DIR:
-      LABEL: Reihenfolge
-      OPTIONS:
-        ASC: Aufsteigend
-        DESC: Absteigend
     APPEARANCE:
       TITLE: Erscheinungsbild
     HIDE_NEXT_PREV_BUTTONS:
       LABEL: Verstecke Nächste/Vorherige Schaltflächen
-  SECTION_BITS:
-    PAGE_TITLE:
-      TITLE: Seitentitel
-    HIDE_PAGE_TITLE:
-      LABEL: Titel am oberen Rand der Seite anzeigen
-      HELP: Bestimmt, ob der Seitentitel am oberen Rand einer Seite angezeigt wird
   PARTIALS:
+    COLLECTION:
+      ITEMS:
+        LABEL: Elemente
+      ORDER_BY:
+        LABEL: Sortieren nach
+        OPTIONS:
+          FOLDER: Ordner
+          TITLE: Titel
+          DATE: Datum
+          DEFAULT: Standard
+      ORDER_DIR:
+        LABEL: Reihenfolge
+        OPTIONS:
+          ASC: Aufsteigend
+          DESC: Absteigend
     BLOG_BITS:
       HERO_TITLE:
         TITLE: Hero Abschnitt
@@ -132,6 +129,12 @@ TEMPLATE:
         LABEL: Zeige Breadcrumbs
       SHOW_PAGINATION:
         LABEL: Zeige Seitennummerierung
+    SECTION:
+      PAGE_TITLE:
+        TITLE: Seitentitel
+      HIDE_PAGE_TITLE:
+        LABEL: Titel am oberen Rand der Seite anzeigen
+        HELP: Bestimmt, ob der Seitentitel am oberen Rand einer Seite angezeigt wird
   MODULAR:
     ALERT:
       CONTENT_TITLE:

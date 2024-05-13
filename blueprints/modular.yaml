@@ -1,7 +1,5 @@
-title: Sections Page Options
-'@extends':
-  type: default
-  context: blueprints://pages
+title: PLUGIN_ADMIN.MODULE
+extends@: default
 
 form:
   fields:
@@ -10,23 +8,18 @@ form:
       active: 1
 
       fields:
-        options:
-          type: tab
-
-          import@:
-            type: partials/section
-            context: blueprints://pages
-
-        sectionpages:
-          type: tab
-          title: TEMPLATE.SECTIONS.SECTION_PAGES.TITLE
-
+        content:
           fields:
 
+            modular_title:
+              type: spacer
+              title: PLUGIN_ADMIN.MODULE_SETUP
+
             header.content.items:
-              type: hidden
+              type: text
               label: PLUGIN_ADMIN.ITEMS
-              default: '@self.children'
+              default: '@self.modular'
+              size: medium
 
             header.content.order.by:
               type: select
@@ -47,19 +40,3 @@ form:
               options:
                 asc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.ASC
                 desc: TEMPLATE.PARTIALS.COLLECTION.ORDER_DIR.OPTIONS.DESC
-
-            appearance:
-              type: section
-              title: TEMPLATE.SECTIONS.SECTION_CONFIG.TITLE
-              underline: true
-
-            header.hide_next_prev_page_buttons:
-              type: toggle
-              label: TEMPLATE.SECTIONS.HIDE_NEXT_PREV_BUTTONS.LABEL
-              default: 0
-              highlight: 0
-              options:
-                0: PLUGIN_ADMIN.YES
-                1: PLUGIN_ADMIN.NO
-              validate:
-                type: bool
