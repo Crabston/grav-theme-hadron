@@ -15,6 +15,10 @@ form:
             header.hide_git_sync_repo_link:
               unset@: true
 
+          import@:
+            type: partials/sidebar
+            context: blueprints://pages
+
         advanced:
           fields:
             columns:

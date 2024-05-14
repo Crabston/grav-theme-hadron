@@ -89,6 +89,16 @@ TEMPLATE:
         OPTIONS:
           ASC: Aufsteigend
           DESC: Absteigend
+    SIDEBAR:
+      TITLE: Seitenleiste
+      DISPLAY:
+        LABEL: Zeige Seitenleiste
+      SHOW_POPULAR_TAGS:
+        LABEL: Zeige beliebte Tags
+      SHOW_FEED:
+        LABEL: Zeige Feed
+      SHOW_TOC:
+        LABEL: Zeige Inhaltsverzeichnis
     BLOG:
       HERO_TITLE:
         TITLE: Hero Abschnitt

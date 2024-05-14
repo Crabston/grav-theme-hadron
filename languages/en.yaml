@@ -89,6 +89,16 @@ TEMPLATE:
         OPTIONS:
           ASC: Ascending
           DESC: Descending
+    SIDEBAR:
+      TITLE: Sidebar
+      DISPLAY:
+        LABEL: Display Sidebar
+      SHOW_POPULAR_TAGS:
+        LABEL: Show Popular Tags
+      SHOW_FEED:
+        LABEL: Show Feed
+      SHOW_TOC:
+        LABEL: Show Table of Contents
     BLOG:
       HERO_TITLE:
         TITLE: Hero Section
