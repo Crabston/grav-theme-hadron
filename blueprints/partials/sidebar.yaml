@@ -1,9 +1,5 @@
 form:
   fields:
-    sidebar:
-      type: section
-      underline: true
-      title: TEMPLATE.PARTIALS.SIDEBAR.TITLE
     # TODO: use header.sidebar.display instead of header.show_sidebar in the future (check with dependents)
     #header.show_sidebar:
     header.sidebar.display:
