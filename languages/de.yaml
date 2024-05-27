@@ -99,6 +99,8 @@ TEMPLATE:
         LABEL: Zeige Feed
       SHOW_TOC:
         LABEL: Zeige Inhaltsverzeichnis
+      SHOW_TNTSEARCH:
+        LABEL: Zeige TNTSearch Box
     BLOG:
       HERO_TITLE:
         TITLE: Hero Abschnitt

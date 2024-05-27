@@ -44,3 +44,14 @@ form:
         0: PLUGIN_ADMIN.NO
       validate:
         type: bool
+    header.sidebar.show_tntsearch:
+      type: toggle
+      toggleable: true
+      label: TEMPLATE.PARTIALS.SIDEBAR.SHOW_TNTSEARCH.LABEL
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool

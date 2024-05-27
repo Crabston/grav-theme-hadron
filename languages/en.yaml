@@ -99,6 +99,8 @@ TEMPLATE:
         LABEL: Show Feed
       SHOW_TOC:
         LABEL: Show Table of Contents
+      SHOW_TNTSEARCH:
+        LABEL: Show TNTSearch Box
     BLOG:
       HERO_TITLE:
         TITLE: Hero Section
