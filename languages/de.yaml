@@ -89,6 +89,18 @@ TEMPLATE:
         OPTIONS:
           ASC: Aufsteigend
           DESC: Absteigend
+    SIDEBAR:
+      TITLE: Seitenleiste
+      DISPLAY:
+        LABEL: Zeige Seitenleiste
+      SHOW_POPULAR_TAGS:
+        LABEL: Zeige beliebte Tags
+      SHOW_FEED:
+        LABEL: Zeige Feed
+      SHOW_TOC:
+        LABEL: Zeige Inhaltsverzeichnis
+      SHOW_TNTSEARCH:
+        LABEL: Zeige TNTSearch Box
     BLOG:
       HERO_TITLE:
         TITLE: Hero Abschnitt
@@ -109,8 +121,6 @@ TEMPLATE:
       BLOG_URL:
         LABEL: Blog URL
         HELP: Der Pfad zu dieser Hauptblogseite, die diese Konfiguration enthält
-      SHOW_SIDEBAR:
-        LABEL: Zeige Seitenleiste
       SHOW_BREADCRUMBS:
         LABEL: Zeige Breadcrumbs
       SHOW_PAGINATION:

@@ -10,6 +10,11 @@
 	box-sizing: border-box;
 }
 
+// smooth scroll (for anchor links)
+html {
+	scroll-behavior: smooth;
+}
+
 .f {
 	display: flex;
 

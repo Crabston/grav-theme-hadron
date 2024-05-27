@@ -89,6 +89,18 @@ TEMPLATE:
         OPTIONS:
           ASC: Ascending
           DESC: Descending
+    SIDEBAR:
+      TITLE: Sidebar
+      DISPLAY:
+        LABEL: Display Sidebar
+      SHOW_POPULAR_TAGS:
+        LABEL: Show Popular Tags
+      SHOW_FEED:
+        LABEL: Show Feed
+      SHOW_TOC:
+        LABEL: Show Table of Contents
+      SHOW_TNTSEARCH:
+        LABEL: Show TNTSearch Box
     BLOG:
       HERO_TITLE:
         TITLE: Hero Section
@@ -109,8 +121,6 @@ TEMPLATE:
       BLOG_URL:
         LABEL: Blog Route
         HELP: The route to this main blog page that contains this configuration
-      SHOW_SIDEBAR:
-        LABEL: Show Sidebar
       SHOW_BREADCRUMBS:
         LABEL: Show Breadcrumbs
       SHOW_PAGINATION:

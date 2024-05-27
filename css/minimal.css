@@ -134,6 +134,10 @@ table .text-align-left {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .f {
   display: flex;
 }
