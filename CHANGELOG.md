@@ -1,26 +1,26 @@
 # v1.2.0
-##  2024-05-27
+##  27-05-2024
 
 1. [](#new)
-    * Add `tntsearch` plugin to sidebar
-    * Add `page-toc` plugin to sidebar
-1. [](#improved)
-    * Add options for sidebar in admin panel
+   * Add `tntsearch` plugin to sidebar
+   * Add `page-toc` plugin to sidebar
+2. [](#improved)
+   * Add options for sidebar in admin panel
 
 # v1.1.0
-##  2024-05-13
+##  13-05-2024
 
 1. [](#new)
-    * English and German translations
-    * Remove Git Sync plugin options
-1. [](#improved)
-    * Enhance Blog summary
-    * Show header image in blog list
+   * English and German translations
+   * Remove Git Sync plugin options
+2. [](#improved)
+   * Enhance Blog summary
+   * Show header image in blog list
 
 # v1.0.0
-##  2024-04-17
+##  17-04-2024
 
 1. [](#new)
-    * Initial release
-        * responsive tables
-        * healthcheck plugin
+   * Initial release
+   * responsive tables
+   * healthcheck plugin
