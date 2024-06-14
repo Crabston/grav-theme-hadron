@@ -1,6 +1,3 @@
-PLUGIN_SITEMAP:
-  HEADER_IGNORE: Ignore Page in Sitemap
-
 TEMPLATE:
   DEFAULT:
     BODY_CLASSES:
