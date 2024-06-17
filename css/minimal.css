@@ -78,6 +78,34 @@ table .text-align-left {
     text-align: right;
   }
 }
+form .form-columns {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+form .form-field {
+  padding: 0.5rem;
+}
+form .form-field .form-data input, form .form-field .form-data textarea {
+  padding: 0.5rem;
+  width: 100%;
+}
+form .form-field .form-data input {
+  height: 2.5rem;
+}
+form .form-field .form-data textarea {
+  min-height: 2.5rem;
+  max-height: 20rem;
+  resize: vertical;
+}
+form .form-column {
+  width: 100%;
+}
+form .buttons {
+  padding: 0.5rem;
+  height: 2.5rem;
+}
+
 .overlay-dark .image-overlay {
   background-color: rgba(0, 0, 0, 0.2);
 }

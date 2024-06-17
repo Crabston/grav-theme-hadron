@@ -1,0 +1,56 @@
+// forms
+@import '../variables';
+
+$form-padding: .5rem;
+$form-field-height: 2.5rem;
+
+// desktop
+form {
+	.form-columns {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	.form-field {
+		padding: .5rem;
+
+		.form-data {
+			input, textarea {
+				padding: $form-padding;
+				width: 100%;
+			}
+
+			input {
+				height: $form-field-height;
+			}
+
+			textarea {
+				min-height: $form-field-height;
+				max-height: 8*$form-field-height;
+				resize: vertical;
+			}
+		}
+	}
+
+	.form-column {
+		width: 100%;
+	}
+
+	.buttons {
+		padding: $form-padding;
+		height: $form-field-height;
+	}
+
+}
+
+
+// desktop
+@media screen and (min-width: 601px) {
+
+}
+
+// mobile
+@media screen and (max-width: 600px) {
+
+}
