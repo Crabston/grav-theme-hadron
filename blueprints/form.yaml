@@ -105,9 +105,25 @@ form:
                     1: Aktiviert
                     0: Deaktiviert
 
+            section_buttons:
+              type: section
+              title: Formular Knöpfe
+              underline: true
+
             header.form.buttons:
+              type: list
+              style: horizontal
               label: Formular Knöpfe
-              #type: list
+              fields:
+                .type:
+                  type: select
+                  label: Typ
+                  options:
+                    submit: Absenden
+                    reset: Zurücksetzen
+                .value:
+                  type: text
+                  label: Label
 
             header.form.process:
               label: Formular Verarbeitung
