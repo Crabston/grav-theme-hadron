@@ -1,0 +1,114 @@
+title: Formular
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        form:
+          type: tab
+          title: Formular
+          fields:
+
+            content_title:
+              type: spacer
+              title: Formular Einstellungen
+
+            header.form.name:
+              label: Formular Name
+              type: text
+
+            header.form.fields:
+              type: list
+              style: vertical
+              label: Formular Felder
+              fields:
+
+                .type:
+                  type: select
+                  label: Typ
+                  options:
+                    text: Text
+                    email: E-Mail
+                    textarea: Textarea
+                    select: Select
+                    radio: Radio
+                    checkboxes: Checkboxes
+                    hidden: Hidden
+                    honeypot: Honeypot
+                    columns: Columns
+
+                .label:
+                  toggleable: true
+                  type: text
+                  label: Label
+
+                .placeholder:
+                  toggleable: true
+                  type: text
+                  label: Platzhalter
+
+                .fields:
+                  toggleable: true
+                  type: list
+                  style: horizontal
+                  label: Felder
+                  help: Typ muss auf Columns gesetzt sein
+                  min: 1
+                  max: 4
+                  fields:
+                    .type:
+                      default: column
+                      readonly: true
+                      type: text
+                      classes: hidden
+
+                    .fields:
+                      type: list
+                      style: vertical
+                      max: 1
+                      fields:
+                        .type:
+                          type: select
+                          label: Typ
+                          options:
+                            text: Text
+                            email: E-Mail
+                            textarea: Textarea
+                            select: Select
+                            radio: Radio
+                            checkboxes: Checkboxes
+                            hidden: Hidden
+                            honeypot: Honeypot
+                            columns: Columns
+                        .label:
+                          type: text
+                          label: Label
+                        .placeholder:
+                          type: text
+                          label: Platzhalter
+                        .validate.required:
+                          toggleable: true
+                          type: toggle
+                          label: Erforderlich
+                          options:
+                            1: Aktiviert
+                            0: Deaktiviert
+
+                .validate.required:
+                  toggleable: true
+                  type: toggle
+                  label: Erforderlich
+                  options:
+                    1: Aktiviert
+                    0: Deaktiviert
+
+            header.form.buttons:
+              label: Formular Knöpfe
+              #type: list
+
+            header.form.process:
+              label: Formular Verarbeitung
+              #type: text
