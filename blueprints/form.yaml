@@ -125,6 +125,16 @@ form:
                   type: text
                   label: Label
 
-            header.form.process:
-              label: Formular Verarbeitung
-              #type: text
+            process:
+              type: section
+              title: Formular Verarbeitung
+              underline: true
+              fields:
+                header.form.process.display:
+                  type: pages
+                  label: Seite
+                  help: Seite auf die nach dem Absenden des Formulars weitergeleitet wird
+                header.form.process.message:
+                  type: text
+                  label: Nachricht
+                  help: Nachricht die nach dem Absenden des Formulars angezeigt wird
