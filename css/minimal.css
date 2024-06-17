@@ -83,27 +83,27 @@ form .form-columns {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
+form .form-columns .form-column {
+  width: 100%;
+}
 form .form-field {
   padding: 0.5rem;
 }
-form .form-field .form-data input, form .form-field .form-data textarea {
-  padding: 0.5rem;
+form .form-field .form-data textarea.fancy {
   width: 100%;
-}
-form .form-field .form-data input {
-  height: 2.5rem;
-}
-form .form-field .form-data textarea {
   min-height: 2.5rem;
   max-height: 20rem;
+  padding: 0.5rem;
   resize: vertical;
 }
-form .form-column {
+form .form-field .form-data input.fancy[type=text], form .form-field .form-data input.fancy[type=email], form .form-field .form-data input.fancy[type=tel], form .form-field .form-data input.fancy[type=date], form .form-field .form-data input.fancy[type=number], form .form-field .form-data input.fancy[type=url] {
   width: 100%;
-}
-form .buttons {
-  padding: 0.5rem;
   height: 2.5rem;
+  padding: 0.5rem;
+}
+form .form-field .buttons {
+  height: 2.5rem;
+  padding: 0.5rem;
 }
 
 .overlay-dark .image-overlay {
