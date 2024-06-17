@@ -96,12 +96,32 @@ form .form-field .form-data textarea.fancy {
   padding: 0.5rem;
   resize: vertical;
 }
-form .form-field .form-data input.fancy[type=text], form .form-field .form-data input.fancy[type=email], form .form-field .form-data input.fancy[type=tel], form .form-field .form-data input.fancy[type=date], form .form-field .form-data input.fancy[type=number], form .form-field .form-data input.fancy[type=url] {
+
+form .form-field .form-data input.fancy[type=text], form .form-field .form-data input.fancy[type=email], form .form-field .form-data input.fancy[type=tel], form .form-field .form-data input.fancy[type=date], form .form-field .form-data input.fancy[type=number], form .form-field .form-data input.fancy[type=url], form .form-field .form-data input.fancy[type=range] {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem;
 }
-form .form-field .buttons {
+
+form .form-field .form-data select.fancy {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+form .form-field .form-data select.fancy[multiple] {
+  height: auto;
+  max-height: 15rem;
+}
+
+form .buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+form .buttons button {
+  width: 100%;
   height: 2.5rem;
   padding: 0.5rem;
 }
