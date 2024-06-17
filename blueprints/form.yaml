@@ -133,6 +133,7 @@ form:
             process:
               type: section
               title: Formular Verarbeitung
+              text: Weitere Optionen müssen via Frontmatter gesetzt werden.
               underline: true
               fields:
                 header.form.process.display:
