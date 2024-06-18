@@ -1,0 +1,82 @@
+// forms
+@use 'sass:selector';
+@import '../variables';
+
+@mixin unify-parent($child) {
+	@at-root #{selector.unify(&, $child)} {
+		@content;
+	}
+}
+
+// desktop
+form {
+	$form-padding: .5rem;
+	$form-field-height: 2.5rem;
+
+	@mixin layout {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	@mixin form-field {
+		width: 100%;
+		height: $form-field-height;
+		padding: $form-padding;
+	}
+
+	.form-columns {
+		@include layout;
+
+		.form-column {
+			width: 100%;
+		}
+	}
+
+	.form-field {
+		padding: .5rem;
+
+		.form-data :not(.no-css) {
+			@include unify-parent('textarea') {
+				width: 100%;
+				min-height: 2*$form-field-height;
+				max-height: 8*$form-field-height;
+				padding: $form-padding;
+				resize: vertical;
+			}
+
+			@include unify-parent('input') {
+				&[type='text'],
+				&[type='email'],
+				&[type='tel'],
+				&[type='date'],
+				&[type='number'],
+				&[type='url'],
+				&[type='range'] {
+					@include form-field;
+				}
+			}
+
+			@include unify-parent('select') {
+				@include form-field;
+
+				&[multiple] {
+					height: auto;
+					max-height: 6*$form-field-height;
+				}
+			}
+		}
+
+	}
+
+	// TODO: unify buttons with fancy class
+	.buttons {
+		@include layout;
+		gap: 1rem;
+		padding: $form-padding;
+
+		button {
+			@include form-field;
+		}
+	}
+}

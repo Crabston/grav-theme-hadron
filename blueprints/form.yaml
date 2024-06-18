@@ -1,0 +1,169 @@
+title: Formular
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        form:
+          type: tab
+          title: Formular
+          fields:
+
+            title:
+              type: spacer
+              title: Formular Einstellungen
+
+            header.form.name:
+              label: Formular Name
+              type: text
+
+            # TODO: create fields that work an will be saved in the frontmatter correctly
+            fields:
+              type: section
+              title: Formular Felder
+              text: _Noch nicht implementiert._ Felder bitte via Frontmatter setzen.
+              underline: true
+              #fields:
+              #  header.form.fields:
+              #    type: list
+              #    style: vertical
+              #    label: Formular Felder
+              #    fields:
+#
+              #      .type:
+              #        type: select
+              #        label: Typ
+              #        options:
+              #          text: Text
+              #          email: E-Mail
+              #          textarea: Textarea
+              #          select: Select
+              #          radio: Radio
+              #          checkboxes: Checkboxes
+              #          hidden: Hidden
+              #          honeypot: Honeypot
+              #          columns: Columns
+#
+              #      .label:
+              #        toggleable: true
+              #        type: text
+              #        label: Label
+#
+              #      .placeholder:
+              #        toggleable: true
+              #        type: text
+              #        label: Platzhalter
+#
+              #      .classes:
+              #        toggleable: true
+              #        type: text
+              #        label: CSS Klassen
+#
+              #      .validate.required:
+              #        toggleable: true
+              #        type: toggle
+              #        label: Erforderlich
+              #        options:
+              #          1: Aktiviert
+              #          0: Deaktiviert
+#
+              #      .fields:
+              #        toggleable: true
+              #        type: list
+              #        style: horizontal
+              #        label: Felder
+              #        help: Typ muss auf Columns gesetzt sein
+              #        min: 1
+              #        max: 4
+              #        fields:
+              #          .type:
+              #            type: text
+              #            default: column
+              #            classes: hidden
+              #            readonly: true
+              #          .fields:
+              #            type: list
+              #            style: vertical
+              #            max: 1
+              #            fields:
+#
+              #              .type:
+              #                type: select
+              #                label: Typ
+              #                options:
+              #                  text: Text
+              #                  email: E-Mail
+              #                  textarea: Textarea
+              #                  select: Select
+              #                  radio: Radio
+              #                  checkboxes: Checkboxes
+              #                  hidden: Hidden
+              #                  honeypot: Honeypot
+              #                  columns: Columns
+#
+              #              .label:
+              #                toggleable: true
+              #                type: text
+              #                label: Label
+#
+              #              .placeholder:
+              #                toggleable: true
+              #                type: text
+              #                label: Platzhalter
+#
+              #              .classes:
+              #                toggleable: true
+              #                type: text
+              #                label: CSS Klassen
+#
+              #              .validate.required:
+              #                toggleable: true
+              #                type: toggle
+              #                label: Erforderlich
+              #                options:
+              #                  1: Aktiviert
+              #                  0: Deaktiviert
+
+            # TODO: add predefined buttons
+            buttons:
+              type: section
+              title: Formular Knöpfe
+              underline: true
+              fields:
+                header.form.buttons:
+                  type: list
+                  style: horizontal
+                  label: Formular Knöpfe
+                  fields:
+                    .type:
+                      type: select
+                      label: Typ
+                      options:
+                        submit: Submit
+                        reset: Reset
+                    .value:
+                      type: text
+                      label: Label
+                    .classes:
+                      toggleable: true
+                      type: text
+                      label: CSS Klassen
+
+            # TODO: add process options for email & save and eventually more
+            process:
+              type: section
+              title: Formular Verarbeitung
+              text: Weitere Optionen müssen via Frontmatter gesetzt werden.
+              underline: true
+              fields:
+                header.form.process.display:
+                  type: text
+                  label: Seite
+                  help: Seite auf die nach dem Absenden des Formulars weitergeleitet wird
+                header.form.process.message:
+                  type: text
+                  label: Nachricht
+                  help: Nachricht die nach dem Absenden des Formulars angezeigt wird
