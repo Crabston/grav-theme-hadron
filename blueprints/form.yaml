@@ -55,6 +55,19 @@ form:
                       type: text
                       label: Platzhalter
 
+                    .classes:
+                      toggleable: true
+                      type: text
+                      label: CSS Klassen
+
+                    .validate.required:
+                      toggleable: true
+                      type: toggle
+                      label: Erforderlich
+                      options:
+                        1: Aktiviert
+                        0: Deaktiviert
+
                     .fields:
                       toggleable: true
                       type: list
@@ -65,16 +78,16 @@ form:
                       max: 4
                       fields:
                         .type:
-                          default: column
-                          readonly: true
                           type: text
+                          default: column
                           classes: hidden
-
+                          readonly: true
                         .fields:
                           type: list
                           style: vertical
                           max: 1
                           fields:
+
                             .type:
                               type: select
                               label: Typ
@@ -88,12 +101,22 @@ form:
                                 hidden: Hidden
                                 honeypot: Honeypot
                                 columns: Columns
+
                             .label:
+                              toggleable: true
                               type: text
                               label: Label
+
                             .placeholder:
+                              toggleable: true
                               type: text
                               label: Platzhalter
+
+                            .classes:
+                              toggleable: true
+                              type: text
+                              label: CSS Klassen
+
                             .validate.required:
                               toggleable: true
                               type: toggle
@@ -101,14 +124,6 @@ form:
                               options:
                                 1: Aktiviert
                                 0: Deaktiviert
-
-                    .validate.required:
-                      toggleable: true
-                      type: toggle
-                      label: Erforderlich
-                      options:
-                        1: Aktiviert
-                        0: Deaktiviert
 
             buttons:
               type: section
@@ -124,11 +139,15 @@ form:
                       type: select
                       label: Typ
                       options:
-                        submit: Absenden
-                        reset: Zurücksetzen
+                        submit: Submit
+                        reset: Reset
                     .value:
                       type: text
                       label: Label
+                    .classes:
+                      toggleable: true
+                      type: text
+                      label: CSS Klassen
 
             process:
               type: section
@@ -137,7 +156,7 @@ form:
               underline: true
               fields:
                 header.form.process.display:
-                  type: pages
+                  type: text
                   label: Seite
                   help: Seite auf die nach dem Absenden des Formulars weitergeleitet wird
                 header.form.process.message:
