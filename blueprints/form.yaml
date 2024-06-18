@@ -20,111 +20,114 @@ form:
               label: Formular Name
               type: text
 
+            # TODO: create fields that work an will be saved in the frontmatter correctly
             fields:
               type: section
               title: Formular Felder
+              text: _Noch nicht implementiert._ Felder bitte via Frontmatter setzen.
               underline: true
-              fields:
-                header.form.fields:
-                  type: list
-                  style: vertical
-                  label: Formular Felder
-                  fields:
+              #fields:
+              #  header.form.fields:
+              #    type: list
+              #    style: vertical
+              #    label: Formular Felder
+              #    fields:
+#
+              #      .type:
+              #        type: select
+              #        label: Typ
+              #        options:
+              #          text: Text
+              #          email: E-Mail
+              #          textarea: Textarea
+              #          select: Select
+              #          radio: Radio
+              #          checkboxes: Checkboxes
+              #          hidden: Hidden
+              #          honeypot: Honeypot
+              #          columns: Columns
+#
+              #      .label:
+              #        toggleable: true
+              #        type: text
+              #        label: Label
+#
+              #      .placeholder:
+              #        toggleable: true
+              #        type: text
+              #        label: Platzhalter
+#
+              #      .classes:
+              #        toggleable: true
+              #        type: text
+              #        label: CSS Klassen
+#
+              #      .validate.required:
+              #        toggleable: true
+              #        type: toggle
+              #        label: Erforderlich
+              #        options:
+              #          1: Aktiviert
+              #          0: Deaktiviert
+#
+              #      .fields:
+              #        toggleable: true
+              #        type: list
+              #        style: horizontal
+              #        label: Felder
+              #        help: Typ muss auf Columns gesetzt sein
+              #        min: 1
+              #        max: 4
+              #        fields:
+              #          .type:
+              #            type: text
+              #            default: column
+              #            classes: hidden
+              #            readonly: true
+              #          .fields:
+              #            type: list
+              #            style: vertical
+              #            max: 1
+              #            fields:
+#
+              #              .type:
+              #                type: select
+              #                label: Typ
+              #                options:
+              #                  text: Text
+              #                  email: E-Mail
+              #                  textarea: Textarea
+              #                  select: Select
+              #                  radio: Radio
+              #                  checkboxes: Checkboxes
+              #                  hidden: Hidden
+              #                  honeypot: Honeypot
+              #                  columns: Columns
+#
+              #              .label:
+              #                toggleable: true
+              #                type: text
+              #                label: Label
+#
+              #              .placeholder:
+              #                toggleable: true
+              #                type: text
+              #                label: Platzhalter
+#
+              #              .classes:
+              #                toggleable: true
+              #                type: text
+              #                label: CSS Klassen
+#
+              #              .validate.required:
+              #                toggleable: true
+              #                type: toggle
+              #                label: Erforderlich
+              #                options:
+              #                  1: Aktiviert
+              #                  0: Deaktiviert
 
-                    .type:
-                      type: select
-                      label: Typ
-                      options:
-                        text: Text
-                        email: E-Mail
-                        textarea: Textarea
-                        select: Select
-                        radio: Radio
-                        checkboxes: Checkboxes
-                        hidden: Hidden
-                        honeypot: Honeypot
-                        columns: Columns
-
-                    .label:
-                      toggleable: true
-                      type: text
-                      label: Label
-
-                    .placeholder:
-                      toggleable: true
-                      type: text
-                      label: Platzhalter
-
-                    .classes:
-                      toggleable: true
-                      type: text
-                      label: CSS Klassen
-
-                    .validate.required:
-                      toggleable: true
-                      type: toggle
-                      label: Erforderlich
-                      options:
-                        1: Aktiviert
-                        0: Deaktiviert
-
-                    .fields:
-                      toggleable: true
-                      type: list
-                      style: horizontal
-                      label: Felder
-                      help: Typ muss auf Columns gesetzt sein
-                      min: 1
-                      max: 4
-                      fields:
-                        .type:
-                          type: text
-                          default: column
-                          classes: hidden
-                          readonly: true
-                        .fields:
-                          type: list
-                          style: vertical
-                          max: 1
-                          fields:
-
-                            .type:
-                              type: select
-                              label: Typ
-                              options:
-                                text: Text
-                                email: E-Mail
-                                textarea: Textarea
-                                select: Select
-                                radio: Radio
-                                checkboxes: Checkboxes
-                                hidden: Hidden
-                                honeypot: Honeypot
-                                columns: Columns
-
-                            .label:
-                              toggleable: true
-                              type: text
-                              label: Label
-
-                            .placeholder:
-                              toggleable: true
-                              type: text
-                              label: Platzhalter
-
-                            .classes:
-                              toggleable: true
-                              type: text
-                              label: CSS Klassen
-
-                            .validate.required:
-                              toggleable: true
-                              type: toggle
-                              label: Erforderlich
-                              options:
-                                1: Aktiviert
-                                0: Deaktiviert
-
+            # TODO: add predefined buttons
             buttons:
               type: section
               title: Formular Knöpfe
@@ -149,6 +152,7 @@ form:
                       type: text
                       label: CSS Klassen
 
+            # TODO: add process options for email & save and eventually more
             process:
               type: section
               title: Formular Verarbeitung
