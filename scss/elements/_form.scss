@@ -36,10 +36,10 @@ form {
 	.form-field {
 		padding: .5rem;
 
-		.form-data .fancy {
+		.form-data :not(.no-css) {
 			@include unify-parent('textarea') {
 				width: 100%;
-				min-height: $form-field-height;
+				min-height: 2*$form-field-height;
 				max-height: 8*$form-field-height;
 				padding: $form-padding;
 				resize: vertical;

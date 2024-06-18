@@ -89,26 +89,26 @@ form .form-columns .form-column {
 form .form-field {
   padding: 0.5rem;
 }
-form .form-field .form-data textarea.fancy {
+form .form-field .form-data textarea:not(.no-css) {
   width: 100%;
-  min-height: 2.5rem;
+  min-height: 5rem;
   max-height: 20rem;
   padding: 0.5rem;
   resize: vertical;
 }
 
-form .form-field .form-data input.fancy[type=text], form .form-field .form-data input.fancy[type=email], form .form-field .form-data input.fancy[type=tel], form .form-field .form-data input.fancy[type=date], form .form-field .form-data input.fancy[type=number], form .form-field .form-data input.fancy[type=url], form .form-field .form-data input.fancy[type=range] {
+form .form-field .form-data input:not(.no-css)[type=text], form .form-field .form-data input:not(.no-css)[type=email], form .form-field .form-data input:not(.no-css)[type=tel], form .form-field .form-data input:not(.no-css)[type=date], form .form-field .form-data input:not(.no-css)[type=number], form .form-field .form-data input:not(.no-css)[type=url], form .form-field .form-data input:not(.no-css)[type=range] {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem;
 }
 
-form .form-field .form-data select.fancy {
+form .form-field .form-data select:not(.no-css) {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem;
 }
-form .form-field .form-data select.fancy[multiple] {
+form .form-field .form-data select:not(.no-css)[multiple] {
   height: auto;
   max-height: 15rem;
 }
