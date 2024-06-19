@@ -146,6 +146,10 @@ form .buttons button {
   padding: 1rem;
 }
 
+.hero h2 .toc-anchor {
+  display: none;
+}
+
 #footer {
   margin-top: 3rem;
   padding: 1rem;
