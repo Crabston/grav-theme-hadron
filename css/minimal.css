@@ -78,18 +78,18 @@ table .text-align-left {
     text-align: right;
   }
 }
-form .form-columns {
+form:not(.login-form) .form-columns {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-form .form-columns .form-column {
+form:not(.login-form) .form-columns .form-column {
   width: 100%;
 }
-form .form-field {
+form:not(.login-form) .form-field {
   padding: 0.5rem;
 }
-form .form-field .form-data textarea:not(.no-css) {
+form:not(.login-form) .form-field .form-data textarea:not(.no-css) {
   width: 100%;
   min-height: 5rem;
   max-height: 20rem;
@@ -97,30 +97,30 @@ form .form-field .form-data textarea:not(.no-css) {
   resize: vertical;
 }
 
-form .form-field .form-data input:not(.no-css)[type=text], form .form-field .form-data input:not(.no-css)[type=email], form .form-field .form-data input:not(.no-css)[type=tel], form .form-field .form-data input:not(.no-css)[type=date], form .form-field .form-data input:not(.no-css)[type=number], form .form-field .form-data input:not(.no-css)[type=url], form .form-field .form-data input:not(.no-css)[type=range] {
+form:not(.login-form) .form-field .form-data input:not(.no-css)[type=text], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=email], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=tel], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=date], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=number], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=url], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=range], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=password] {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem;
 }
 
-form .form-field .form-data select:not(.no-css) {
+form:not(.login-form) .form-field .form-data select:not(.no-css) {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem;
 }
-form .form-field .form-data select:not(.no-css)[multiple] {
+form:not(.login-form) .form-field .form-data select:not(.no-css)[multiple] {
   height: auto;
   max-height: 15rem;
 }
 
-form .buttons {
+form:not(.login-form) .buttons {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.5rem;
 }
-form .buttons button {
+form:not(.login-form) .buttons button {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem;
