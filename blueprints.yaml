@@ -17,14 +17,5 @@ license: MIT
 
 dependencies:
   - { name: grav, version: '>=1.6.0' }
-  - healthcheck
-  - email-sendgrid
-  - featherlight
-  - youtube
-  - sitemap
-  - shortcode-gallery-plusplus
-  - shortcode-owl-carousel
-  - shortcode-ui
-  - shortcode-core
   - quark-open-publishing
   - quark
