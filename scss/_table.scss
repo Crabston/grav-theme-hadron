@@ -3,8 +3,8 @@ table {
 	border-spacing: unset;
 
 	th {
-		background-color: $prim-color;
-		color: #FFFFFF;
+		background-color: $primary-color;
+		color: $text-color-secondary;
 	}
 
 	th, td { padding: 0.2rem 0.5rem; }
@@ -16,7 +16,7 @@ table {
 		text-transform: uppercase;
 	}
 
-	tr:nth-child(even) { background-color: #DCDCDC; }
+	tr:nth-child(even) { background-color: $dark-overlay; }
 
 	.text-align-center { text-align: center; }
 
@@ -27,12 +27,12 @@ table {
 
 
 // desktop
-@media screen and (min-width: 601px) {
+@media screen and (min-width: $responsive-breakpoint-mobile+1) {
 	table td::before { display: none; }
 }
 
 // mobile
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $responsive-breakpoint-mobile) {
 	.table-responsive table {
 		border: 0;
 		width: 100%;
@@ -51,13 +51,13 @@ table {
 		}
 
 		tr {
-			border-bottom: 3px solid $sec-color;
+			border-bottom: 3px solid $background-color;
 			display: block;
 			margin-bottom: .625em;
 		}
 
 		td {
-			border-bottom: 1px solid #DDDDDD;
+			border-bottom: 1px solid $dark-overlay;
 			display: block;
 			font-size: .8em;
 

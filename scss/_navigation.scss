@@ -18,26 +18,28 @@
 }
 
 // mobile navigation menu button
-.mobile-menu #toggle span {
-	background: $sec-text-color;
+body:not(.header-dark) .mobile-menu #toggle:not(.active) span,
+#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
+	background: $text-color;
 }
 
-#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
-	background: $pri-text-color;
+body.header-dark .mobile-menu #toggle span,
+.mobile-menu #toggle.active span {
+	background: $text-color-secondary;
 }
 
 // mobile nav
 .mobile-container {
 	.mobile-logo {
 		.title {
-			color: $sec-text-color;
+			color: $text-color-secondary;
 		}
 	}
 
 	.overlay-menu {
 		a, .toggler {
 			padding: 1rem;
-			color: $sec-text-color;
+			color: $text-color-secondary;
 		}
 
 		.toggler {

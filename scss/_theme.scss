@@ -1,18 +1,25 @@
-// theme variables
+@use 'sass:color';
 
-// colors
-$bg-color: #FFFFFF;
-$pri-text-color: #3D3D3D;
-$sec-text-color: #FFFFFF;
-$pri-bg-color: #FFFFFF;
-$sec-color: #4063CB;
-$prim-color: #4063CB;
+// color definitions
+$primary-color: #4063CB;
+$accent-color: #4063CB;
+$grey: #3a414e;
+$light-overlay: rgba(255, 255, 255, 0.25);
+$dark-overlay: rgba(0, 0, 0, 0.25);
 
 // elements
-$header-color: #FFFFFF;
-$footer-color: #FFFFFF;
+$background-color: white;
+$text-color: $grey;
+$text-color-light: mix($text-color, $light-overlay, 25%);
+$text-color-secondary: white;
+$text-color-secondary-dark: mix($text-color-secondary, $dark-overlay);
 
 // hero image
 $overlay-dark: #00000033;
 $overlay-dark-grad-from: #0000004D;
 $overlay-dark-grad-to: #00000000;
+
+// sizes
+$responsive-breakpoint-mobile: 640px;
+$responsive-breakpoint-tablet: 840px;
+$responsive-breakpoint-desktop: 1280px;

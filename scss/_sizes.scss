@@ -1,16 +1,16 @@
 // sizes
 
 // desktop
-@media screen and (min-width: 901px) {
+@media screen and (min-width: $responsive-breakpoint-tablet+1) {
 	// ...
 }
 
 // tablet
-@media screen and (max-width: 900px) {
+@media screen and (max-width: $responsive-breakpoint-tablet) {
 	// ...
 }
 
 // mobile
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $responsive-breakpoint-mobile) {
 	// ...
 }

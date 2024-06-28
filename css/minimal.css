@@ -1,5 +1,5 @@
 .bg-gray {
-  background-color: #ffffff !important;
+  background-color: white !important;
 }
 
 section.modular-text {
@@ -10,10 +10,10 @@ section.modular-text h2 {
 }
 
 body:not(.header-dark).header-transparent #header:not(.scrolled) a {
-  color: rgba(255, 255, 255, 0.7019607843) !important;
+  color: rgba(223, 223, 223, 0.625) !important;
 }
 body:not(.header-dark).header-transparent #header:not(.scrolled) a.active {
-  color: #FFFFFF !important;
+  color: white !important;
 }
 
 #footer {
@@ -44,20 +44,22 @@ body:not(.header-dark).header-transparent #header:not(.scrolled) a.active {
   margin-top: 0;
 }
 
-.mobile-menu #toggle span {
-  background: #ffffff;
+body:not(.header-dark) .mobile-menu #toggle:not(.active) span,
+#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
+  background: #3a414e;
 }
 
-#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
-  background: #3d3d3d;
+body.header-dark .mobile-menu #toggle span,
+.mobile-menu #toggle.active span {
+  background: white;
 }
 
 .mobile-container .mobile-logo .title {
-  color: #ffffff;
+  color: white;
 }
 .mobile-container .overlay-menu a, .mobile-container .overlay-menu .toggler {
   padding: 1rem;
-  color: #ffffff;
+  color: white;
 }
 .mobile-container .overlay-menu .toggler {
   font-size: 1.5rem;
@@ -120,8 +122,8 @@ table {
   border-spacing: unset;
 }
 table th {
-  background-color: #4063cb;
-  color: #ffffff;
+  background-color: #4063CB;
+  color: white;
 }
 table th, table td {
   padding: 0.2rem 0.5rem;
@@ -133,7 +135,7 @@ table td::before {
   text-transform: uppercase;
 }
 table tr:nth-child(even) {
-  background-color: #dcdcdc;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 table .text-align-center {
   text-align: center;
@@ -145,12 +147,12 @@ table .text-align-left {
   text-align: left;
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 641px) {
   table td::before {
     display: none;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .table-responsive table {
     border: 0;
     width: 100%;
@@ -169,12 +171,12 @@ table .text-align-left {
     width: 1px;
   }
   .table-responsive table tr {
-    border-bottom: 3px solid #4063cb;
+    border-bottom: 3px solid white;
     display: block;
     margin-bottom: 0.625em;
   }
   .table-responsive table td {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     display: block;
     font-size: 0.8em;
   }

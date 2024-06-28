@@ -1,5 +1,5 @@
 // spectre overrides
-.bg-gray { background-color: $bg-color !important;}
+.bg-gray { background-color: $background-color !important;}
 
 // grav overrides
 section.modular-text {
@@ -12,10 +12,10 @@ section.modular-text {
 body {
 	&:not(.header-dark).header-transparent #header:not(.scrolled) {
 		a {
-			color: #FFFFFFB3 !important;
+			color: $text-color-secondary-dark !important;
 
 			&.active {
-				color: #FFFFFF !important;
+				color: $text-color-secondary !important;
 			}
 		}
 	}
