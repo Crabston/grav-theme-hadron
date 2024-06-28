@@ -1,0 +1,25 @@
+@use 'sass:color';
+
+// color definitions
+$primary-color: #4063CB;
+$accent-color: #4063CB;
+$grey: #3a414e;
+$light-overlay: rgba(255, 255, 255, 0.25);
+$dark-overlay: rgba(0, 0, 0, 0.25);
+
+// elements
+$background-color: white;
+$text-color: $grey;
+$text-color-light: mix($text-color, $light-overlay, 25%);
+$text-color-secondary: white;
+$text-color-secondary-dark: mix($text-color-secondary, $dark-overlay);
+
+// hero image
+$overlay-dark: #00000033;
+$overlay-dark-grad-from: #0000004D;
+$overlay-dark-grad-to: #00000000;
+
+// sizes
+$responsive-breakpoint-mobile: 640px;
+$responsive-breakpoint-tablet: 840px;
+$responsive-breakpoint-desktop: 1280px;

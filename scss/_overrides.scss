@@ -1,12 +1,22 @@
-// global overrides
-@import "variables";
-
 // spectre overrides
-.bg-gray { background-color: $bg-color !important;}
+.bg-gray { background-color: $background-color !important;}
 
 // grav overrides
 section.modular-text {
 	padding: 1rem;
 
-	h2 {margin-top: 1rem;}
+	h2 { margin-top: 1rem; }
+}
+
+// body CSS classes
+body {
+	&:not(.header-dark).header-transparent #header:not(.scrolled) {
+		a {
+			color: $text-color-secondary-dark !important;
+
+			&.active {
+				color: $text-color-secondary !important;
+			}
+		}
+	}
 }

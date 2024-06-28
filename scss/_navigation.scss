@@ -1,11 +1,6 @@
-// navigation
-@import 'variables';
-
 // navigation general
 #header nav.navbar,
 .mobile-container .mobile-logo {
-
-	// brand
 	.navbar-brand {
 		gap: 1rem;
 
@@ -19,10 +14,37 @@
 .mobile-container .mobile-logo {
 	margin-top: .7rem;
 
-	img {margin-top: 0;}
+	img { margin-top: 0; }
 }
 
 // mobile navigation menu button
-.mobile-menu .button_container span {
-	background: $sec-text-color;
+body:not(.header-dark) .mobile-menu #toggle:not(.active) span,
+#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
+	background: $text-color;
+}
+
+body.header-dark .mobile-menu #toggle span,
+.mobile-menu #toggle.active span {
+	background: $text-color-secondary;
+}
+
+// mobile nav
+.mobile-container {
+	.mobile-logo {
+		.title {
+			color: $text-color-secondary;
+		}
+	}
+
+	.overlay-menu {
+		a, .toggler {
+			padding: 1rem;
+			color: $text-color-secondary;
+		}
+
+		.toggler {
+			font-size: 1.5rem;
+			padding: 1rem;
+		}
+	}
 }

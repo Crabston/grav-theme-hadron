@@ -1,20 +1,21 @@
-@use 'overrides';
-@use 'variables';
-@use 'elements';
-@use 'sizes';
-@use 'hero';
-@use 'header-footer';
-@use 'navigation';
+// general
+@import 'theme';
+@import 'overrides';
+@import 'sizes';
+
+// components
+@import 'header-footer';
+@import 'navigation';
+@import 'hero';
+@import 'form';
+@import 'table';
+@import 'components';
 
 // css reset
-* {
-	box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 // smooth scroll (for anchor links)
-html {
-	scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 .f {
 	display: flex;
