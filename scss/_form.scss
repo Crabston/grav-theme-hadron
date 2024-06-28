@@ -1,6 +1,4 @@
-// forms
 @use 'sass:selector';
-@import 'variables';
 
 @mixin unify-parent($child) {
 	@at-root #{selector.unify(&, $child)} {

@@ -1,17 +1,15 @@
 // general
-@use 'variables';
-@use 'overrides';
+@import 'theme';
+@import 'overrides';
+@import 'sizes';
 
 // components
-@use 'header-footer';
-@use 'navigation';
-@use 'hero';
-@use 'form';
-@use 'table';
-@use 'components';
-
-// other
-@use 'sizes';
+@import 'header-footer';
+@import 'navigation';
+@import 'hero';
+@import 'form';
+@import 'table';
+@import 'components';
 
 // css reset
 * {

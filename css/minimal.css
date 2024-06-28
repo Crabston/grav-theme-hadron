@@ -16,6 +16,106 @@ body:not(.header-dark).header-transparent #header:not(.scrolled) a.active {
   color: #FFFFFF !important;
 }
 
+#footer {
+  margin-top: 3rem;
+  padding: 1rem;
+}
+#footer p {
+  margin: 0;
+}
+
+#header nav.navbar .navbar-brand,
+.mobile-container .mobile-logo .navbar-brand {
+  gap: 1rem;
+}
+#header nav.navbar .navbar-brand .title,
+.mobile-container .mobile-logo .navbar-brand .title {
+  font-size: 1.5rem;
+}
+#header nav.navbar .navbar-brand:hover,
+.mobile-container .mobile-logo .navbar-brand:hover {
+  text-decoration: none;
+}
+
+.mobile-container .mobile-logo {
+  margin-top: 0.7rem;
+}
+.mobile-container .mobile-logo img {
+  margin-top: 0;
+}
+
+.mobile-menu #toggle span {
+  background: #ffffff;
+}
+
+#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
+  background: #3d3d3d;
+}
+
+.mobile-container .mobile-logo .title {
+  color: #ffffff;
+}
+.mobile-container .overlay-menu a, .mobile-container .overlay-menu .toggler {
+  padding: 1rem;
+  color: #ffffff;
+}
+.mobile-container .overlay-menu .toggler {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.hero h2 .toc-anchor {
+  display: none;
+}
+
+form:not(.login-form) .form-columns {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+form:not(.login-form) .form-columns .form-column {
+  width: 100%;
+}
+form:not(.login-form) .form-field {
+  padding: 0.5rem;
+}
+form:not(.login-form) .form-field .form-data textarea:not(.no-css) {
+  width: 100%;
+  min-height: 5rem;
+  max-height: 20rem;
+  padding: 0.5rem;
+  resize: vertical;
+}
+
+form:not(.login-form) .form-field .form-data input:not(.no-css)[type=text], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=email], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=tel], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=date], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=number], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=url], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=range], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=password] {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
+form:not(.login-form) .form-field .form-data select:not(.no-css) {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+form:not(.login-form) .form-field .form-data select:not(.no-css)[multiple] {
+  height: auto;
+  max-height: 15rem;
+}
+
+form:not(.login-form) .buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+form:not(.login-form) .buttons button {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
 table {
   border-spacing: unset;
 }
@@ -85,66 +185,6 @@ table .text-align-left {
     text-align: right;
   }
 }
-form:not(.login-form) .form-columns {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-form:not(.login-form) .form-columns .form-column {
-  width: 100%;
-}
-form:not(.login-form) .form-field {
-  padding: 0.5rem;
-}
-form:not(.login-form) .form-field .form-data textarea:not(.no-css) {
-  width: 100%;
-  min-height: 5rem;
-  max-height: 20rem;
-  padding: 0.5rem;
-  resize: vertical;
-}
-
-form:not(.login-form) .form-field .form-data input:not(.no-css)[type=text], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=email], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=tel], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=date], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=number], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=url], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=range], form:not(.login-form) .form-field .form-data input:not(.no-css)[type=password] {
-  width: 100%;
-  height: 2.5rem;
-  padding: 0.5rem;
-}
-
-form:not(.login-form) .form-field .form-data select:not(.no-css) {
-  width: 100%;
-  height: 2.5rem;
-  padding: 0.5rem;
-}
-form:not(.login-form) .form-field .form-data select:not(.no-css)[multiple] {
-  height: auto;
-  max-height: 15rem;
-}
-
-form:not(.login-form) .buttons {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.5rem;
-}
-form:not(.login-form) .buttons button {
-  width: 100%;
-  height: 2.5rem;
-  padding: 0.5rem;
-}
-
-.mobile-container .mobile-logo .title {
-  color: #ffffff;
-}
-.mobile-container .overlay-menu a, .mobile-container .overlay-menu .toggler {
-  padding: 1rem;
-  color: #ffffff;
-}
-.mobile-container .overlay-menu .toggler {
-  font-size: 1.5rem;
-  padding: 1rem;
-}
-
 .overlay-dark .image-overlay {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -163,46 +203,6 @@ form:not(.login-form) .buttons button {
 }
 .sponsoren-list img {
   padding: 1rem;
-}
-
-.hero h2 .toc-anchor {
-  display: none;
-}
-
-#footer {
-  margin-top: 3rem;
-  padding: 1rem;
-}
-#footer p {
-  margin: 0;
-}
-
-#header nav.navbar .navbar-brand,
-.mobile-container .mobile-logo .navbar-brand {
-  gap: 1rem;
-}
-#header nav.navbar .navbar-brand .title,
-.mobile-container .mobile-logo .navbar-brand .title {
-  font-size: 1.5rem;
-}
-#header nav.navbar .navbar-brand:hover,
-.mobile-container .mobile-logo .navbar-brand:hover {
-  text-decoration: none;
-}
-
-.mobile-container .mobile-logo {
-  margin-top: 0.7rem;
-}
-.mobile-container .mobile-logo img {
-  margin-top: 0;
-}
-
-.mobile-menu #toggle span {
-  background: #ffffff;
-}
-
-#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
-  background: #3d3d3d;
 }
 
 * {
