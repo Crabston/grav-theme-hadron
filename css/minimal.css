@@ -133,6 +133,18 @@ form:not(.login-form) .buttons button {
   padding: 0.5rem;
 }
 
+.mobile-container .mobile-logo .title {
+  color: #ffffff;
+}
+.mobile-container .overlay-menu a, .mobile-container .overlay-menu .toggler {
+  padding: 1rem;
+  color: #ffffff;
+}
+.mobile-container .overlay-menu .toggler {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
 .overlay-dark .image-overlay {
   background-color: rgba(0, 0, 0, 0.2);
 }
