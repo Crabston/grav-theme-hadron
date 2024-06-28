@@ -9,6 +9,13 @@ section.modular-text h2 {
   margin-top: 1rem;
 }
 
+body:not(.header-dark).header-transparent #header:not(.scrolled) a {
+  color: rgba(255, 255, 255, 0.7019607843) !important;
+}
+body:not(.header-dark).header-transparent #header:not(.scrolled) a.active {
+  color: #FFFFFF !important;
+}
+
 table {
   border-spacing: unset;
 }

@@ -1,5 +1,5 @@
 // global overrides
-@import "variables";
+@import 'variables';
 
 // spectre overrides
 .bg-gray { background-color: $bg-color !important;}
@@ -9,4 +9,17 @@ section.modular-text {
 	padding: 1rem;
 
 	h2 {margin-top: 1rem;}
+}
+
+// body CSS classes
+body {
+	&:not(.header-dark).header-transparent #header:not(.scrolled) {
+		a {
+			color: #FFFFFFB3 !important;
+
+			&.active {
+				color: #FFFFFF !important;
+			}
+		}
+	}
 }
