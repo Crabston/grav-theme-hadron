@@ -12,14 +12,10 @@
 @import 'components';
 
 // css reset
-* {
-	box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 // smooth scroll (for anchor links)
-html {
-	scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 .f {
 	display: flex;

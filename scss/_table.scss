@@ -4,7 +4,7 @@ table {
 
 	th {
 		background-color: $prim-color;
-		color: #ffffff;
+		color: #FFFFFF;
 	}
 
 	th, td { padding: 0.2rem 0.5rem; }
@@ -16,7 +16,7 @@ table {
 		text-transform: uppercase;
 	}
 
-	tr:nth-child(even) { background-color: #dcdcdc; }
+	tr:nth-child(even) { background-color: #DCDCDC; }
 
 	.text-align-center { text-align: center; }
 
@@ -57,7 +57,7 @@ table {
 		}
 
 		td {
-			border-bottom: 1px solid #dddddd;
+			border-bottom: 1px solid #DDDDDD;
 			display: block;
 			font-size: .8em;
 
