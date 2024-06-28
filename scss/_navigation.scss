@@ -4,8 +4,6 @@
 // navigation general
 #header nav.navbar,
 .mobile-container .mobile-logo {
-
-	// brand
 	.navbar-brand {
 		gap: 1rem;
 
@@ -29,4 +27,24 @@
 
 #header.scrolled ~ .mobile-menu #toggle:not(.active) span {
 	background: $pri-text-color;
+}
+
+// mobile nav
+.mobile-container {
+	.mobile-logo {
+		.title {
+			color: $sec-text-color;
+		}
+	}
+
+	.overlay-menu {
+		a, .toggler {
+			padding: 1rem;
+			color: $sec-text-color;
+		}
+		.toggler{
+			font-size: 1.5rem;
+			padding: 1rem;
+		}
+	}
 }

@@ -1,10 +1,17 @@
-@use 'overrides';
+// general
 @use 'variables';
-@use 'elements';
-@use 'sizes';
-@use 'hero';
+@use 'overrides';
+
+// components
 @use 'header-footer';
 @use 'navigation';
+@use 'hero';
+@use 'form';
+@use 'table';
+@use 'components';
+
+// other
+@use 'sizes';
 
 // css reset
 * {
