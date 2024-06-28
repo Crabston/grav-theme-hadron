@@ -23,6 +23,10 @@
 }
 
 // mobile navigation menu button
-.mobile-menu .button_container span {
+.mobile-menu #toggle span {
 	background: $sec-text-color;
+}
+
+#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
+	background: $pri-text-color;
 }

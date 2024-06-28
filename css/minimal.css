@@ -178,8 +178,12 @@ form:not(.login-form) .buttons button {
   margin-top: 0;
 }
 
-.mobile-menu .button_container span {
+.mobile-menu #toggle span {
   background: #ffffff;
+}
+
+#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
+  background: #3d3d3d;
 }
 
 * {
