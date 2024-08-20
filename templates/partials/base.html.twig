@@ -1,5 +1,26 @@
 {% extends '@quark-open-publishing/partials/base.html.twig' %}
 
+{% block head deferred %}
+<meta charset="utf-8" />
+<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% include 'partials/metadata.html.twig' %}
+
+{# get favicon from theme config if it exists #}
+{% set favicon = theme_var('favicon') %}
+{% if favicon %}
+	{% set favicon_file = (favicon|first).name %}
+	{% set file_type = favicon_file|split('.')|last %}
+	<link rel="icon" type="image/{{ file_type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+{% else %}
+	<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+{% endif %}
+
+<link rel="canonical" href="{{ page.url(true, true) }}" />
+{% endblock head %}
+
 {% block stylesheets %}
 	{% do assets.addCss('theme://css-compiled/spectre'~compress) %}
 	{% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress) %}{% endif %}
