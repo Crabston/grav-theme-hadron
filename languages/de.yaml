@@ -179,6 +179,9 @@ THEME_LOCAL:
         GRID_MD: Mittel
     HEADER:
       TITLE: Header Standards
+      FAVICON:
+        LABEL: Benutzerdefiniertes Favicon
+        DESCRIPTION: Wird verwendet anstelle des Standard Favicons `theme://images/favicon.png`
       CUSTOM_LOGO:
         LABEL: Benutzerdefiniertes Logo
         DESCRIPTION: Wird verwendet anstelle des Standardlogos `theme://images/grav-logo.svg`

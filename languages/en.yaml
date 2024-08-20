@@ -179,6 +179,9 @@ THEME_LOCAL:
         GRID_MD: Medium
     HEADER:
       TITLE: Header Defaults
+      FAVICON:
+        LABEL: Custom favicon
+        DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
       CUSTOM_LOGO:
         LABEL: Custom Logo
         DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
