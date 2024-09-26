@@ -1,16 +1,8 @@
-# Minimal Theme
-
-The **Minimal** Theme is for [Grav CMS](http://github.com/getgrav/grav).
+# Hadron Theme
+modern Grav theme based on Quark with advanced features and styles
 
 ## Description
-
-Simple Theme for Grav CMS, depending on Quark and Quark Open Publishing. Minimalistic, clean and responsive. Enhances the Quark theme with additional features and styles.
-
-**This theme has to be used as a child theme with Quark and/or Quark Open Publishing.**
+Hadron is a modern [Grav](https://getgrav.org) theme based on [Quark](https://github.com/getgrav/grav-theme-quark). As a child/ inherited theme of Quark, it includes more advanced features than the original Quark theme. It also offers advanced styling options.
 
 ## Features
-
-- makes tables responsive on small screens
-- german translations for everything
-- enhanced blog options
-- more enhancements to the Quark and Quark Open Publishing theme
+_coming soon_
