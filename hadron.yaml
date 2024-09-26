@@ -4,8 +4,8 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-         - user/themes/minimal
-         - user/themes/quark-open-publishing
+         - user/themes/hadron
+         - user/themes/quark-open-publishing # TODO: remove
          - user/themes/quark
 
 enabled: true
