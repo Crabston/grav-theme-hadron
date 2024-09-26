@@ -1,21 +1,20 @@
-name: Minimal
-slug: minimal
+name: Hadron
+slug: hadron
 type: theme
 version: 1.2.0
-description: 'Simple Theme for Grav CMS, depending on Quark and Quark Open Publishing. Minimalistic, clean and responsive. Enhances the Quark theme with additional features and styles.'
-icon: star
+description: 'Hadron is a modern Grav theme based on Quark. As a child/ inherited theme of Quark, it includes more advanced features than the original Quark theme. It also offers advanced styling options.'
+icon: circle
 author:
   name: 'Crabston GmbH'
   email: contact@crabston.dev
   url: 'https://crabston.dev'
-homepage: https://github.com/Crabston/grav-theme-minimal
+homepage: https://github.com/Crabston/grav-theme-hadron
 demo: https://grav.demo.crabston.dev
-keywords: grav, theme, minimal, quark, quark-open-publishing
-bugs: https://github.com/Crabston/grav-theme-minimal/issues
-readme: https://github.com/Crabston/grav-theme-minimal/blob/main/README.md
+keywords: grav, theme, hadron, quark, modern, advanced, styling, options
+bugs: https://github.com/Crabston/grav-theme-hadron/issues
+readme: https://github.com/Crabston/grav-theme-hadron/blob/main/README.md
 license: MIT
 
 dependencies:
   - { name: grav, version: '>=1.6.0' }
-  - quark-open-publishing
   - quark

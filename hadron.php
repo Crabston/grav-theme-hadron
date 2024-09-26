@@ -4,7 +4,8 @@ namespace Grav\Theme;
 use Grav\Common\Grav;
 use Grav\Common\Theme;
 
-class Minimal extends QuarkOpenPublishing
+// TODO: extend Quark theme instead of QuarkOpenPublishing
+class Hadron extends QuarkOpenPublishing
 {
 	public static function getSubscribedEvents() {
 		return [
@@ -16,6 +17,7 @@ class Minimal extends QuarkOpenPublishing
 		parent::onTwigLoader();
 
 		// add parent theme as namespace to twig
+		// TODO: extend Quark theme instead of QuarkOpenPublishing
 		$parentThemeName = 'quark-open-publishing';
 		$parentThemePath = Grav::instance()['locator']->findResource('themes://' . $parentThemeName);
 		$this->grav['twig']->addPath($parentThemePath . DIRECTORY_SEPARATOR . 'templates', $parentThemeName);
