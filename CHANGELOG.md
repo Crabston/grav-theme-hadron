@@ -1,3 +1,9 @@
+# 2.0.0
+##  _unreleased_
+
+1. [](#improved)
+   * Rename theme from `Minimal` to `Hadron`
+
 # 1.2.0
 ##  27-05-2024
 
