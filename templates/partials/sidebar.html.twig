@@ -4,18 +4,10 @@
 {% set sidebar_page = pages.find('/sidebar') %}
 {% set sidebar_page_content =  sidebar_page.content %}
 
-{% block tntsearch1 %}
+{% block tntsearch %}
 	{% if config.plugins.tntsearch.enabled and page.header.sidebar.show_tntsearch %}
 		<div class="sidebar-content">
 			{% embed 'partials/tntsearch.html.twig' with { limit: 10, snippet: 150, min: 3, search_type: 'auto', dropdown: true } %}{% endembed %}
-		</div>
-	{% endif %}
-{% endblock %}
-
-{% block simplesearch %}
-	{% if config.plugins.simplesearch.enabled %}
-		<div class="sidebar-content">
-			{% include 'partials/simplesearch_searchbox.html.twig' %}
 		</div>
 	{% endif %}
 {% endblock %}
