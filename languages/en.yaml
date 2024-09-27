@@ -161,7 +161,19 @@ TEMPLATE:
         RIGHT: Right
     CARD_URL:
       LABEL: Embedly Card URL
-
+  H5P:
+    TITLE:
+      LABEL: Page Title
+    CONTENT_TITLE:
+      LABEL: H5P Content Title
+    DISPLAY_CONTENT_TITLE:
+      LABEL: Display H5P Content Title
+    CONTENT_ID:
+      LABEL: H5P Content ID (Node)
+      DESCRIPTION: 'For example, for the URL https://h5p.org/node/712 the ID would be 712.'
+    INFO:
+      LABEL: 'How-to Tip'
+      CONTENT: 'To display this item within another page, enter `[plugin:page-inject](/h5p/PAGE)` in your Markdown content area.'
 
 THEME:
   HADRON:
