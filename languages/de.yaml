@@ -146,6 +146,21 @@ TEMPLATE:
       HERO_IMAGE:
         LABEL: Hero Bild
         DESCRIPTION: Wenn nicht angegeben, wird das erste Bild im Seitenordner verwendet
+  EMBEDLY:
+    CONTENT_TITLE:
+      LABEL: Seiten Titel
+    CARD_TITLE:
+      LABEL: Embedly Karten Titel
+    DISPLAY_CARD_TITLE:
+      LABEL: Embedly Karten Titel anzeigen
+    CARD_ALIGNMENT:
+      LABEL: Embedly Karten Ausrichtung
+      OPTIONS:
+        LEFT: Links
+        CENTER: Zentriert
+        RIGHT: Rechts
+    CARD_URL:
+      LABEL: Embedly Card URL
 
 THEME:
   HADRON:

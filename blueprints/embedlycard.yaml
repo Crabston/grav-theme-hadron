@@ -2,6 +2,7 @@ title: Embedly Card Options
 '@extends':
   type: default
   context: blueprints://pages
+
 form:
   fields:
     tabs:
@@ -14,23 +15,23 @@ form:
               replace@: true
               type: text
               size: long
-              label: Page Title
+              label: TEMPLATE.EMBEDLY.CONTENT_TITLE.LABEL
 
             header.embedly_card_title:
               ordering@: 2
               type: text
               size: long
-              label: Embedly Card Title
+              label: TEMPLATE.EMBEDLY.CARD_TITLE.LABEL
 
             header.display_embedly_card_title:
               ordering@: 3
               type: toggle
-              label: Display Embedly Card Title
+              label: TEMPLATE.EMBEDLY.DISPLAY_CARD_TITLE.LABEL
               default: 0
               highlight: 1
               options:
-                1:  Yes
-                0:  No
+                1:  PLUGIN_ADMIN.YES
+                0:  PLUGIN_ADMIN.NO
               validate:
                 type: bool
 
@@ -38,18 +39,18 @@ form:
               ordering@: 4
               type: select
               size: small
-              label: Embedly Card Alignment
+              label: TEMPLATE.EMBEDLY.CARD_ALIGNMENT.LABEL
               default: left
               options:
-                left: Left
-                center: Center
-                right: Right
+                left: TEMPLATE.EMBEDLY.CARD_ALIGNMENT.OPTIONS.LEFT
+                center: TEMPLATE.EMBEDLY.CARD_ALIGNMENT.OPTIONS.CENTER
+                right: TEMPLATE.EMBEDLY.CARD_ALIGNMENT.OPTIONS.RIGHT
 
             header.embedly_card_url:
               ordering@: 5
               type: text
               size: long
-              label: Embedly Card Web Page URL
+              label: TEMPLATE.EMBEDLY.CARD_URL.LABEL
               validate:
                 type: URL
 

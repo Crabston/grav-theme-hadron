@@ -146,6 +146,22 @@ TEMPLATE:
       HERO_IMAGE:
         LABEL: Hero Image
         DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
+  EMBEDLY:
+    CONTENT_TITLE:
+      LABEL: Page Title
+    CARD_TITLE:
+      LABEL: Embedly Card Title
+    DISPLAY_CARD_TITLE:
+      LABEL: Display Embedly Card Title
+    CARD_ALIGNMENT:
+      LABEL: Embedly Card Alignment
+      OPTIONS:
+        LEFT: Left
+        CENTER: Center
+        RIGHT: Right
+    CARD_URL:
+      LABEL: Embedly Card URL
+
 
 THEME:
   HADRON:
