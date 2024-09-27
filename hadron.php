@@ -64,7 +64,7 @@ class Hadron extends Quark {
 	public function registerNextGenEditorPluginShortcodes($event) {
 		$plugins = $event['plugins'];
 
-		$plugins['js'][] = 'user://themes/quark-open-publishing/nextgen-editor/shortcodes/h5p.js';
+		$plugins['js'][] = 'user://themes/hadron/nextgen-editor/shortcodes/h5p.js';
 
 		$event['plugins']  = $plugins;
 		return $event;
