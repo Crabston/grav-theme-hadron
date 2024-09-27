@@ -15,6 +15,15 @@ class Hadron extends Quark {
 		];
 	}
 
+	public function onTwigLoader() {
+		parent::onTwigLoader();
+
+		// add parent theme as namespace to twig
+		$parentThemeName = 'quark';
+		$parentThemePath = Grav::instance()['locator']->findResource('themes://' . $parentThemeName);
+		$this->grav['twig']->addPath($parentThemePath . DIRECTORY_SEPARATOR . 'templates', $parentThemeName);
+	}
+
 	public function onTwigInitialized() {
 		$twig = $this->grav['twig'];
 
@@ -37,27 +46,9 @@ class Hadron extends Quark {
 		$twig->twig_vars = array_merge($twig->twig_vars, $form_class_variables);
 	}
 
-	public function onTwigLoader() {
-		parent::onTwigLoader();
-
-		// add parent theme as namespace to twig
-		$parentThemeName = 'quark';
-		$parentThemePath = Grav::instance()['locator']->findResource('themes://' . $parentThemeName);
-		$this->grav['twig']->addPath($parentThemePath . DIRECTORY_SEPARATOR . 'templates', $parentThemeName);
-	}
-
 	public static function getblogpageheroclasses()	{
 		$config = Grav::instance()['config'];
 		return $config->get('themes.' . $config->get('system.pages.theme') . '.blog_page_hero_classes');
-	}
-
-	public function registerNextGenEditorPluginShortcodes($event) {
-		$plugins = $event['plugins'];
-
-		$plugins['js'][] = 'user://themes/quark-open-publishing/nextgen-editor/shortcodes/h5p.js';
-
-		$event['plugins']  = $plugins;
-		return $event;
 	}
 
 	public function onShortcodeHandlers() {
@@ -68,5 +59,14 @@ class Hadron extends Quark {
 		if ($this->isAdmin() && ($this->grav['config']->get('plugins.shortcode-core.enabled'))) {
 			$this->grav['assets']->add('theme://editor-buttons/admin/js/shortcode-h5p.js');
 		}
+	}
+
+	public function registerNextGenEditorPluginShortcodes($event) {
+		$plugins = $event['plugins'];
+
+		$plugins['js'][] = 'user://themes/quark-open-publishing/nextgen-editor/shortcodes/h5p.js';
+
+		$event['plugins']  = $plugins;
+		return $event;
 	}
 }
