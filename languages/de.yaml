@@ -30,7 +30,7 @@ TEMPLATE:
     CONTENT:
       DEFAULT: 'Deine Seitenzusammenfassung kommt hierhin.\n\n===\n\nDein Seiteninhalt kommt hierhin.'
     BLOG:
-      TITLE: Blog Item
+      TITLE: Blog Beitrag
       HEADER_IMAGE_SECTION:
         TITLE: Header Bild
       HEADER_IMAGE:
