@@ -1,5 +1,7 @@
 # 2.0.0
 ##  _unreleased_
+1. [](#new)
+   * merge with the quark-open-publishing theme
 1. [](#improved)
    * Rename theme from `Minimal` to `Hadron`
 
