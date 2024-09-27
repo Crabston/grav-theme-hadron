@@ -43,8 +43,4 @@
 			</li>
 		{% endfor %}
 	{% endif %}
-	{# check to display git sync link in menu - hibbittsdesign.org #}
-	{% if theme_var('display_of_git_sync_repo_link') == 'menu' or theme_var('display_of_git_sync_repo_link') == empty %}
-		<li>{% include 'partials/git_sync_repo_link.html.twig' %}</li>
-	{% endif %}
 </ul>
