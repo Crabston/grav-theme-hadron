@@ -49,7 +49,20 @@ form:
       placeholder: '/blog'
       size: medium
 
+    header.show_sidebar:
+      type: toggle
+      toggleable: true
+      label: Show Sidebar
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     header.show_breadcrumbs:
+      toggleable: true
       type: toggle
       label: TEMPLATE.PARTIALS.BLOG.SHOW_BREADCRUMBS.LABEL
       highlight: 1
@@ -62,6 +75,7 @@ form:
 
     header.show_pagination:
       type: toggle
+      toggleable: true
       label: TEMPLATE.PARTIALS.BLOG.SHOW_PAGINATION.LABEL
       highlight: 1
       default: 1

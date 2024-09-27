@@ -1,0 +1,130 @@
+.fa {
+  padding-right: 5px;
+}
+
+.image-credit-wrapper {
+overflow: hidden;
+position: relative;
+max-width: 1400px;
+}
+
+.image-credit-wrapper .image-credit {
+position: absolute;
+right: 0px;
+bottom: 0px;
+margin-bottom: 6px;
+}
+
+.image-credit {
+background: rgba(0,0,0,.5);
+border-top-left-radius:3px;
+color: #ccc;
+display: inline-block;
+font-size: 11px;
+font-family: helvetica;
+font-weight: 300;
+padding: 5px 8px;
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.image-credit a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.image-credit a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.hidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+#blog-hero h1 {
+    text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
+}
+
+#blog-hero h2 {
+    text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
+}
+
+#blog-hero h3 {
+    text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
+}
+
+#blog-hero #to-start {
+    text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
+}
+
+img.left {
+  display:inline;
+  float:left;
+  margin:1rem 15px 5px 0;
+  max-width: 50%;
+}
+
+img.right {
+  float:right;
+  margin:1rem 0 5px 15px;
+  max-width: 50%;;
+}
+
+img.center {
+  display:block;
+  margin:10px
+  auto;
+}
+
+figure.image-caption {
+    text-align: center;
+    margin: 1rem;
+}
+
+figure.image-caption figcaption {
+    opacity: 0.7;
+    font-size: 90%;
+}
+
+figure.figure-right {
+    float:right;
+    margin:5px 0 5px 15px;
+    max-width: 50%;
+}
+
+figure.figure-left {
+    float: left;
+    margin:5px 15px 5px 0;
+    max-width: 50%;
+}
+
+figure.caption-left figcaption {
+    text-align: left;
+}
+
+figure.caption-right figcaption {
+    text-align: right;
+}
+
+h1.sections-page-title-template, h2.sections-page-title-template, h3.sections-page-title-template, h4.sections-page-title-template, h5.sections-page-title-template, h6.sections-page-title-template {
+    margin-top: 0rem;
+}
+
+.sections-page-title {
+    margin-top: -2rem;
+}
+
+.bricklayermodulars {
+    padding-right: 25px;
+}
+
+.blogitem__readingtime {
+  padding-left: 10px;
+}

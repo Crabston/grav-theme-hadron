@@ -1,4 +1,4 @@
-{% extends '@quark-open-publishing/partials/base.html.twig' %}
+{% extends '@quark/partials/base.html.twig' %}
 
 {% block head deferred %}
 <meta charset="utf-8" />
@@ -38,4 +38,21 @@
 	{% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
 	{% do assets.addJs('theme://js/my.js', 100) %}
 	{% do assets.addJs('theme://js/responsiveTable.js', {group:'bottom'}) %}
+{% endblock %}
+
+{% block footer %}
+    <section id="footer" class="section bg-gray">
+        <section class="container {{ grid_size }}">
+	        {# display footer markdown page #}
+	        {% set content = pages.find('/footer').content %}
+	        {% if content %}
+		        {{ content|raw }}
+	        {% endif %}
+        </section>
+    </section>
+{% endblock %}
+
+{% block bottom %}
+	{{ assets.js('bottom')|raw }}
+	<script async charset="utf-8" src="//cdn.embedly.com/widgets/platform.js"></script>
 {% endblock %}

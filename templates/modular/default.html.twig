@@ -1,0 +1,12 @@
+{% set grid_size = theme_var('grid-size') %}
+{% set image = page.media.images|first %}
+
+<section id="modular" class="section">
+    <section class="container {{ grid_size }}">
+        <div class="columns">
+            <div class="column col-12 col-md-12">
+                {{ content|raw }}
+            </div>
+        </div>
+    </section>
+</section>

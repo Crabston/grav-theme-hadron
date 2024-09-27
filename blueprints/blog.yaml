@@ -1,7 +1,5 @@
-title: Blog Metadata
-'@extends':
-  type: blog
-  context: blueprints://pages
+extends@: default
+child_type: item
 
 form:
   fields:
@@ -115,12 +113,6 @@ form:
               validate:
                 type: text
 
-            metadata:
-              type: section
-              title: TEMPLATE.BLOG.METADATA.TITLE
-              underline: true
-
-            header.metadata:
-              type: array
-              label: TEMPLATE.BLOG.METADATA_ITEMS.LABEL
-              required: true
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages
