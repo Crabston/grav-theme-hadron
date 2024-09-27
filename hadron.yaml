@@ -7,15 +7,39 @@ streams:
          - user/themes/hadron
          - user/themes/quark
 
-enabled: true
-production-mode: true
 grid-size: grid-lg
+blog-page: /blog
+dropdown:
+  enabled: true
 header-fixed: true
 header-animated: true
 header-dark: false
 header-transparent: false
 sticky-footer: true
-blog-page: '/blog'
 spectre:
   exp: false
   icons: false
+production-mode: true
+h5pembedrootpath: 'https://h5p.org/h5p/embed/'
+blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
+favicon:
+  user/themes/local/images/favicon.svg:
+    name: favicon.svg
+    full_path: favicon.svg
+    type: image/svg+xml
+    size: 4868
+    path: user/themes/local/images/favicon.svg
+custom_logo:
+  user/themes/local/images/logo/logo.svg:
+    name: logo.svg
+    full_path: logo.svg
+    type: image/svg+xml
+    size: 4868
+    path: user/themes/local/images/logo/logo.svg
+custom_logo_mobile:
+  user/themes/local/images/logo/logo.svg:
+    name: logo.svg
+    full_path: logo.svg
+    type: image/svg+xml
+    size: 4868
+    path: user/themes/local/images/logo/logo.svg
