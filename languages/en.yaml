@@ -147,13 +147,9 @@ TEMPLATE:
         LABEL: Hero Image
         DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
 
-THEME_LOCAL:
-  OPEN_PUBLISHING:
-    TITLE: Open Publishing Options
-    CHROMELESS:
-      TITLE: Chromeless Site (i.e. Embedded)
-      ENABLE_CHROMELESS:
-        LABEL: Hide Site Menu, Sidebar and Footer
+THEME:
+  HADRON:
+    TITLE: Hadron Options
     H5P:
       TITLE: H5P Setup
       EMBED_URL:
@@ -164,7 +160,7 @@ THEME_LOCAL:
       TITLE: Menu
       DISPLAY_DROPDOWNS:
         LABEL: Display Dropdowns in Menu
-  QUARK_OPTIONS:
+  QUARK:
     TITLE: Quark Options
     PRODUCTION_MODE:
       LABEL: Production mode
@@ -220,27 +216,3 @@ THEME_LOCAL:
       ICONS:
         LABEL: Icons CSS
         HELP: When enabled, the `spectre-icons.css` file will be included
-  CUSTOM_MENU:
-    TITLE: Custom Menu Items
-    DISPLAY:
-      LABEL: Display Custom Menu Items
-      HELP: Determines if any defined custom menu entries are displayed in the menubar.
-    MENU:
-      LABEL: Custom Menu Items
-      FIELDS:
-        TEXT:
-          LABEL: Text
-          DESCRIPTION: Text label for menu item.
-        ICON:
-          LABEL: Icon
-          DESCRIPTION: Font Awesome icon for menu item.
-        URL:
-          LABEL: URL
-          DESCRIPTION: URL for menu item.
-        TARGET:
-          LABEL: Target
-          OPTIONS:
-            BLANK: Open in a new window
-            PARENT: Open in the parent frame
-            TOP: Open in the full body of the window
-            SELF: Open in the same frame as clicked

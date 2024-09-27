@@ -147,13 +147,9 @@ TEMPLATE:
         LABEL: Hero Bild
         DESCRIPTION: Wenn nicht angegeben, wird das erste Bild im Seitenordner verwendet
 
-THEME_LOCAL:
-  OPEN_PUBLISHING:
-    TITLE: Open Publishing Optionen
-    CHROMELESS:
-      TITLE: Eingebettete Website (Chromeless)
-      ENABLE_CHROMELESS:
-        LABEL: Verstecke Menü, Seitenleiste und Fusszeile
+THEME:
+  HADRON:
+    TITLE: Hadron Optionen
     H5P:
       TITLE: H5P Setup
       EMBED_URL:
@@ -164,7 +160,7 @@ THEME_LOCAL:
       TITLE: Menü
       DISPLAY_DROPDOWNS:
         LABEL: Zeige Dropdowns im Menü
-  QUARK_OPTIONS:
+  QUARK:
     TITLE: Quark Optionen
     PRODUCTION_MODE:
       LABEL: Produktionsmodus
@@ -220,27 +216,3 @@ THEME_LOCAL:
       ICONS:
         LABEL: Icons CSS
         HELP: Wenn aktiviert, wird die `spectre-icons.css` Datei eingebunden
-  CUSTOM_MENU:
-    TITLE: Benutzerdefinierte Menüeinträge
-    DISPLAY:
-      LABEL: Zeige benutzerdefinierte Menüeinträge
-      HELP: Wenn aktiviert, werden benutzerdefinierte Menüeinträge angezeigt
-    MENU:
-      LABEL: Benutzerdefinierte Menüeinträge
-      FIELDS:
-        TEXT:
-          LABEL: Text
-          DESCRIPTION: Textbeschriftung für Menüeintrag
-        ICON:
-          LABEL: Icon
-          DESCRIPTION: Font Awesome Icon für Menüeintrag
-        URL:
-          LABEL: URL
-          DESCRIPTION: URL für Menüeintrag
-        TARGET:
-          LABEL: Ziel
-          OPTIONS:
-            BLANK: In einem neuen Fenster öffnen
-            PARENT: Im übergeordneten Fenster öffnen
-            TOP: Im gesamten Fenster öffnen
-            SELF: Im selben Fenster öffnen
