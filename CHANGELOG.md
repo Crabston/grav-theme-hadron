@@ -1,5 +1,5 @@
 # 2.0.0
-##  _unreleased_
+##  30-09-2024
 1. [](#new)
    - merge some features with the quark-open-publishing theme
    - remove the open-publishing theme as a dependency
