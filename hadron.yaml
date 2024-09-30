@@ -23,23 +23,23 @@ production-mode: true
 h5pembedrootpath: 'https://h5p.org/h5p/embed/'
 blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
 favicon:
-  user/themes/local/images/favicon.svg:
+  user/themes/hadron/images/favicon.svg:
     name: favicon.svg
     full_path: favicon.svg
     type: image/svg+xml
     size: 4868
-    path: user/themes/local/images/favicon.svg
+    path: user/themes/hadron/images/favicon.svg
 custom_logo:
-  user/themes/local/images/logo/logo.svg:
+  user/themes/hadron/images/logo/logo.svg:
     name: logo.svg
     full_path: logo.svg
     type: image/svg+xml
     size: 4868
-    path: user/themes/local/images/logo/logo.svg
+    path: user/themes/hadron/images/logo/logo.svg
 custom_logo_mobile:
-  user/themes/local/images/logo/logo.svg:
+  user/themes/hadron/images/logo/logo.svg:
     name: logo.svg
     full_path: logo.svg
     type: image/svg+xml
     size: 4868
-    path: user/themes/local/images/logo/logo.svg
+    path: user/themes/hadron/images/logo/logo.svg
