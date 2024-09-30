@@ -41,14 +41,14 @@ _Learn more about page templates on [tutorials.crabston.ch/grav/seiten/seiten-ty
 ## Installation
 Installing the Hadron theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
-The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Hadron theme can be found in the [Hadron](https://github.com/Crabston/grav-demo) which is a self-contained repository for a complete site which include: sample content, configuration, theme, and plugins.
+The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Hadron theme can be found in the [Hadron Skeleton](https://github.com/Crabston/grav-demo) which is a self-contained repository for a complete site which include: sample content, configuration, theme, and plugins.
 
 ### GPM Installation (Preferred)
-The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line). From the root of your Grav installation, type:
 
     bin/gpm install hadron
 
-This will install the Quark theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/hadron`.
+This will install the Hadron theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/hadron`.
 
 ### Manual Installation
 To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `hadron`. You can find these files either on [GitHub](https://github.com/Crabston/grav-theme-hadron) or via [GetGrav.org](http://getgrav.org/downloads/themes).
@@ -109,64 +109,13 @@ custom_logo_mobile:
 ```
 
 ### Page Overrides
-Quark has the ability to allow pages to override some of the default options by letting the user set `body_classes` for any page. The theme will merge the combination of the defaults with any `body_classes` set. For example:
+_see page overrides on the [Quark theme (Page Overrides)](https://github.com/getgrav/grav-theme-quark#page-overrides)_
 
-```yaml
-body_classes: "header-dark header-transparent"
-```
+### Modular/ Hero Options
+_see hero options on the [Quark theme (Hero Options)](https://github.com/getgrav/grav-theme-quark#hero-options)_
 
-On a particular page will ensure that page has those options enabled (assuming they are false by default).
+### Modular/ Features Options
+_see features modular options on the [Quark theme (Features Modular Options)](https://github.com/getgrav/grav-theme-quark#features-modular-options)_
 
-### Hero Options
-The hero template allows some options to be set in the page frontmatter. This is used by the modular `hero` as well as the blog and item templates to provide a more dynamic header.
-
-```yaml
-hero_classes: text-light title-h1h2 parallax overlay-dark-gradient hero-large
-hero_image: road.jpg
-hero_align: center
-```
-
-The `hero_classes` option allows a variety of hero classes to be set dynamically these include:
-- `text-light` | `text-dark` - Controls if the text should be light or dark depending on the content
-- `title-h1h2` - Enforced a close matched h1/h2 title pairing
-- `parallax` - Enables a CSS-powered parallax effect
-- `overlay-dark-gradient` - Displays a transparent gradient which further darkens the underlying image
-- `overlay-light-gradient` - Displays a transparent gradient which further lightens the underlying image
-- `overlay-dark` - Displays a solid transparent overlay which further darkens the underlying image
-- `overlay-light` - Displays a solid transparent overlay which further darkens the underlying image
-- `hero-fullscreen` | `hero-large` | `hero-medium` | `hero-small` | `hero-tiny` - Size of the hero block
-
-The `hero_image` should point to an image file in the current page folder.
-
-### Features Modular Options
-The features modular template provides the ability to set a class on the features, as well as an array of feature items. For example:
-
-```yaml
-class: offset-box
-features:
-    - header: Crazy Fast
-      text: "Performance is not just an afterthought, we baked it in from the start!"
-      icon: fighter-jet
-    - header: Easy to build
-      text: "Simple text files means Grav is trivial to install, and easy to maintain"
-      icon: database
-    - header: Awesome Technology
-      text: "Grav employs best-in-class technologies such as Twig, Markdown &amp; Yaml"
-      icon: cubes
-    - header: Super Flexible
-      text: "From the ground up, with many plugin hooks, Grav is extremely extensible"
-      icon: object-ungroup
-    - header: Abundant Plugins
-      text: "A vibrant developer community means over 200 themes available to download"
-      icon: puzzle-piece
-    - header: Free / Open Source
-      text: "Grav is an open source project, so you can spend your money on other stuff"
-      icon: money 
-```
-
-### Text Modular Options
-The text box provides a single option to control if any image found in the page folder should be left or right aligned:
-
-```yaml
-image_align: right
-```
+### Modular/ Text Options
+_see text modular options on the [Quark theme  (Text Modular Options)](https://github.com/getgrav/grav-theme-quark#text-modular-options)_
