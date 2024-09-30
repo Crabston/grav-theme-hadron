@@ -64,19 +64,19 @@ This theme has various customization options. You can customize the theme by edi
 The Hadron theme has many options that can be set in the theme configuration file. Some of the important options are:
 
 ```yaml
-grid-size: grid-lg              # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
-blog-page: /blog                # The route to the blog page
+grid-size: grid-lg          # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
+blog-page: /blog            # The route to the blog page
 dropdown:
-  enabled: true                 # Enable dropdown navigation
-header-fixed: true              # Cause the header to be fixed at the top of the browser
-header-animated: true           # Allows the fixed header to resize to a smaller header when scrolled
-header-dark: false              # Inverts the text/logo to work better on dark backgrounds
-header-transparent: false       # Allows the fixed header to be transparent over the page
-sticky-footer: true             # Causes the footer to be sticky at the bottom of the page
-production-mode: true           # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
-favicon:                        # A custom favicon rather than the theme default (see below for more information)
-custom_logo:                    # A custom logo (see below)
-custom_logo_mobile:             # A custom logo for mobile devices (see below)
+  enabled: true             # Enable dropdown navigation
+header-fixed: true          # Cause the header to be fixed at the top of the browser
+header-animated: true       # Allows the fixed header to resize to a smaller header when scrolled
+header-dark: false          # Inverts the text/logo to work better on dark backgrounds
+header-transparent: false   # Allows the fixed header to be transparent over the page
+sticky-footer: true         # Causes the footer to be sticky at the bottom of the page
+production-mode: true       # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
+favicon:                    # A custom favicon rather than the theme default (see below for more information)
+custom_logo:                # A custom logo (see below)
+custom_logo_mobile:         # A custom logo for mobile devices (see below)
 ```
 
 To make modifications, you can copy the `user/themes/hadron/hadron.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
