@@ -8,12 +8,14 @@ Hadron is a modern [Grav](https://getgrav.org) theme based on [Quark](https://gi
 If you want to see the Hadron theme in action, you can visit the [Hadron Demo Site](https://grav.demo.crabston.dev). There you will find a short introduction to the theme and its features too. There are a components page and some example pages too.
 
 ## Features
-_Learn more about all the features on [tutorials.crabston.ch/grav/hadron](https://tutorials.crabston.ch/grav/hadron)_
+_Learn more about all the features of Hadron in detail on [tutorials.crabston.ch/grav/hadron](https://tutorials.crabston.ch/grav/hadron)_
 
 - Responsive tables
+- Menu with dropdown support
+- Featured posts for blog
 - Built-in Support for Embed.ly
 - Built-in Support for H5P
-- Featured posts for blog
+- more theme customization options
 - other enhancements
 
 ### Inherited Quark Features
