@@ -30,7 +30,7 @@ TEMPLATE:
     CONTENT:
       DEFAULT: 'Deine Seitenzusammenfassung kommt hierhin.\n\n===\n\nDein Seiteninhalt kommt hierhin.'
     BLOG:
-      TITLE: Blog Item
+      TITLE: Blog Beitrag
       HEADER_IMAGE_SECTION:
         TITLE: Header Bild
       HEADER_IMAGE:
@@ -146,14 +146,38 @@ TEMPLATE:
       HERO_IMAGE:
         LABEL: Hero Bild
         DESCRIPTION: Wenn nicht angegeben, wird das erste Bild im Seitenordner verwendet
+  EMBEDLY:
+    CONTENT_TITLE:
+      LABEL: Seiten Titel
+    CARD_TITLE:
+      LABEL: Embedly Karten Titel
+    DISPLAY_CARD_TITLE:
+      LABEL: Embedly Karten Titel anzeigen
+    CARD_ALIGNMENT:
+      LABEL: Embedly Karten Ausrichtung
+      OPTIONS:
+        LEFT: Links
+        CENTER: Zentriert
+        RIGHT: Rechts
+    CARD_URL:
+      LABEL: Embedly Card URL
+  H5P:
+    TITLE:
+      LABEL: Seiten Titel
+    CONTENT_TITLE:
+      LABEL: H5P Inhaltstitel
+    DISPLAY_CONTENT_TITLE:
+      LABEL: H5P Inhaltstitel anzeigen
+    CONTENT_ID:
+      LABEL: H5P Inhalts-ID (Node)
+      DESCRIPTION: 'Beispiel: Für die URL https://h5p.org/node/712 wäre die ID 712.'
+    INFO:
+      LABEL: 'How-to Tipp'
+      CONTENT: 'Um dieses Element innerhalb einer anderen Seite anzuzeigen, geben Sie `[plugin:page-inject](/h5p/PAGE)` in Ihrem Markdown-Inhaltsbereich ein.'
 
-THEME_LOCAL:
-  OPEN_PUBLISHING:
-    TITLE: Open Publishing Optionen
-    CHROMELESS:
-      TITLE: Eingebettete Website (Chromeless)
-      ENABLE_CHROMELESS:
-        LABEL: Verstecke Menü, Seitenleiste und Fusszeile
+THEME:
+  HADRON:
+    TITLE: Hadron Optionen
     H5P:
       TITLE: H5P Setup
       EMBED_URL:
@@ -164,7 +188,7 @@ THEME_LOCAL:
       TITLE: Menü
       DISPLAY_DROPDOWNS:
         LABEL: Zeige Dropdowns im Menü
-  QUARK_OPTIONS:
+  QUARK:
     TITLE: Quark Optionen
     PRODUCTION_MODE:
       LABEL: Produktionsmodus
@@ -220,27 +244,3 @@ THEME_LOCAL:
       ICONS:
         LABEL: Icons CSS
         HELP: Wenn aktiviert, wird die `spectre-icons.css` Datei eingebunden
-  CUSTOM_MENU:
-    TITLE: Benutzerdefinierte Menüeinträge
-    DISPLAY:
-      LABEL: Zeige benutzerdefinierte Menüeinträge
-      HELP: Wenn aktiviert, werden benutzerdefinierte Menüeinträge angezeigt
-    MENU:
-      LABEL: Benutzerdefinierte Menüeinträge
-      FIELDS:
-        TEXT:
-          LABEL: Text
-          DESCRIPTION: Textbeschriftung für Menüeintrag
-        ICON:
-          LABEL: Icon
-          DESCRIPTION: Font Awesome Icon für Menüeintrag
-        URL:
-          LABEL: URL
-          DESCRIPTION: URL für Menüeintrag
-        TARGET:
-          LABEL: Ziel
-          OPTIONS:
-            BLANK: In einem neuen Fenster öffnen
-            PARENT: Im übergeordneten Fenster öffnen
-            TOP: Im gesamten Fenster öffnen
-            SELF: Im selben Fenster öffnen

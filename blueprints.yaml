@@ -18,3 +18,199 @@ license: MIT
 dependencies:
   - { name: grav, version: '>=1.6.0' }
   - quark
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        hadron:
+          type: tab
+          title: THEME.HADRON.TITLE
+          fields:
+            h5p:
+              type: section
+              title: THEME.HADRON.H5P.TITLE
+              underline: true
+            h5pembedrootpath:
+              type: text
+              size: long
+              label: THEME.HADRON.H5P.EMBED_URL.LABEL
+              default: 'https://h5p.org/h5p/embed/'
+              help: THEME.HADRON.H5P.EMBED_URL.HELP
+              description: THEME.HADRON.H5P.EMBED_URL.DESCRIPTION
+              validate:
+                type: URL
+            menu:
+              type: section
+              title: THEME.HADRON.MENU.TITLE
+              underline: true
+            dropdown.enabled:
+              type: toggle
+              label: THEME.HADRON.MENU.DISPLAY_DROPDOWNS.LABEL
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+        quark:
+          type: tab
+          title: THEME.QUARK.TITLE
+          fields:
+            production-mode:
+              type: toggle
+              label: THEME.QUARK.PRODUCTION_MODE.LABEL
+              help: THEME.QUARK.PRODUCTION_MODE.HELP
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            grid-size:
+              type: select
+              label: THEME.QUARK.GRID_SIZE.LABEL
+              help: THEME.QUARK.GRID_SIZE.HELP
+              size: small
+              options:
+                '': THEME.QUARK.GRID_SIZE.OPTIONS.NONE
+                grid-xl: THEME.QUARK.GRID_SIZE.OPTIONS.GRID_XL
+                grid-lg: THEME.QUARK.GRID_SIZE.OPTIONS.GRID_LG
+                grid-md: THEME.QUARK.GRID_SIZE.OPTIONS.GRID_MD
+            header_section:
+              type: section
+              title: THEME.QUARK.HEADER.TITLE
+              underline: true
+            favicon:
+              type: file
+              label: THEME.QUARK.HEADER.FAVICON.LABEL
+              size: large
+              destination: 'theme://images'
+              multiple: false
+              markdown: true
+              description: THEME.QUARK.HEADER.FAVICON.DESCRIPTION
+              accept:
+                - 'image/*'
+            custom_logo:
+              type: file
+              label: THEME.QUARK.HEADER.CUSTOM_LOGO.LABEL
+              size: large
+              destination: 'theme://images/logo'
+              multiple: false
+              markdown: true
+              description: THEME.QUARK.HEADER.CUSTOM_LOGO.DESCRIPTION
+              accept:
+                - 'image/*'
+            custom_logo_mobile:
+              type: file
+              label: THEME.QUARK.HEADER.CUSTOM_LOGO_MOBILE.LABEL
+              size: large
+              destination: 'theme://images/logo'
+              multiple: false
+              accept:
+                - 'image/*'
+            header-fixed:
+              type: toggle
+              label: THEME.QUARK.HEADER.HEADER_FIXED.LABEL
+              help: THEME.QUARK.HEADER.HEADER_FIXED.HELP
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            header-animated:
+              type: toggle
+              label: THEME.QUARK.HEADER.HEADER_ANIMATED.LABEL
+              help: THEME.QUARK.HEADER.HEADER_ANIMATED.HELP
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            header-dark:
+              type: toggle
+              label: THEME.QUARK.HEADER.HEADER_DARK.LABEL
+              help: THEME.QUARK.HEADER.HEADER_DARK.HELP
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            header-transparent:
+              type: toggle
+              label: THEME.QUARK.HEADER.HEADER_TRANSPARENT.LABEL
+              help: THEME.QUARK.HEADER.HEADER_TRANSPARENT.HELP
+              highlight: 0
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            footer_section:
+              type: section
+              title: THEME.QUARK.FOOTER.TITLE
+              underline: true
+            sticky-footer:
+              type: toggle
+              label: THEME.QUARK.FOOTER.STICKY_FOOTER.LABEL
+              help: THEME.QUARK.FOOTER.STICKY_FOOTER.HELP
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            blog_section:
+              type: section
+              title: THEME.QUARK.BLOG.TITLE
+              underline: true
+            blog-page:
+              type: text
+              label: THEME.QUARK.BLOG.BLOG_PAGE.LABEL
+              help: THEME.QUARK.BLOG.BLOG_PAGE.HELP
+              size: medium
+              default: /blog
+            blog_page_hero_classes:
+              type: text
+              label: THEME.QUARK.BLOG.HERO_CLASSES.LABEL
+              markdown: true
+              description: THEME.QUARK.BLOG.HERO_CLASSES.DESCRIPTION
+            spectre_section:
+              type: section
+              title: THEME.QUARK.SPECTRE.TITLE
+              underline: true
+            spectre.exp:
+              type: toggle
+              label: THEME.QUARK.SPECTRE.EXPERIMENTAL.LABEL
+              help: THEME.QUARK.SPECTRE.EXPERIMENTAL.HELP
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            spectre.icons:
+              type: toggle
+              label: THEME.QUARK.SPECTRE.ICONS.LABEL
+              help: THEME.QUARK.SPECTRE.ICONS.HELP
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool

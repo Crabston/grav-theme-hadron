@@ -9,7 +9,7 @@ form:
       label: TEMPLATE.PARTIALS.BLOG.HERO_CLASSES.LABEL
       markdown: true
       description: TEMPLATE.PARTIALS.BLOG.HERO_CLASSES.DESCRIPTION
-      data-default@: '\Grav\Theme\QuarkOpenPublishing::getblogpageheroclasses'
+      data-default@: '\Grav\Theme\Hadron::getblogpageheroclasses'
 
     header.hero_image:
       type: filepicker

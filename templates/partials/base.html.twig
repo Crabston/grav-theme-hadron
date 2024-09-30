@@ -35,8 +35,7 @@
 {% block javascripts %}
 	{% do assets.addJs('jquery', 101) %}
 	{% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
-	{% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
-	{% do assets.addJs('theme://js/my.js', 100) %}
+	{% do assets.addJs('theme://js/hadron.js', {group:'bottom'}) %}
 	{% do assets.addJs('theme://js/responsiveTable.js', {group:'bottom'}) %}
 {% endblock %}
 
@@ -50,9 +49,4 @@
 	        {% endif %}
         </section>
     </section>
-{% endblock %}
-
-{% block bottom %}
-	{{ assets.js('bottom')|raw }}
-	<script async charset="utf-8" src="//cdn.embedly.com/widgets/platform.js"></script>
 {% endblock %}
