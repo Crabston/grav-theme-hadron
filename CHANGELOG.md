@@ -1,29 +1,31 @@
 # 2.0.0
 ##  _unreleased_
 1. [](#new)
-   * merge with the quark-open-publishing theme
+   - merge some features with the quark-open-publishing theme
+   - remove the open-publishing theme as a dependency
 1. [](#improved)
-   * Rename theme from `Minimal` to `Hadron`
+   - Rename theme from `Minimal` to `Hadron`
+   - add more details to the readme
 
 # 1.2.0
 ##  27-05-2024
 1. [](#new)
-   * Add `tntsearch` plugin to sidebar
-   * Add `page-toc` plugin to sidebar
+   - Add `tntsearch` plugin to sidebar
+   - Add `page-toc` plugin to sidebar
 2. [](#improved)
-   * Add options for sidebar in admin panel
+   - Add options for sidebar in admin panel
 
 # 1.1.0
 ##  13-05-2024
 1. [](#new)
-   * Full English and German translations
-   * Remove Git Sync plugin options
+   - Full English and German translations
+   - Remove Git Sync plugin options (from open-publishing theme)
 2. [](#improved)
-   * Enhance Blog summary
-   * Show header image in blog list
+   - Enhance Blog summary
+   - Show header image in blog list
 
 # 1.0.0
 ##  17-04-2024
 1. [](#new)
-   * Initial release
-   * responsive tables
+   - Initial release
+   - add feature for responsive tables
