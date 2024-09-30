@@ -175,6 +175,28 @@ TEMPLATE:
       LABEL: 'How-to Tipp'
       CONTENT: 'Um dieses Element innerhalb einer anderen Seite anzuzeigen, geben Sie `[plugin:page-inject](/h5p/PAGE)` in Ihrem Markdown-Inhaltsbereich ein.'
 
+ADMIN:
+  PAGES:
+    MODALS:
+      NEW_BLOG_ITEM:
+        BAR:
+          LABEL: Neuer Blog Beitrag
+        MODAL:
+          TITLE: Blog Beitrag hinzufügen
+        TITLE:
+          LABEL: Beitragstitel
+        PARENT:
+          LABEL: übergeordnete Seite
+      NEW_STANDARD_PAGE:
+        BAR:
+          LABEL: Neue Standardseite
+        MODAL:
+          TITLE: Standardseite hinzufügen
+        TITLE:
+          LABEL: Seitentitel
+        PARENT:
+          LABEL: übergeordnete Seite
+
 THEME:
   HADRON:
     TITLE: Hadron Optionen
