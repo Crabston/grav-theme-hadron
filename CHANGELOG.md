@@ -1,3 +1,10 @@
+# 2.0.1
+##  _unreleased_
+1. [](#bugfix)
+   - Fix reading time template missing
+1. [](#improved)
+   - add translations for admin > pages > modals (navigation)
+
 # 2.0.0
 ##  30-09-2024
 1. [](#new)
