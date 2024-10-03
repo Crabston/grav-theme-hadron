@@ -175,6 +175,28 @@ TEMPLATE:
       LABEL: 'How-to Tip'
       CONTENT: 'To display this item within another page, enter `[plugin:page-inject](/h5p/PAGE)` in your Markdown content area.'
 
+ADMIN:
+  PAGES:
+    MODALS:
+      NEW_BLOG_ITEM:
+        BAR:
+          LABEL: New Blog Item
+        MODAL:
+          TITLE: Add Blog Item
+        TITLE:
+          LABEL: Blog Item Title
+        PARENT:
+          LABEL: Parent Page
+      NEW_STANDARD_PAGE:
+        BAR:
+          LABEL: New Standard Page
+        MODAL:
+          TITLE: Add Standard Page
+        TITLE:
+          LABEL: Page Title
+        PARENT:
+          LABEL: Parent Page
+
 THEME:
   HADRON:
     TITLE: Hadron Options
