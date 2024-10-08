@@ -28,6 +28,40 @@ body.header-dark .mobile-menu #toggle span,
 	background: $text-color-secondary;
 }
 
+// navigation menu
+// only dropdown itself
+body:is(.header-light, .header-dark, .header-transparent) #header, #header.scrolled {
+	.dropmenu ul ul li a:is(.active, :focus, :hover) {
+		color: $primary-color !important;
+	}
+}
+
+body:is(.header-light) #header, #header.scrolled {
+	background-color: $background-color;
+	color: $text-color;
+
+	.dropmenu a:is(.active, :focus, :hover) {
+		color: $primary-color !important;
+	}
+}
+
+body:is(.header-transparent) #header, #header.scrolled {
+	background-color: $background-color;
+	color: $text-color;
+
+	.dropmenu li a:is(.active, :focus, :hover) {
+		color: $primary-color !important;
+	}
+}
+
+body:is(.header-dark) #header:not(.scrolled) {
+	color: $text-color-secondary-dark;
+
+	.dropmenu > ul > li > a:is(.active, :focus, :hover) {
+		color: $text-color-secondary !important;
+	}
+}
+
 // mobile nav
 .mobile-container {
 	.mobile-logo {
