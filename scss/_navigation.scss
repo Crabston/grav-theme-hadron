@@ -28,6 +28,31 @@ body.header-dark .mobile-menu #toggle span,
 	background: $text-color-secondary;
 }
 
+// navigation menu
+body:is(.header-light, .header-transparent) #header, #header.scrolled {
+	background-color: $background-color;
+	color: $text-color;
+
+	.dropmenu ul > li > a:is(.active, :focus, :hover) {
+		color: $primary-color !important;
+	}
+}
+
+// navigation in dark mode (& transparent dark mode)
+body:is(.header-dark) #header:not(.scrolled) {
+	color: $text-color-secondary-dark;
+
+	// default dropdown
+	.dropmenu ul > li > a:is(.active, :focus, :hover) {
+		color: $primary-color !important;
+	}
+
+	// navigation items
+	.dropmenu > ul > li > a:is(.active, :focus, :hover) {
+		color: $text-color-secondary !important;
+	}
+}
+
 // mobile nav
 .mobile-container {
 	.mobile-logo {

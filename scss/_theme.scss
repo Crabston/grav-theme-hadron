@@ -23,3 +23,23 @@ $overlay-dark-grad-to: #00000000;
 $responsive-breakpoint-mobile: 640px;
 $responsive-breakpoint-tablet: 840px;
 $responsive-breakpoint-desktop: 1280px;
+
+// elements
+$background-color: white;
+$text-color: $grey;
+$text-color-light: mix($text-color, $light-overlay, 25%);
+$text-color-secondary: white;
+$text-color-secondary-dark: mix($text-color-secondary, $dark-overlay);
+$link-color: $primary-color;
+$link-color__active: $accent-color;
+
+// header & footer
+$header-background: $background-color;
+$header-text: $text-color;
+$header-text__active: $text-color-secondary;
+$footer-background: $background-color;
+$footer-text: $text-color;
+$footer-text-link: $link-color;
+
+// sizes
+$nav-item-height: 4rem;

@@ -2,6 +2,7 @@
 ##  _unreleased_
 1. [](#bugfix)
    - Fix reading time template missing
+   - Fix transparent navigation bug (#18)
 1. [](#improved)
    - add translations for admin > pages > modals (navigation)
 
