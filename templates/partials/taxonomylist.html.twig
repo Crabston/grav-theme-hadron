@@ -1,4 +1,5 @@
-{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+{% set taxlist = children_only ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+{% set taxlist = descendants_only ? taxonomylist.getDescendantPagesTags() : taxonomylist.get() %}
 
 {% if taxlist %}
 <span class="tags">
