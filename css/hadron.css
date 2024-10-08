@@ -54,28 +54,19 @@ body.header-dark .mobile-menu #toggle span,
   background: white;
 }
 
-body:is(.header-light, .header-dark, .header-transparent) #header .dropmenu ul ul li a:is(.active, :focus, :hover), #header.scrolled .dropmenu ul ul li a:is(.active, :focus, :hover) {
-  color: #4063CB !important;
-}
-
-body:is(.header-light) #header, #header.scrolled {
+body:is(.header-light, .header-transparent) #header, #header.scrolled {
   background-color: white;
   color: #3a414e;
 }
-body:is(.header-light) #header .dropmenu a:is(.active, :focus, :hover), #header.scrolled .dropmenu a:is(.active, :focus, :hover) {
-  color: #4063CB !important;
-}
-
-body:is(.header-transparent) #header, #header.scrolled {
-  background-color: white;
-  color: #3a414e;
-}
-body:is(.header-transparent) #header .dropmenu li a:is(.active, :focus, :hover), #header.scrolled .dropmenu li a:is(.active, :focus, :hover) {
+body:is(.header-light, .header-transparent) #header .dropmenu ul > li > a:is(.active, :focus, :hover), #header.scrolled .dropmenu ul > li > a:is(.active, :focus, :hover) {
   color: #4063CB !important;
 }
 
 body:is(.header-dark) #header:not(.scrolled) {
   color: rgba(223.125, 223.125, 223.125, 0.625);
+}
+body:is(.header-dark) #header:not(.scrolled) .dropmenu ul > li > a:is(.active, :focus, :hover) {
+  color: #4063CB !important;
 }
 body:is(.header-dark) #header:not(.scrolled) .dropmenu > ul > li > a:is(.active, :focus, :hover) {
   color: white !important;
