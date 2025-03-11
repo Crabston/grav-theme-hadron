@@ -1,0 +1,26 @@
+title: Snipcart Detail
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        snipcart:
+          type: tab
+          title: Snipcart
+          fields:
+
+            snipcart_title:
+              type: spacer
+              title: Snipcart
+
+            header.price:
+              type: text
+              label: Price
+              size: medium
+
+            header.product_id:
+              type: text
+              label: Product ID
+              size: medium
