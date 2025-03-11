@@ -53,7 +53,10 @@
 	{% do assets.addJs('jquery', 101) %}
 	{% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
 	{% do assets.addJs('theme://js/hadron.js', {group:'bottom'}) %}
-{% endblock javascripts %}
+	{% if config.plugins.snipcart.enabled %}
+		{% do assets.addJs('https://cdn.snipcart.com/scripts/2.0/snipcart.js', {group:'bottom', id: 'snipcart', 'data-api-key': header.snipcart.api_key}) %}
+	{% endif %}
+{% endblock javascript %}
 
 {% block header %}
     <section id="header" class="section">

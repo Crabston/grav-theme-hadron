@@ -43,4 +43,12 @@
 			</li>
 		{% endfor %}
 	{% endif %}
+
+    {% block snipcart_cart %}
+        {% if config.plugins.snipcart.enabled %}
+            <li>
+                {% include 'partials/snipcart_cart.html.twig' %}
+            </li>
+        {% endif %}
+    {% endblock snipcart_cart %}
 </ul>
