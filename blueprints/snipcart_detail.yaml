@@ -15,12 +15,23 @@ form:
               type: spacer
               title: Snipcart
 
-            header.price:
-              type: text
-              label: Price
-              size: medium
-
             header.product_id:
               type: text
               label: Product ID
-              size: medium
+              size: small
+
+            header.price:
+              type: number
+              label: Price
+              size: small
+
+            header.weight:
+              type: number
+              label: Weight
+              size: small
+
+            header.description:
+              type: text
+              label: Description
+              size: long
+
