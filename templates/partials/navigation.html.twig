@@ -31,23 +31,15 @@
 	{% import _self as macros %}
 	{{ macros.nav_loop(pages, hide_home_menu_link, home_alias ) }}
 
-	{% if theme_var('custommenus.enabled') %}
-		{% for mitem in theme_var('menu') %}
-			<li>
-				<a href="{{ mitem.url }}" target="{{ mitem.target }}">
-					{% if mitem.icon %}
-						<i class="fa fa-{{ mitem.icon }}"></i>
-					{% endif %}
-					{{ mitem.text }}
-				</a>
-			</li>
-		{% endfor %}
-	{% endif %}
-
     {% block snipcart_cart %}
         {% if config.plugins.snipcart.enabled %}
             <li>
                 {% include 'partials/snipcart_cart.html.twig' %}
+                <ul>
+                    <li><a href="#" class="snipcart-edit-profile">Account</a></li>
+                    <li><a href="#" class="snipcart-user-profile">Order History</a></li>
+                    <li><a href="#" class="snipcart-user-logout">Logout</a></li>
+                </ul>
             </li>
         {% endif %}
     {% endblock snipcart_cart %}
