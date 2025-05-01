@@ -237,11 +237,16 @@ nav.language-switcher > ul > li > a {
 
 section.cards .cards-list {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 section.cards .cards-list h4 {
   margin-top: 0;
+}
+@media screen and (max-width: 640px) {
+  section.cards .cards-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 section.sbs .sbs {
