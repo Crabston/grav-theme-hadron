@@ -152,6 +152,18 @@ TEMPLATE:
       HERO_IMAGE:
         LABEL: Hero Bild
         DESCRIPTION: Wenn nicht angegeben, wird das erste Bild im Seitenordner verwendet
+  CARDS:
+    TAB_TITLE: Karten
+    IMAGE:
+      LABEL: Bild
+    TITLE:
+      LABEL: Titel
+    TEXT:
+      LABEL: Text
+    PAGE:
+      LABEL: Seite
+    LINK_TEXT:
+      LABEL: Link Text
   SBS:
     TAB_TITLE: SBS (Seite an Seite)
     ELEMENTS: Elemente

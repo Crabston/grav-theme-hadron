@@ -152,6 +152,18 @@ TEMPLATE:
       HERO_IMAGE:
         LABEL: Hero Image
         DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
+  CARDS:
+    TAB_TITLE: Cards
+    IMAGE:
+      LABEL: Image
+    TITLE:
+      LABEL: Title
+    TEXT:
+      LABEL: Text
+    PAGE:
+      LABEL: Page
+    LINK_TEXT:
+      LABEL: Link Text
   SBS:
     TAB_TITLE: SBS (Side By Side)
     ELEMENTS: Elements

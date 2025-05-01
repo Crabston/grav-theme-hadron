@@ -7,7 +7,7 @@
 
 		<div class="cards-list">
 			{% for card in page.header.cards %}
-				{% include 'partials/card-content.html.twig' with {card: card, css: page.header.classes} %}
+				{% include 'partials/card-content.html.twig' with {card: card} %}
 			{% endfor %}
 		</div>
 
