@@ -1,0 +1,15 @@
+{% set grid_size = theme_var('grid-size') %}
+
+<section class="section cards modular-cards">
+	<section class="container {{ grid_size }}">
+
+		{{ content|raw }}
+
+		<div class="cards-list">
+			{% for card in page.header.cards %}
+				{% include 'partials/card-content.html.twig' with {card: card, css: page.header.classes} %}
+			{% endfor %}
+		</div>
+
+	</section>
+</section>

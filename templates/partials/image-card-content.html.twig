@@ -1,0 +1,9 @@
+<div class="image-card layout-{{ card.layout }}">
+	<div class="image-card-image">
+		<img src="{{ card.image }}" alt="{{ card.image_alt ?? '' }}">
+	</div>
+
+	<div class="image-card-content {{ card.alignment ?? '' }}">
+		{{ content | raw }}
+	</div>
+</div>

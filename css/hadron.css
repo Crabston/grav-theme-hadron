@@ -205,58 +205,97 @@ table .text-align-left {
     text-align: right;
   }
 }
-section.modular-image-cards .image-cards .image-card {
+nav.language-switcher {
+  margin-left: 1rem;
+}
+nav.language-switcher ul {
+  display: flex;
+  gap: 0.5rem;
+}
+nav.language-switcher li {
+  margin-top: 0;
+}
+nav.language-switcher li::marker {
+  content: none;
+}
+nav.language-switcher a.active {
+  color: #4063CB;
+}
+nav.language-switcher > ul > li > a {
+  padding: 0.25rem !important;
+}
+.mobile-container nav.language-switcher {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.mobile-container nav.language-switcher a:not(.active) {
+  color: white;
+}
+.mobile-container nav.language-switcher a.active {
+  text-decoration: none;
+}
+
+section.modular-image-card .image-card {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin: 3rem 0;
 }
-section.modular-image-cards .image-cards .image-card.layout-right {
+section.modular-image-card .image-card.layout-right {
   flex-direction: row-reverse;
 }
-section.modular-image-cards .image-cards .image-card .image-card-image, section.modular-image-cards .image-cards .image-card .image-card-content {
+section.modular-image-card .image-card .image-card-image, section.modular-image-card .image-card .image-card-content {
   width: 50%;
 }
-section.modular-image-cards .image-cards .image-card .image-card-image img {
+section.modular-image-card .image-card .image-card-image img {
   width: 100%;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.top-left {
+section.modular-image-card .image-card .image-card-content.top-left {
   align-self: start;
   text-align: left;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.top-center {
+section.modular-image-card .image-card .image-card-content.top-center {
   align-self: start;
   text-align: center;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.top-right {
+section.modular-image-card .image-card .image-card-content.top-right {
   align-self: start;
   text-align: right;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.center-left {
+section.modular-image-card .image-card .image-card-content.center-left {
   align-self: center;
   text-align: left;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.center-center {
+section.modular-image-card .image-card .image-card-content.center-center {
   align-self: center;
   text-align: center;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.center-right {
+section.modular-image-card .image-card .image-card-content.center-right {
   align-self: center;
   text-align: right;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.bottom-left {
+section.modular-image-card .image-card .image-card-content.bottom-left {
   align-self: end;
   text-align: left;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.bottom-center {
+section.modular-image-card .image-card .image-card-content.bottom-center {
   align-self: end;
   text-align: center;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.bottom-right {
+section.modular-image-card .image-card .image-card-content.bottom-right {
   align-self: end;
   text-align: right;
 }
-section.modular-image-cards .image-cards .image-card h4 {
+section.modular-image-card .image-card h4 {
+  margin-top: 0;
+}
+
+section.cards .cards-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+section.cards .cards-list h4 {
   margin-top: 0;
 }
 

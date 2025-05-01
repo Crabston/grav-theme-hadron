@@ -1,0 +1,9 @@
+{% set grid_size = theme_var('grid-size') %}
+
+<section class="section modular-image-card">
+	<section class="container {{ grid_size }}">
+
+		{% include 'partials/image-card-content.html.twig' with {card: page.header.card} %}
+
+	</section>
+</section>
