@@ -1,11 +1,11 @@
-title: Bild Karten
+title: Side By Side List
 '@extends': default
 
 form:
   fields:
     tabs:
       fields:
-        features:
+        sbs:
           type: tab
           title: TEMPLATE.MODULAR.IMAGE_CARDS.TITLE
           fields:
