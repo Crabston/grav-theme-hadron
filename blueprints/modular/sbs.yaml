@@ -1,0 +1,52 @@
+title: Bild Karten
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: TEMPLATE.MODULAR.IMAGE_CARDS.TITLE
+          fields:
+            header.sbs:
+              type: list
+              label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LABEL
+
+              fields:
+                .layout:
+                  type: select
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.LABEL
+                  default: left
+                  options:
+                    left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.OPTIONS.LEFT
+                    right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.OPTIONS.RIGHT
+                .alignment:
+                  type: select
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.LABEL
+                  default: center-left
+                  options:
+                    top-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_LEFT
+                    top-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_CENTER
+                    top-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_RIGHT
+                    center-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_LEFT
+                    center-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_CENTER
+                    center-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_RIGHT
+                    bottom-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_LEFT
+                    bottom-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_CENTER
+                    bottom-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_RIGHT
+                .image:
+                  type: mediapicker
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.IMAGE.LABEL
+                .title:
+                  type: text
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.TITLE.LABEL
+                .text:
+                  type: textarea
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.TEXT.LABEL
+                .page:
+                  type: pages
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.PAGE.LABEL
+                .link_text:
+                  type: text
+                  label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LINK_TEXT.LABEL

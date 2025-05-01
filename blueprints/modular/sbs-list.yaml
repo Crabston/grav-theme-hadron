@@ -9,7 +9,7 @@ form:
           type: tab
           title: TEMPLATE.MODULAR.IMAGE_CARDS.TITLE
           fields:
-            header.cards:
+            header.sbs:
               type: list
               label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LABEL
 

@@ -1,4 +1,4 @@
-section.modular-image-card .image-card {
+section.sbs .sbs {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
@@ -8,15 +8,15 @@ section.modular-image-card .image-card {
 		flex-direction: row-reverse;
 	}
 
-	.image-card-image, .image-card-content {
+	.sbs-image, .sbs-content {
 		width: 50%;
 	}
 
-	.image-card-image {
+	.sbs-image {
 		img { width: 100%; }
 	}
 
-	.image-card-content {
+	.sbs-content {
 		&.top-left { align-self: start; text-align: left; }
 		&.top-center { align-self: start; text-align: center; }
 		&.top-right { align-self: start; text-align: right; }
@@ -27,16 +27,6 @@ section.modular-image-card .image-card {
 		&.bottom-center { align-self: end; text-align: center; }
 		&.bottom-right { align-self: end; text-align: right; }
 	}
-
-	h4 {
-		margin-top: 0;
-	}
-}
-
-section.cards .cards-list {
-	display: grid;
-	grid-template-columns: auto auto;
-	gap: 1rem;
 
 	h4 {
 		margin-top: 0;

@@ -235,67 +235,67 @@ nav.language-switcher > ul > li > a {
   text-decoration: none;
 }
 
-section.modular-image-card .image-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 3rem 0;
-}
-section.modular-image-card .image-card.layout-right {
-  flex-direction: row-reverse;
-}
-section.modular-image-card .image-card .image-card-image, section.modular-image-card .image-card .image-card-content {
-  width: 50%;
-}
-section.modular-image-card .image-card .image-card-image img {
-  width: 100%;
-}
-section.modular-image-card .image-card .image-card-content.top-left {
-  align-self: start;
-  text-align: left;
-}
-section.modular-image-card .image-card .image-card-content.top-center {
-  align-self: start;
-  text-align: center;
-}
-section.modular-image-card .image-card .image-card-content.top-right {
-  align-self: start;
-  text-align: right;
-}
-section.modular-image-card .image-card .image-card-content.center-left {
-  align-self: center;
-  text-align: left;
-}
-section.modular-image-card .image-card .image-card-content.center-center {
-  align-self: center;
-  text-align: center;
-}
-section.modular-image-card .image-card .image-card-content.center-right {
-  align-self: center;
-  text-align: right;
-}
-section.modular-image-card .image-card .image-card-content.bottom-left {
-  align-self: end;
-  text-align: left;
-}
-section.modular-image-card .image-card .image-card-content.bottom-center {
-  align-self: end;
-  text-align: center;
-}
-section.modular-image-card .image-card .image-card-content.bottom-right {
-  align-self: end;
-  text-align: right;
-}
-section.modular-image-card .image-card h4 {
-  margin-top: 0;
-}
-
 section.cards .cards-list {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
 }
 section.cards .cards-list h4 {
+  margin-top: 0;
+}
+
+section.sbs .sbs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+section.sbs .sbs.layout-right {
+  flex-direction: row-reverse;
+}
+section.sbs .sbs .sbs-image, section.sbs .sbs .sbs-content {
+  width: 50%;
+}
+section.sbs .sbs .sbs-image img {
+  width: 100%;
+}
+section.sbs .sbs .sbs-content.top-left {
+  align-self: start;
+  text-align: left;
+}
+section.sbs .sbs .sbs-content.top-center {
+  align-self: start;
+  text-align: center;
+}
+section.sbs .sbs .sbs-content.top-right {
+  align-self: start;
+  text-align: right;
+}
+section.sbs .sbs .sbs-content.center-left {
+  align-self: center;
+  text-align: left;
+}
+section.sbs .sbs .sbs-content.center-center {
+  align-self: center;
+  text-align: center;
+}
+section.sbs .sbs .sbs-content.center-right {
+  align-self: center;
+  text-align: right;
+}
+section.sbs .sbs .sbs-content.bottom-left {
+  align-self: end;
+  text-align: left;
+}
+section.sbs .sbs .sbs-content.bottom-center {
+  align-self: end;
+  text-align: center;
+}
+section.sbs .sbs .sbs-content.bottom-right {
+  align-self: end;
+  text-align: right;
+}
+section.sbs .sbs h4 {
   margin-top: 0;
 }
 

@@ -1,0 +1,9 @@
+<div class="sbs layout-{{ element.layout }}">
+	<div class="sbs-image">
+		<img src="{{ element.image }}" alt="{{ element.image_alt ?? '' }}">
+	</div>
+
+	<div class="sbs-content {{ element.alignment ?? '' }}">
+		{{ content | raw }}
+	</div>
+</div>
