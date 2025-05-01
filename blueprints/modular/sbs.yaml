@@ -7,32 +7,32 @@ form:
       fields:
         sbs:
           type: tab
-          title: TEMPLATE.MODULAR.IMAGE_CARDS.TITLE
+          title: TEMPLATE.SBS.TAB_TITLE
           fields:
             header.sbs.layout:
               type: select
-              label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.LABEL
+              label: TEMPLATE.SBS.LAYOUT.LABEL
               default: left
               options:
-                left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.OPTIONS.LEFT
-                right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.LAYOUT.OPTIONS.RIGHT
+                left: TEMPLATE.SBS.LAYOUT.OPTIONS.LEFT
+                right: TEMPLATE.SBS.LAYOUT.OPTIONS.RIGHT
             header.sbs.alignment:
               type: select
-              label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.LABEL
+              label: TEMPLATE.SBS.ALIGNMENT.LABEL
               default: center-left
               options:
-                top-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_LEFT
-                top-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_CENTER
-                top-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.TOP_RIGHT
-                center-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_LEFT
-                center-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_CENTER
-                center-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.CENTER_RIGHT
-                bottom-left: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_LEFT
-                bottom-center: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_CENTER
-                bottom-right: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.ALIGNMENT.OPTIONS.BOTTOM_RIGHT
+                top-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_LEFT
+                top-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_CENTER
+                top-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_RIGHT
+                center-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_LEFT
+                center-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_CENTER
+                center-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_RIGHT
+                bottom-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_LEFT
+                bottom-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_CENTER
+                bottom-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_RIGHT
             header.sbs.image:
               type: mediapicker
-              label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.IMAGE.LABEL
+              label: TEMPLATE.SBS.IMAGE.LABEL
             header.sbs.image_alt:
               type: text
-              label: TEMPLATE.MODULAR.IMAGE_CARDS.CARDS.IMAGE_ALT.LABEL
+              label: TEMPLATE.SBS.IMAGE_ALT.LABEL
