@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block body %}
+	<section id="body-wrapper" class="section cards">
+		<section class="container {{ grid_size }}">
+
+			{{ content|raw }}
+
+			<div class="cards-list">
+				{% for card in page.header.cards %}
+					{% include 'partials/card-content.html.twig' with {card: card} %}
+				{% endfor %}
+			</div>
+		</section>
+	</section>
+{% endblock %}

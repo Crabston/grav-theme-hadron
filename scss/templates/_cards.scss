@@ -1,0 +1,13 @@
+section.cards .cards-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+
+	h4 {
+		margin-top: 0;
+	}
+
+	@media screen and (max-width: $responsive-breakpoint-mobile) {
+		grid-template-columns: 1fr;
+	}
+}

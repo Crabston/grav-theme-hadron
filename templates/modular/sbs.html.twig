@@ -1,0 +1,9 @@
+{% set grid_size = theme_var('grid-size') %}
+
+<section class="section sbs modular-sbs">
+	<section class="container {{ grid_size }}">
+
+		{% include 'partials/sbs-content.html.twig' with {sbs: page.header.sbs} %}
+
+	</section>
+</section>

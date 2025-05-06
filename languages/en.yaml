@@ -152,37 +152,50 @@ TEMPLATE:
       HERO_IMAGE:
         LABEL: Hero Image
         DESCRIPTION: If not specified, this defaults to the first image found in the pages folder
-    IMAGE_CARDS:
-      TITLE: Image Cards
-      CARDS:
-        LABEL: Cards
-        LAYOUT:
-          LABEL: Layout
-          OPTIONS:
-            LEFT: Left
-            RIGHT: Right
-        ALIGNMENT:
-          LABEL: Content Alignment
-          OPTIONS:
-            TOP_LEFT: 'Top Left'
-            TOP_CENTER: 'Top Center'
-            TOP_RIGHT: 'Top Right'
-            CENTER_LEFT: 'Center Left'
-            CENTER_CENTER: 'Center Center'
-            CENTER_RIGHT: 'Center Right'
-            BOTTOM_LEFT: 'Bottom Left'
-            BOTTOM_CENTER: 'Bottom Center'
-            BOTTOM_RIGHT: 'Bottom Right'
-        IMAGE:
-          LABEL: Image
-        TITLE:
-          LABEL: Title
-        TEXT:
-          LABEL: Text
-        PAGE:
-          LABEL: Page
-        LINK_TEXT:
-          LABEL: Link Text
+  CARDS:
+    TAB_TITLE: Cards
+    IMAGE:
+      LABEL: Image
+    TITLE:
+      LABEL: Title
+    TEXT:
+      LABEL: Text
+    PAGE:
+      LABEL: Page
+    LINK_TEXT:
+      LABEL: Link Text
+  SBS:
+    TAB_TITLE: SBS (Side By Side)
+    ELEMENTS: Elements
+    LAYOUT:
+      LABEL: Layout
+      OPTIONS:
+        LEFT: Left
+        RIGHT: Right
+    ALIGNMENT:
+      LABEL: Content Alignment
+      OPTIONS:
+        TOP_LEFT: 'Top Left'
+        TOP_CENTER: 'Top Center'
+        TOP_RIGHT: 'Top Right'
+        CENTER_LEFT: 'Center Left'
+        CENTER_CENTER: 'Center Center'
+        CENTER_RIGHT: 'Center Right'
+        BOTTOM_LEFT: 'Bottom Left'
+        BOTTOM_CENTER: 'Bottom Center'
+        BOTTOM_RIGHT: 'Bottom Right'
+    IMAGE:
+      LABEL: Image
+    IMAGE_ALT:
+      LABEL: Image Description
+    TITLE:
+      LABEL: Title
+    TEXT:
+      LABEL: Text
+    PAGE:
+      LABEL: Page
+    LINK_TEXT:
+      LABEL: Link Text
   EMBEDLY:
     CONTENT_TITLE:
       LABEL: Page Title

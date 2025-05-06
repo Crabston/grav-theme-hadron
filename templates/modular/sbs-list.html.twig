@@ -1,0 +1,24 @@
+{% set grid_size = theme_var('grid-size') %}
+
+<section class="section sbs modular-sbs">
+	<section class="container {{ grid_size }}">
+
+		{{ content|raw }}
+
+		<div class="sbs-list">
+			{% for element in page.header.sbs %}
+				<div class="sbs layout-{{ element.layout }}">
+					<div class="sbs-image">
+						<img src="{{ element.image }}" alt="{{ element.title }}">
+					</div>
+
+					<div class="sbs-content {{ element.alignment ?? '' }}">
+						<h4>{{ element.title }}</h4>
+						<p>{{ element.text }}</p>
+						<a href="{{ element.page }}" class="btn">{{ element.link_text }}</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+</section>

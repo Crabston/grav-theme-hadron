@@ -1,0 +1,19 @@
+<div class="card">
+	<div class="card-image">
+		<img src="{{ card.image }}" alt="{{ card.title ?? '' }}" class="img-responsive">
+	</div>
+
+	<div class="card-header">
+		<div class="card-title">
+			<h4>{{ card.title }}</h4>
+		</div>
+	</div>
+
+	<div class="card-body">
+		{% if card.text %}
+            <p>{{ card.text }}</p>
+		{% endif %}
+
+		<a href="{{ card.page }}" class="btn">{{ card.link_text }}</a>
+	</div>
+</div>

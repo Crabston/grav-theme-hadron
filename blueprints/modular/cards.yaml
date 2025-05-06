@@ -1,0 +1,31 @@
+title: Cards
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        cards:
+          type: tab
+          title: TEMPLATE.CARDS.TAB_TITLE
+          fields:
+            header.cards:
+              type: list
+              label: TEMPLATE.CARDS.TAB_TITLE
+
+              fields:
+                .image:
+                  type: mediapicker
+                  label: TEMPLATE.CARDS.IMAGE.LABEL
+                .title:
+                  type: text
+                  label: TEMPLATE.CARDS.TITLE.LABEL
+                .text:
+                  type: text
+                  label: TEMPLATE.CARDS.TEXT.LABEL
+                .page:
+                  type: pages
+                  label: TEMPLATE.CARDS.PAGE.LABEL
+                .link_text:
+                  type: text
+                  label: TEMPLATE.CARDS.LINK_TEXT.LABEL

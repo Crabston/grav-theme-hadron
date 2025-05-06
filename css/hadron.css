@@ -205,58 +205,102 @@ table .text-align-left {
     text-align: right;
   }
 }
-section.modular-image-cards .image-cards .image-card {
+nav.language-switcher {
+  margin-left: 1rem;
+}
+nav.language-switcher ul {
+  display: flex;
+  gap: 0.5rem;
+}
+nav.language-switcher li {
+  margin-top: 0;
+}
+nav.language-switcher li::marker {
+  content: none;
+}
+nav.language-switcher a.active {
+  color: #4063CB;
+}
+nav.language-switcher > ul > li > a {
+  padding: 0.25rem !important;
+}
+.mobile-container nav.language-switcher {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.mobile-container nav.language-switcher a:not(.active) {
+  color: white;
+}
+.mobile-container nav.language-switcher a.active {
+  text-decoration: none;
+}
+
+section.cards .cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+section.cards .cards-list h4 {
+  margin-top: 0;
+}
+@media screen and (max-width: 640px) {
+  section.cards .cards-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+section.sbs .sbs {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin: 3rem 0;
 }
-section.modular-image-cards .image-cards .image-card.layout-right {
+section.sbs .sbs.layout-right {
   flex-direction: row-reverse;
 }
-section.modular-image-cards .image-cards .image-card .image-card-image, section.modular-image-cards .image-cards .image-card .image-card-content {
+section.sbs .sbs .sbs-image, section.sbs .sbs .sbs-content {
   width: 50%;
 }
-section.modular-image-cards .image-cards .image-card .image-card-image img {
+section.sbs .sbs .sbs-image img {
   width: 100%;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.top-left {
+section.sbs .sbs .sbs-content.top-left {
   align-self: start;
   text-align: left;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.top-center {
+section.sbs .sbs .sbs-content.top-center {
   align-self: start;
   text-align: center;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.top-right {
+section.sbs .sbs .sbs-content.top-right {
   align-self: start;
   text-align: right;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.center-left {
+section.sbs .sbs .sbs-content.center-left {
   align-self: center;
   text-align: left;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.center-center {
+section.sbs .sbs .sbs-content.center-center {
   align-self: center;
   text-align: center;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.center-right {
+section.sbs .sbs .sbs-content.center-right {
   align-self: center;
   text-align: right;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.bottom-left {
+section.sbs .sbs .sbs-content.bottom-left {
   align-self: end;
   text-align: left;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.bottom-center {
+section.sbs .sbs .sbs-content.bottom-center {
   align-self: end;
   text-align: center;
 }
-section.modular-image-cards .image-cards .image-card .image-card-content.bottom-right {
+section.sbs .sbs .sbs-content.bottom-right {
   align-self: end;
   text-align: right;
 }
-section.modular-image-cards .image-cards .image-card h4 {
+section.sbs .sbs h4 {
   margin-top: 0;
 }
 

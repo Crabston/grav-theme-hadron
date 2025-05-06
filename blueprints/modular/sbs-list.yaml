@@ -1,0 +1,52 @@
+title: Side By Side List
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        sbs:
+          type: tab
+          title: TEMPLATE.SBS.TAB_TITLE
+          fields:
+            header.sbs:
+              type: list
+              label: TEMPLATE.SBS.ELEMENTS
+
+              fields:
+                .layout:
+                  type: select
+                  label: TEMPLATE.SBS.LAYOUT.LABEL
+                  default: left
+                  options:
+                    left: TEMPLATE.SBS.LAYOUT.OPTIONS.LEFT
+                    right: TEMPLATE.SBS.LAYOUT.OPTIONS.RIGHT
+                .alignment:
+                  type: select
+                  label: TEMPLATE.SBS.ALIGNMENT.LABEL
+                  default: center-left
+                  options:
+                    top-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_LEFT
+                    top-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_CENTER
+                    top-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_RIGHT
+                    center-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_LEFT
+                    center-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_CENTER
+                    center-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_RIGHT
+                    bottom-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_LEFT
+                    bottom-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_CENTER
+                    bottom-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_RIGHT
+                .image:
+                  type: mediapicker
+                  label: TEMPLATE.SBS.IMAGE.LABEL
+                .title:
+                  type: text
+                  label: TEMPLATE.SBS.TITLE.LABEL
+                .text:
+                  type: textarea
+                  label: TEMPLATE.SBS.TEXT.LABEL
+                .page:
+                  type: pages
+                  label: TEMPLATE.SBS.PAGE.LABEL
+                .link_text:
+                  type: text
+                  label: TEMPLATE.SBS.LINK_TEXT.LABEL

@@ -1,0 +1,38 @@
+title: Side By Side Element
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        sbs:
+          type: tab
+          title: TEMPLATE.SBS.TAB_TITLE
+          fields:
+            header.sbs.layout:
+              type: select
+              label: TEMPLATE.SBS.LAYOUT.LABEL
+              default: left
+              options:
+                left: TEMPLATE.SBS.LAYOUT.OPTIONS.LEFT
+                right: TEMPLATE.SBS.LAYOUT.OPTIONS.RIGHT
+            header.sbs.alignment:
+              type: select
+              label: TEMPLATE.SBS.ALIGNMENT.LABEL
+              default: center-left
+              options:
+                top-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_LEFT
+                top-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_CENTER
+                top-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.TOP_RIGHT
+                center-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_LEFT
+                center-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_CENTER
+                center-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.CENTER_RIGHT
+                bottom-left: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_LEFT
+                bottom-center: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_CENTER
+                bottom-right: TEMPLATE.SBS.ALIGNMENT.OPTIONS.BOTTOM_RIGHT
+            header.sbs.image:
+              type: mediapicker
+              label: TEMPLATE.SBS.IMAGE.LABEL
+            header.sbs.image_alt:
+              type: text
+              label: TEMPLATE.SBS.IMAGE_ALT.LABEL

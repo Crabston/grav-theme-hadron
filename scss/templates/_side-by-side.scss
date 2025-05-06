@@ -1,0 +1,34 @@
+section.sbs .sbs {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 3rem 0;
+
+	&.layout-right {
+		flex-direction: row-reverse;
+	}
+
+	.sbs-image, .sbs-content {
+		width: 50%;
+	}
+
+	.sbs-image {
+		img { width: 100%; }
+	}
+
+	.sbs-content {
+		&.top-left { align-self: start; text-align: left; }
+		&.top-center { align-self: start; text-align: center; }
+		&.top-right { align-self: start; text-align: right; }
+		&.center-left { align-self: center; text-align: left; }
+		&.center-center { align-self: center; text-align: center; }
+		&.center-right { align-self: center; text-align: right; }
+		&.bottom-left { align-self: end; text-align: left; }
+		&.bottom-center { align-self: end; text-align: center; }
+		&.bottom-right { align-self: end; text-align: right; }
+	}
+
+	h4 {
+		margin-top: 0;
+	}
+}
