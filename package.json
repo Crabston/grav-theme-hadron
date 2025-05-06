@@ -1,0 +1,20 @@
+{
+	"name": "hadron",
+	"version": "2.1.0",
+	"description": "modern Grav theme based on Quark with advanced features and styles",
+	"homepage": "https://github.com/Crabston/grav-theme-hadron#readme",
+	"bugs": {
+		"url": "https://github.com/Crabston/grav-theme-hadron/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Crabston/grav-theme-hadron.git"
+	},
+	"license": "MIT",
+	"author": "Crabston Gmbh <contact@crabston.dev> (https://crabston.dev)",
+	"type": "commonjs",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}
