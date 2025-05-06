@@ -11,6 +11,13 @@ grid-size: grid-lg
 blog-page: /blog
 dropdown:
   enabled: true
+custommenus:
+  enabled: false
+menu:
+  - text: Grav
+    icon: external-link
+    url: 'https://getgrav.org/'
+    target: _blank
 header-fixed: true
 header-animated: true
 header-dark: false
