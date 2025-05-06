@@ -1,3 +1,11 @@
+# 2.1.0
+## 06-05-2025
+1. [](#new)
+   - page template for cards
+   - page template for sbs layouts
+1. [](#improved)
+   - option to add custom menu items
+
 # 2.0.2
 ## 11-02-2025
 1. [](#bugfix)
