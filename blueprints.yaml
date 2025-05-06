@@ -43,7 +43,7 @@ form:
               description: THEME.HADRON.H5P.EMBED_URL.DESCRIPTION
               validate:
                 type: URL
-            menu:
+            menu_section:
               type: section
               title: THEME.HADRON.MENU.TITLE
               underline: true
@@ -57,6 +57,43 @@ form:
                 1: PLUGIN_ADMIN.ENABLED
               validate:
                 type: bool
+            custommenus.enabled:
+              type: toggle
+              label: THEME.HADRON.MENU.DISPLAY_CUSTOM_MENUS.LABEL
+              help: THEME.HADRON.MENU.DISPLAY_CUSTOM_MENUS.HELP
+              highlight: 1
+              default: 1
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            menu:
+              type: list
+              label: THEME.HADRON.MENU.ITEMS.LABEL
+              fields:
+                .text:
+                  type: text
+                  label: THEME.HADRON.MENU.ITEMS.TEXT.LABEL
+                  description: THEME.HADRON.MENU.ITEMS.TEXT.DESCRIPTION
+                .icon:
+                  type: text
+                  label: THEME.HADRON.MENU.ITEMS.ICON.LABEL
+                  description: THEME.HADRON.MENU.ITEMS.ICON.DESCRIPTION
+                .url:
+                  type: text
+                  label: THEME.HADRON.MENU.ITEMS.URL.LABEL
+                  description: THEME.HADRON.MENU.ITEMS.URL.DESCRIPTION
+                .target:
+                  type: select
+                  label: THEME.HADRON.MENU.ITEMS.TARGET.LABEL
+                  default: _self
+                  size: medium
+                  options:
+                    _blank: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.BLANK
+                    _parent: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.PARENT
+                    _top: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.TOP
+                    _self: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.SELF
             fontawesome:
               type: section
               title: THEME.HADRON.FONTAWESOME.TITLE

@@ -247,6 +247,27 @@ THEME:
       TITLE: Menu
       DISPLAY_DROPDOWNS:
         LABEL: Display Dropdowns in Menu
+      DISPLAY_CUSTOM_MENUS:
+        LABEL: Display Custom Menu Items
+        HELP: Determines if any defined custom menu entries are displayed in the menubar.
+      ITEMS:
+        LABEL: Custom Menu Items
+        TEXT:
+          LABEL: Text
+          DESCRIPTION: Text label for menu item.
+        ICON:
+          LABEL: Icon
+          DESCRIPTION: Font Awesome icon name, e.g. 'external-link'.
+        URL:
+          LABEL: URL
+          DESCRIPTION: URL for menu item.
+        TARGET:
+          LABEL: Target
+          OPTIONS:
+            BLANK: Open in a new window
+            PARENT: Open in the parent frame
+            TOP: Open in the full body of the window
+            SELF: Open in the same frame as it was clicked
     FONTAWESOME:
       TITLE: Fontawesome Icons
       ENABLE_SOLID:

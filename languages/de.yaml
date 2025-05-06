@@ -247,6 +247,27 @@ THEME:
       TITLE: Menü
       DISPLAY_DROPDOWNS:
         LABEL: Zeige Dropdowns im Menü
+      DISPLAY_CUSTOM_MENUS:
+        LABEL: Zeige benutzerdefinierte Menüs
+        HELP: Definiert, ob benutzerdefinierte Menüeinträge im Menü angezeigt werden.
+      ITEMS:
+        LABEL: Menüeinträge
+        TEXT:
+          LABEL: Text
+          DESCRIPTION: Text für Menüeintrag
+        ICON:
+          LABEL: Icon
+          DESCRIPTION: Font Awesome Icon für Menüeintrag, z.B. 'external-link'
+        URL:
+          LABEL: URL
+          DESCRIPTION: URL für Menüeintrag
+        TARGET:
+          LABEL: Ziel
+          OPTIONS:
+            BLANK: Öffne in einem neuen Fenster / Tab
+            PARENT: Öffne im übergeordneten Fenster
+            TOP: Öffne im Hauptfenster
+            SELF: Öffne im aktuellen Fenster / Tab
     FONTAWESOME:
       TITLE: Fontawesome Icons
       ENABLE_SOLID:
