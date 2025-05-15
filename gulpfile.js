@@ -7,6 +7,7 @@ const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 
 const ts = require("gulp-typescript");
+const terser = require("gulp-terser");
 
 function buildStyles() {
 	return gulp.src("./scss/**/*.scss")
@@ -33,6 +34,12 @@ function compileTypescript() {
 	});
 	return gulp.src("./ts/**/*.{ts,js}")
 		.pipe(tsProject())
+		.pipe(gulp.dest("./js"));
+}
+
+function compressJavascript() {
+	return gulp.src("./js/**/*.js")
+		.pipe(terser({ ecma: 6 }))
 		.pipe(gulp.dest("./js"));
 }
 
