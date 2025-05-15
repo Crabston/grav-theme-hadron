@@ -1,24 +1,24 @@
 {% extends '@quark/partials/base.html.twig' %}
 
 {% block head deferred %}
-<meta charset="utf-8" />
-<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+	<meta charset="utf-8" />
+	<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% include 'partials/metadata.html.twig' %}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% include 'partials/metadata.html.twig' %}
 
-{# get favicon from theme config if it exists #}
-{% set favicon = theme_var('favicon') %}
-{% if favicon %}
-	{% set favicon_file = (favicon|first).name %}
-	{% set file_type = favicon_file|split('.')|last %}
-	<link rel="icon" type="image/{{ file_type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
-{% else %}
-	<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
-{% endif %}
+	{# get favicon from theme config if it exists #}
+	{% set favicon = theme_var('favicon') %}
+	{% if favicon %}
+		{% set favicon_file = (favicon|first).name %}
+		{% set file_type = favicon_file|split('.')|last %}
+		<link rel="icon" type="image/{{ file_type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+	{% else %}
+		<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+	{% endif %}
 
-<link rel="canonical" href="{{ page.url(true, true) }}" />
+	<link rel="canonical" href="{{ page.url(true, true) }}" />
 {% endblock head %}
 
 {% block stylesheets %}
@@ -47,14 +47,14 @@
 	{% if enable_fa_solid %}    {% do assets.addCss('theme://css/fontawesome-solid.min.css') %}     {% endif %}
 	{% if enable_fa_regular %}  {% do assets.addCss('theme://css/fontawesome-regular.min.css') %}   {% endif %}
 	{% if enable_fa_brand %}    {% do assets.addCss('theme://css/fontawesome-brands.min.css') %}    {% endif %}
-{% endblock %}
+{% endblock stylesheets %}
 
 {% block javascripts %}
 	{% do assets.addJs('jquery', 101) %}
 	{% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
 	{% do assets.addJs('theme://js/hadron.js', {group:'bottom'}) %}
 	{% do assets.addJs('theme://js/responsiveTable.js', {group:'bottom'}) %}
-{% endblock %}
+{% endblock javascripts %}
 
 {% block header %}
     <section id="header" class="section">
@@ -68,13 +68,13 @@
 				    <nav class="dropmenu animated">
 					    {% block header_navigation %}
 						    {% include 'partials/navigation.html.twig' %}
-					    {% endblock %}
+					    {% endblock header_navigation %}
 				    </nav>
 
 				    <nav class="dropmenu language-switcher">
 					    {% block language_switcher %}
 						    {% include 'partials/langauge-switcher.html.twig' %}
-					    {% endblock %}
+					    {% endblock language_switcher %}
 				    </nav>
 
 				    {% if config.plugins.login.enabled and grav.user.username %}
@@ -92,7 +92,7 @@
 		    <span class="bottom"></span>
 	    </div>
     </div>
-{% endblock %}
+{% endblock header %}
 
 {% block footer %}
 	<section id="footer" class="section bg-gray">
@@ -104,7 +104,7 @@
 			{% endif %}
 		</section>
 	</section>
-{% endblock %}
+{% endblock footer %}
 
 {% block mobile %}
     <div class="mobile-container">
@@ -120,4 +120,4 @@
 		    </nav>
 	    </div>
     </div>
-{% endblock %}
+{% endblock mobile %}

@@ -10,16 +10,18 @@
 			{% embed 'partials/tntsearch.html.twig' with { limit: 10, snippet: 150, min: 3, search_type: 'auto', dropdown: true } %}{% endembed %}
 		</div>
 	{% endif %}
-{% endblock %}
+{% endblock tntsearch %}
 
 {# display sidebar markdown page - hibbittsdesign.org #}
-{% if sidebar_page.header.position == 'top' or sidebar_page.header.position is empty %}
-	{% if sidebar_page_content is not empty %}
-		<div class="sidebar-content">
-			{{ sidebar_page_content|raw }}
-		</div>
+{% block sidebar_md_top %}
+	{% if sidebar_page.header.position == 'top' or sidebar_page.header.position is empty %}
+		{% if sidebar_page_content is not empty %}
+			<div class="sidebar-content">
+				{{ sidebar_page_content|raw }}
+			</div>
+		{% endif %}
 	{% endif %}
-{% endif %}
+{% endblock sidebar_md_top %}
 
 {% block relatedpages %}
 	{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
@@ -28,7 +30,7 @@
 			{% include 'partials/relatedpages.html.twig' %}
 		</div>
 	{% endif %}
-{% endblock %}
+{% endblock relatedpages %}
 
 {% block random %}
 	{% if config.plugins.random.enabled %}
@@ -38,7 +40,7 @@
 			</a>
 		</div>
 	{% endif %}
-{% endblock %}
+{% endblock random %}
 
 {% block taxonomylist %}
 	{# Display the taxonomylist if the plugin is enabled and the config set to true #}
@@ -48,7 +50,7 @@
 			{% include 'partials/taxonomylist.html.twig' with {'base_url': new_base_url, 'taxonomy': 'tag', children_only: true} %}
 		</div>
 	{% endif %}
-{% endblock %}
+{% endblock taxonomylist %}
 
 {% block archives %}
 	{% if config.plugins.archives.enabled %}
@@ -57,16 +59,18 @@
 			{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
 		</div>
 	{% endif %}
-{% endblock %}
+{% endblock archives %}
 
 {# display sidebar markdown page - hibbittsdesign.org #}
-{% if sidebar_page.header.position == 'bottom' %}
-	{% if sidebar_page_content is not empty %}
-		<div class="sidebar-content">
-			{{ sidebar_page_content|raw }}
-		</div>
+{% block sidebar_md_bottom %}
+	{% if sidebar_page.header.position == 'bottom' %}
+		{% if sidebar_page_content is not empty %}
+			<div class="sidebar-content">
+				{{ sidebar_page_content|raw }}
+			</div>
+		{% endif %}
 	{% endif %}
-{% endif %}
+{% endblock sidebar_md_bottom %}
 
 {% block feed %}
 	{# Display the feed if the plugin is enabled and the config set to true #}
@@ -77,7 +81,7 @@
 			<a class="btn" href="{{ feed_url }}.rss"> <i class="fa fa-rss-square"></i> RSS </a>
 		</div>
 	{% endif %}
-{% endblock %}
+{% endblock feed %}
 
 {% block toc %}
 	{# Display the TOC if the plugin is enabled and the config not set to false #}
@@ -86,4 +90,4 @@
 			{% include 'components/page-toc.html.twig' %}
 		</div>
 	{% endif %}
-{% endblock %}
+{% endblock toc %}

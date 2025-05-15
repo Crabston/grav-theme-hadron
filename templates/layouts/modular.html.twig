@@ -1,0 +1,7 @@
+{% set grid_size = theme_var('grid-size') %}
+
+<section class="section {{ template_name }} {{ page.header.class}}">
+    <section class="container {{ grid_size }}">
+        {% block modular_content %}{% endblock %}
+    </section>
+</section>

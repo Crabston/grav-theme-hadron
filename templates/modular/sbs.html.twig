@@ -1,9 +1,6 @@
-{% set grid_size = theme_var('grid-size') %}
+{% extends 'layouts/modular.html.twig' %}
+{% set template_name = 'modular-sbs-list sbs sbs-list' %}
 
-<section class="section sbs modular-sbs">
-	<section class="container {{ grid_size }}">
-
-		{% include 'partials/sbs-content.html.twig' with {sbs: page.header.sbs} %}
-
-	</section>
-</section>
+{% block modular_content %}
+	{% include 'partials/sbs-content.html.twig' with {sbs: page.header.sbs} %}
+{% endblock modular_content %}
