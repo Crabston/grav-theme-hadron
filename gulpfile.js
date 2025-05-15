@@ -24,14 +24,13 @@ function minifyCss() {
 }
 
 function compileTypescript() {
+	const tsProject = ts.createProject("tsconfig.json", {
+		noImplicitAny: true,
+		outFile: "hadron.js",
+		allowJs: true,
+	});
 	return gulp.src("./ts/**/*.{ts,js}")
-		.pipe(ts({
-			noImplicitAny: true,
-			outFile: "hadron.js",
-			target: "es6",
-			removeComments: true,
-			allowJs: true,
-		}))
+		.pipe(tsProject())
 		.pipe(gulp.dest("./js"));
 }
 
