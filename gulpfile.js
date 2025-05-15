@@ -1,9 +1,11 @@
 "use strict";
 
 const gulp = require("gulp");
-const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
+
+const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
+
 const ts = require("gulp-typescript");
 
 function buildStyles() {
@@ -36,7 +38,8 @@ function compileTypescript() {
 
 exports.buildStyles = buildStyles;
 exports.minifyCss = minifyCss;
-exports.compileTypescript = compileTypescript;
 exports.watchCss = function() {
 	gulp.watch("./scss/**/*.scss", buildStyles);
 };
+
+exports.compileTypescript = compileTypescript;
