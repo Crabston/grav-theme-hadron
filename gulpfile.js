@@ -9,7 +9,7 @@ const cleanCSS = require("gulp-clean-css");
 const ts = require("gulp-typescript");
 const terser = require("gulp-terser");
 
-function buildStyles() {
+function compileStyles() {
 	return gulp.src("./scss/**/*.scss")
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(sass().on("error", sass.logError))
@@ -17,9 +17,9 @@ function buildStyles() {
 		.pipe(gulp.dest("./css"));
 }
 
-function minifyCss() {
+function compressCSS() {
 	return gulp.src("./css/**/*.css")
-		.pipe(cleanCSS({ debug: true, level: 2 }, (details) => {
+		.pipe(cleanCSS({ debug: true, level: 0 }, (details) => {
 			console.log(`Before: ${details.name}: ${details.stats.originalSize}`);
 			console.log(`After : ${details.name}: ${details.stats.minifiedSize}`);
 		}))
@@ -43,10 +43,16 @@ function compressJavascript() {
 		.pipe(gulp.dest("./js"));
 }
 
-exports.buildStyles = buildStyles;
-exports.minifyCss = minifyCss;
-exports.watchCss = function() {
-	gulp.watch("./scss/**/*.scss", buildStyles);
+exports.compileStyles = compileStyles;
+exports.compressCSS = compressCSS;
+exports.buildCSS = gulp.series(compileStyles, compressCSS);
+exports.watchCSS = function() {
+	gulp.watch("./scss/**/*.scss", gulp.series(compileStyles, compressCSS));
 };
 
 exports.compileTypescript = compileTypescript;
+exports.compressJavascript = compressJavascript;
+exports.buildJS = gulp.series(compileTypescript, compressJavascript);
+exports.watchJS = function() {
+	gulp.watch("./ts/**/*.{ts,js}", gulp.series(compileTypescript, compressJavascript));
+};
