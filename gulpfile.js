@@ -15,9 +15,9 @@ function buildStyles() {
 
 function minifyCss() {
 	return gulp.src("./css/**/*.css")
-		.pipe(cleanCSS({ debug: true, level: 0 }, (details) => {
+		.pipe(cleanCSS({ debug: true, level: 2 }, (details) => {
 			console.log(`Before: ${details.name}: ${details.stats.originalSize}`);
-			console.log(`After_: ${details.name}: ${details.stats.minifiedSize}`);
+			console.log(`After : ${details.name}: ${details.stats.minifiedSize}`);
 		}))
 		.pipe(gulp.dest("./css"));
 }
