@@ -4,6 +4,7 @@ const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const cleanCSS = require("gulp-clean-css");
+const ts = require("gulp-typescript");
 
 function buildStyles() {
 	return gulp.src("./scss/**/*.scss")
@@ -11,7 +12,7 @@ function buildStyles() {
 		.pipe(sass().on("error", sass.logError))
 		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest("./css"));
-};
+}
 
 function minifyCss() {
 	return gulp.src("./css/**/*.css")
@@ -22,8 +23,21 @@ function minifyCss() {
 		.pipe(gulp.dest("./css"));
 }
 
+function compileTypescript() {
+	return gulp.src("./ts/**/*.{ts,js}")
+		.pipe(ts({
+			noImplicitAny: true,
+			outFile: "hadron.js",
+			target: "es6",
+			removeComments: true,
+			allowJs: true,
+		}))
+		.pipe(gulp.dest("./js"));
+}
+
 exports.buildStyles = buildStyles;
 exports.minifyCss = minifyCss;
-exports.watch = function() {
+exports.compileTypescript = compileTypescript;
+exports.watchCss = function() {
 	gulp.watch("./scss/**/*.scss", buildStyles);
 };
