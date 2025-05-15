@@ -13,9 +13,16 @@
 	"license": "MIT",
 	"author": "Crabston Gmbh <contact@crabston.dev> (https://crabston.dev)",
 	"type": "commonjs",
-	"main": "index.js",
+	"main": "gulpfile.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"compileStyles": "gulp compileStyles",
+		"compressCSS": "gulp compressCSS",
+		"buildCSS": "gulp buildCSS",
+		"watchCSS": "gulp watchCSS",
+		"compileTypescript": "gulp compileTypescript",
+		"compressJavascript": "gulp compressJavascript",
+		"buildJS": "gulp buildJS",
+		"watchJS": "gulp watchJS"
 	},
 	"devDependencies": {
 		"gulp": "^5.0.0",
