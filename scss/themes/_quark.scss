@@ -2,7 +2,7 @@
 @use '../theme' as hadron;
 
 // Spectre Overrides
-$primary-color: hadron.$primary-color !default;
+$primary-color: hadron.$primary-color;
 $dark-color: quark.$dark-color;
 $light-color: quark.$light-color;
 $gray-color: quark.$gray-color;
