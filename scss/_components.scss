@@ -95,22 +95,22 @@ body:is(.header-dark) #header:not(.scrolled) {
 	}
 }
 
-//// darkmode elements
-//@if ($dark-mode) {
-//	input, textarea, button:not(.btn-primary), .btn:not(button),
-//	.notices, .card, .tab, .accordion-wrapper label,
-//	code:not([class*=language-]), pre {
-//		background-color: $dark-overlay !important;
-//
-//		& code[class*=language-] {
-//			background-color: transparent !important;
-//		}
-//	}
-//
-//	blockquote {
-//		border-left-color: $dark-overlay !important;
-//	}
-//}
+// darkmode elements
+@if ($dark-mode) {
+	input, textarea, button:not(.btn-primary), .btn:not(button),
+	.notices, .card, .tab, .accordion-wrapper label,
+	code:not([class*=language-]), pre {
+		background-color: $dark-overlay !important;
+
+		& code[class*=language-] {
+			background-color: transparent !important;
+		}
+	}
+
+	blockquote {
+		border-left-color: $dark-overlay !important;
+	}
+}
 
 // labels
 .label.label-secondary {
@@ -138,11 +138,11 @@ body {
 		}
 	}
 
-	//@if ($mobile-menu-colored) {
-	//	.treemenu li a:is(a, .active, :focus, :hover) {
-	//		color: $link-color !important;
-	//	}
-	//}
+	@if ($mobile-menu-colored) {
+		.treemenu li a:is(a, .active, :focus, :hover) {
+			color: $link-color !important;
+		}
+	}
 
 	table {
 		th {

@@ -1,5 +1,9 @@
 @use 'sass:color';
 
+// logical variables
+$dark-mode: false;
+$mobile-menu-colored: false;
+
 // color definitions
 $primary-color: #4063CB !default;
 $accent-color: #4063CB !default;
