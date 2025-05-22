@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import 'components/language-switcher';
 @import 'templates/cards';
 @import 'templates/side-by-side';
@@ -44,6 +45,121 @@ nav.language-switcher {
 
 		&::marker {
 			content: none;
+		}
+	}
+}
+
+
+// mobile navigation menu button
+body:not(.header-dark) .mobile-menu #toggle:not(.active) span,
+#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
+	background: $text-color;
+}
+
+body.header-dark .mobile-menu #toggle span,
+.mobile-menu #toggle.active span {
+	background: $text-color-secondary;
+}
+
+// navigation menu
+body:is(.header-light, .header-transparent) #header, #header.scrolled {
+	background-color: $background-color;
+	color: $text-color;
+
+	.dropmenu ul > li > a:is(.active, :focus, :hover) {
+		color: $link-color !important;
+	}
+}
+
+// navigation in dark mode (& transparent dark mode)
+body:is(.header-dark) #header:not(.scrolled) {
+	color: $text-color-secondary-dark;
+
+	// default dropdown
+	.dropmenu ul > li > a:is(.active, :focus, :hover) {
+		color: $link-color !important;
+	}
+
+	// navigation items
+	.dropmenu > ul > li > a:is(.active, :focus, :hover) {
+		color: $text-color-secondary !important;
+	}
+}
+
+#footer {
+	background-color: $footer-background !important;
+	color: $footer-text;
+
+	a, a:is(:hover) {
+		color: $link-color;
+	}
+}
+
+//// darkmode elements
+//@if ($dark-mode) {
+//	input, textarea, button:not(.btn-primary), .btn:not(button),
+//	.notices, .card, .tab, .accordion-wrapper label,
+//	code:not([class*=language-]), pre {
+//		background-color: $dark-overlay !important;
+//
+//		& code[class*=language-] {
+//			background-color: transparent !important;
+//		}
+//	}
+//
+//	blockquote {
+//		border-left-color: $dark-overlay !important;
+//	}
+//}
+
+// labels
+.label.label-secondary {
+	color: $link-color;
+	background-color: mix($link-color, $light-overlay, 10%);
+}
+
+body {
+	background-color: $background-color;
+	color: $text-color;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $text-color;
+	}
+
+	a:not(:has(.title), :is(.mobile-container a)) {
+		color: $link-color;
+
+		&:hover, &:focus, &:active, &:visited {
+			color: $link-color__active;
+		}
+
+		&.btn {
+			border-color: $accent-color;
+		}
+	}
+
+	//@if ($mobile-menu-colored) {
+	//	.treemenu li a:is(a, .active, :focus, :hover) {
+	//		color: $link-color !important;
+	//	}
+	//}
+
+	table {
+		th {
+			background-color: $primary-color;
+			color: $text-color-secondary;
+		}
+
+		tr:nth-child(even) {
+			background-color: $dark-overlay;
+		}
+	}
+
+	input, textarea, select {
+		&:focus, &:focus-visible {
+			border-color: $primary-color;
+			outline: $primary-color;
+			box-shadow: 0 0 0 .1rem rgba($primary-color, .25);
 		}
 	}
 }
