@@ -1,6 +1,8 @@
 @use 'sass:selector';
 @use 'sass:color';
 
+// acts as a parent selector for the child element
+// parent :selector { @include unify-parent('child') } results in parent child:selector
 @mixin unify-parent($child) {
 	@at-root #{selector.unify(&, $child)} {
 		@content;
