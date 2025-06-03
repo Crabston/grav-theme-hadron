@@ -1,7 +1,4 @@
 @use 'sass:color';
-@import 'components/language-switcher';
-@import 'templates/cards';
-@import 'templates/side-by-side';
 
 // overlays
 .image-overlay {
@@ -28,23 +25,6 @@
 	}
 
 	img { padding: 1rem; }
-}
-
-// TODO: move to components/_language-switcher.scss
-nav.language-switcher {
-	nav:not(.dropmenu) li {
-		font-size: 16px;
-	}
-}
-
-// TODO: move to components/_footer.scss
-#footer {
-	background-color: $footer-background !important;
-	color: $footer-text;
-
-	a, a:is(:hover) {
-		color: $link-color;
-	}
 }
 
 // darkmode elements
@@ -93,18 +73,6 @@ body {
 	@if ($mobile-menu-colored) {
 		.treemenu li a:is(a, .active, :focus, :hover) {
 			color: $link-color !important;
-		}
-	}
-
-	// TODO: move to components/_table.scss
-	table {
-		th {
-			background-color: $primary-color;
-			color: $text-color-secondary;
-		}
-
-		tr:nth-child(even) {
-			background-color: $dark-overlay;
 		}
 	}
 }

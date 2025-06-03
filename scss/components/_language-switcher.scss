@@ -1,6 +1,10 @@
 nav.language-switcher {
 	margin-left: 1rem;
 
+	nav:not(.dropmenu) li {
+		font-size: 16px;
+	}
+
 	ul {
 		display: flex;
 		gap: .5rem

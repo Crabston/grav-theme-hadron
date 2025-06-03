@@ -1,6 +1,12 @@
 #footer {
+	background-color: $footer-background !important;
+	color: $footer-text;
 	margin-top: 3rem;
 	padding: 1rem;
+
+	a, a:is(:hover) {
+		color: $link-color;
+	}
 
 	p { margin: 0; }
 }
