@@ -30,62 +30,14 @@
 	img { padding: 1rem; }
 }
 
+// TODO: move to components/_language-switcher.scss
 nav.language-switcher {
 	nav:not(.dropmenu) li {
 		font-size: 16px;
 	}
-
-	ul {
-		display: flex;
-		gap: .5rem
-	}
-
-	li {
-		margin-top: 0;
-
-		&::marker {
-			content: none;
-		}
-	}
 }
 
-
-// mobile navigation menu button
-body:not(.header-dark) .mobile-menu #toggle:not(.active) span,
-#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
-	background: $text-color;
-}
-
-body.header-dark .mobile-menu #toggle span,
-.mobile-menu #toggle.active span {
-	background: $text-color-secondary;
-}
-
-// navigation menu
-body:is(.header-light, .header-transparent) #header, #header.scrolled {
-	background-color: $background-color;
-	color: $text-color;
-
-	.dropmenu ul > li > a:is(.active, :focus, :hover) {
-		color: $link-color !important;
-	}
-}
-
-// navigation in dark mode (& transparent dark mode)
-body:is(.header-dark) #header:not(.scrolled) {
-	color: $text-color-secondary-dark;
-
-	// default dropdown
-	.dropmenu ul > li > a:is(.active, :focus, :hover) {
-		color: $link-color !important;
-	}
-
-	// navigation items
-	.dropmenu > ul > li > a:is(.active, :focus, :hover) {
-		color: $text-color-secondary !important;
-	}
-}
-
+// TODO: move to components/_footer.scss
 #footer {
 	background-color: $footer-background !important;
 	color: $footer-text;
@@ -144,6 +96,7 @@ body {
 		}
 	}
 
+	// TODO: move to components/_table.scss
 	table {
 		th {
 			background-color: $primary-color;

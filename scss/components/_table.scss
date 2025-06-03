@@ -26,11 +26,13 @@ table {
 }
 
 
+// TODO: include breakpoint in style directly
 // desktop
 @media screen and (min-width: $responsive-breakpoint-mobile+1) {
 	table td::before { display: none; }
 }
 
+// TODO: include breakpoint in style directly
 // mobile
 @media screen and (max-width: $responsive-breakpoint-mobile) {
 	.table-responsive table {

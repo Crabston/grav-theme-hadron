@@ -2,12 +2,17 @@
 @import 'theme';
 @import 'base';
 @import 'overrides';
-@import 'sizes';
 
 // components
-@import 'header-footer';
-@import 'navigation';
-@import 'hero';
-@import 'form';
-@import 'table';
 @import 'components';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/language-switcher';
+@import 'components/hero';
+@import 'components/form';
+@import 'components/table';
+@import 'components/footer';
+
+// templates
+@import 'templates/cards';
+@import 'templates/side-by-side';
