@@ -1,7 +1,6 @@
-{% set grid_size = theme_var('grid-size') %}
+{% extends 'layouts/modular.html.twig' %}
+{% set template_name = 'modular-text' %}
 
-<section class="g-text section modular-text {{ page.header.class}}">
-    <section class="container {{ grid_size }}">
-           {{ content|raw }}
-    </section>
-</section>
+{% block modular_content %}
+    {{ content|raw }}
+{% endblock modular_content %}
