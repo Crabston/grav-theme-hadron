@@ -43,7 +43,7 @@ body {
 
 			@include navbar-brand;
 
-			.title { color: $text-color-secondary; }
+			.title { color: $header-text-dark; }
 
 			img { margin-top: 0; }
 		}
@@ -51,7 +51,7 @@ body {
 		.overlay-menu {
 			a, .toggler {
 				padding: 1rem;
-				color: $text-color-secondary;
+				color: $header-text-dark;
 			}
 
 			.toggler {
@@ -66,7 +66,7 @@ body {
 	&:not(.header-dark) .mobile-menu,
 	#header.scrolled ~ .mobile-menu {
 		#toggle:not(.active) span {
-			background: $text-color;
+			background: $header-text;
 		}
 	}
 
@@ -74,15 +74,15 @@ body {
 	// if dark mode or not scrolled
 	&:is(.header-dark) .mobile-menu #toggle span,
 	.mobile-menu #toggle.active span {
-		background: $text-color-secondary;
+		background: $header-background;
 	}
 
 	// header
 	// if not dark or scrolled
 	&:is(.header-light, .header-transparent) #header,
 	#header.scrolled {
-		background-color: $background-color;
-		color: $text-color;
+		background-color: $header-background;
+		color: $header-text;
 
 		.dropmenu ul > li > a:is(.active, :focus, :hover) {
 			color: $primary-color !important;
@@ -92,7 +92,7 @@ body {
 	// header
 	// if dark or not scrolled
 	&:is(.header-dark) #header:not(.scrolled) {
-		color: $text-color-secondary-dark;
+		color: $header-text-dark;
 
 		// default dropdown
 		.dropmenu ul > li > a:is(.active, :focus, :hover) {
@@ -101,7 +101,7 @@ body {
 
 		// navigation items
 		.dropmenu > ul > li > a:is(.active, :focus, :hover) {
-			color: $text-color-secondary !important;
+			color: $header-text-dark !important;
 		}
 	}
 }

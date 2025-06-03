@@ -1,6 +1,6 @@
 @use 'sass:color';
 
-// logical variables
+// theme variables
 $dark-mode: false;
 $mobile-menu-colored: false;
 
@@ -11,24 +11,12 @@ $grey: #3a414e !default;
 $light-overlay: rgba(255, 255, 255, 0.25) !default;
 $dark-overlay: rgba(0, 0, 0, 0.25) !default;
 
-// elements
-$background-color: white !default;
-$text-color: $grey !default;
-$text-color-light: mix($text-color, $light-overlay, 25%) !default;
-$text-color-secondary: white !default;
-$text-color-secondary-dark: mix($text-color-secondary, $dark-overlay) !default;
-
-// hero image
-$overlay-dark: #00000033 !default;
-$overlay-dark-grad-from: #0000004D !default;
-$overlay-dark-grad-to: #00000000 !default;
-
 // sizes
 $responsive-breakpoint-mobile: 640px !default;
 $responsive-breakpoint-tablet: 840px !default;
 $responsive-breakpoint-desktop: 1280px !default;
 
-// elements
+// content
 $background-color: white !default;
 $text-color: $grey !default;
 $text-color-light: mix($text-color, $light-overlay, 25%) !default;
@@ -37,13 +25,12 @@ $text-color-secondary-dark: mix($text-color-secondary, $dark-overlay) !default;
 $link-color: $primary-color !default;
 $link-color__active: $accent-color !default;
 
-// header & footer
+// header
 $header-background: $background-color !default;
 $header-text: $text-color !default;
-$header-text__active: $text-color-secondary !default;
+$header-text-dark: $text-color-secondary !default;
+
+// footer
 $footer-background: $background-color !default;
 $footer-text: $text-color !default;
 $footer-text-link: $link-color !default;
-
-// sizes
-$nav-item-height: 4rem;
