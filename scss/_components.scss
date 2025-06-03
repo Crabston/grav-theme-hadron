@@ -1,30 +1,9 @@
 @use 'sass:color';
 
-// overlays
-.image-overlay {
-	.overlay-dark & {
-		background-color: $overlay-dark;
-	}
-
-	.overlay-dark-gradient & {
-		background: linear-gradient(to bottom, $overlay-dark-grad-from, $overlay-dark-grad-to);
-	}
-}
-
-// sponsors
-.sponsoren-list {
-	p {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-	a {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	img { padding: 1rem; }
+// labels
+.label.label-secondary {
+	color: $link-color;
+	background-color: mix($link-color, $light-overlay, 10%);
 }
 
 // darkmode elements
@@ -42,12 +21,6 @@
 	blockquote {
 		border-left-color: $dark-overlay !important;
 	}
-}
-
-// labels
-.label.label-secondary {
-	color: $link-color;
-	background-color: mix($link-color, $light-overlay, 10%);
 }
 
 body {
