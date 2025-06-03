@@ -1,8 +1,28 @@
-// TODO: refactor whole file; make it more readable and maintainable
+// NOTE: Structure of HTML
+/*
+body.header-dark.header-light.header-transparent {
+	// header & navigation
+	#header.scrolled {
+		nav.navbar {
+			nav.dropmenu { }
+		}
+	}
 
-// navigation general
-#header nav.navbar,
-.mobile-container .mobile-logo {
+	// hamburger menu
+	.mobile-menu {
+		#toggle {
+			span { }
+		}
+	}
+
+	// mobile navigation
+	.mobile-container {
+		.mobile-logo { }
+	}
+}
+*/
+
+@mixin navbar-brand {
 	.navbar-brand {
 		gap: 1rem;
 
@@ -12,66 +32,76 @@
 	}
 }
 
-// mobile navigation
-.mobile-container .mobile-logo {
-	margin-top: .7rem;
-
-	img { margin-top: 0; }
-}
-
-// mobile navigation menu button
-body:not(.header-dark) .mobile-menu #toggle:not(.active) span,
-#header.scrolled ~ .mobile-menu #toggle:not(.active) span {
-	background: $text-color;
-}
-
-body.header-dark .mobile-menu #toggle span,
-.mobile-menu #toggle.active span {
-	background: $text-color-secondary;
-}
-
-// navigation menu
-body:is(.header-light, .header-transparent) #header, #header.scrolled {
-	background-color: $background-color;
-	color: $text-color;
-
-	.dropmenu ul > li > a:is(.active, :focus, :hover) {
-		color: $primary-color !important;
-	}
-}
-
-// navigation in dark mode (& transparent dark mode)
-body:is(.header-dark) #header:not(.scrolled) {
-	color: $text-color-secondary-dark;
-
-	// default dropdown
-	.dropmenu ul > li > a:is(.active, :focus, :hover) {
-		color: $primary-color !important;
+body {
+	#header {
+		@include navbar-brand;
 	}
 
-	// navigation items
-	.dropmenu > ul > li > a:is(.active, :focus, :hover) {
-		color: $text-color-secondary !important;
-	}
-}
+	.mobile-container {
+		.mobile-logo {
+			margin-top: .7rem;
 
-// mobile nav
-.mobile-container {
-	.mobile-logo {
-		.title {
-			color: $text-color-secondary;
+			@include navbar-brand;
+
+			.title { color: $text-color-secondary; }
+
+			img { margin-top: 0; }
+		}
+
+		.overlay-menu {
+			a, .toggler {
+				padding: 1rem;
+				color: $text-color-secondary;
+			}
+
+			.toggler {
+				font-size: 1.5rem;
+				padding: 1rem;
+			}
 		}
 	}
 
-	.overlay-menu {
-		a, .toggler {
-			padding: 1rem;
-			color: $text-color-secondary;
+	// hamburger menu
+	// if no dark mode or scrolled
+	&:not(.header-dark) .mobile-menu,
+	#header.scrolled ~ .mobile-menu {
+		#toggle:not(.active) span {
+			background: $text-color;
+		}
+	}
+
+	// hamburger menu
+	// if dark mode or not scrolled
+	&:is(.header-dark) .mobile-menu #toggle span,
+	.mobile-menu #toggle.active span {
+		background: $text-color-secondary;
+	}
+
+	// header
+	// if not dark or scrolled
+	&:is(.header-light, .header-transparent) #header,
+	#header.scrolled {
+		background-color: $background-color;
+		color: $text-color;
+
+		.dropmenu ul > li > a:is(.active, :focus, :hover) {
+			color: $primary-color !important;
+		}
+	}
+
+	// header
+	// if dark or not scrolled
+	&:is(.header-dark) #header:not(.scrolled) {
+		color: $text-color-secondary-dark;
+
+		// default dropdown
+		.dropmenu ul > li > a:is(.active, :focus, :hover) {
+			color: $primary-color !important;
 		}
 
-		.toggler {
-			font-size: 1.5rem;
-			padding: 1rem;
+		// navigation items
+		.dropmenu > ul > li > a:is(.active, :focus, :hover) {
+			color: $text-color-secondary !important;
 		}
 	}
 }
