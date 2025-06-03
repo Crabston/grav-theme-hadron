@@ -1,0 +1,41 @@
+@use '../../../quark/scss/theme/variables' as quark;
+@use '../theme' as hadron;
+
+// Spectre Overrides
+$primary-color: hadron.$primary-color;
+$dark-color: quark.$dark-color;
+$light-color: quark.$light-color;
+$gray-color: quark.$gray-color;
+$gray-color-dark: quark.$gray-color-dark;
+$border-color: quark.$border-color;
+$bg-color: quark.$bg-color;
+$body-font-color: quark.$body-font-color;
+
+// Layout
+$horiz-padding: quark.$horiz-padding;
+$vert-padding: quark.$vert-padding;
+
+// Fonts
+$min-responsive-font-size: quark.$min-responsive-font-size;
+
+// Header
+$header-height-large: quark.$header-height-large;
+$header-height-small: quark.$header-height-small;
+$header-color-dark: quark.$header-color-dark;
+$header-text-light: quark.$header-text-light;
+$header-text-dark: quark.$header-text-dark;
+
+// Dropdown Menu
+$dropmenu-bg: quark.$dropmenu-bg;
+$dropmenu-hover-text: hadron.$primary-color;
+$dropmenu-horiz-padding: quark.$dropmenu-horiz-padding;
+$dropmenu-vert-padding: quark.$dropmenu-vert-padding;
+$dropmenu-child-padding: quark.$dropmenu-child-padding;
+$dropmenu-shadow: quark.$dropmenu-shadow;
+
+// Mobile Menu
+$mobile-color-main: hadron.$primary-color;
+$mobile-color-active: quark.$mobile-color-active;
+$mobile-color-link: quark.$mobile-color-link;
+$mobile-button-height: quark.$mobile-button-height;
+$mobile-button-width: quark.$mobile-button-width;

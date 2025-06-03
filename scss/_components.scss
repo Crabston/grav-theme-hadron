@@ -1,49 +1,51 @@
-@import 'components/language-switcher';
-@import 'templates/cards';
-@import 'templates/side-by-side';
+@use 'sass:color';
 
-// overlays
-.image-overlay {
-	.overlay-dark & {
-		background-color: $overlay-dark;
+// labels
+.label.label-secondary {
+	color: $link-color;
+	background-color: mix($link-color, $light-overlay, 10%);
+}
+
+// darkmode elements
+@if ($dark-mode) {
+	input, textarea, button:not(.btn-primary), .btn:not(button),
+	.notices, .card, .tab, .accordion-wrapper label,
+	code:not([class*=language-]), pre {
+		background-color: $dark-overlay !important;
+
+		& code[class*=language-] {
+			background-color: transparent !important;
+		}
 	}
 
-	.overlay-dark-gradient & {
-		background: linear-gradient(to bottom, $overlay-dark-grad-from, $overlay-dark-grad-to);
+	blockquote {
+		border-left-color: $dark-overlay !important;
 	}
 }
 
-// sponsors
-.sponsoren-list {
-	p {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+body {
+	background-color: $background-color;
+	color: $text-color;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $text-color;
 	}
 
-	a {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	a:not(:has(.title), :is(.mobile-container a)) {
+		color: $link-color;
+
+		&:hover, &:focus, &:active, &:visited {
+			color: $link-color__active;
+		}
+
+		&.btn {
+			border-color: $accent-color;
+		}
 	}
 
-	img { padding: 1rem; }
-}
-
-nav.language-switcher {
-	nav:not(.dropmenu) li {
-		font-size: 16px;
-	}
-
-	ul {
-		display: flex;
-		gap: .5rem
-	}
-
-	li {
-		margin-top: 0;
-
-		&::marker {
-			content: none;
+	@if ($mobile-menu-colored) {
+		.treemenu li a:is(a, .active, :focus, :hover) {
+			color: $link-color !important;
 		}
 	}
 }

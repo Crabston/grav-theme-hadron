@@ -31,13 +31,13 @@
 		{% set enable_fa = false %}
 	{% endif %}
 
-	{% do assets.addCss('theme://css-compiled/spectre'~compress) %}
-	{% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress) %}{% endif %}
-	{% if theme_var('spectre.icons') %}{% do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
-	{% do assets.addCss('theme://css-compiled/theme'~compress) %}
-	{% do assets.addCss('theme://css/theme.css',100) %}
-	{% do assets.addCss('theme://css/hadron.css') %}
-	{% do assets.addCss('theme://css/custom.css') %}
+	{% do assets.addCss('theme://css-compiled/spectre'~compress, 100) %}
+	{% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress, 100) %}{% endif %}
+	{% if theme_var('spectre.icons') %}{% do assets.addCss('theme://css-compiled/spectre-icons'~compress, 100) %}{% endif %}
+
+	{% do assets.addCss('theme://css/quark.css',100) %}
+	{% do assets.addCss('theme://css/hadron.css',10) %}
+	{% do assets.addCss('theme://css/custom.css', 0) %}
 
 	{% if not enable_fa %}
 		{% do assets.addCss('theme://css/line-awesome.min.css') %}
@@ -53,7 +53,6 @@
 	{% do assets.addJs('jquery', 101) %}
 	{% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
 	{% do assets.addJs('theme://js/hadron.js', {group:'bottom'}) %}
-	{% do assets.addJs('theme://js/responsiveTable.js', {group:'bottom'}) %}
 {% endblock javascripts %}
 
 {% block header %}

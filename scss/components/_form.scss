@@ -1,5 +1,8 @@
 @use 'sass:selector';
+@use 'sass:color';
 
+// acts as a parent selector for the child element
+// parent :selector { @include unify-parent('child') } results in parent child:selector
 @mixin unify-parent($child) {
 	@at-root #{selector.unify(&, $child)} {
 		@content;
@@ -76,6 +79,54 @@ form:not(.login-form) {
 
 		button {
 			@include form-field;
+
+			color: $primary-color;
+			border: 1px solid $primary-color;
+
+			&.btn-primary {
+				color: $text-color-secondary;
+				background-color: $primary-color;
+
+				&:hover {
+					background-color: darken($primary-color, 10%);
+				}
+			}
+
+			&:hover, &:focus, &:focus-visible {
+				border: 1px solid $primary-color;
+				box-shadow: 0 0 0 .1rem rgba($primary-color, .25);
+				outline-color: $primary-color;
+				background-color: transparentize($primary-color, .9);
+			}
 		}
+	}
+
+	// TODO: create a $form-color variable
+	input, textarea, select {
+		accent-color: $primary-color; // for checkboxes, radio, range, ...
+
+		@if ($dark-mode == true) {
+			color-scheme: dark;
+		}
+
+		&:focus, &:focus-visible {
+			border-color: $primary-color;
+			outline: $primary-color;
+			box-shadow: 0 0 0 .1rem rgba($primary-color, .25);
+		}
+	}
+
+	select option {
+		&:hover {
+			box-shadow: 0 0 10px 100px $primary-color inset;
+		}
+
+		&[selected] {
+			background-color: $primary-color;
+		}
+	}
+
+	.switch-toggle input:checked + label {
+		background-color: $primary-color;
 	}
 }

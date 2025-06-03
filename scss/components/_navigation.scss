@@ -1,0 +1,107 @@
+// NOTE: Structure of HTML
+/*
+body.header-dark.header-light.header-transparent {
+	// header & navigation
+	#header.scrolled {
+		nav.navbar {
+			nav.dropmenu { }
+		}
+	}
+
+	// hamburger menu
+	.mobile-menu {
+		#toggle {
+			span { }
+		}
+	}
+
+	// mobile navigation
+	.mobile-container {
+		.mobile-logo { }
+	}
+}
+*/
+
+@mixin navbar-brand {
+	.navbar-brand {
+		gap: 1rem;
+
+		.title { font-size: 1.5rem; }
+
+		&:hover { text-decoration: none; }
+	}
+}
+
+body {
+	#header {
+		@include navbar-brand;
+	}
+
+	.mobile-container {
+		.mobile-logo {
+			margin-top: .7rem;
+
+			@include navbar-brand;
+
+			.title { color: $header-text-dark; }
+
+			img { margin-top: 0; }
+		}
+
+		.overlay-menu {
+			a, .toggler {
+				padding: 1rem;
+				color: $header-text-dark;
+			}
+
+			.toggler {
+				font-size: 1.5rem;
+				padding: 1rem;
+			}
+		}
+	}
+
+	// hamburger menu
+	// if no dark mode or scrolled
+	&:not(.header-dark) .mobile-menu,
+	#header.scrolled ~ .mobile-menu {
+		#toggle:not(.active) span {
+			background: $header-text;
+		}
+	}
+
+	// hamburger menu
+	// if dark mode or not scrolled
+	&:is(.header-dark) .mobile-menu #toggle span,
+	.mobile-menu #toggle.active span {
+		background: $header-background;
+	}
+
+	// header
+	// if not dark or scrolled
+	&:is(.header-light, .header-transparent) #header,
+	#header.scrolled {
+		background-color: $header-background;
+		color: $header-text;
+
+		.dropmenu ul > li > a:is(.active, :focus, :hover) {
+			color: $primary-color !important;
+		}
+	}
+
+	// header
+	// if dark or not scrolled
+	&:is(.header-dark) #header:not(.scrolled) {
+		color: $header-text-dark;
+
+		// default dropdown
+		.dropmenu ul > li > a:is(.active, :focus, :hover) {
+			color: $primary-color !important;
+		}
+
+		// navigation items
+		.dropmenu > ul > li > a:is(.active, :focus, :hover) {
+			color: $header-text-dark !important;
+		}
+	}
+}

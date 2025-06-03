@@ -1,45 +1,36 @@
 @use 'sass:color';
 
+// theme variables
+$dark-mode: false;
+$mobile-menu-colored: false;
+
 // color definitions
-$primary-color: #4063CB;
-$accent-color: #4063CB;
-$grey: #3a414e;
-$light-overlay: rgba(255, 255, 255, 0.25);
-$dark-overlay: rgba(0, 0, 0, 0.25);
-
-// elements
-$background-color: white;
-$text-color: $grey;
-$text-color-light: mix($text-color, $light-overlay, 25%);
-$text-color-secondary: white;
-$text-color-secondary-dark: mix($text-color-secondary, $dark-overlay);
-
-// hero image
-$overlay-dark: #00000033;
-$overlay-dark-grad-from: #0000004D;
-$overlay-dark-grad-to: #00000000;
+$primary-color: #4063CB !default;
+$accent-color: #4063CB !default;
+$grey: #3a414e !default;
+$light-overlay: rgba(255, 255, 255, 0.25) !default;
+$dark-overlay: rgba(0, 0, 0, 0.25) !default;
 
 // sizes
-$responsive-breakpoint-mobile: 640px;
-$responsive-breakpoint-tablet: 840px;
-$responsive-breakpoint-desktop: 1280px;
+$responsive-breakpoint-mobile: 640px !default;
+$responsive-breakpoint-tablet: 840px !default;
+$responsive-breakpoint-desktop: 1280px !default;
 
-// elements
-$background-color: white;
-$text-color: $grey;
-$text-color-light: mix($text-color, $light-overlay, 25%);
-$text-color-secondary: white;
-$text-color-secondary-dark: mix($text-color-secondary, $dark-overlay);
-$link-color: $primary-color;
-$link-color__active: $accent-color;
+// content
+$background-color: white !default;
+$text-color: $grey !default;
+$text-color-light: mix($text-color, $light-overlay, 25%) !default;
+$text-color-secondary: white !default;
+$text-color-secondary-dark: mix($text-color-secondary, $dark-overlay) !default;
+$link-color: $primary-color !default;
+$link-color__active: $accent-color !default;
 
-// header & footer
-$header-background: $background-color;
-$header-text: $text-color;
-$header-text__active: $text-color-secondary;
-$footer-background: $background-color;
-$footer-text: $text-color;
-$footer-text-link: $link-color;
+// header
+$header-background: $background-color !default;
+$header-text: $text-color !default;
+$header-text-dark: $text-color-secondary !default;
 
-// sizes
-$nav-item-height: 4rem;
+// footer
+$footer-background: $background-color !default;
+$footer-text: $text-color !default;
+$footer-text-link: $link-color !default;

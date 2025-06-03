@@ -1,30 +1,18 @@
 // general
 @import 'theme';
+@import 'base';
 @import 'overrides';
-@import 'sizes';
 
 // components
-@import 'header-footer';
-@import 'navigation';
-@import 'hero';
-@import 'form';
-@import 'table';
 @import 'components';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/language-switcher';
+@import 'components/hero';
+@import 'components/form';
+@import 'components/table';
+@import 'components/footer';
 
-// css reset
-* { box-sizing: border-box; }
-
-// smooth scroll (for anchor links)
-html { scroll-behavior: smooth; }
-
-.f {
-	display: flex;
-
-	&.col { flex-direction: column; }
-
-	&.row { flex-direction: row; }
-
-	&.c { justify-content: center; }
-
-	&.a { align-items: center; }
-}
+// templates
+@import 'templates/cards';
+@import 'templates/side-by-side';

@@ -1,0 +1,37 @@
+{
+	"name": "hadron",
+	"version": "2.1.0",
+	"description": "modern Grav theme based on Quark with advanced features and styles",
+	"homepage": "https://github.com/Crabston/grav-theme-hadron#readme",
+	"bugs": {
+		"url": "https://github.com/Crabston/grav-theme-hadron/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Crabston/grav-theme-hadron.git"
+	},
+	"license": "MIT",
+	"author": "Crabston Gmbh <contact@crabston.dev> (https://crabston.dev)",
+	"type": "commonjs",
+	"main": "gulpfile.js",
+	"scripts": {
+		"compileStyles": "gulp compileStyles",
+		"compressCSS": "gulp compressCSS",
+		"buildCSS": "gulp buildCSS",
+		"watchCSS": "gulp watchCSS",
+		"compileTypescript": "gulp compileTypescript",
+		"compressJavascript": "gulp compressJavascript",
+		"buildJS": "gulp buildJS",
+		"watchJS": "gulp watchJS"
+	},
+	"devDependencies": {
+		"gulp": "^5.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-sass": "^6.0.1",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-terser": "^2.1.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"sass": "^1.87.0",
+		"typescript": "^5.8.3"
+	}
+}
