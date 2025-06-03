@@ -27,14 +27,14 @@ $header-text-dark: quark.$header-text-dark;
 
 // Dropdown Menu
 $dropmenu-bg: quark.$dropmenu-bg;
-$dropmenu-hover-text: quark.$dropmenu-hover-text;
+$dropmenu-hover-text: hadron.$primary-color;
 $dropmenu-horiz-padding: quark.$dropmenu-horiz-padding;
 $dropmenu-vert-padding: quark.$dropmenu-vert-padding;
 $dropmenu-child-padding: quark.$dropmenu-child-padding;
 $dropmenu-shadow: quark.$dropmenu-shadow;
 
 // Mobile Menu
-$mobile-color-main: quark.$mobile-color-main;
+$mobile-color-main: hadron.$primary-color;
 $mobile-color-active: quark.$mobile-color-active;
 $mobile-color-link: quark.$mobile-color-link;
 $mobile-button-height: quark.$mobile-button-height;
