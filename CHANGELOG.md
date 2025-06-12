@@ -1,3 +1,9 @@
+# 2.1.1
+## _unreleased_
+1. [](#improved)
+   - add template blocks for easier customization
+   - optimized CSS for better performance
+
 # 2.1.0
 ## 06-05-2025
 1. [](#new)
