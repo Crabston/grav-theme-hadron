@@ -32,15 +32,15 @@
 	{{ macros.nav_loop(pages, hide_home_menu_link, home_alias ) }}
 
     {% block snipcart_cart %}
-        {% if config.plugins.snipcart.enabled %}
-            <li>
-                {% include 'partials/snipcart_cart.html.twig' %}
-                <ul>
-                    <li><a href="#" class="snipcart-edit-profile">Account</a></li>
-                    <li><a href="#" class="snipcart-user-profile">Order History</a></li>
-                    <li><a href="#" class="snipcart-user-logout">Logout</a></li>
-                </ul>
-            </li>
-        {% endif %}
+		{% if config.plugins.snipcart.enabled %}
+			<li>
+				{% include 'partials/snipcart_cart.html.twig' %}
+				<ul>
+					<li><a href="#" class="snipcart-edit-profile">Account</a></li>
+					<li><a href="#" class="snipcart-user-profile">Order History</a></li>
+					<li><a href="#" class="snipcart-user-logout">Logout</a></li>
+				</ul>
+			</li>
+		{% endif %}
     {% endblock snipcart_cart %}
 </ul>
