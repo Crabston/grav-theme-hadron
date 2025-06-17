@@ -56,7 +56,7 @@
 	{% if config.plugins.snipcart.enabled %}
 		{% do assets.addJs('https://cdn.snipcart.com/scripts/2.0/snipcart.js', {group:'bottom', id: 'snipcart', 'data-api-key': header.snipcart.api_key}) %}
 	{% endif %}
-{% endblock javascript %}
+{% endblock javascripts %}
 
 {% block header %}
     <section id="header" class="section">
