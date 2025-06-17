@@ -31,15 +31,7 @@
 	{% import _self as macros %}
 	{{ macros.nav_loop(pages, hide_home_menu_link, home_alias ) }}
 
-	{# TODO: move to snipcart plugin and include to hadron #}
     {% block snipcart_cart %}
-		{% if config.plugins.snipcart.enabled %}
-			<li>
-				{% include 'partials/snipcart_cart.html.twig' %}
-				<ul>
-					<li><a href="#" class="snipcart-customer-signin">Account</a></li>
-				</ul>
-			</li>
-		{% endif %}
+		{% include 'partials/snipcart_navigation.html.twig' ignore missing %}
     {% endblock snipcart_cart %}
 </ul>
