@@ -43,9 +43,18 @@ body {
 		}
 	}
 
+	ol ol, ol ul, ul ol, ul ul {
+		margin: 0 1.6rem;
+	}
+
 	@if ($mobile-menu-colored) {
 		.treemenu li a:is(a, .active, :focus, :hover) {
 			color: $link-color !important;
 		}
+	}
+
+	.hadron-font{
+		font-family: Hadron, sans-serif;
+		text-transform: uppercase;
 	}
 }

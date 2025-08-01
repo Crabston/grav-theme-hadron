@@ -4,7 +4,9 @@
 	{% if logo %}
 		{% set logo_file = (logo|first).name %}
 		<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title }}" />
-		<span class="title">{{ title }}</span>
+		{% if not config.theme.hide_title %}
+			<span class="title">{{ title }}</span>
+		{% endif %}
 	{% else %}
 		{% include('@images/grav-logo.svg') %}
 	{% endif %}
