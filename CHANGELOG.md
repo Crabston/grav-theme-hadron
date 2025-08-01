@@ -1,8 +1,11 @@
-# 2.1.1
-## _unreleased_
+# 2.2.0
+## 01-08-2025
+1. [](#new)
+   - integrated Snipcart shop
 1. [](#improved)
    - add template blocks for easier customization
    - optimized CSS for better performance
+   - updated branding for Hadron
 
 # 2.1.0
 ## 06-05-2025
