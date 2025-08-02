@@ -258,6 +258,9 @@ THEME:
         DESCRIPTION: URL der Quelle, bis, aber nicht einschliesslich, der H5P Content ID. Zum Beispiel https://h5p.org/h5p/embed/ oder https://[organization].h5p.com/content/.
     MENU:
       TITLE: Menü
+      HIDE_TITLE:
+        LABEL: Verstecke Titel
+        HELP: Versteckt den Titel der Seite in der Navigation
       DISPLAY_DROPDOWNS:
         LABEL: Zeige Dropdowns im Menü
       DISPLAY_CUSTOM_MENUS:
@@ -281,14 +284,6 @@ THEME:
             PARENT: Öffne im übergeordneten Fenster
             TOP: Öffne im Hauptfenster
             SELF: Öffne im aktuellen Fenster / Tab
-    FONTAWESOME:
-      TITLE: Fontawesome Icons
-      ENABLE_SOLID:
-        LABEL: Aktiviere Solid Icons
-      ENABLE_REGULAR:
-        LABEL: Aktiviere Regular Icons
-      ENABLE_BRAND:
-        LABEL: Aktiviere Brands Icons
     LANGSWITCHER:
       TITLE: Language Switcher
       ENABLE:
@@ -305,6 +300,14 @@ THEME:
           SHORT: kurz
           LONG: lang
           ICON: Flagge
+    FONTAWESOME:
+      TITLE: Fontawesome Icons
+      ENABLE_SOLID:
+        LABEL: Aktiviere Solid Icons
+      ENABLE_REGULAR:
+        LABEL: Aktiviere Regular Icons
+      ENABLE_BRAND:
+        LABEL: Aktiviere Brands Icons
   QUARK:
     TITLE: Quark Optionen
     PRODUCTION_MODE:

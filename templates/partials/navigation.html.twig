@@ -31,6 +31,21 @@
 	{% import _self as macros %}
 	{{ macros.nav_loop(pages, hide_home_menu_link, home_alias ) }}
 
+    {% block menu_items %}
+		{% if theme_var('custommenus.enabled') %}
+			{% for mitem in theme_var('menu') %}
+				<li>
+					<a href="{{ mitem.url }}" target="{{ mitem.target }}">
+						{% if mitem.icon %}
+							<i class="fa fa-{{ mitem.icon }}"></i>
+						{% endif %}
+						{{ mitem.text }}
+					</a>
+				</li>
+			{% endfor %}
+		{% endif %}
+    {% endblock menu_items %}
+
     {% block snipcart_cart %}
 		{% include 'partials/snipcart_navigation.html.twig' ignore missing %}
     {% endblock snipcart_cart %}

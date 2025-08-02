@@ -47,6 +47,17 @@ form:
               type: section
               title: THEME.HADRON.MENU.TITLE
               underline: true
+            hide_title:
+              type: toggle
+              label: THEME.HADRON.MENU.HIDE_TITLE.LABEL
+              help: THEME.HADRON.MENU.HIDE_TITLE.HELP
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
             dropdown.enabled:
               type: toggle
               label: THEME.HADRON.MENU.DISPLAY_DROPDOWNS.LABEL
@@ -94,6 +105,38 @@ form:
                     _parent: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.PARENT
                     _top: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.TOP
                     _self: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.SELF
+            langswitcher:
+              type: section
+              title: THEME.HADRON.LANGSWITCHER.TITLE
+              underline: true
+            langswitcher.enable:
+              type: toggle
+              label: THEME.HADRON.LANGSWITCHER.ENABLE.LABEL
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
+            langswitcher.display:
+              type: select
+              size: small
+              label: THEME.HADRON.LANGSWITCHER.DISPLAY.LABEL
+              default: dropdown
+              options:
+                dropdown: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.DROPDOWN
+                inline: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.INLINE
+            langswitcher.format:
+              type: select
+              size: small
+              label: THEME.HADRON.LANGSWITCHER.FORMAT.LABEL
+              default: combined
+              options:
+                combined: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.COMBINED
+                short: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.SHORT
+                long: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.LONG
+                icon: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.ICON
             fontawesome:
               type: section
               title: THEME.HADRON.FONTAWESOME.TITLE
@@ -128,38 +171,6 @@ form:
                 1: PLUGIN_ADMIN.ENABLED
               validate:
                 type: bool
-            langswitcher:
-              type: section
-              title: THEME.HADRON.LANGSWITCHER.TITLE
-              underline: true
-            langswitcher.enable:
-              type: toggle
-              label: THEME.HADRON.LANGSWITCHER.ENABLE.LABEL
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            langswitcher.display:
-              type: select
-              size: small
-              label: THEME.HADRON.LANGSWITCHER.DISPLAY.LABEL
-              default: dropdown
-              options:
-                dropdown: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.DROPDOWN
-                inline: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.INLINE
-            langswitcher.format:
-              type: select
-              size: small
-              label: THEME.HADRON.LANGSWITCHER.FORMAT.LABEL
-              default: combined
-              options:
-                combined: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.COMBINED
-                short: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.SHORT
-                long: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.LONG
-                icon: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.ICON
         quark:
           type: tab
           title: THEME.QUARK.TITLE

@@ -258,6 +258,9 @@ THEME:
         DESCRIPTION: H5P embed source URL path up to, but not including, the Content ID. For example, https://h5p.org/h5p/embed/ or https://[organization].h5p.com/content/.
     MENU:
       TITLE: Menu
+      HIDE_TITLE:
+        LABEL: Hide Title
+        HELP: Hide the site title in the navigation bar
       DISPLAY_DROPDOWNS:
         LABEL: Display Dropdowns in Menu
       DISPLAY_CUSTOM_MENUS:
@@ -281,14 +284,6 @@ THEME:
             PARENT: Open in the parent frame
             TOP: Open in the full body of the window
             SELF: Open in the same frame as it was clicked
-    FONTAWESOME:
-      TITLE: Fontawesome Icons
-      ENABLE_SOLID:
-        LABEL: Enable Solid Icons
-      ENABLE_REGULAR:
-        LABEL: Enable Regular Icons
-      ENABLE_BRAND:
-        LABEL: Enable Brands Icons
     LANGSWITCHER:
       TITLE: Language Switcher
       ENABLE:
@@ -305,6 +300,14 @@ THEME:
           SHORT: Shortcode
           LONG: Name
           ICON: Flag
+    FONTAWESOME:
+      TITLE: Fontawesome Icons
+      ENABLE_SOLID:
+        LABEL: Enable Solid Icons
+      ENABLE_REGULAR:
+        LABEL: Enable Regular Icons
+      ENABLE_BRAND:
+        LABEL: Enable Brands Icons
   QUARK:
     TITLE: Quark Options
     PRODUCTION_MODE:
