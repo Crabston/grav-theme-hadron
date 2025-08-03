@@ -1,3 +1,12 @@
+# 2.2.1
+## 03-08-2025
+1. [](#bugfix)
+   - fixed language switcher issues
+   - fixed h5p issues
+1. [](#improved)
+   - updated thumbnail and blueprint
+   - added option for logo inversion in navigation
+
 # 2.2.0
 ## 01-08-2025
 1. [](#new)

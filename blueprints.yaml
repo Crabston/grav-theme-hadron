@@ -1,8 +1,8 @@
 name: Hadron
 slug: hadron
 type: theme
-version: 2.2.0
-description: 'HHadron is a modern and fast Grav Theme and Skeleton for Grav with many other features. Use the Hadron theme on existing websites or when you want to start from scratch. It is customizable, responsive, and has many other great features ready to use.'
+version: 2.2.1
+description: 'Hadron is a modern and fast Grav Theme and Skeleton for Grav with many other features. Use the Hadron theme on existing websites or when you want to start from scratch. It is customizable, responsive, and has many other great features ready to use.'
 icon: circle
 author:
   name: 'Crabston GmbH'

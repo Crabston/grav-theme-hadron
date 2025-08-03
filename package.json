@@ -1,7 +1,7 @@
 {
 	"name": "hadron",
-	"version": "2.2.0",
-	"description": "modern Grav theme based on Quark with advanced features and styles",
+	"version": "2.2.1",
+	"description": "Hadron is a modern and fast Grav Theme and Skeleton for Grav with many other features. Use the Hadron theme on existing websites or when you want to start from scratch. It is customizable, responsive, and has many other great features ready to use.",
 	"homepage": "https://github.com/Crabston/grav-theme-hadron#readme",
 	"bugs": {
 		"url": "https://github.com/Crabston/grav-theme-hadron/issues"
