@@ -1,14 +1,15 @@
 streams:
- schemes:
-   theme:
-     type: ReadOnlyStream
-     prefixes:
-       '':
-         - user/themes/hadron
-         - user/themes/quark
+  schemes:
+    theme:
+      type: ReadOnlyStream
+      prefixes:
+        '':
+          - user/themes/hadron
+          - user/themes/quark
 
 grid-size: grid-lg
 blog-page: /blog
+hide_title: true
 dropdown:
   enabled: true
 custommenus:
@@ -18,6 +19,10 @@ menu:
     icon: external-link
     url: 'https://getgrav.org/'
     target: _blank
+langswitcher:
+  enable: true
+  display: inline
+  format: icon
 header-fixed: true
 header-animated: true
 header-dark: false
@@ -32,29 +37,27 @@ fontawesome:
   solid: false
   regular: false
   brands: false
-langswitcher:
-  enable: false
-  display: dropdown
-  format: combined
+  brand: false
 blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
+invert_logo: true
 favicon:
-  user/themes/hadron/images/favicon.svg:
-    name: favicon.svg
-    full_path: favicon.svg
+  user/themes/hadron/images/hadron-favicon.svg:
+    name: hadron-favicon.svg
+    full_path: hadron-favicon.svg
     type: image/svg+xml
-    size: 4868
-    path: user/themes/hadron/images/favicon.svg
+    size: 566
+    path: user/themes/hadron/images/hadron-favicon.svg
 custom_logo:
-  user/themes/hadron/images/logo/logo.svg:
-    name: logo.svg
-    full_path: logo.svg
+  user/themes/hadron/images/logo/hadron-logo.svg:
+    name: hadron-logo.svg
+    full_path: hadron-logo.svg
     type: image/svg+xml
-    size: 4868
-    path: user/themes/hadron/images/logo/logo.svg
+    size: 3076
+    path: user/themes/hadron/images/logo/hadron-logo.svg
 custom_logo_mobile:
-  user/themes/hadron/images/logo/logo.svg:
-    name: logo.svg
-    full_path: logo.svg
+  user/themes/hadron/images/logo/hadron-logo.svg:
+    name: hadron-logo.svg
+    full_path: hadron-logo.svg
     type: image/svg+xml
-    size: 4868
-    path: user/themes/hadron/images/logo/logo.svg
+    size: 3076
+    path: user/themes/hadron/images/logo/hadron-logo.svg

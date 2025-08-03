@@ -323,6 +323,9 @@ THEME:
         GRID_MD: Medium
     HEADER:
       TITLE: Header Defaults
+      INVERT_LOGO:
+        LABEL: Invert Logo
+        HELP: When enabled, the logo will be inverted on light backgrounds. Recommended for black and white logos.
       FAVICON:
         LABEL: Custom favicon
         DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`

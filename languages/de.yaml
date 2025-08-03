@@ -323,6 +323,9 @@ THEME:
         GRID_MD: Mittel
     HEADER:
       TITLE: Header Standards
+      INVERT_LOGO:
+        LABEL: Logo invertieren
+        HELP: Wenn aktiviert, wird das Logo auf hellen Hintergründen invertiert. Vorgeschlagen für schwarz / weisse Logos.
       FAVICON:
         LABEL: Benutzerdefiniertes Favicon
         DESCRIPTION: Wird verwendet anstelle des Standard Favicons `theme://images/favicon.png`
