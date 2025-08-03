@@ -2,15 +2,15 @@ name: Hadron
 slug: hadron
 type: theme
 version: 2.2.0
-description: 'Hadron is a modern Grav theme based on Quark. As a child/ inherited theme of Quark, it includes more advanced features than the original Quark theme. It also offers advanced styling options.'
+description: 'HHadron is a modern and fast Grav Theme and Skeleton for Grav with many other features. Use the Hadron theme on existing websites or when you want to start from scratch. It is customizable, responsive, and has many other great features ready to use.'
 icon: circle
 author:
   name: 'Crabston GmbH'
   email: contact@crabston.dev
   url: 'https://crabston.dev'
 homepage: https://github.com/Crabston/grav-theme-hadron
-demo: https://grav.demo.crabston.dev
-keywords: grav, theme, hadron, quark, modern, advanced, styling, options
+demo: https://usehadron.dev/
+keywords: hadron, grav, theme, modern, fast, customization, quark, spectre.css, website, webshop
 bugs: https://github.com/Crabston/grav-theme-hadron/issues
 readme: https://github.com/Crabston/grav-theme-hadron/blob/main/README.md
 license: MIT
