@@ -37,6 +37,7 @@ langswitcher:
   display: dropdown
   format: combined
 blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
+invert_logo: true
 favicon:
   user/themes/hadron/images/favicon.svg:
     name: favicon.svg

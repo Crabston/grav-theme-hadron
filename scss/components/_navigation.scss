@@ -109,7 +109,7 @@ body {
 	// if light header or transparent header or scrolled
 	&:is(.header-light) #header, &:not(.header-dark, .header-transparent) #header, #header.scrolled {
 		// invert logo for light header
-		.navbar-brand img {
+		.navbar-brand.inverted img {
 			filter: invert(1);
 		}
 	}

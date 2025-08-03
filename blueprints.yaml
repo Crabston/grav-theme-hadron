@@ -200,6 +200,17 @@ form:
               type: section
               title: THEME.QUARK.HEADER.TITLE
               underline: true
+            invert_logo:
+              type: toggle
+              label: THEME.QUARK.HEADER.INVERT_LOGO.LABEL
+              help: THEME.QUARK.HEADER.INVERT_LOGO.HELP
+              highlight: 0
+              default: 0
+              options:
+                0: PLUGIN_ADMIN.DISABLED
+                1: PLUGIN_ADMIN.ENABLED
+              validate:
+                type: bool
             favicon:
               type: file
               label: THEME.QUARK.HEADER.FAVICON.LABEL
