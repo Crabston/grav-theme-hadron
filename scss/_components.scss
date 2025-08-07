@@ -53,7 +53,12 @@ body {
 		}
 	}
 
-	.hadron-font{
+	.hadron-font {
+		@font-face {
+			font-family: 'Hadron';
+			src: url(../../hadron/assets/nasalization.otf);
+		}
+
 		font-family: Hadron, sans-serif;
 		text-transform: uppercase;
 	}
