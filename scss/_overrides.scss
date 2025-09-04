@@ -7,16 +7,3 @@ section.modular-text {
 
 	h2 { margin-top: 1rem; }
 }
-
-// body CSS classes
-body {
-	&:not(.header-dark).header-transparent #header:not(.scrolled) {
-		a {
-			color: $text-color-secondary-dark !important;
-
-			&.active {
-				color: $text-color-secondary !important;
-			}
-		}
-	}
-}
