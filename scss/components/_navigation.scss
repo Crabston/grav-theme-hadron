@@ -1,3 +1,4 @@
+// TODO: Refactor and clean up
 // NOTE: Structure of HTML
 /*
 body.header-dark.header-light.header-transparent {
@@ -86,6 +87,18 @@ body {
 
 		.dropmenu ul > li > a:is(.active, :focus, :hover) {
 			color: $primary-color !important;
+		}
+	}
+
+	// header
+	// if not dark but transparent and not scrolled
+	&:not(.header-dark).header-transparent #header:not(.scrolled) {
+		a {
+			color: $text-color-secondary-dark !important;
+
+			&.active {
+				color: $text-color-secondary !important;
+			}
 		}
 	}
 
