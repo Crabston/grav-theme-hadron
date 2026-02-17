@@ -69,4 +69,9 @@ class Hadron extends Quark {
 		$event['plugins']  = $plugins;
 		return $event;
 	}
+	
+	// Helper function to get query parameters in twig templates
+	public static function getUriQueryParam($name) {
+		return Grav:: instance()['uri']->query($name);
+	}
 }
