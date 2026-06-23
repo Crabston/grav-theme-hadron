@@ -16,8 +16,8 @@ readme: https://github.com/Crabston/grav-theme-hadron/blob/main/README.md
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.6.0' }
-  - quark
+  - { name: grav, version: '>=2.0.0' }
+  - quark2
 
 form:
   validation: loose
