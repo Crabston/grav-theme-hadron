@@ -41,23 +41,23 @@ fontawesome:
 blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
 invert_logo: true
 favicon:
-  user/themes/hadron/images/hadron-favicon.svg:
+  user/media/hadron-favicon.svg:
     name: hadron-favicon.svg
     full_path: hadron-favicon.svg
     type: image/svg+xml
     size: 566
-    path: user/themes/hadron/images/hadron-favicon.svg
+    path: user/media/hadron-favicon.svg
 custom_logo:
-  user/themes/hadron/images/logo/hadron-logo.svg:
+  user/media/logo/hadron-logo.svg:
     name: hadron-logo.svg
     full_path: hadron-logo.svg
     type: image/svg+xml
     size: 3076
-    path: user/themes/hadron/images/logo/hadron-logo.svg
+    path: user/media/logo/hadron-logo.svg
 custom_logo_mobile:
-  user/themes/hadron/images/logo/hadron-logo.svg:
+  user/media/logo/hadron-logo.svg:
     name: hadron-logo.svg
     full_path: hadron-logo.svg
     type: image/svg+xml
     size: 3076
-    path: user/themes/hadron/images/logo/hadron-logo.svg
+    path: user/media/logo/hadron-logo.svg

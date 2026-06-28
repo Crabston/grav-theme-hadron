@@ -14,9 +14,9 @@
 	{% if favicon %}
 		{% set favicon_file = (favicon|first).name %}
 		{% set file_type = favicon_file|split('.')|last %}
-		<link rel="icon" type="image/{{ file_type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+		<link rel="icon" type="image/{{ file_type }}" href="{{ url('media://' ~ favicon_file) }}" />
 	{% else %}
-		<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+		<link rel="icon" type="image/png" href="{{ url('media://favicon.png') }}" />
 	{% endif %}
 
 	<link rel="canonical" href="{{ page.url(true, true) }}" />
@@ -99,9 +99,6 @@
 
 				    <div class="navbar-section actions">
 					    {% include 'partials/theme-toggle.html.twig' %}
-					    {% if config.plugins.login.enabled and grav.user.username %}
-						    <span class="login-status-wrapper"><i class="fa-solid fa-user" aria-hidden="true"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
-					    {% endif %}
 				    </div>
 
 				    <nav class="dropmenu language-switcher">
@@ -111,7 +108,7 @@
 				    </nav>
 
 				    {% if config.plugins.login.enabled and grav.user.username %}
-					    <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
+					    <span class="login-status-wrapper"><i class="fa-solid fa-user" aria-hidden="true"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
 				    {% endif %}
 			    </section>
 		    </nav>

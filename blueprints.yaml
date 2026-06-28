@@ -225,7 +225,7 @@ form:
               type: file
               label: THEME.QUARK.HEADER.CUSTOM_LOGO.LABEL
               size: large
-              destination: 'theme://images/logo'
+              destination: 'media://'
               multiple: false
               markdown: true
               description: THEME.QUARK.HEADER.CUSTOM_LOGO.DESCRIPTION
@@ -235,7 +235,7 @@ form:
               type: file
               label: THEME.QUARK.HEADER.CUSTOM_LOGO_MOBILE.LABEL
               size: large
-              destination: 'theme://images/logo'
+              destination: 'media://'
               multiple: false
               accept:
                 - 'image/*'

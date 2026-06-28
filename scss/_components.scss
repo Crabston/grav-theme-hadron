@@ -22,3 +22,7 @@ html[data-theme-preference=dark] {
 		border-left-color: $dark-overlay !important;
 	}
 }
+
+.section {
+	padding-block: clamp(2rem, 6vw, 4rem);
+}
