@@ -130,3 +130,8 @@ form:not(.login-form) {
 		background-color: $primary-color;
 	}
 }
+
+.form-input:focus, .form-select:focus, textarea:focus, select:focus, input:focus {
+	border-color: $primary-color;
+	outline: $primary-color;
+}

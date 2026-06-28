@@ -1,129 +1,45 @@
-// TODO: Refactor and clean up
-// NOTE: Structure of HTML
-/*
-body.header-dark.header-light.header-transparent {
-	// header & navigation
-	#header.scrolled {
-		nav.navbar {
-			nav.dropmenu { }
-		}
-	}
-
-	// hamburger menu
-	.mobile-menu {
-		#toggle {
-			span { }
-		}
-	}
-
-	// mobile navigation
-	.mobile-container {
-		.mobile-logo { }
-	}
-}
-*/
-
-@mixin navbar-brand {
-	.navbar-brand {
-		gap: 1rem;
-
-		.title { font-size: 1.5rem; }
-
-		&:hover { text-decoration: none; }
-	}
-}
-
+// desktop navigation
 body {
 	#header {
-		@include navbar-brand;
+		margin: 0;
+		padding: 2rem;
+
+		.container {
+			padding: 0;
+			margin: 0 auto;
+
+			.navbar-section.logo {
+				margin: 0;
+			}
+		}
+
+	}
+
+	&.scrolled #header {
+		padding: 1rem 2rem 0;
+	}
+}
+
+// mobile navigation
+body {
+	.mobile-menu {
+		@media (max-width: 860px) {
+			top: 2rem;
+			right: 2rem;
+			min-height: 64px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&.scrolled .mobile-menu {
+		top: 1rem;
+		right: 2rem;
 	}
 
 	.mobile-container {
-		.mobile-logo {
-			margin-top: .7rem;
-
-			@include navbar-brand;
-
-			.title { color: $header-text-dark; }
-
-			img { margin-top: 0; }
-		}
-
-		.overlay-menu {
-			a, .toggler {
-				padding: 1rem;
-				color: $header-text-dark;
-			}
-
-			.toggler {
-				font-size: 1.5rem;
-				padding: 1rem;
-			}
-		}
-	}
-
-	// hamburger menu
-	// if no dark mode or scrolled
-	&:not(.header-dark) .mobile-menu,
-	#header.scrolled ~ .mobile-menu {
-		#toggle:not(.active) span {
-			background: $header-text;
-		}
-	}
-
-	// hamburger menu
-	// if dark mode or not scrolled
-	&:is(.header-dark) .mobile-menu #toggle span,
-	.mobile-menu #toggle.active span {
-		background: $header-background;
-	}
-
-	// header
-	// if not dark or scrolled
-	&:is(.header-light, .header-transparent) #header,
-	#header.scrolled {
-		background-color: $header-background;
-		color: $header-text;
-
-		.dropmenu ul > li > a:is(.active, :focus, :hover) {
-			color: $primary-color !important;
-		}
-	}
-
-	// header
-	// if not dark but transparent and not scrolled
-	&:not(.header-dark).header-transparent #header:not(.scrolled) {
-		a {
-			color: $text-color-secondary-dark !important;
-
-			&.active {
-				color: $text-color-secondary !important;
-			}
-		}
-	}
-
-	// header
-	// if dark or not scrolled
-	&:is(.header-dark) #header:not(.scrolled) {
-		color: $header-text-dark;
-
-		// default dropdown
-		.dropmenu ul > li > a:is(.active, :focus, :hover) {
-			color: $primary-color !important;
-		}
-
-		// navigation items
-		.dropmenu > ul > li > a:is(.active, :focus, :hover) {
-			color: $header-text-dark !important;
-		}
-	}
-
-	// header
-	// if light header or transparent header or scrolled
-	&:is(.header-light) #header, &:not(.header-dark, .header-transparent) #header, #header.scrolled {
-		// invert logo for light header
-		.navbar-brand.inverted img {
-			filter: invert(1);
+		#overlay {
+			padding: 2rem;
 		}
 	}
 }

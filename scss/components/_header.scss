@@ -1,3 +1,12 @@
-#header {
-	// ...
+// brand logo color filter for dark and light mode
+#header .navbar-brand img,
+.mobile-container .mobile-logo img {
+	html[data-theme-preference=dark] & {
+		filter: brightness(0) invert(1);
+	}
+
+	html[data-theme-preference=light] &,
+	html[data-theme-preference=auto] & {
+		filter: brightness(255) invert(1);
+	}
 }

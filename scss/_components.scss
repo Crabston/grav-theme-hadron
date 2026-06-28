@@ -7,7 +7,7 @@
 }
 
 // darkmode elements
-@if ($dark-mode) {
+html[data-theme-preference=dark] {
 	input, textarea, button:not(.btn-primary), .btn:not(button),
 	.notices, .card, .tab, .accordion-wrapper label,
 	code:not([class*=language-]), pre {
@@ -20,46 +20,5 @@
 
 	blockquote {
 		border-left-color: $dark-overlay !important;
-	}
-}
-
-body {
-	background-color: $background-color;
-	color: $text-color;
-
-	h1, h2, h3, h4, h5, h6 {
-		color: $text-color;
-	}
-
-	a:not(:has(.title), :is(.mobile-container a)) {
-		color: $link-color;
-
-		&:hover, &:focus, &:active, &:visited {
-			color: $link-color__active;
-		}
-
-		&.btn {
-			border-color: $accent-color;
-		}
-	}
-
-	ol ol, ol ul, ul ol, ul ul {
-		margin: 0 1.6rem;
-	}
-
-	@if ($mobile-menu-colored) {
-		.treemenu li a:is(a, .active, :focus, :hover) {
-			color: $link-color !important;
-		}
-	}
-
-	.hadron-font {
-		@font-face {
-			font-family: 'Hadron';
-			src: url(../../hadron/assets/nasalization.otf);
-		}
-
-		font-family: Hadron, sans-serif;
-		text-transform: uppercase;
 	}
 }
