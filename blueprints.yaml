@@ -1,8 +1,8 @@
 name: Hadron
 slug: hadron
 type: theme
-version: 2.2.1
-description: 'Hadron is a modern and fast Grav Theme and Skeleton for Grav with many other features. Use the Hadron theme on existing websites or when you want to start from scratch. It is customizable, responsive, and has many other great features ready to use.'
+version: 3.0.0
+description: 'Hadron is more than a modern and customizable Grav theme and skeleton. On the one hand, it is optimized for beginners to quickly create a simple website, but on the other hand, it is also suitable for professionals who want to use Hadron as a foundation for a complex website with self-developed functions.'
 icon: circle
 author:
   name: 'Crabston GmbH'
@@ -10,7 +10,7 @@ author:
   url: 'https://crabston.dev'
 homepage: https://github.com/Crabston/grav-theme-hadron
 demo: https://usehadron.dev/
-keywords: hadron, grav, theme, modern, fast, customization, quark, spectre.css, website, webshop
+keywords: hadron, grav, grav2, theme, modern, fast, customization, quark2, blades css, website, webshop
 bugs: https://github.com/Crabston/grav-theme-hadron/issues
 readme: https://github.com/Crabston/grav-theme-hadron/blob/main/README.md
 license: MIT
@@ -215,7 +215,7 @@ form:
               type: file
               label: THEME.QUARK.HEADER.FAVICON.LABEL
               size: large
-              destination: 'theme://images'
+              destination: 'user/media/favicons'
               multiple: false
               markdown: true
               description: THEME.QUARK.HEADER.FAVICON.DESCRIPTION
@@ -225,7 +225,7 @@ form:
               type: file
               label: THEME.QUARK.HEADER.CUSTOM_LOGO.LABEL
               size: large
-              destination: 'media://'
+              destination: 'user/media/logo'
               multiple: false
               markdown: true
               description: THEME.QUARK.HEADER.CUSTOM_LOGO.DESCRIPTION
@@ -235,7 +235,7 @@ form:
               type: file
               label: THEME.QUARK.HEADER.CUSTOM_LOGO_MOBILE.LABEL
               size: large
-              destination: 'media://'
+              destination: 'user/media/logo'
               multiple: false
               accept:
                 - 'image/*'
