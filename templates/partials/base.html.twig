@@ -64,6 +64,7 @@
 	{% do assets.addCss('theme://css/blades.min.css', 95) %}
 	{% do assets.addCss('theme://css/theme.css', 90) %}
 	{% do assets.addCss('theme://css/hadron.css', 90) %}
+	{% do assets.addCss('theme://css/custom.css', 80) %}
 	{% if fa_enabled %}
 		{% if fa_local %}
 			{% do assets.addCss('theme://css/fontawesome/all.min.css', 85) %}
@@ -71,7 +72,6 @@
 			{% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css', 85) %}
 		{% endif %}
 	{% endif %}
-	{% do assets.addCss('theme://css/custom.css', 80) %}
 {% endblock stylesheets %}
 
 {% block javascripts %}
@@ -81,75 +81,74 @@
 {% endblock javascripts %}
 
 {% block header %}
-    <section id="header" class="section">
-	    <section class="container {{ grid_size }}">
-		    <nav class="navbar" aria-label="Primary">
-			    <section class="navbar-section logo">
-				    {% include 'partials/logo.html.twig' %}
-			    </section>
-			    <section class="navbar-section desktop-menu">
+	<header id="header" class="section">
+		<div class="container {{ grid_size }}">
+			<nav class="navbar" aria-label="Primary">
+				<div class="navbar-section logo">
+					{% include 'partials/logo.html.twig' %}
+				</div>
+				<div class="navbar-section desktop-menu">
+					<div class="dropmenu animated">
+						{% block header_navigation %}
+							{% include 'partials/navigation.html.twig' %}
+						{% endblock %}
+					</div>
 
-				    <div class="navbar-section desktop-menu">
-					    <div class="dropmenu animated">
-						    {% block header_navigation %}
-							    {% include 'partials/navigation.html.twig' %}
-						    {% endblock %}
-					    </div>
-				    </div>
+					<div class="dropmenu language-switcher">
+						{% block language_switcher %}
+							{% include 'partials/langauge-switcher.html.twig' %}
+						{% endblock language_switcher %}
+					</div>
+				</div>
 
-				    <div class="navbar-section actions">
-					    {% include 'partials/theme-toggle.html.twig' %}
-				    </div>
-
-				    <nav class="dropmenu language-switcher">
-					    {% block language_switcher %}
-						    {% include 'partials/langauge-switcher.html.twig' %}
-					    {% endblock language_switcher %}
-				    </nav>
-
-				    {% if config.plugins.login.enabled and grav.user.username %}
-					    <span class="login-status-wrapper"><i class="fa-solid fa-user" aria-hidden="true"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
-				    {% endif %}
-			    </section>
-		    </nav>
-	    </section>
-    </section>
-    <div class="mobile-menu">
-	    <div class="button_container" id="toggle">
-		    <span class="top"></span>
-		    <span class="middle"></span>
-		    <span class="bottom"></span>
-	    </div>
-    </div>
+				<div class="navbar-section actions">
+					{% include 'partials/theme-toggle.html.twig' %}
+					{% if config.plugins.login.enabled and grav.user.username %}
+						<span class="login-status-wrapper">
+							<i class="fa-solid fa-user" aria-hidden="true"></i>
+							{% include 'partials/login-status.html.twig' ignore missing %}
+						</span>
+					{% endif %}
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="mobile-menu">
+		<div class="button_container" id="toggle">
+			<span class="top"></span>
+			<span class="middle"></span>
+			<span class="bottom"></span>
+		</div>
+	</div>
 {% endblock header %}
 
 {% block footer %}
-	<section id="footer" class="section bg-gray">
-		<section class="container {{ grid_size }}">
+	<footer id="footer" class="section bg-gray">
+		<div class="container {{ grid_size }}">
 			{# display footer markdown page #}
 			{% set content = pages.find('/footer').content %}
 			{% if content %}
 				{{ content|raw }}
 			{% endif %}
-		</section>
-	</section>
+		</div>
+	</footer>
 {% endblock footer %}
 
 {% block mobile %}
-    <div class="mobile-container">
-	    <div class="overlay" id="overlay">
-		    <div class="mobile-logo">
-			    {% include 'partials/logo.html.twig' with {mobile: true} %}
-		    </div>
-		    <nav class="language-switcher">
-			    {% include 'partials/langauge-switcher.html.twig' with {mobile: true} %}
-		    </nav>
-		    <nav class="theme-toggle">
-			    {% include 'partials/theme-toggle.html.twig' with {labeled: true} %}
-		    </nav>
-		    <nav class="overlay-menu">
-			    {% include 'partials/navigation.html.twig' with {tree: true} %}
-		    </nav>
-	    </div>
-    </div>
+	<div class="mobile-container">
+		<nav class="overlay" id="overlay">
+			<div class="mobile-logo">
+				{% include 'partials/logo.html.twig' with {mobile: true} %}
+			</div>
+			<div class="theme-toggle">
+				{% include 'partials/theme-toggle.html.twig' with {labeled: true} %}
+			</div>
+			<div class="language-switcher">
+				{% include 'partials/langauge-switcher.html.twig' with {mobile: true} %}
+			</div>
+			<div class="overlay-menu">
+				{% include 'partials/navigation.html.twig' with {tree: true} %}
+			</div>
+		</nav>
+	</div>
 {% endblock mobile %}
