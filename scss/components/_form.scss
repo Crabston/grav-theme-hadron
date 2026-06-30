@@ -114,40 +114,42 @@ form:not(.login-form) {
 
 // for buttons outside of forms, e.g. <a> tags with class btn
 .btn {
-	html[data-theme=light] & {
-		color: $light-text-color;
-		background-color: $light-background-color-muted !important;
+	@mixin button-theme($text-color, $bg-color, $outline-color, $primary-text, $primary-outline) {
+		color: $text-color;
+		background-color: $bg-color !important;
 
 		&:hover, &:focus, &:focus-visible {
-			outline: 2px solid $light-text-color;
+			outline: 2px solid $outline-color;
 		}
 
 		&.btn-primary {
-			color: $light-text-color-inverse;
+			color: $primary-text;
 			background-color: $primary-color !important;
 
 			&:hover, &:focus, &:focus-visible {
-				outline: 2px solid $primary-color-light;
+				outline: 2px solid $primary-outline;
 			}
 		}
 	}
 
+	html[data-theme=light] & {
+		@include button-theme(
+				$light-text-color,
+				$light-background-color-muted,
+				$light-text-color,
+				$light-text-color-inverse,
+				$primary-color-light
+		);
+	}
+
 	html[data-theme=dark] & {
-		color: $dark-text-color;
-		background-color: $dark-background-color-muted;
-
-		&:hover, &:focus, &:focus-visible {
-			outline: 2px solid $dark-text-color;
-		}
-
-		&.btn-primary {
-			color: $dark-text-color-inverse;
-			background-color: $primary-color !important;
-
-			&:hover, &:focus, &:focus-visible {
-				outline: 2px solid $primary-color-dark;
-			}
-		}
+		@include button-theme(
+				$dark-text-color,
+				$dark-background-color-muted,
+				$dark-text-color,
+				$dark-text-color-inverse,
+				$primary-color-dark
+		);
 	}
 
 	&.external-link {
