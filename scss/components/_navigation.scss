@@ -1,8 +1,13 @@
+$SPACE_HORIZONTAL: 2rem;
+$SPACE_HORIZONTAL_SMALL: 2rem;
+$SPACE_VERTICAL: 2rem;
+$SPACE_VERTICAL_SMALL: .75rem;
+
 // desktop navigation
 body {
 	#header {
 		margin: 0;
-		padding: 2rem;
+		padding: $SPACE_VERTICAL $SPACE_HORIZONTAL;
 
 		.container {
 			padding: 0;
@@ -16,7 +21,7 @@ body {
 	}
 
 	&.scrolled #header {
-		padding: 1rem 2rem 0;
+		padding: $SPACE_VERTICAL_SMALL $SPACE_HORIZONTAL_SMALL;
 	}
 }
 
@@ -24,8 +29,8 @@ body {
 body {
 	.mobile-menu {
 		@media (screen and max-width: $responsive-breakpoint-tablet) {
-			top: 2rem;
-			right: 2rem;
+			top: $SPACE_VERTICAL;
+			right: $SPACE_HORIZONTAL;
 			min-height: 64px;
 			display: flex;
 			align-items: center;
@@ -33,13 +38,14 @@ body {
 	}
 
 	&.scrolled .mobile-menu {
-		top: 1rem;
-		right: 2rem;
+		min-height: 60px;
+		top: $SPACE_VERTICAL_SMALL;
+		right: $SPACE_HORIZONTAL_SMALL;
 	}
 
 	.mobile-container {
 		#overlay {
-			padding: 2rem;
+			padding: $SPACE_VERTICAL $SPACE_HORIZONTAL;
 		}
 	}
 }
