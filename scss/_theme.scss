@@ -1,15 +1,5 @@
 @use 'sass:color';
 
-// color definitions
-$primary-color: #4063CB !default; // fallback if theme settings are not available
-$primary-color: --q2-accent !default; // comes from theme settings
-$primary-color-light: color.mix(white, $primary-color, 20%);
-$primary-color-dark: color.mix(black, $primary-color, 20%);
-
-$grey: #3A414E !default;
-$light-overlay: rgba(255, 255, 255, 0.25) !default;
-$dark-overlay: rgba(0, 0, 0, 0.25) !default;
-
 // light mode
 $light-background-color: #FBFBFC !default;
 $light-background-color-elevated: #FFFFFF !default;
@@ -19,9 +9,7 @@ $light-text-color: #3A414E !default;
 $light-text-color-strong: #111111 !default;
 $light-text-color-muted: #898989 !default;
 $light-text-color-inverse: #F2F2F3 !default;
-:root[data-theme='light'] {
-	--q2-accent: #{$primary-color};
-
+:root[data-theme=light] {
 	--q2-bg: #{$light-background-color}; /* page canvas — whisper-soft gray */
 	--q2-bg-elev: #{$light-background-color-elevated}; /* cards / content surface */
 	--q2-bg-muted: #{$light-background-color-muted}; /* recessed */
@@ -42,9 +30,7 @@ $dark-text-color: #F2F2F3 !default;
 $dark-text-color-strong: #FFFFFF !default;
 $dark-text-color-muted: #9A9AA0 !default;
 $dark-text-color-inverse: #111111 !default;
-:root[data-theme='dark'] {
-	--q2-accent: #{$primary-color-light};
-
+:root[data-theme=dark] {
 	--q2-bg: #{$dark-background-color}; /* page canvas — whisper-soft gray */
 	--q2-bg-elev: #{$dark-background-color-elevated}; /* cards / content surface */
 	--q2-bg-muted: #{$dark-background-color-muted}; /* recessed */
@@ -62,22 +48,3 @@ $responsive-breakpoint-mobile: 560px !default;
 $responsive-breakpoint-tablet: 860px !default;
 //$responsive-breakpoint-tablet: 960px !default;
 $responsive-breakpoint-desktop: 1200px !default;
-
-// content
-$background-color: $light-background-color;
-$text-color: $light-text-color;
-$text-color-light: $light-text-color-strong;
-$text-color-secondary: $light-text-color-strong;
-$text-color-secondary-dark: $light-text-color-inverse;
-$link-color: $primary-color-light;
-$link-color__active: $primary-color;
-
-// header
-$header-background: $light-background-color;
-$header-text: $light-text-color;
-$header-text-dark: $light-text-color-inverse;
-
-// footer
-$footer-background: $light-background-color;
-$footer-text: $light-text-color;
-$footer-text-link: $primary-color-light;

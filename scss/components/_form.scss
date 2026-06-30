@@ -65,25 +65,25 @@ form:not(.login-form) {
 
 			//.form-input, .form-select,
 			textarea, select, input {
-				accent-color: $primary-color; // for checkboxes, radio, range, ...
+				accent-color: var(--q2-accent); // for checkboxes, radio, range, ...
 
 				html[data-theme=dark] {
-					color-scheme: dark;
+					//color-scheme: dark;
 				}
 
 				&:focus, &:focus-visible {
-					border-color: $primary-color;
-					outline: $primary-color;
+					border-color: var(--q2-accent);
+					outline: var(--q2-accent);
 				}
 			}
 
 			select option {
 				&:hover {
-					box-shadow: 0 0 10px 100px $primary-color inset;
+					box-shadow: 0 0 10px 100px var(--q2-accent) inset;
 				}
 
 				&[selected] {
-					background-color: $primary-color;
+					background-color: var(--q2-accent);
 				}
 			}
 		}
@@ -96,60 +96,38 @@ form:not(.login-form) {
 			@include form-field;
 
 			&.btn-primary {
-				color: $light-text-color-inverse;
-				background-color: $primary-color;
+				color: var(--q2-text-inverse);
+				background-color: var(--q2-accent);
 			}
 
 			&:hover, &:focus, &:focus-visible {
-				outline: 2px solid $primary-color-light;
+				outline: 2px solid var(--q2-accent);
 			}
 		}
 	}
 
 	.switch-toggle input:checked + label {
-		background-color: $primary-color;
+		background-color: var(--q2-accent);
 	}
 }
 
 
 // for buttons outside of forms, e.g. <a> tags with class btn
 .btn {
-	@mixin button-theme($text-color, $bg-color, $outline-color, $primary-text, $primary-outline) {
-		color: $text-color;
-		background-color: $bg-color !important;
+	color: var(--q2-text);
+	background-color: var(--q2-bg-muted) !important;
+
+	&:hover, &:focus, &:focus-visible {
+		outline: 2px solid var(--q2-text);
+	}
+
+	&.btn-primary {
+		color: var(--q2-accent-contrast) !important;
+		background-color: var(--q2-accent) !important;
 
 		&:hover, &:focus, &:focus-visible {
-			outline: 2px solid $outline-color;
+			outline: 2px solid var(--q2-focus-ring);
 		}
-
-		&.btn-primary {
-			color: $primary-text;
-			background-color: $primary-color !important;
-
-			&:hover, &:focus, &:focus-visible {
-				outline: 2px solid $primary-outline;
-			}
-		}
-	}
-
-	html[data-theme=light] & {
-		@include button-theme(
-				$light-text-color,
-				$light-background-color-muted,
-				$light-text-color,
-				$light-text-color-inverse,
-				$primary-color-light
-		);
-	}
-
-	html[data-theme=dark] & {
-		@include button-theme(
-				$dark-text-color,
-				$dark-background-color-muted,
-				$dark-text-color,
-				$dark-text-color-inverse,
-				$primary-color-dark
-		);
 	}
 
 	&.external-link {

@@ -1,5 +1,12 @@
 {% extends '@quark2/partials/base.html.twig' %}
 
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-transparent', 'sticky-footer']) %}
+{% set theme_default = theme_var('theme-mode') ?: 'auto' %}
+{% set accent = theme_var('accent-color') %}
+{% set accent_is_hex = accent and accent matches '/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/' %}
+{% set fa_enabled = theme_var('fontawesome.enabled') %}
+{% set fa_local   = theme_var('fontawesome.local') %}
+
 {% block head deferred %}
 	<meta charset="utf-8" />
 	<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
@@ -28,14 +35,14 @@
 	{% if accent_is_hex %}
 		{# User-configured accent: tint links, focus ring, and filled UI accents with the chosen hex #}
 		<style>
-			:root {
+			:root[data-theme=light] {
 				--q2-accent: {{ accent }};
 				--q2-accent-contrast: #ffffff;
 				--q2-link: {{ accent }};
 				--q2-focus-ring: color-mix(in oklab, {{ accent }} 45%, transparent);
 			}
-			:root[data-theme='dark'] {
-				--q2-accent: color-mix(in oklab, {{ accent }} 80%, white 20%);
+			:root[data-theme=dark] {
+				--q2-accent: {{ accent }};
 				--q2-accent-contrast: #ffffff;
 				--q2-link: color-mix(in oklab, {{ accent }} 75%, white 25%);
 				--q2-focus-ring: color-mix(in oklab, {{ accent }} 45%, transparent);
