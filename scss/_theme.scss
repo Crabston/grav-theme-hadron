@@ -19,19 +19,18 @@ $light-text-color: #3A414E !default;
 $light-text-color-strong: #111111 !default;
 $light-text-color-muted: #898989 !default;
 $light-text-color-inverse: #F2F2F3 !default;
-:root,
 :root[data-theme='light'] {
-	--q2-accent: $primary-color;
+	--q2-accent: #{$primary-color};
 
-	--q2-bg: $light-background-color; /* page canvas — whisper-soft gray */
-	--q2-bg-elev: $light-background-color-elevated; /* cards / content surface */
-	--q2-bg-muted: $light-background-color-muted; /* recessed */
-	--q2-bg-inverse: $light-background-color-inverse;
+	--q2-bg: #{$light-background-color}; /* page canvas — whisper-soft gray */
+	--q2-bg-elev: #{$light-background-color-elevated}; /* cards / content surface */
+	--q2-bg-muted: #{$light-background-color-muted}; /* recessed */
+	--q2-bg-inverse: #{$light-background-color-inverse};
 
-	--q2-text: $light-text-color;
-	--q2-text-strong: $light-text-color-strong;
-	--q2-text-muted: $light-text-color-muted;
-	--q2-text-inverse: $light-text-color-inverse;
+	--q2-text: #{$light-text-color};
+	--q2-text-strong: #{$light-text-color-strong};
+	--q2-text-muted: #{$light-text-color-muted};
+	--q2-text-inverse: #{$light-text-color-inverse};
 }
 
 // dark mode
@@ -43,18 +42,18 @@ $dark-text-color: #F2F2F3 !default;
 $dark-text-color-strong: #FFFFFF !default;
 $dark-text-color-muted: #9A9AA0 !default;
 $dark-text-color-inverse: $dark-text-color !default;
-:root[data-theme='light'] {
-	--q2-accent: $primary-color-light;
+:root[data-theme='dark'] {
+	--q2-accent: #{$primary-color-light};
 
-	--q2-bg: $dark-background-color; /* page canvas — whisper-soft gray */
-	--q2-bg-elev: $dark-background-color-elevated; /* cards / content surface */
-	--q2-bg-muted: $dark-background-color-muted; /* recessed */
-	--q2-bg-inverse: $dark-background-color-inverse;
+	--q2-bg: #{$dark-background-color}; /* page canvas — whisper-soft gray */
+	--q2-bg-elev: #{$dark-background-color-elevated}; /* cards / content surface */
+	--q2-bg-muted: #{$dark-background-color-muted}; /* recessed */
+	--q2-bg-inverse: #{$dark-background-color-inverse};
 
-	--q2-text: $dark-text-color;
-	--q2-text-strong: $dark-text-color-strong;
-	--q2-text-muted: $dark-text-color-muted;
-	--q2-text-inverse: $dark-text-color-inverse;
+	--q2-text: #{$dark-text-color};
+	--q2-text-strong: #{$dark-text-color-strong};
+	--q2-text-muted: #{$dark-text-color-muted};
+	--q2-text-inverse: #{$dark-text-color-inverse};
 }
 
 // sizes
