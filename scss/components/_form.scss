@@ -22,8 +22,6 @@ form:not(.login-form) {
 
 	@mixin form-field {
 		width: 100%;
-		height: $form-field-height;
-		padding: $form-padding;
 	}
 
 	.form-columns {
@@ -40,9 +38,6 @@ form:not(.login-form) {
 		.form-data :not(.no-css) {
 			@include unify-parent('textarea') {
 				width: 100%;
-				min-height: 2*$form-field-height;
-				max-height: 8*$form-field-height;
-				padding: $form-padding;
 				resize: vertical;
 			}
 
@@ -67,66 +62,75 @@ form:not(.login-form) {
 					max-height: 6*$form-field-height;
 				}
 			}
-		}
 
+			//.form-input, .form-select,
+			textarea, select, input {
+				accent-color: var(--q2-accent); // for checkboxes, radio, range, ...
+
+				html[data-theme=dark] {
+					//color-scheme: dark;
+				}
+
+				&:focus, &:focus-visible {
+					border-color: var(--q2-accent);
+					outline: var(--q2-accent);
+				}
+			}
+
+			select option {
+				&:hover {
+					box-shadow: 0 0 10px 100px var(--q2-accent) inset;
+				}
+
+				&[selected] {
+					background-color: var(--q2-accent);
+				}
+			}
+		}
 	}
 
-	// TODO: unify buttons with fancy class
 	.buttons {
 		@include layout;
-		gap: 1rem;
-		padding: $form-padding;
 
 		button {
 			@include form-field;
 
-			color: $primary-color;
-			border: 1px solid $primary-color;
-
 			&.btn-primary {
-				color: $text-color-secondary;
-				background-color: $primary-color;
-
-				&:hover {
-					background-color: darken($primary-color, 10%);
-				}
+				color: var(--q2-text-inverse);
+				background-color: var(--q2-accent);
 			}
 
 			&:hover, &:focus, &:focus-visible {
-				border: 1px solid $primary-color;
-				box-shadow: 0 0 0 .1rem rgba($primary-color, .25);
-				outline-color: $primary-color;
-				background-color: transparentize($primary-color, .9);
+				outline: 2px solid var(--q2-accent);
 			}
-		}
-	}
-
-	// TODO: create a $form-color variable
-	input, textarea, select {
-		accent-color: $primary-color; // for checkboxes, radio, range, ...
-
-		@if ($dark-mode == true) {
-			color-scheme: dark;
-		}
-
-		&:focus, &:focus-visible {
-			border-color: $primary-color;
-			outline: $primary-color;
-			box-shadow: 0 0 0 .1rem rgba($primary-color, .25);
-		}
-	}
-
-	select option {
-		&:hover {
-			box-shadow: 0 0 10px 100px $primary-color inset;
-		}
-
-		&[selected] {
-			background-color: $primary-color;
 		}
 	}
 
 	.switch-toggle input:checked + label {
-		background-color: $primary-color;
+		background-color: var(--q2-accent);
+	}
+}
+
+
+// for buttons outside of forms, e.g. <a> tags with class btn
+.btn {
+	color: var(--q2-text);
+	background-color: var(--q2-bg-muted) !important;
+
+	&:hover, &:focus, &:focus-visible {
+		outline: 2px solid var(--q2-text);
+	}
+
+	&.btn-primary {
+		color: var(--q2-accent-contrast) !important;
+		background-color: var(--q2-accent) !important;
+
+		&:hover, &:focus, &:focus-visible {
+			outline: 2px solid var(--q2-focus-ring);
+		}
+	}
+
+	&.external-link {
+		padding: 0.875rem 1.5rem !important; // from theme.css:1186
 	}
 }

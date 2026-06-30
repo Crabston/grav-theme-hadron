@@ -5,7 +5,7 @@
 <a href="{{ home_url }}" class="f a navbar-brand mr-10 {{ invert }}">
 	{% if logo %}
 		{% set logo_file = (logo|first).name %}
-		<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title }}" />
+		<img src="/{{ (logo|first).path }}" alt="{{ site.title }}" />
 		{% if not config.theme.hide_title %}
 			<span class="title">{{ title }}</span>
 		{% endif %}

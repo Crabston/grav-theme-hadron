@@ -1,26 +1,11 @@
 // desktop
 table {
-	border-spacing: unset;
-
 	th {
-		background-color: $primary-color;
-		color: $text-color-secondary;
+		background-color: var(--q2-accent);
+		color: var(--q2-text-inverse);
 	}
 
-	th, td { padding: 0.2rem 0.5rem; }
-
-	td::before {
-		content: attr(data-label);
-		float: left;
-		font-weight: bold;
-		text-transform: uppercase;
-
-		@media screen and (min-width: $responsive-breakpoint-mobile+1) {
-			display: none;
-		}
-	}
-
-	tr:nth-child(even) { background-color: $dark-overlay; }
+	tr:nth-child(even) td { background-color: var(--q2-bg-muted) !important; }
 
 	.text-align-center { text-align: center; }
 
@@ -32,36 +17,30 @@ table {
 // mobile
 @media screen and (max-width: $responsive-breakpoint-mobile) {
 	.table-responsive table {
-		border: 0;
-		width: 100%;
-
-		caption { font-size: 1.3em; }
-
 		thead {
-			border: none;
-			clip: rect(0 0 0 0);
-			height: 1px;
-			margin: -1px;
-			overflow: hidden;
-			padding: 0;
-			position: absolute;
-			width: 1px;
+			display: none;
 		}
 
 		tr {
-			border-bottom: 3px solid $background-color;
+			border-bottom: 3px solid var(--q2-text);
 			display: block;
 			margin-bottom: .625em;
 		}
 
 		td {
-			border-bottom: 1px solid $dark-overlay;
 			display: block;
 			font-size: .8em;
 
-			:last-child { border-bottom: 0; }
+			&::before {
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
 		}
 
 		.text-align-center, .text-align-right, .text-align-left { text-align: right; }
+
+		caption { font-size: 1.3em; }
 	}
 }

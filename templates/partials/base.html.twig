@@ -1,11 +1,19 @@
-{% extends '@quark/partials/base.html.twig' %}
+{% extends '@quark2/partials/base.html.twig' %}
+
+{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-transparent', 'sticky-footer']) %}
+{% set theme_default = theme_var('theme-mode') ?: 'auto' %}
+{% set accent = theme_var('accent-color') %}
+{% set accent_is_hex = accent and accent matches '/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/' %}
+{% set fa_enabled = theme_var('fontawesome.enabled') %}
+{% set fa_local   = theme_var('fontawesome.local') %}
 
 {% block head deferred %}
 	<meta charset="utf-8" />
 	<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+
 	{% include 'partials/metadata.html.twig' %}
 
 	{# get favicon from theme config if it exists #}
@@ -13,110 +21,141 @@
 	{% if favicon %}
 		{% set favicon_file = (favicon|first).name %}
 		{% set file_type = favicon_file|split('.')|last %}
-		<link rel="icon" type="image/{{ file_type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+		<link rel="icon" type="image/{{ file_type }}" href="/{{ (favicon|first).path }}" />
 	{% else %}
 		<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
 	{% endif %}
 
 	<link rel="canonical" href="{{ page.url(true, true) }}" />
+
+	{# Preload the critical latin subsets so headings + body text render in-font on first paint #}
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="{{ url('theme://fonts/cal-sans/cal-sans-latin.woff2') }}" />
+	<link rel="preload" as="font" type="font/woff2" crossorigin href="{{ url('theme://fonts/inter/inter-latin.woff2') }}" />
+
+	{% if accent_is_hex %}
+		{# User-configured accent: tint links, focus ring, and filled UI accents with the chosen hex #}
+		<style>
+			:root[data-theme=light] {
+				--q2-accent: {{ accent }};
+				--q2-accent-contrast: #ffffff;
+				--q2-link: {{ accent }};
+				--q2-focus-ring: color-mix(in oklab, {{ accent }} 45%, transparent);
+			}
+			:root[data-theme=dark] {
+				--q2-accent: {{ accent }};
+				--q2-accent-contrast: #ffffff;
+				--q2-link: color-mix(in oklab, {{ accent }} 75%, white 25%);
+				--q2-focus-ring: color-mix(in oklab, {{ accent }} 45%, transparent);
+			}
+		</style>
+	{% endif %}
+
+	    {# Pre-paint theme bootstrap — blocks FOUC by setting data-theme synchronously #}
+	<script>
+		(function () {
+			try {
+				var d = document.documentElement;
+				var stored = localStorage.getItem('quark2-theme');
+				var pref = stored || d.getAttribute('data-theme-default') || 'auto';
+				var isDark = pref === 'dark' || (pref === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+				d.setAttribute('data-theme', isDark ? 'dark' : 'light');
+				d.setAttribute('data-theme-preference', pref);
+				d.classList.toggle('dark', isDark);
+			} catch (e) {}
+		})();
+	</script>
 {% endblock head %}
 
 {% block stylesheets %}
-	{% set enable_fa_solid = theme.fontawesome.solid %}
-	{% set enable_fa_regular = theme.fontawesome.regular %}
-	{% set enable_fa_brand = theme.fontawesome.brand %}
-	{% if (enable_fa_solid or enable_fa_regular or enable_fa_brand) %}
-		{% set enable_fa = true %}
-	{% else %}
-		{% set enable_fa = false %}
+	{% do assets.addCss('theme://css/fonts.css', 100) %}
+	{% do assets.addCss('theme://css/blades.min.css', 95) %}
+	{% do assets.addCss('theme://css/theme.css', 90) %}
+	{% do assets.addCss('theme://css/hadron.css', 90) %}
+	{% do assets.addCss('theme://css/custom.css', 80) %}
+	{% if fa_enabled %}
+		{% if fa_local %}
+			{% do assets.addCss('theme://css/fontawesome/all.min.css', 85) %}
+		{% else %}
+			{% do assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css', 85) %}
+		{% endif %}
 	{% endif %}
-
-	{% do assets.addCss('theme://css-compiled/spectre'~compress, 100) %}
-	{% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress, 100) %}{% endif %}
-	{% if theme_var('spectre.icons') %}{% do assets.addCss('theme://css-compiled/spectre-icons'~compress, 100) %}{% endif %}
-
-	{% do assets.addCss('theme://css/quark.css',100) %}
-	{% do assets.addCss('theme://css/hadron.css',10) %}
-	{% do assets.addCss('theme://css/custom.css', 0) %}
-
-	{% if not enable_fa %}
-		{% do assets.addCss('theme://css/line-awesome.min.css') %}
-	{% else %}
-		{% do assets.addCss('theme://css/fontawesome.min.css') %}
-	{% endif %}
-	{% if enable_fa_solid %}    {% do assets.addCss('theme://css/fontawesome-solid.min.css') %}     {% endif %}
-	{% if enable_fa_regular %}  {% do assets.addCss('theme://css/fontawesome-regular.min.css') %}   {% endif %}
-	{% if enable_fa_brand %}    {% do assets.addCss('theme://css/fontawesome-brands.min.css') %}    {% endif %}
 {% endblock stylesheets %}
 
 {% block javascripts %}
-	{% do assets.addJs('jquery', 101) %}
-	{% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+	{% do assets.addJs('theme://js/theme-toggle.js', {group:'head', priority: 100}) %}
+	{% do assets.addJs('theme://js/site.js', {group:'bottom', priority: 100}) %}
 	{% do assets.addJs('theme://js/hadron.js', {group:'bottom'}) %}
 {% endblock javascripts %}
 
 {% block header %}
-    <section id="header" class="section">
-	    <section class="container {{ grid_size }}">
-		    <nav class="navbar">
-			    <section class="navbar-section logo">
-				    {% include 'partials/logo.html.twig' %}
-			    </section>
-			    <section class="navbar-section desktop-menu">
+	<header id="header" class="section">
+		<div class="container {{ grid_size }}">
+			<nav class="navbar" aria-label="Primary">
+				<div class="navbar-section logo">
+					{% include 'partials/logo.html.twig' %}
+				</div>
+				<div class="navbar-section desktop-menu">
+					<div class="dropmenu animated">
+						{% block header_navigation %}
+							{% include 'partials/navigation.html.twig' %}
+						{% endblock %}
+					</div>
 
-				    <nav class="dropmenu animated">
-					    {% block header_navigation %}
-						    {% include 'partials/navigation.html.twig' %}
-					    {% endblock header_navigation %}
-				    </nav>
+					<div class="dropmenu language-switcher">
+						{% block language_switcher %}
+							{% include 'partials/langauge-switcher.html.twig' %}
+						{% endblock language_switcher %}
+					</div>
+				</div>
 
-				    <nav class="dropmenu language-switcher">
-					    {% block language_switcher %}
-						    {% include 'partials/langauge-switcher.html.twig' %}
-					    {% endblock language_switcher %}
-				    </nav>
-
-				    {% if config.plugins.login.enabled and grav.user.username %}
-					    <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
-				    {% endif %}
-
-			    </section>
-		    </nav>
-	    </section>
-    </section>
-    <div class="mobile-menu">
-	    <div class="button_container" id="toggle">
-		    <span class="top"></span>
-		    <span class="middle"></span>
-		    <span class="bottom"></span>
-	    </div>
-    </div>
+				<div class="navbar-section actions">
+					{% include 'partials/theme-toggle.html.twig' %}
+					{% if config.plugins.login.enabled and grav.user.username %}
+						<span class="login-status-wrapper">
+							<i class="fa-solid fa-user" aria-hidden="true"></i>
+							{% include 'partials/login-status.html.twig' ignore missing %}
+						</span>
+					{% endif %}
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="mobile-menu">
+		<div class="button_container" id="toggle">
+			<span class="top"></span>
+			<span class="middle"></span>
+			<span class="bottom"></span>
+		</div>
+	</div>
 {% endblock header %}
 
 {% block footer %}
-	<section id="footer" class="section bg-gray">
-		<section class="container {{ grid_size }}">
+	<footer id="footer" class="section bg-gray">
+		<div class="container {{ grid_size }}">
 			{# display footer markdown page #}
 			{% set content = pages.find('/footer').content %}
 			{% if content %}
 				{{ content|raw }}
 			{% endif %}
-		</section>
-	</section>
+		</div>
+	</footer>
 {% endblock footer %}
 
 {% block mobile %}
-    <div class="mobile-container">
-	    <div class="overlay" id="overlay">
-		    <div class="mobile-logo">
-			    {% include 'partials/logo.html.twig' with {mobile: true} %}
-		    </div>
-		    <nav class="language-switcher">
-			    {% include 'partials/langauge-switcher.html.twig' with {mobile: true} %}
-		    </nav>
-		    <nav class="overlay-menu">
-			    {% include 'partials/navigation.html.twig' with {tree: true} %}
-		    </nav>
-	    </div>
-    </div>
+	<div class="mobile-container">
+		<nav class="overlay" id="overlay">
+			<div class="mobile-logo">
+				{% include 'partials/logo.html.twig' with {mobile: true} %}
+			</div>
+			<div class="theme-toggle">
+				{% include 'partials/theme-toggle.html.twig' with {labeled: true} %}
+			</div>
+			<div class="language-switcher">
+				{% include 'partials/langauge-switcher.html.twig' with {mobile: true} %}
+			</div>
+			<div class="overlay-menu">
+				{% include 'partials/navigation.html.twig' with {tree: true} %}
+			</div>
+		</nav>
+	</div>
 {% endblock mobile %}

@@ -1,14 +1,10 @@
 // general
 @import 'theme';
-@import 'base';
-@import 'overrides';
 
 // components
-@import 'components';
+@import 'components/general';
 @import 'components/header';
 @import 'components/navigation';
-@import 'components/language-switcher';
-@import 'components/hero';
 @import 'components/form';
 @import 'components/table';
 @import 'components/footer';
@@ -16,3 +12,33 @@
 // templates
 @import 'templates/cards';
 @import 'templates/side-by-side';
+
+// smooth scroll (for anchor links)
+html { scroll-behavior: smooth; }
+
+.f {
+	display: flex;
+
+	&.col { flex-direction: column; }
+
+	&.row { flex-direction: row; }
+
+	&.c { justify-content: center; }
+
+	&.a { align-items: center; }
+}
+
+.hadron-font {
+	@font-face {
+		font-family: 'Hadron';
+		src: url(../../hadron/assets/nasalization.otf);
+	}
+
+	font-family: Hadron, Inter, sans-serif;
+	text-transform: uppercase;
+	text-wrap: nowrap;
+
+	h1 & {
+		margin: .5rem;
+	}
+}
