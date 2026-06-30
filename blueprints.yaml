@@ -26,316 +26,270 @@ form:
       type: tabs
       active: 1
       fields:
-        hadron:
+
+        appearance:
           type: tab
-          title: THEME.HADRON.TITLE
+          title: THEME.APPEARANCE.TITLE
           fields:
-            h5p:
+
+            theme-mode:
+              type: select
+              label: THEME.APPEARANCE.THEME_MODE.LABEL
+              help: THEME.APPEARANCE.THEME_MODE.HELP
+              size: small
+              default: auto
+              options:
+                auto: THEME.APPEARANCE.THEME_MODE.OPTIONS.AUTO
+                light: THEME.APPEARANCE.THEME_MODE.OPTIONS.LIGHT
+                dark: THEME.APPEARANCE.THEME_MODE.OPTIONS.DARK
+
+            accent-color:
+              type: colorpicker
+              label: THEME.APPEARANCE.ACCENT_COLOR.LABEL
+              help: THEME.APPEARANCE.ACCENT_COLOR.HELP
+              default: '#242424'
+
+            branding_section:
               type: section
-              title: THEME.HADRON.H5P.TITLE
-              underline: true
-            h5pembedrootpath:
-              type: text
-              size: long
-              label: THEME.HADRON.H5P.EMBED_URL.LABEL
-              default: 'https://h5p.org/h5p/embed/'
-              help: THEME.HADRON.H5P.EMBED_URL.HELP
-              description: THEME.HADRON.H5P.EMBED_URL.DESCRIPTION
-              validate:
-                type: URL
-            menu_section:
-              type: section
-              title: THEME.HADRON.MENU.TITLE
-              underline: true
-            hide_title:
+              title: THEME.APPEARANCE.BRANDING.TITLE
+            favicon:
+              type: file
+              label: THEME.APPEARANCE.BRANDING.FAVICON.LABEL
+              help: THEME.APPEARANCE.BRANDING.FAVICON.HELP
+              size: large
+              destination: 'media/favicon'
+              multiple: false
+              markdown: true
+              accept:
+                - image/*
+            monochrome-logo:
               type: toggle
-              label: THEME.HADRON.MENU.HIDE_TITLE.LABEL
-              help: THEME.HADRON.MENU.HIDE_TITLE.HELP
+              label: THEME.APPEARANCE.BRANDING.MONOCHROME_LOGO.LABEL
+              help: THEME.APPEARANCE.BRANDING.MONOCHROME_LOGO.HELP
               highlight: 0
               default: 0
               options:
-                0: PLUGIN_ADMIN.DISABLED
                 1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            custom_logo:
+              type: file
+              label: THEME.APPEARANCE.BRANDING.CUSTOM_LOGO.LABEL
+              help: THEME.APPEARANCE.BRANDING.CUSTOM_LOGO.HELP
+              size: large
+              destination: 'media/logo'
+              multiple: false
+              markdown: true
+              accept:
+                - image/*
+            custom_logo_mobile:
+              type: file
+              label: THEME.APPEARANCE.BRANDING.CUSTOM_LOGO_MOBILE.LABEL
+              size: large
+              destination: 'media/logo'
+              multiple: false
+              accept:
+                - image/*
+
+            header_section:
+              type: section
+              title: THEME.APPEARANCE.HEADER.TITLE
+            header-fixed:
+              type: toggle
+              label: THEME.APPEARANCE.HEADER.HEADER_FIXED.LABEL
+              help: THEME.APPEARANCE.HEADER.HEADER_FIXED.HELP
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            header-animated:
+              type: toggle
+              label: THEME.APPEARANCE.HEADER.HEADER_ANIMATED.LABEL
+              help: THEME.APPEARANCE.HEADER.HEADER_ANIMATED.HELP
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            header-transparent:
+              type: toggle
+              label: THEME.APPEARANCE.HEADER.HEADER_TRANSPARENT.LABEL
+              help: THEME.APPEARANCE.HEADER.HEADER_TRANSPARENT.HELP
+              highlight: 0
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            footer_section:
+              type: section
+              title: THEME.APPEARANCE.FOOTER.TITLE
+            sticky-footer:
+              type: toggle
+              label: THEME.APPEARANCE.FOOTER.STICKY_FOOTER.LABEL
+              help: THEME.APPEARANCE.FOOTER.STICKY_FOOTER.HELP
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+        menu:
+          type: tab
+          title: THEME.MENU.TITLE
+          fields:
+            hide_title:
+              type: toggle
+              label: THEME.MENU.HIDE_TITLE.LABEL
+              help: THEME.MENU.HIDE_TITLE.HELP
+              highlight: 0
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
             dropdown.enabled:
               type: toggle
-              label: THEME.HADRON.MENU.DISPLAY_DROPDOWNS.LABEL
+              label: THEME.MENU.DISPLAY_DROPDOWNS.LABEL
               highlight: 1
               default: 1
               options:
-                0: PLUGIN_ADMIN.DISABLED
                 1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
             custommenus.enabled:
               type: toggle
-              label: THEME.HADRON.MENU.DISPLAY_CUSTOM_MENUS.LABEL
-              help: THEME.HADRON.MENU.DISPLAY_CUSTOM_MENUS.HELP
+              label: THEME.MENU.DISPLAY_CUSTOM_MENUS.LABEL
+              help: THEME.MENU.DISPLAY_CUSTOM_MENUS.HELP
               highlight: 1
               default: 1
               options:
-                0: PLUGIN_ADMIN.DISABLED
                 1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
+
             menu:
               type: list
-              label: THEME.HADRON.MENU.ITEMS.LABEL
+              label: THEME.MENU.ITEMS.LABEL
               fields:
                 .text:
                   type: text
-                  label: THEME.HADRON.MENU.ITEMS.TEXT.LABEL
-                  description: THEME.HADRON.MENU.ITEMS.TEXT.DESCRIPTION
+                  label: THEME.MENU.ITEMS.TEXT.LABEL
+                  description: THEME.MENU.ITEMS.TEXT.DESCRIPTION
                 .icon:
                   type: text
-                  label: THEME.HADRON.MENU.ITEMS.ICON.LABEL
-                  description: THEME.HADRON.MENU.ITEMS.ICON.DESCRIPTION
+                  label: THEME.MENU.ITEMS.ICON.LABEL
+                  description: THEME.MENU.ITEMS.ICON.DESCRIPTION
                 .url:
                   type: text
-                  label: THEME.HADRON.MENU.ITEMS.URL.LABEL
-                  description: THEME.HADRON.MENU.ITEMS.URL.DESCRIPTION
+                  label: THEME.MENU.ITEMS.URL.LABEL
+                  description: THEME.MENU.ITEMS.URL.DESCRIPTION
                 .target:
                   type: select
-                  label: THEME.HADRON.MENU.ITEMS.TARGET.LABEL
+                  label: THEME.MENU.ITEMS.TARGET.LABEL
                   default: _self
                   size: medium
                   options:
-                    _blank: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.BLANK
-                    _parent: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.PARENT
-                    _top: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.TOP
-                    _self: THEME.HADRON.MENU.ITEMS.TARGET.OPTIONS.SELF
-            langswitcher:
+                    _blank: THEME.MENU.ITEMS.TARGET.OPTIONS.BLANK
+                    _parent: THEME.MENU.ITEMS.TARGET.OPTIONS.PARENT
+                    _top: THEME.MENU.ITEMS.TARGET.OPTIONS.TOP
+                    _self: THEME.MENU.ITEMS.TARGET.OPTIONS.SELF
+
+        features:
+          type: tab
+          title: THEME.FEATURES.TITLE
+          fields:
+
+            icons_section:
               type: section
-              title: THEME.HADRON.LANGSWITCHER.TITLE
-              underline: true
-            langswitcher.enable:
+              title: THEME.FEATURES.ICONS.TITLE
+            fontawesome.enabled:
               type: toggle
-              label: THEME.HADRON.LANGSWITCHER.ENABLE.LABEL
+              label: THEME.FEATURES.ICONS.ENABLED.LABEL
+              help: THEME.FEATURES.ICONS.ENABLED.HELP
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            fontawesome.local:
+              type: toggle
+              label: THEME.FEATURES.ICONS.LOCAL.LABEL
+              help: THEME.FEATURES.ICONS.LOCAL.HELP
               highlight: 0
               default: 0
               options:
-                0: PLUGIN_ADMIN.DISABLED
                 1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            langswitcher_section:
+              type: section
+              title: THEME.FEATURES.LANG_SWITCHER.TITLE
+            langswitcher.enable:
+              type: toggle
+              label: THEME.FEATURES.LANG_SWITCHER.ENABLE.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
             langswitcher.display:
               type: select
               size: small
-              label: THEME.HADRON.LANGSWITCHER.DISPLAY.LABEL
-              default: dropdown
+              label: THEME.FEATURES.LANG_SWITCHER.DISPLAY.LABEL
+              default: inline
               options:
-                dropdown: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.DROPDOWN
-                inline: THEME.HADRON.LANGSWITCHER.DISPLAY.OPTIONS.INLINE
+                dropdown: THEME.FEATURES.LANG_SWITCHER.DISPLAY.OPTIONS.DROPDOWN
+                inline: THEME.FEATURES.LANG_SWITCHER.DISPLAY.OPTIONS.INLINE
             langswitcher.format:
               type: select
               size: small
-              label: THEME.HADRON.LANGSWITCHER.FORMAT.LABEL
-              default: combined
+              label: THEME.FEATURES.LANG_SWITCHER.FORMAT.LABEL
+              default: icon
               options:
-                combined: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.COMBINED
-                short: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.SHORT
-                long: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.LONG
-                icon: THEME.HADRON.LANGSWITCHER.FORMAT.OPTIONS.ICON
-            fontawesome:
-              type: section
-              title: THEME.HADRON.FONTAWESOME.TITLE
-              underline: true
-            fontawesome.solid:
-              type: toggle
-              label: THEME.HADRON.FONTAWESOME.ENABLE_SOLID.LABEL
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            fontawesome.regular:
-              type: toggle
-              label: THEME.HADRON.FONTAWESOME.ENABLE_REGULAR.LABEL
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            fontawesome.brand:
-              type: toggle
-              label: THEME.HADRON.FONTAWESOME.ENABLE_BRAND.LABEL
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-        quark:
-          type: tab
-          title: THEME.QUARK.TITLE
-          fields:
-            production-mode:
-              type: toggle
-              label: THEME.QUARK.PRODUCTION_MODE.LABEL
-              help: THEME.QUARK.PRODUCTION_MODE.HELP
-              highlight: 1
-              default: 1
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            grid-size:
-              type: select
-              label: THEME.QUARK.GRID_SIZE.LABEL
-              help: THEME.QUARK.GRID_SIZE.HELP
-              size: small
-              options:
-                '': THEME.QUARK.GRID_SIZE.OPTIONS.NONE
-                grid-xl: THEME.QUARK.GRID_SIZE.OPTIONS.GRID_XL
-                grid-lg: THEME.QUARK.GRID_SIZE.OPTIONS.GRID_LG
-                grid-md: THEME.QUARK.GRID_SIZE.OPTIONS.GRID_MD
-            header_section:
-              type: section
-              title: THEME.QUARK.HEADER.TITLE
-              underline: true
-            invert_logo:
-              type: toggle
-              label: THEME.QUARK.HEADER.INVERT_LOGO.LABEL
-              help: THEME.QUARK.HEADER.INVERT_LOGO.HELP
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            favicon:
-              type: file
-              label: THEME.QUARK.HEADER.FAVICON.LABEL
-              size: large
-              destination: 'user/media/favicons'
-              multiple: false
-              markdown: true
-              description: THEME.QUARK.HEADER.FAVICON.DESCRIPTION
-              accept:
-                - 'image/*'
-            custom_logo:
-              type: file
-              label: THEME.QUARK.HEADER.CUSTOM_LOGO.LABEL
-              size: large
-              destination: 'user/media/logo'
-              multiple: false
-              markdown: true
-              description: THEME.QUARK.HEADER.CUSTOM_LOGO.DESCRIPTION
-              accept:
-                - 'image/*'
-            custom_logo_mobile:
-              type: file
-              label: THEME.QUARK.HEADER.CUSTOM_LOGO_MOBILE.LABEL
-              size: large
-              destination: 'user/media/logo'
-              multiple: false
-              accept:
-                - 'image/*'
-            header-fixed:
-              type: toggle
-              label: THEME.QUARK.HEADER.HEADER_FIXED.LABEL
-              help: THEME.QUARK.HEADER.HEADER_FIXED.HELP
-              highlight: 1
-              default: 1
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            header-animated:
-              type: toggle
-              label: THEME.QUARK.HEADER.HEADER_ANIMATED.LABEL
-              help: THEME.QUARK.HEADER.HEADER_ANIMATED.HELP
-              highlight: 1
-              default: 1
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            header-dark:
-              type: toggle
-              label: THEME.QUARK.HEADER.HEADER_DARK.LABEL
-              help: THEME.QUARK.HEADER.HEADER_DARK.HELP
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            header-transparent:
-              type: toggle
-              label: THEME.QUARK.HEADER.HEADER_TRANSPARENT.LABEL
-              help: THEME.QUARK.HEADER.HEADER_TRANSPARENT.HELP
-              highlight: 0
-              default: 1
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
-            footer_section:
-              type: section
-              title: THEME.QUARK.FOOTER.TITLE
-              underline: true
-            sticky-footer:
-              type: toggle
-              label: THEME.QUARK.FOOTER.STICKY_FOOTER.LABEL
-              help: THEME.QUARK.FOOTER.STICKY_FOOTER.HELP
-              highlight: 1
-              default: 1
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
+                combined: THEME.FEATURES.LANG_SWITCHER.FORMAT.OPTIONS.COMBINED
+                short: THEME.FEATURES.LANG_SWITCHER.FORMAT.OPTIONS.SHORT
+                long: THEME.FEATURES.LANG_SWITCHER.FORMAT.OPTIONS.LONG
+                icon: THEME.FEATURES.LANG_SWITCHER.FORMAT.OPTIONS.ICON
+
             blog_section:
               type: section
-              title: THEME.QUARK.BLOG.TITLE
-              underline: true
+              title: THEME.FEATURES.BLOG.TITLE
             blog-page:
               type: text
-              label: THEME.QUARK.BLOG.BLOG_PAGE.LABEL
-              help: THEME.QUARK.BLOG.BLOG_PAGE.HELP
+              label: THEME.FEATURES.BLOG.BLOG_PAGE.LABEL
+              help: THEME.FEATURES.BLOG.BLOG_PAGE.HELP
               size: medium
-              default: /blog
-            blog_page_hero_classes:
-              type: text
-              label: THEME.QUARK.BLOG.HERO_CLASSES.LABEL
-              markdown: true
-              description: THEME.QUARK.BLOG.HERO_CLASSES.DESCRIPTION
-            spectre_section:
+              default: '/blog'
+
+            h5p:
               type: section
-              title: THEME.QUARK.SPECTRE.TITLE
-              underline: true
-            spectre.exp:
-              type: toggle
-              label: THEME.QUARK.SPECTRE.EXPERIMENTAL.LABEL
-              help: THEME.QUARK.SPECTRE.EXPERIMENTAL.HELP
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
+              title: THEME.FEATURES.H5P.TITLE
+            h5pembedrootpath:
+              type: text
+              size: long
+              label: THEME.FEATURES.H5P.EMBED_URL.LABEL
+              default: 'https://h5p.org/h5p/embed/'
+              help: THEME.FEATURES.H5P.EMBED_URL.HELP
+              description: THEME.FEATURES.H5P.EMBED_URL.DESCRIPTION
               validate:
-                type: bool
-            spectre.icons:
-              type: toggle
-              label: THEME.QUARK.SPECTRE.ICONS.LABEL
-              help: THEME.QUARK.SPECTRE.ICONS.HELP
-              highlight: 0
-              default: 0
-              options:
-                0: PLUGIN_ADMIN.DISABLED
-                1: PLUGIN_ADMIN.ENABLED
-              validate:
-                type: bool
+                type: URL

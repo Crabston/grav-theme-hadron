@@ -248,43 +248,86 @@ ADMIN:
           LABEL: Parent Page
 
 THEME:
-  HADRON:
-    TITLE: Hadron Options
-    H5P:
-      TITLE: H5P Setup
-      EMBED_URL:
-        LABEL: H5P Embed Source URL
-        HELP: Enter the embed source URL path up to, but not including, the H5P Content ID.
-        DESCRIPTION: H5P embed source URL path up to, but not including, the Content ID. For example, https://h5p.org/h5p/embed/ or https://[organization].h5p.com/content/.
-    MENU:
-      TITLE: Menu
-      HIDE_TITLE:
-        LABEL: Hide Title
-        HELP: Hide the site title in the navigation bar
-      DISPLAY_DROPDOWNS:
-        LABEL: Display Dropdowns in Menu
-      DISPLAY_CUSTOM_MENUS:
-        LABEL: Display Custom Menu Items
-        HELP: Determines if any defined custom menu entries are displayed in the menubar.
-      ITEMS:
-        LABEL: Custom Menu Items
-        TEXT:
-          LABEL: Text
-          DESCRIPTION: Text label for menu item.
-        ICON:
-          LABEL: Icon
-          DESCRIPTION: Font Awesome icon name, e.g. 'external-link'.
-        URL:
-          LABEL: URL
-          DESCRIPTION: URL for menu item.
-        TARGET:
-          LABEL: Target
-          OPTIONS:
-            BLANK: Open in a new window
-            PARENT: Open in the parent frame
-            TOP: Open in the full body of the window
-            SELF: Open in the same frame as it was clicked
-    LANGSWITCHER:
+  APPEARANCE:
+    TITLE: Appearance
+    THEME_MODE:
+      LABEL: Theme Mode Default
+      HELP: Default appearance before a user makes a choice. Users can still toggle in the UI.
+      OPTIONS:
+        AUTO: Auto (follows OS)
+        LIGHT: Light
+        DARK: Dark
+    ACCENT_COLOR:
+      LABEL: Accent Color
+      HELP: Tints links and focus rings. Leave blank for the pure monochrome palette.
+    BRANDING:
+      TITLE: Branding
+      MONOCHROME_LOGO:
+        LABEL: Monochrome Logo
+        HELP: When enabled, the logo will be black on light mode, and white on dark mode. Recommended only for grayscale logos.
+      FAVICON:
+        LABEL: Custom favicon
+        HELP: Will be used instead of default favicon `theme://images/favicon.png`
+      CUSTOM_LOGO:
+        LABEL: Custom Logo
+        HELP: Will be used instead of default logo `theme://images/grav-logo.svg`
+      CUSTOM_LOGO_MOBILE:
+        LABEL: Custom Logo (Mobile View)
+    HEADER:
+      TITLE: Header Settings
+      HEADER_FIXED:
+        LABEL: Fixed header
+        HELP: When enabled, the header will be fixed at the top of the browser
+      HEADER_ANIMATED:
+        LABEL: Animate header
+        HELP: When enabled, the header will animate on scroll
+      HEADER_TRANSPARENT:
+        LABEL: Transparent Header (hero)
+        HELP: When enabled, the header will be transparent on hero pages
+    FOOTER:
+      TITLE: Footer Settings
+      STICKY_FOOTER:
+        LABEL: Sticky Footer
+        HELP: When enabled, the footer will stick to the bottom of the browser
+  MENU:
+    TITLE: Menu
+    HIDE_TITLE:
+      LABEL: Hide Title
+      HELP: Hide the site title in the navigation bar
+    DISPLAY_DROPDOWNS:
+      LABEL: Display Dropdowns in Menu
+    DISPLAY_CUSTOM_MENUS:
+      LABEL: Display Custom Menu Items
+      HELP: Determines if any defined custom menu entries are displayed in the menubar.
+    ITEMS:
+      LABEL: Custom Menu Items
+      TEXT:
+        LABEL: Text
+        DESCRIPTION: Text label for menu item.
+      ICON:
+        LABEL: Icon
+        DESCRIPTION: Font Awesome icon name, e.g. 'external-link'.
+      URL:
+        LABEL: URL
+        DESCRIPTION: URL for menu item.
+      TARGET:
+        LABEL: Target
+        OPTIONS:
+          BLANK: Open in a new window
+          PARENT: Open in the parent frame
+          TOP: Open in the full body of the window
+          SELF: Open in the same frame as it was clicked
+  FEATURES:
+    TITLE: Features
+    ICONS:
+      TITLE: Icon Settings (Fontawesome)
+      ENABLED:
+        LABEL: Font Awesome 7
+        HELP: Load Font Awesome 7 free icon set.
+      LOCAL:
+        LABEL: Serve Font Awesome locally
+        HELP: When enabled, expects `css/fontawesome/all.min.css` to exist in the theme. Otherwise uses the official CDN.
+    LANG_SWITCHER:
       TITLE: Language Switcher
       ENABLE:
         LABEL: Enable Language Switcher
@@ -300,70 +343,14 @@ THEME:
           SHORT: Shortcode
           LONG: Name
           ICON: Flag
-    FONTAWESOME:
-      TITLE: Fontawesome Icons
-      ENABLE_SOLID:
-        LABEL: Enable Solid Icons
-      ENABLE_REGULAR:
-        LABEL: Enable Regular Icons
-      ENABLE_BRAND:
-        LABEL: Enable Brands Icons
-  QUARK:
-    TITLE: Quark Options
-    PRODUCTION_MODE:
-      LABEL: Production mode
-      HELP: When enabled, Quark will render with minified CSS
-    GRID_SIZE:
-      LABEL: Grid size
-      HELP: The maximum width of the theme
-      OPTIONS:
-        NONE: None (full width)
-        GRID_XL: Extra Large
-        GRID_LG: Large
-        GRID_MD: Medium
-    HEADER:
-      TITLE: Header Defaults
-      INVERT_LOGO:
-        LABEL: Invert Logo
-        HELP: When enabled, the logo will be inverted on light backgrounds. Recommended for black and white logos.
-      FAVICON:
-        LABEL: Custom favicon
-        DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
-      CUSTOM_LOGO:
-        LABEL: Custom Logo
-        DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
-      CUSTOM_LOGO_MOBILE:
-        LABEL: Mobile Custom Logo
-      HEADER_FIXED:
-        LABEL: Fixed header
-        HELP: When enabled, the header will be fixed at the top of the browser
-      HEADER_ANIMATED:
-        LABEL: Animate header
-        HELP: When enabled, the header will animate on scroll
-      HEADER_DARK:
-        LABEL: Dark Style
-        HELP: When enabled, a dark-friendly style will be used
-      HEADER_TRANSPARENT:
-        LABEL: Transparent Header
-        HELP: When enabled, the header will be transparent
-    FOOTER:
-      TITLE: Footer Defaults
-      STICKY_FOOTER:
-        LABEL: Sticky Footer
-        HELP: When enabled, the footer will stick to the bottom of the browser
     BLOG:
-      TITLE: Blog Defaults
+      TITLE: Blog Options
       BLOG_PAGE:
-        LABEL: Blog Page
+        LABEL: Blog Page Route
         HELP: The route to the blog page when working with blog sidebar
-      HERO_CLASSES:
-        LABEL: Hero Classes
-        DESCRIPTION: There are several Hero class options that can be listed here (space separated):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Please consult the [Quark documentation](https://github.com/getgrav/grav-theme-quark#hero-options) for more details.
-    SPECTRE:
-      TITLE: Spectre.css Options
-      EXPERIMENTAL:
-        LABEL: Experimental CSS
-        HELP: When enabled, the `spectre-exp.css` file will be included
-      ICONS:
-        LABEL: Icons CSS
-        HELP: When enabled, the `spectre-icons.css` file will be included
+    H5P:
+      TITLE: H5P Setup
+      EMBED_URL:
+        LABEL: H5P Embed Source URL
+        HELP: Enter the embed source URL path up to, but not including, the H5P Content ID.
+        DESCRIPTION: H5P embed source URL path up to, but not including, the Content ID. For example, https://h5p.org/h5p/embed/ or https://[organization].h5p.com/content/.

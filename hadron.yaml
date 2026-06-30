@@ -7,57 +7,47 @@ streams:
           - user/themes/hadron
           - user/themes/quark2
 
-grid-size: grid-lg
-blog-page: /blog
-hide_title: true
+theme-mode: auto
+accent-color: '#242424'
+monochrome-logo: false
+favicon:
+  user/media/favicon/grav-favicon.svg:
+    name: grav-favicon.svg
+    type: image/svg+xml
+    size: 4868
+    path: user/media/favicon/grav-favicon.svg
+custom_logo:
+  user/media/logo/grav-logo.svg:
+    name: grav-logo.svg
+    type: image/svg+xml
+    size: 4868
+    path: user/media/logo/grav-logo.svg
+custom_logo_mobile:
+  user/media/logo/grav-logo.svg:
+    name: grav-logo.svg
+    type: image/svg+xml
+    size: 4868
+    path: user/media/logo/grav-logo.svg
+header-fixed: true
+header-animated: true
+header-transparent: false
+sticky-footer: true
+hide_title: false
 dropdown:
   enabled: true
 custommenus:
-  enabled: false
+  enabled: true
 menu:
   - text: Grav
     icon: external-link
     url: 'https://getgrav.org/'
     target: _blank
+fontawesome:
+  enabled: true
+  local: false
 langswitcher:
   enable: true
   display: inline
   format: icon
-header-fixed: true
-header-animated: true
-header-dark: false
-header-transparent: false
-sticky-footer: true
-spectre:
-  exp: false
-  icons: false
-production-mode: true
+blog-page: /blog
 h5pembedrootpath: 'https://h5p.org/h5p/embed/'
-fontawesome:
-  solid: false
-  regular: false
-  brands: false
-  brand: false
-blog_page_hero_classes: 'text-light title-h1h2 overlay-dark-gradient hero-large parallax'
-invert_logo: true
-favicon:
-  user/media/hadron-favicon.svg:
-    name: hadron-favicon.svg
-    full_path: hadron-favicon.svg
-    type: image/svg+xml
-    size: 566
-    path: user/media/hadron-favicon.svg
-custom_logo:
-  user/media/logo/hadron-logo.svg:
-    name: hadron-logo.svg
-    full_path: hadron-logo.svg
-    type: image/svg+xml
-    size: 3076
-    path: user/media/logo/hadron-logo.svg
-custom_logo_mobile:
-  user/media/logo/hadron-logo.svg:
-    name: hadron-logo.svg
-    full_path: hadron-logo.svg
-    type: image/svg+xml
-    size: 3076
-    path: user/media/logo/hadron-logo.svg
