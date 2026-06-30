@@ -1,56 +1,41 @@
-# Hadron Theme
-modern Grav theme based on Quark with advanced features and styles
+![Hadron Logo](hadron.svg)
 
-## Description
-Hadron is a modern [Grav](https://getgrav.org) theme based on [Quark](https://github.com/getgrav/grav-theme-quark). As a child/ inherited theme of Quark, it includes more advanced features than the original Quark theme. It also offers advanced styling options.
+# Grav Hadron Theme
+[Hadron](https://usehadron.dev/) is more than a modern and customizable [Grav](https://getgrav.org/) theme and skeleton. On the one hand, it is optimized for beginners to quickly create a simple website, but on the other hand, it is also suitable for professionals who want to use Hadron as a foundation for a complex website with self-developed functions.
+
+This theme is part of the [Hadron Skeleton](https://github.com/Crabston/grav-skeleton-hadron/) and is based on [Quark2](https://github.com/getgrav/grav-theme-quark2). It enhances Quark2 with additional features and customization options Quark2 doesn't support. There are also new page templates and other elements that are not part of Quark2.
+If you are already using Quark or Quark2, you can easily switch to Hadron by installing the Hadron theme and changing the theme in the Grav configuration.
+
+> [!NOTE]
+> With the latest Hadron 3 we now support [Grav v2](https://getgrav.org/blog/grav-2-stable-released) & [Quark2](https://github.com/getgrav/grav-theme-quark2)!
 
 ## Demo
-If you want to see the Hadron theme in action, you can visit the [Hadron Demo Site](https://grav.demo.crabston.dev). There you will find a short introduction to the theme and its features too. There are a components page and some example pages too.
+You can see the Hadron skeleton & theme in action on the [Hadron Website](https://usehadron.dev/). There you will find a short introduction to the skeleton/ theme and its features too. There is an elements page and some template / example pages too.
+
+If you want, you can also follow the [installation instructions](#installation), to test Hadron live on your device. It is very easy and just takes a few minutes to set up.
 
 ## Features
-_Learn more about all the features of Hadron in detail on [tutorials.crabston.ch/grav/hadron](https://tutorials.crabston.ch/grav/hadron)_
+_Learn more about all the features of Hadron in detail on [usehadron.dev/docs/theme/page-types](https://usehadron.dev/docs/theme/page-types)._
 
-- Responsive tables
-- Menu with dropdown support
-- Featured posts for blog
-- Built-in Support for Embed.ly
+Here are some of the main features of the Hadron theme:
+- Ready-to-use language switcher for multilingual sites
+- Unique support for responsive tables
+- Menu with dropdown support and customizable menu items
+- More theme customization options
 - Built-in Support for H5P
-- Built-in multilanguage support
-- Newest Fontawesome Icons (v6.7.2)
-- more theme customization options
-- other enhancements
-
-### Inherited Quark Features
-- Lightweight and minimal for optimal performance
-- Spectre CSS Framework
-- Fully responsive with full-page mobile navigation
-- SCSS based CSS source files for easy customization
-- Built-in support for on-page navigation
-- Multiple page template types
-- Fontawesome icon support
-
-## Page Templates
-_Learn more about page templates on [tutorials.crabston.ch/grav/seiten/seiten-typen](https://tutorials.crabston.ch/grav/seiten/seiten-typen)_
-
-### Inherited Quark Page Templates
-- Default template `default.md`
-- Error template `error.md`
-- Blog template `blog.md`
-- Blog item template `item.md`
-- Modular templates: `modular.md`
-  - Features Modular template `features.md`
-  - Hero Modular template `hero.md`
-  - Text Modular template `text.md`
+- Built-in Support for Embed.ly
 
 ## Installation
 Installing the Hadron theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
-The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Hadron theme can be found in the [Hadron Skeleton](https://github.com/Crabston/grav-demo) which is a self-contained repository for a complete site which include: sample content, configuration, theme, and plugins.
+The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Hadron theme can be found in the [Hadron Skeleton](https://github.com/Crabston/grav-skeleton-hadron) which is a self-contained repository for a complete site which include: sample content, configuration, theme, and plugins and much more!
 
 ### GPM Installation (Preferred)
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line). From the root of your Grav installation, type:
 
-    bin/gpm install hadron
+```bash
+bin/gpm install hadron
+```
 
 This will install the Hadron theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/hadron`.
 
@@ -63,8 +48,9 @@ You should now have all the theme files under `/your/site/grav/user/themes/hadro
 This theme has various customization options. You can customize the theme by editing the theme configuration file. You can also customize the theme by creating a custom CSS/ SCSS file.
 
 ## Theme Options
-The Hadron theme has many options that can be set in the theme configuration file. Some of the important options are:
+The Hadron theme has many options that can be set in the theme configuration file. Find all of them in the docs: [usehadron.dev/docs/theme/options](https://usehadron.dev/docs/theme/options)
 
+_Some of the important options are:_
 ```yaml
 grid-size: grid-lg          # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
 blog-page: /blog            # The route to the blog page
@@ -80,58 +66,26 @@ fontawesome:                # Customize the use of fontawesome icons
 favicon:                    # A custom favicon rather than the theme default (see below for more information)
 custom_logo:                # A custom logo (see below)
 custom_logo_mobile:         # A custom logo for mobile devices (see below)
+theme-mode: auto            # Color mode for the theme, options include: `auto`, `light`, and `dark`
+accent-color: '#242424'     # The accent color for the theme, can be any valid CSS HEX color value
+monochrome-logo: false      # If true, the logo will be monochrome and will change depending on the theme mode (light/dark).
+favicon:                    # A custom favicon rather than the theme default
+custom_logo:                # A custom logo for the navigation bar / header
+custom_logo_mobile:         # A custom logo for the navigation bar / header on mobile devices
+header-fixed: true          # Causes the header to be fixed at the top of the browser
+header-animated: true       # Allows the fixed header to resize to a smaller header when scrolled
+header-transparent: false   # Allows the header to be transparent over the page (only for hero elements)
+sticky-footer: true         # Causes the footer to be sticky at the bottom of the page
+hide_title: false           # Hides the site title in the header
+dropdown.enabled: true      # Enables dropdown navigation
+custommenus.enabled: true   # Enables custom menus in the header
+menu:                       # Sets custom menu items for the header navigation
+fontawesome.enabled: true   # Enables the use of Font Awesome icons (V7)
+langswitcher:               # Settings for the language switcher in the header
+blog-page: /blog            # The route to the blog page
+h5pembedrootpath: ''        # The root path for H5P embed files, if not set, the public H5P CDN will be used.
 ```
 
 To make modifications, you can copy the `user/themes/hadron/hadron.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/hadron/hadron.yaml` file directly or your changes will be lost with any updates
-
-### Fontawesome Icons
-You can customize the use of Fontawesome icons by setting the `fontawesome` option in the theme configuration file. The options are:
-
-```yaml
-fontawesome:
-  solid: false    # Enable solid icons
-  regular: false  # Enable regular icons
-  brand: false    # Enable brand icons
-```
-If you activate an icon set, the built-in Quark icons (forkawesome) get deactivated. You can enable multiple icons sets at the same time.
-
-### Custom Favicon & Logos
-To add a custom favicon/ logo, you should put the favicon/ logo into the `user/themes/hadron/images/logo` folder. Standard image formats are supported (.png, .jpg, .gif, .svg, etc.). Then reference the logo via the YAML like so:
-
-```yaml
-favicon:
-  path/to/your/favicon.svg:
-    name: favicon.svg
-    full_path: favicon.svg
-    type: image/svg+xml
-    size: 2048
-    path: user/themes/local/images/favicon.svg
-custom_logo:
-  path/to/your/logo.png:
-    name: logo.png
-    full_path: logo.png
-    type: image/png+xml
-    size: 8192
-    path: path/to/your/logo.png
-custom_logo_mobile:
-  path/to/your/mobile-logo.jpg:
-    name: mobile-logo.jpg
-    full_path: mobile-logo.jpg
-    type: image/jpg+xml
-    size: 4096
-    path: path/to/your/mobile-logo.jpg
-```
-
-### Page Overrides
-_see page overrides on the [Quark theme (Page Overrides)](https://github.com/getgrav/grav-theme-quark#page-overrides)_
-
-### Modular/ Hero Options
-_see hero options on the [Quark theme (Hero Options)](https://github.com/getgrav/grav-theme-quark#hero-options)_
-
-### Modular/ Features Options
-_see features modular options on the [Quark theme (Features Modular Options)](https://github.com/getgrav/grav-theme-quark#features-modular-options)_
-
-### Modular/ Text Options
-_see text modular options on the [Quark theme  (Text Modular Options)](https://github.com/getgrav/grav-theme-quark#text-modular-options)_
