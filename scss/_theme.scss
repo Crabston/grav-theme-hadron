@@ -37,11 +37,11 @@ $light-text-color-inverse: #F2F2F3 !default;
 $dark-background-color: #08090B !default;
 $dark-background-color-elevated: #1D1F25 !default;
 $dark-background-color-muted: #2A2D34 !default;
-$dark-background-color-inverse: $dark-background-color !default;
+$dark-background-color-inverse: #F5F5F5 !default;
 $dark-text-color: #F2F2F3 !default;
 $dark-text-color-strong: #FFFFFF !default;
 $dark-text-color-muted: #9A9AA0 !default;
-$dark-text-color-inverse: $dark-text-color !default;
+$dark-text-color-inverse: #111111 !default;
 :root[data-theme='dark'] {
 	--q2-accent: #{$primary-color-light};
 
