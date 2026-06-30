@@ -21,7 +21,7 @@
 	{% if favicon %}
 		{% set favicon_file = (favicon|first).name %}
 		{% set file_type = favicon_file|split('.')|last %}
-		<link rel="icon" type="image/{{ file_type }}" href="/{{ (favicon|first).path }}" />
+		<link rel="icon" type="image/{{ file_type }}" href="{{ (favicon|first).path }}" />
 	{% else %}
 		<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
 	{% endif %}
