@@ -2,16 +2,16 @@
 
 // labels
 .label.label-secondary {
-	color: $link-color;
-	background-color: mix($link-color, $light-overlay, 10%);
+	color: $primary-color;
+	background-color: color.mix($primary-color, #FFFFFF, 10%); // TODO: check if still needed
 }
 
 // darkmode elements
-html[data-theme-preference=dark] {
+html[data-theme=dark]{
 	input, textarea, button:not(.btn-primary), .btn:not(button),
 	.notices, .card, .tab, .accordion-wrapper label,
 	code:not([class*=language-]), pre {
-		background-color: $dark-overlay !important;
+		background-color: $dark-background-color-muted !important;
 
 		& code[class*=language-] {
 			background-color: transparent !important;
@@ -19,7 +19,7 @@ html[data-theme-preference=dark] {
 	}
 
 	blockquote {
-		border-left-color: $dark-overlay !important;
+		border-left-color: $dark-background-color-muted !important;
 	}
 }
 

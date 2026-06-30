@@ -23,7 +23,7 @@ body {
 // mobile navigation
 body {
 	.mobile-menu {
-		@media (max-width: 860px) {
+		@media ($responsive-breakpoint-tablet) {
 			top: 2rem;
 			right: 2rem;
 			min-height: 64px;

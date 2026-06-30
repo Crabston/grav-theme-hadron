@@ -2,7 +2,7 @@
 @import 'theme';
 
 // components
-@import 'components';
+@import 'components/general';
 @import 'components/header';
 @import 'components/navigation';
 @import 'components/form';
@@ -34,7 +34,7 @@ html { scroll-behavior: smooth; }
 		src: url(../../hadron/assets/nasalization.otf);
 	}
 
-	font-family: Hadron, sans-serif;
+	font-family: Hadron, Inter, sans-serif;
 	text-transform: uppercase;
 	text-wrap: nowrap;
 

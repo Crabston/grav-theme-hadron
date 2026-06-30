@@ -1,12 +1,11 @@
 // brand logo color filter for dark and light mode
 #header .navbar-brand img,
 .mobile-container .mobile-logo img {
-	html[data-theme-preference=dark] & {
-		filter: brightness(0) invert(1);
+	html[data-theme=dark] & {
+		filter: brightness(0) invert(1); // TODO: refactor theme `invert` to `monochrome_logo`, and set this styles only when logo is monochrome
 	}
 
-	html[data-theme-preference=light] &,
-	html[data-theme-preference=auto] & {
+	html[data-theme=light] & {
 		filter: brightness(255) invert(1);
 	}
 }
