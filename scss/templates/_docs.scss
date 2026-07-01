@@ -1,0 +1,21 @@
+#docs-hero {
+    background: black !important;
+    padding-block: clamp(5rem, 12vw, 9rem);
+    color: var(--q2-accent-contrast);
+
+    .container {
+        width: 80%;
+
+        img { filter: brightness(0) invert(1); }
+
+        hr { border: 1px solid var(--q2-accent-contrast); }
+
+        h1 { margin: 0 0 5rem; }
+
+        h2 {
+            font-family: Inter, Cal Sans, sans-serif;
+            font-weight: normal;
+        }
+    }
+
+}
