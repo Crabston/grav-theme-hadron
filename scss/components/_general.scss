@@ -13,11 +13,8 @@ html[data-theme=dark]{
 	code:not([class*=language-]), pre {
 		background-color: var(--q2-bg-muted) !important;
 
-		& code[class*=language-] {
-			background-color: transparent !important;
-		}
-	}
         & code[class*=language-] {
+            background-color: transparent !important;
         }
     }
 
