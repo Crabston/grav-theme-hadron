@@ -1,16 +1,36 @@
-{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : '/'~blog.slug %}
+{% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative ~ '/' ~ blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
+
+{% if config.plugins.simplesearch.enabled %}
+    <div class="sidebar-content">
+        {% include 'partials/simplesearch_searchbox.html.twig' ignore missing %}
+    </div>
+{% endif %}
+
+{% block tntsearch %}
+    {% if config.plugins.tntsearch.enabled and page.header.sidebar.show_tntsearch %}
+        <div class="sidebar-content">
+            {% embed 'partials/tntsearch.html.twig' with { limit: 10, snippet: 150, min: 3, search_type: 'auto', dropdown: true } %}{% endembed %}
+        </div>
+    {% endif %}
+{% endblock tntsearch %}
+
+{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+    <div class="sidebar-content">
+        <h4>{{ 'THEME_QUARK2.SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h4>
+        {% include 'partials/relatedpages.html.twig' %}
+    </div>
+{% endif %}
+
+{% if config.plugins.random.enabled %}
+    <div class="sidebar-content">
+        <h4>{{ 'THEME_QUARK2.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>
+        <a class="btn btn-ghost btn-sm" href="{{ base_url }}/random"><i class="fa-solid fa-shuffle" aria-hidden="true"></i> {{ 'THEME_QUARK2.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
+    </div>
+{% endif %}
 
 {% set sidebar_page = pages.find('/sidebar') %}
 {% set sidebar_page_content =  sidebar_page.content %}
-
-{% block tntsearch %}
-	{% if config.plugins.tntsearch.enabled and page.header.sidebar.show_tntsearch %}
-		<div class="sidebar-content">
-			{% embed 'partials/tntsearch.html.twig' with { limit: 10, snippet: 150, min: 3, search_type: 'auto', dropdown: true } %}{% endembed %}
-		</div>
-	{% endif %}
-{% endblock tntsearch %}
 
 {# display sidebar markdown page - hibbittsdesign.org #}
 {% block sidebar_md_top %}
@@ -23,43 +43,6 @@
 	{% endif %}
 {% endblock sidebar_md_top %}
 
-{% block relatedpages %}
-	{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-		<div class="sidebar-content">
-			<h4>{{ 'THEME_QUARK.SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h4>
-			{% include 'partials/relatedpages.html.twig' %}
-		</div>
-	{% endif %}
-{% endblock relatedpages %}
-
-{% block random %}
-	{% if config.plugins.random.enabled %}
-		<div class="sidebar-content">
-			<h4>{{ 'THEME_QUARK.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>
-			<a class="button" href="{{ base_url }}/random"><i class="fa fa-retweet"></i> {{ 'THEME_QUARK.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}
-			</a>
-		</div>
-	{% endif %}
-{% endblock random %}
-
-{% block taxonomylist %}
-	{# Display the taxonomylist if the plugin is enabled and the config set to true #}
-	{% if config.plugins.taxonomylist.enabled and page.header.sidebar.show_popular_tags %}
-		<div class="sidebar-content">
-			<h4>{{ 'THEME_QUARK.SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
-			{% include 'partials/taxonomylist.html.twig' with {'base_url': new_base_url, 'taxonomy': 'tag', children_only: true} %}
-		</div>
-	{% endif %}
-{% endblock taxonomylist %}
-
-{% block archives %}
-	{% if config.plugins.archives.enabled %}
-		<div class="sidebar-content">
-			<h4>{{ 'THEME_QUARK.SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
-			{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
-		</div>
-	{% endif %}
-{% endblock archives %}
 
 {# display sidebar markdown page - hibbittsdesign.org #}
 {% block sidebar_md_bottom %}
@@ -72,17 +55,6 @@
 	{% endif %}
 {% endblock sidebar_md_bottom %}
 
-{% block feed %}
-	{# Display the feed if the plugin is enabled and the config set to true #}
-	{% if config.plugins.feed.enabled and page.header.sidebar.show_feed %}
-		<div class="sidebar-content syndicate">
-			<h4>{{ 'THEME_QUARK.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
-			<a class="btn" href="{{ feed_url }}.atom"> <i class="fa fa-rss-square"></i> Atom 1.0 </a>
-			<a class="btn" href="{{ feed_url }}.rss"> <i class="fa fa-rss-square"></i> RSS </a>
-		</div>
-	{% endif %}
-{% endblock feed %}
-
 {% block toc %}
 	{# Display the TOC if the plugin is enabled and the config not set to false #}
 	{% if config.plugins["page-toc"].enabled and page.header.sidebar.show_toc ?? true %}
@@ -91,3 +63,26 @@
 		</div>
 	{% endif %}
 {% endblock toc %}
+
+{% if config.plugins.taxonomylist.enabled %}
+    <div class="sidebar-content">
+        <h4>{{ 'THEME_QUARK2.SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
+        {% include 'partials/taxonomylist.html.twig' with {'base_url': new_base_url, 'taxonomy': 'tag', 'children_only': true} %}
+    </div>
+{% endif %}
+
+{% if config.plugins.archives.enabled %}
+    <div class="sidebar-content">
+        <h4>{{ 'THEME_QUARK2.SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
+        {% include 'partials/archives.html.twig' with {'base_url': new_base_url} %}
+    </div>
+{% endif %}
+
+{% if config.plugins.feed.enabled %}
+    <div class="sidebar-content syndicate">
+        <h4>{{ 'THEME_QUARK2.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
+        <a class="btn btn-ghost btn-sm" href="{{ feed_url }}.atom"><i class="fa-solid fa-square-rss" aria-hidden="true"></i> Atom</a>
+        <a class="btn btn-ghost btn-sm" href="{{ feed_url }}.rss"><i class="fa-solid fa-square-rss" aria-hidden="true"></i> RSS</a>
+        {% if config.plugins.feed.enable_json_feed %}<a class="btn btn-ghost btn-sm" href="{{ feed_url }}.json"><i class="fa-solid fa-code" aria-hidden="true"></i> JSON</a>{% endif %}
+    </div>
+{% endif %}

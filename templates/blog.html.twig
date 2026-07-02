@@ -1,103 +1,80 @@
 {% extends 'partials/base.html.twig' %}
 {% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
 {% set collection = page.collection() %}
-{# revise checks for Blog list page options - hibbittsdesign.org #}
-{% if page.header.show_breadcrumbs is defined %}
-	{% set show_breadcrumbs = page.header.show_breadcrumbs %}
-{% else %}
-	{% set show_breadcrumbs = true %}
-{% endif %}
-{% if page.header.show_sidebar is defined %}
-	{% set show_sidebar = page.header.show_sidebar %}
-{% else %}
-	{% set show_sidebar = true %}
-{% endif %}
-{% if page.header.show_pagination is defined %}
-	{% set show_pagination = page.header.show_pagination %}
-{% else %}
-	{% set show_pagination = true %}
-{% endif %}
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
+{% set show_sidebar    = header_var('show_sidebar',    [page, blog])|defined(false) %}
+{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
+{% set has_hero_content = blog_image or page.content|striptags|trim is not empty %}
 
 {% block stylesheets %}
-	{% do assets.addCss('theme://css/bricklayer.css') %}
-	{{ parent() }}
+    {% do assets.addCss('theme://css/bricklayer.css') %}
+    {{ parent() }}
 {% endblock %}
 
 {% block javascripts %}
-	{{ parent() }}
-	{% do assets.add('theme://js/bricklayer.min.js') %}
-	{% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
+    {{ parent() }}
+    {% do assets.add('theme://js/bricklayer.min.js') %}
+    {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
 {% endblock %}
 
 
 {% block hero %}
-	{% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
+    {% if blog_image %}
+        {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
+    {% endif %}
 {% endblock %}
 
 {% block body %}
-	<section id="body-wrapper" class="section blog-listing">
-		<section class="container {{ grid_size }}">
+    <section id="body-wrapper" class="section blog-listing">
+        <div class="container">
+            {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
 
-			{% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-				{% include 'partials/breadcrumbs.html.twig' %}
-			{% endif %}
+            {% if not blog_image and page.title %}
+                <header class="blog-page-header">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.header.subtitle %}
+                        <p class="lead">{{ page.header.subtitle }}</p>
+                    {% endif %}
+                    {% if page.content|striptags|trim is not empty %}
+                        <div class="blog-page-intro">{{ page.content|raw }}</div>
+                    {% endif %}
+                </header>
+            {% endif %}
 
-			{% embed 'partials/layout.html.twig' with {blog: page} %}
-			{% block item %}
+            {% embed 'partials/layout.html.twig' with {blog: page, show_sidebar: show_sidebar} %}
+                {% block item %}
 
-			{# Added support for modular page content - hibbittsdesign.org #}
-			{% if ((page.header.bricklayer_layout is not defined) or (page.header.bricklayer_layout)) %}
-			<div class="bricklayermodulars">
-				{% else %}
-				<div>
-					{% endif %}
-					{% if page.collection('modular_content') is not empty %}
-						{% for module in page.collection('modular_content') %}
-							{% if (module.content|striptags)|trim %}
-								<p>{{ module.content|raw }}</p>
-							{% endif %}
-						{% endfor %}
-					{% endif %}
-				</div>
+                    {# TODO: separate featured content from other content #}
+                    <div class="blog-grid">
+                        {# display posts with 'featured' tag on current blog page - hibbittsdesign.org #}
+                        {% for child in collection %}
+                            {% if "featured" in child.taxonomy['tag'] %}
+                                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                            {% endif %}
+                        {% endfor %}
 
-				{% if ((page.header.bricklayer_layout is not defined) or (page.header.bricklayer_layout)) %}
-				<div class="bricklayer">
-					{% else %}
-					<div>
-						{% endif %}
+                        {# display posts without 'featured' tag - hibbittsdesign.org #}
+                        {% for child in collection %}
+                            {% if "featured" not in child.taxonomy['tag'] %}
+                                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
 
-						{# display posts with 'featured' tag on current blog page - hibbittsdesign.org #}
-						{% for child in taxonomy.findTaxonomy({'tag': "featured"}) %}
-							{% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
-						{% endfor %}
+                    {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
+                        <div id="listing-footer">
+                            {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+                        </div>
+                    {% endif %}
+                {% endblock %}
 
-						{# display posts without 'featured' tag - hibbittsdesign.org #}
-						{% for child in collection %}
-							{% if "featured" not in child.taxonomy['tag'] %}
-								{% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
-							{% endif %}
-						{% endfor %}
-
-					</div>
-
-					{% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
-						<div id="listing-footer">
-							{% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
-						</div>
-					{% endif %}
-
-					{% endblock %}
-
-					{% block sidebar %}
-						{% include 'partials/sidebar.html.twig' %}
-					{% endblock %}
-					{% endembed %}
-		</section>
-	</section>
-	<script>
-		//Bricklayer
-		{% if ((page.header.bricklayer_layout is not defined) or (page.header.bricklayer_layout)) %}
-		var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
-		{% endif %}
-	</script>
+                {% block sidebar %}
+                    {% include 'partials/sidebar.html.twig' %}
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </section>
 {% endblock %}
