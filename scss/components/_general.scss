@@ -17,6 +17,9 @@ html[data-theme=dark]{
 			background-color: transparent !important;
 		}
 	}
+        & code[class*=language-] {
+        }
+    }
 
 	blockquote {
 		border-left-color: var(--q2-bg-muted) !important;
@@ -25,4 +28,27 @@ html[data-theme=dark]{
 
 .section {
 	padding-block: clamp(2rem, 6vw, 4rem);
+}
+
+#sidebar {
+    #toc {
+        position: unset !important;
+
+        li {
+            padding: unset;
+        }
+
+        ul ul {
+            margin-bottom: unset
+        }
+    }
+}
+
+#body-wrapper {
+    &.blog-listing {
+        .section {
+            padding: 0;
+            margin-bottom: 5rem;
+        }
+    }
 }
