@@ -41,20 +41,16 @@
                 {% include 'partials/breadcrumbs.html.twig' %}
             {% endif %}
 
-            {% if not blog_image and page.title %}
-                <header class="blog-page-header">
-                    <h1>{{ page.title }}</h1>
-                    {% if page.header.subtitle %}
-                        <p class="lead">{{ page.header.subtitle }}</p>
-                    {% endif %}
-                    {% if page.content|striptags|trim is not empty %}
-                        <div class="blog-page-intro">{{ page.content|raw }}</div>
-                    {% endif %}
-                </header>
-            {% endif %}
-
-            {% embed 'partials/layout.html.twig' with {blog: page, show_sidebar: show_sidebar} %}
+            {% embed 'partials/layout.html.twig' with {blog: page} %}
                 {% block item %}
+
+                    {% if page.collection('modular_content') is not empty %}
+                        {% for module in page.collection('modular_content') %}
+                            {% if module.header.visible and (module.content|striptags)|trim %}
+                                <p>{{ module.content|raw }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
 
                     {# TODO: separate featured content from other content #}
                     <div class="blog-grid">
