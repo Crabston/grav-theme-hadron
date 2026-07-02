@@ -3,26 +3,23 @@
 {% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true) %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
-{% set hero_image_name = page.header.hero_image %}
+{% set hero_image_name = page.header.custom_hero_header_image ?? (theme_var('custom_logo')|first).path %}
 
 {% block hero %}
-    {% if hero_image_name %}
-        {% set hero_image = page.media[hero_image_name] %}
-        {% set content %}
-            <img alt="Hadron Logo" src="{{ url(page.header.hero_image) }}" />
-            <hr />
-            <h1 class="hadron-font">{{ page.title }}</h1>
-            <h2>{{ page.header.subtitle }}</h2>
-            <p>
-                {% include 'partials/blog/date.html.twig' %}
-                {% if config.plugins.readingtime.enabled %}
-                    <span class="blogitem__readingtime">{% include 'partials/blog/readingtime.html.twig' %}</span>
-                {% endif %}
-            </p>
-            {% include 'partials/blog/taxonomy.html.twig' %}
-        {% endset %}
-        {% include 'partials/hero.html.twig' with {id: 'docs-hero'} %}
-    {% endif %}
+    {% set content %}
+        <img alt="Hadron Logo" src="{{ url(hero_image_name) }}" />
+        <hr />
+        <h1 class="hadron-font">{{ page.title }}</h1>
+        <h2>{{ page.header.subtitle }}</h2>
+        <p>
+            {% include 'partials/blog/date.html.twig' %}
+            {% if config.plugins.readingtime.enabled %}
+                <span class="blogitem__readingtime">{% include 'partials/blog/readingtime.html.twig' %}</span>
+            {% endif %}
+        </p>
+        {% include 'partials/blog/taxonomy.html.twig' %}
+    {% endset %}
+    {% include 'partials/hero.html.twig' with {id: 'docs-hero'} %}
 {% endblock %}
 
 {% block body %}
