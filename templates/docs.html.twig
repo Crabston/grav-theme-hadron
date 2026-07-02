@@ -29,6 +29,14 @@
     <section id="body-wrapper" class="section blog-listing">
         <div class="container">
 
+            {# display news banner #}
+            {% set banner = pages.find(header_var('display_banner')) %}
+            {% if banner and banner.published %}
+                <section id="news-banner">
+                    {{ banner.content|raw }}
+                </section>
+            {% endif %}
+
             {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
                 {% include 'partials/breadcrumbs.html.twig' %}
             {% endif %}
