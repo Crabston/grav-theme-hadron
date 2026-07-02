@@ -27,13 +27,13 @@
 
 {% block body %}
     <section id="body-wrapper" class="section blog-listing">
-        <section class="container {{ grid_size }}">
+        <div class="container">
 
             {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
                 {% include 'partials/breadcrumbs.html.twig' %}
             {% endif %}
 
-            {% embed 'partials/layout.html.twig' %}
+            {% embed 'partials/layout.html.twig' with {show_sidebar: show_sidebar, blog: blog} %}
                 {% block item %}
                     {% include 'partials/blog-item.html.twig' %}
                 {% endblock %}
@@ -42,6 +42,6 @@
                 {% endblock %}
             {% endembed %}
 
-        </section>
+        </div>
     </section>
 {% endblock %}
