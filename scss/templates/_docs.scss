@@ -6,16 +6,54 @@
     .container {
         width: 80%;
 
-        img { filter: brightness(0) invert(1); }
+        img {
+            filter: brightness(0) invert(1);
+        }
 
-        hr { border: 1px solid var(--q2-accent-contrast); }
+        hr {
+            border: 1px solid var(--q2-accent-contrast);
+        }
 
-        h1 { margin: 0 0 5rem; }
+        h1 {
+            margin: 0 0 5rem;
+            color: var(--q2-accent-contrast);
+        }
 
         h2 {
             font-family: Inter, Cal Sans, sans-serif;
             font-weight: normal;
+            color: var(--q2-accent-contrast);
         }
     }
 
+    #to-start {
+        color: var(--q2-accent-contrast);
+        animation-duration: 1.2s;
+    }
+}
+
+.blog-grid .card-image-docs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    color: var(--q2-accent-contrast);
+    background-color: black;
+    text-decoration: none;
+
+    img {
+        filter: brightness(0) invert(1);
+    }
+
+    hr {
+        width: 100%;
+        border: 1px solid var(--q2-accent-contrast);
+    }
+
+    h1 {
+        margin: 0;
+        color: var(--q2-accent-contrast);
+        font-family: Inter, sans-serif;
+    }
 }
