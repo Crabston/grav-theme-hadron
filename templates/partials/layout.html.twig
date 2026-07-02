@@ -1,26 +1,24 @@
-{# Override show_sidebar variable #}
-{% set show_sidebar = header_var('sidebar.display', [page, blog])|defined(true)  %}
+{% set show_sidebar = show_sidebar is defined ? show_sidebar : true %}
+{% set sidebar_class = show_sidebar ? 'has-sidebar' : '' %}
 
 {% set item_col = show_sidebar ? 'col-9 col-md-12' : 'col-12' %}
 {% set sidebar_col = show_sidebar ? 'col-3 col-md-12' : 'col-12' %}
 
 {# check content display flag - hibbittsdesign.org #}
-{% if grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone') or theme_var('chromeless.enabled') %}
+{% set display_sidebar = not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) %}
+{% if not display_sidebar %}
     {% set item_col = 'col-12' %}
     {% set sidebar_col = 'col-12' %}
 {% endif %}
 
-<div class="columns">
+<div class="columns {{ sidebar_class }}">
     <div id="item" class="column {{ item_col }} extra-spacing">
         {% block item %}{% endblock %}
     </div>
     {# check content display flag - hibbittsdesign.org #}
-    {% if not (grav.uri.param('chromeless') or grav.uri.param('embedded') or grav.uri.param('standalone')) and not(theme_var('chromeless.enabled')) %}
-        {% if show_sidebar %}
-            <div id="sidebar" class="column {{ sidebar_col }}">
-                {% block sidebar %}
-                {% endblock %}
-            </div>
-        {% endif %}
+    {% if display_sidebar and show_sidebar %}
+        <aside id="sidebar" class="column {{ sidebar_col }}">
+            {% block sidebar %}{% endblock %}
+        </aside>
     {% endif %}
 </div>
