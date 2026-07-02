@@ -3,13 +3,26 @@
         {# show header image if set in frontmatter #}
         {% if page.header.header_image_file %}
             {% set image = page.media[page.header.header_image_file] %}
+        {% elseif page.header.hero_image %}
+            {% set image = page.media[page.header.hero_image] %}
         {% else %}
             {% set image = page.media.images|first %}
         {% endif %}
 
-        {% if image and ((page.header.header_image is not defined) or (page.header.header_image)) %}
+        {% if page.template == 'docs' and page.header.custom_hero_header_image %}
+            {% set image = page.header.custom_hero_header_image %}
+            <a class="card-image-docs" href="{{ page.url }}">
+                <img alt="Hadron Logo" src="{{ url(image) }}" />
+            </a>
+        {% elseif page.template == 'blog' and page.header.custom_hero_header_image %}
+            {% set image = page.header.custom_hero_header_image %}
+            <a class="card-image-docs" href="{{ page.url }}">
+                <img alt="Hadron Logo" src="{{ url(image) }}" />
+                <hr />
+                <h1>{{ page.title }}</h1>
+            </a>
+        {% elseif image and ((page.header.header_image is not defined) or (page.header.header_image)) %}
             <a class="card-image" href="{{ page.url }}">{{ image.cropZoom(800, 420).html|raw }}</a>
-
         {% endif %}
 
         <header class="card-header">
@@ -24,7 +37,9 @@
             </div>
         </header>
         <div class="card-body">
-            {% if page.summary != page.content %}
+            {% if page.header.subtitle %}
+                {{ page.header.subtitle|raw }}
+            {% elseif page.summary != page.content %}
                 {# only show summary content without styles #}
                 {{ page.summary|striptags|raw }}
             {% else %}
