@@ -26,46 +26,56 @@ Here are some of the main features of the Hadron theme:
 - Built-in Support for Embed.ly
 
 ## Installation
-Installing the Hadron theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
+Installing the Hadron theme can be done in multiple ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file. There are other methods available, such as installing via Git or the Admin Plugin. See the [Hadron Theme Installation guide](https://usehadron.dev/docs/theme/installation) for more information.
 
-The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The Hadron theme can be found in the [Hadron Skeleton](https://github.com/Crabston/grav-skeleton-hadron) which is a self-contained repository for a complete site which include: sample content, configuration, theme, and plugins and much more!
+The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. See the [Hadron Skeleton Repository](https://github.com/Crabston/grav-skeleton-hadron) or [Hadron Skeleton Docs](https://usehadron.dev/docs/skeleton) which is a self-contained repository for a complete site which include: sample content, page templates, configuration, theme, and plugins and much more!
 
-### GPM Installation (Preferred)
+### 1. GPM Installation (recommended)
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line). From the root of your Grav installation, type:
 
-```bash
+```shell
 bin/gpm install hadron
 ```
 
-This will install the Hadron theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/hadron`.
+This command installs the Hadron theme in your `/user/themes` directory within Grav. The theme files can be found under `/your/site/grav/user/themes/hadron`.
 
-### Manual Installation
-To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `hadron`. You can find these files either on [GitHub](https://github.com/Crabston/grav-theme-hadron) or via [GetGrav.org](http://getgrav.org/downloads/themes).
+The main advantage of this method is that you can update the theme with a simple command:
 
-You should now have all the theme files under `/your/site/grav/user/themes/hadron`.
+```shell
+bin/gpm update hadron
+```
 
-## Customization
-This theme has various customization options. You can customize the theme by editing the theme configuration file. You can also customize the theme by creating a custom CSS/ SCSS file.
+### 2. Admin Plugin Installation
+If you are using the [Admin Plugin](https://github.com/getgrav/grav-plugin-admin) or [Admin2 Plugin](https://github.com/getgrav/grav-plugin-admin2), you can install the theme directly through the Admin(2) Plugin. Go to the `Themes` section, click on `Add` and search for `hadron`. Select the theme and click on `Install`.
+
+The theme will now be installed in your `/user/themes` directory. It can also be updated via the Admin Plugin when a new version is available.
+
+### 3. Git Installation
+As an alternative, you can also install the theme via Git. Go to your Grav root `/your/site/grav` directory and run the following command:
+
+```shell
+git clone https://github.com/Crabston/grav-theme-hadron.git /user/themes/hadron
+```
+
+The theme can now be found in the directory `/your/site/grav/user/themes/hadron`.
+
+To update the theme, you can simply change to the theme directory and run `git pull`:
+
+```shell
+cd /your/site/grav/user/themes/hadron
+git pull
+```
+
+### 4. Manual Installation (not recommended)
+To manually install the theme, simply download the zip version of this repository and unpack it under `/your/site/grav/user/themes`. Then rename the folder to `hadron`. The theme files can be found on [GitHub](https://github.com/Crabston/grav-theme-hadron) or on [GetGrav.org](http://getgrav.org/downloads/themes).
+
+You now have all theme files under `/your/site/grav/user/themes/hadron`.
 
 ## Theme Options
-The Hadron theme has many options that can be set in the theme configuration file. Find all of them in the docs: [usehadron.dev/docs/theme/options](https://usehadron.dev/docs/theme/options)
+The Hadron theme offers a variety of options to customize the appearance and behavior of the site. These options can be configured in the Admin Panel or by editing the theme configuration file. Find all of them in the docs: [usehadron.dev/docs/theme/options](https://usehadron.dev/docs/theme/options)
 
 _Some of the important options are:_
 ```yaml
-grid-size: grid-lg          # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
-blog-page: /blog            # The route to the blog page
-dropdown:
-  enabled: true             # Enable dropdown navigation
-header-fixed: true          # Cause the header to be fixed at the top of the browser
-header-animated: true       # Allows the fixed header to resize to a smaller header when scrolled
-header-dark: false          # Inverts the text/logo to work better on dark backgrounds
-header-transparent: false   # Allows the fixed header to be transparent over the page
-sticky-footer: true         # Causes the footer to be sticky at the bottom of the page
-production-mode: true       # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
-fontawesome:                # Customize the use of fontawesome icons
-favicon:                    # A custom favicon rather than the theme default (see below for more information)
-custom_logo:                # A custom logo (see below)
-custom_logo_mobile:         # A custom logo for mobile devices (see below)
 theme-mode: auto            # Color mode for the theme, options include: `auto`, `light`, and `dark`
 accent-color: '#242424'     # The accent color for the theme, can be any valid CSS HEX color value
 monochrome-logo: false      # If true, the logo will be monochrome and will change depending on the theme mode (light/dark).
