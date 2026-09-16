@@ -10,6 +10,10 @@
 			<span class="title">{{ title }}</span>
 		{% endif %}
 	{% else %}
-		{% include('@images/grav-logo.svg') %}
+		{% if not config.theme.hide_title %}
+        	<span class="title">{{ site.title }}</span>
+        {% else %}
+        	{% include('@images/grav-logo.svg') %}
+        {% endif %}
 	{% endif %}
 </a>
