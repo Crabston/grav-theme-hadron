@@ -24,7 +24,7 @@
     {% endif %}
 </article>
 
-<nav class="prev-next" aria-label="Post navigation">
+<nav class="prev-next" aria-label="{{ 'THEME_QUARK2.ARIA.POST_NAVIGATION'|t|e('html_attr') }}">
     {% if not page.isLast %}
         <a class="btn btn-ghost" href="{{ page.prevSibling.url }}"><i class="fa-solid fa-angle-left" aria-hidden="true"></i> {{ 'THEME_QUARK2.BLOG.ITEM.PREV_POST'|t }}</a>
     {% else %}<span></span>{% endif %}

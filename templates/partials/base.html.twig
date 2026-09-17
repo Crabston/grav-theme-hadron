@@ -91,7 +91,7 @@
 {% block header %}
 	<header id="header" class="section">
 		<div class="container {{ grid_size }}">
-			<nav class="navbar" aria-label="Primary">
+            <nav class="navbar" aria-label="{{ 'THEME_QUARK2.ARIA.PRIMARY_NAV'|t|e('html_attr') }}">
 				<div class="navbar-section logo">
 					{% include 'partials/logo.html.twig' %}
 				</div>
@@ -122,11 +122,11 @@
 		</div>
 	</header>
 	<div class="mobile-menu">
-		<div class="button_container" id="toggle">
+        <button type="button" class="button_container" id="toggle" aria-label="{{ 'THEME_QUARK2.ARIA.OPEN_MENU'|t|e('html_attr') }}">
 			<span class="top"></span>
 			<span class="middle"></span>
 			<span class="bottom"></span>
-		</div>
+		</button>
 	</div>
 {% endblock header %}
 
@@ -144,7 +144,7 @@
 
 {% block mobile %}
 	<div class="mobile-container">
-		<nav class="overlay" id="overlay">
+        <div class="overlay" id="overlay" role="dialog" aria-label="{{ 'THEME_QUARK2.ARIA.MENU'|t|e('html_attr') }}">
 			<div class="mobile-logo">
 				{% include 'partials/logo.html.twig' with {mobile: true} %}
 			</div>
@@ -154,9 +154,9 @@
 			<div class="language-switcher">
 				{% include 'partials/langauge-switcher.html.twig' with {mobile: true} %}
 			</div>
-			<div class="overlay-menu">
+            <nav class="overlay-menu" aria-label="{{ 'THEME_QUARK2.ARIA.MOBILE_NAV'|t|e('html_attr') }}">
 				{% include 'partials/navigation.html.twig' with {tree: true} %}
-			</div>
-		</nav>
+			</nav>
+		</div>
 	</div>
 {% endblock mobile %}
