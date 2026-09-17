@@ -1,11 +1,15 @@
 // brand logo color filter for dark and light mode
 #header .navbar-brand img.invert-color,
 .mobile-container .mobile-logo img.invert-color {
-	html[data-theme=dark] & {
-		filter: brightness(0) invert(1);
-	}
+    html[data-theme=dark] & {
+        filter: brightness(0) invert(1);
+    }
 
-	html[data-theme=light] & {
-		filter: brightness(255) invert(1);
-	}
+    html[data-theme=light] & {
+        filter: brightness(255) invert(1);
+    }
+}
+
+#hero.hero {
+    padding-top: calc(var(--q2-header-height) + 2rem + 2rem);
 }

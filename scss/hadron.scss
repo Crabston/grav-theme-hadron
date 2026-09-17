@@ -18,28 +18,28 @@
 html { scroll-behavior: smooth; }
 
 .f {
-	display: flex;
+    display: flex;
 
-	&.col { flex-direction: column; }
+    &.col { flex-direction: column; }
 
-	&.row { flex-direction: row; }
+    &.row { flex-direction: row; }
 
-	&.c { justify-content: center; }
+    &.c { justify-content: center; }
 
-	&.a { align-items: center; }
+    &.a { align-items: center; }
 }
 
 .hadron-font {
-	@font-face {
-		font-family: 'Hadron';
-		src: url(../../hadron/assets/nasalization.otf);
-	}
+    @font-face {
+        font-family: 'Hadron';
+        src: url(../../hadron/assets/nasalization.otf);
+    }
 
-	font-family: Hadron, Inter, sans-serif;
-	text-transform: uppercase;
-	text-wrap: nowrap;
+    font-family: Hadron, Inter, sans-serif;
+    text-transform: uppercase;
+    text-wrap: nowrap;
 
-	h1 & {
-		margin: .5rem;
-	}
+    h1 & {
+        margin: .5rem;
+    }
 }

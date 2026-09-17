@@ -4,133 +4,133 @@
 // acts as a parent selector for the child element
 // parent :selector { @include unify-parent('child') } results in parent child:selector
 @mixin unify-parent($child) {
-	@at-root #{selector.unify(&, $child)} {
-		@content;
-	}
+    @at-root #{selector.unify(&, $child)} {
+        @content;
+    }
 }
 
 // desktop
 form:not(.login-form) {
-	$form-padding: .5rem;
-	$form-field-height: 2.5rem;
+    $form-padding: .5rem;
+    $form-field-height: 2.5rem;
 
-	@mixin layout {
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
+    @mixin layout {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
 
-	@mixin form-field {
-		width: 100%;
-	}
+    @mixin form-field {
+        width: 100%;
+    }
 
-	.form-columns {
-		@include layout;
+    .form-columns {
+        @include layout;
 
-		.form-column {
-			width: 100%;
-		}
-	}
+        .form-column {
+            width: 100%;
+        }
+    }
 
-	.form-field {
-		padding: .5rem;
+    .form-field {
+        padding: .5rem;
 
-		.form-data :not(.no-css) {
-			@include unify-parent('textarea') {
-				width: 100%;
-				resize: vertical;
-			}
+        .form-data :not(.no-css) {
+            @include unify-parent('textarea') {
+                width: 100%;
+                resize: vertical;
+            }
 
-			@include unify-parent('input') {
-				&[type='text'],
-				&[type='email'],
-				&[type='tel'],
-				&[type='date'],
-				&[type='number'],
-				&[type='url'],
-				&[type='range'],
-				&[type='password'] {
-					@include form-field;
-				}
-			}
+            @include unify-parent('input') {
+                &[type='text'],
+                &[type='email'],
+                &[type='tel'],
+                &[type='date'],
+                &[type='number'],
+                &[type='url'],
+                &[type='range'],
+                &[type='password'] {
+                    @include form-field;
+                }
+            }
 
-			@include unify-parent('select') {
-				@include form-field;
+            @include unify-parent('select') {
+                @include form-field;
 
-				&[multiple] {
-					height: auto;
-					max-height: 6*$form-field-height;
-				}
-			}
+                &[multiple] {
+                    height: auto;
+                    max-height: 6*$form-field-height;
+                }
+            }
 
-			//.form-input, .form-select,
-			textarea, select, input {
-				accent-color: var(--q2-accent); // for checkboxes, radio, range, ...
+            //.form-input, .form-select,
+            textarea, select, input {
+                accent-color: var(--q2-accent); // for checkboxes, radio, range, ...
 
-				html[data-theme=dark] {
-					//color-scheme: dark;
-				}
+                html[data-theme=dark] {
+                    //color-scheme: dark;
+                }
 
-				&:focus, &:focus-visible {
-					border-color: var(--q2-accent);
-					outline: var(--q2-accent);
-				}
-			}
+                &:focus, &:focus-visible {
+                    border-color: var(--q2-accent);
+                    outline: var(--q2-accent);
+                }
+            }
 
-			select option {
-				&:hover {
-					box-shadow: 0 0 10px 100px var(--q2-accent) inset;
-				}
+            select option {
+                &:hover {
+                    box-shadow: 0 0 10px 100px var(--q2-accent) inset;
+                }
 
-				&[selected] {
-					background-color: var(--q2-accent);
-				}
-			}
-		}
-	}
+                &[selected] {
+                    background-color: var(--q2-accent);
+                }
+            }
+        }
+    }
 
-	.buttons {
-		@include layout;
+    .buttons {
+        @include layout;
 
-		button {
-			@include form-field;
+        button {
+            @include form-field;
 
-			&.btn-primary {
-				color: var(--q2-text-inverse);
-				background-color: var(--q2-accent);
-			}
+            &.btn-primary {
+                color: var(--q2-text-inverse);
+                background-color: var(--q2-accent);
+            }
 
-			&:hover, &:focus, &:focus-visible {
-				outline: 2px solid var(--q2-accent);
-			}
-		}
-	}
+            &:hover, &:focus, &:focus-visible {
+                outline: 2px solid var(--q2-accent);
+            }
+        }
+    }
 
-	.switch-toggle input:checked + label {
-		background-color: var(--q2-accent);
-	}
+    .switch-toggle input:checked + label {
+        background-color: var(--q2-accent);
+    }
 }
 
 
 // for buttons outside of forms, e.g. <a> tags with class btn
 .btn {
-	color: var(--q2-text);
-	background-color: var(--q2-bg-muted) !important;
+    color: var(--q2-text);
+    background-color: var(--q2-bg-muted) !important;
 
-	&:hover, &:focus, &:focus-visible {
-		outline: 2px solid var(--q2-text);
-	}
+    &:hover, &:focus, &:focus-visible {
+        outline: 2px solid var(--q2-text);
+    }
 
-	&.btn-primary {
-		color: var(--q2-accent-contrast) !important;
-		background-color: var(--q2-accent) !important;
+    &.btn-primary {
+        color: var(--q2-accent-contrast) !important;
+        background-color: var(--q2-accent) !important;
 
-		&:hover, &:focus, &:focus-visible {
-			outline: 2px solid var(--q2-focus-ring);
-		}
-	}
+        &:hover, &:focus, &:focus-visible {
+            outline: 2px solid var(--q2-focus-ring);
+        }
+    }
 
-	&.external-link {
-		padding: 0.875rem 1.5rem !important; // from theme.css:1186
-	}
+    &.external-link {
+        padding: 0.875rem 1.5rem !important; // from theme.css:1186
+    }
 }
