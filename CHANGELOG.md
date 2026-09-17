@@ -1,3 +1,14 @@
+# 3.0.0
+## 19-07-2026
+1. [](#new)
+    - **Hadron v3 now is Grav2 ready with Quark2**
+    - Fully integrated into Admin2
+    - Refactored and updated theme settings
+1. [](#improved)
+    - better integrated into Quark2 than into Quark before
+    - better HTML semantics
+    - more stable styling across platforms etc
+
 # 2.2.1
 ## 03-08-2025
 1. [](#bugfix)
