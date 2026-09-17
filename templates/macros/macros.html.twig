@@ -1,0 +1,23 @@
+{% macro nav_loop(page) %}
+    {% import _self as macros %}
+    {% for p in page.children.visible %}
+        {% set is_active = p.active or p.activeChild %}
+        {% set has_children = (p.children.visible|length) > 0 and theme_var('dropdown.enabled') %}
+        {% set menu_icon = p.header.menu_icon|fa_icon %}
+
+        <li{% if has_children %} class="has-children"{% endif %}>
+            <a href="{{ p.url }}" class="{{ is_active ? 'active' : '' }}">
+                {% if menu_icon %}
+                    <i class="{{ menu_icon }}" aria-hidden="true"></i>
+                {% endif %}
+                {{ p.menu }}
+            </a>
+
+            {% if has_children %}
+                <ul>
+                    {{ macros.nav_loop(p) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}

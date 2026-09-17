@@ -1,46 +1,46 @@
 // desktop
 table {
-	th {
-		background-color: var(--q2-accent);
-		color: var(--q2-text-inverse);
-	}
+    th {
+        background-color: var(--q2-accent);
+        color: var(--q2-text-inverse);
+    }
 
-	tr:nth-child(even) td { background-color: var(--q2-bg-muted) !important; }
+    tr:nth-child(even) td { background-color: var(--q2-bg-muted) !important; }
 
-	.text-align-center { text-align: center; }
+    .text-align-center { text-align: center; }
 
-	.text-align-right { text-align: right; }
+    .text-align-right { text-align: right; }
 
-	.text-align-left { text-align: left; }
+    .text-align-left { text-align: left; }
 }
 
 // mobile
 @media screen and (max-width: $responsive-breakpoint-mobile) {
-	.table-responsive table {
-		thead {
-			display: none;
-		}
+    .table-responsive table {
+        thead {
+            display: none;
+        }
 
-		tr {
-			border-bottom: 3px solid var(--q2-text);
-			display: block;
-			margin-bottom: .625em;
-		}
+        tr {
+            border-bottom: 3px solid var(--q2-text);
+            display: block;
+            margin-bottom: .625em;
+        }
 
-		td {
-			display: block;
-			font-size: .8em;
+        td {
+            display: block;
+            font-size: .8em;
 
-			&::before {
-				content: attr(data-label);
-				float: left;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-		}
+            &::before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
 
-		.text-align-center, .text-align-right, .text-align-left { text-align: right; }
+        .text-align-center, .text-align-right, .text-align-left { text-align: right; }
 
-		caption { font-size: 1.3em; }
-	}
+        caption { font-size: 1.3em; }
+    }
 }

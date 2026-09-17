@@ -5,47 +5,47 @@ $SPACE_VERTICAL_SMALL: .75rem;
 
 // desktop navigation
 body {
-	#header {
-		margin: 0;
-		padding: $SPACE_VERTICAL $SPACE_HORIZONTAL;
+    #header {
+        margin: 0;
+        padding: $SPACE_VERTICAL $SPACE_HORIZONTAL;
 
-		.container {
-			padding: 0;
-			margin: 0 auto;
+        .container {
+            padding: 0;
+            margin: 0 auto;
 
-			.navbar-section.logo {
-				margin: 0;
-			}
-		}
+            .navbar-section.logo {
+                margin: 0;
+            }
+        }
 
-	}
+    }
 
-	&.scrolled #header {
-		padding: $SPACE_VERTICAL_SMALL $SPACE_HORIZONTAL_SMALL;
-	}
+    &.scrolled #header {
+        padding: $SPACE_VERTICAL_SMALL $SPACE_HORIZONTAL_SMALL;
+    }
 }
 
 // mobile navigation
 body {
-	.mobile-menu {
-		@media (screen and max-width: $responsive-breakpoint-tablet) {
-			top: $SPACE_VERTICAL;
-			right: $SPACE_HORIZONTAL;
-			min-height: 64px;
-			display: flex;
-			align-items: center;
-		}
-	}
+    .mobile-menu {
+        @media (screen and max-width: $responsive-breakpoint-tablet) {
+            top: $SPACE_VERTICAL;
+            right: $SPACE_HORIZONTAL;
+            min-height: 64px;
+            display: flex;
+            align-items: center;
+        }
+    }
 
-	&.scrolled .mobile-menu {
-		min-height: 60px;
-		top: $SPACE_VERTICAL_SMALL;
-		right: $SPACE_HORIZONTAL_SMALL;
-	}
+    &.scrolled .mobile-menu {
+        min-height: 60px;
+        top: $SPACE_VERTICAL_SMALL;
+        right: $SPACE_HORIZONTAL_SMALL;
+    }
 
-	.mobile-container {
-		#overlay {
-			padding: $SPACE_VERTICAL $SPACE_HORIZONTAL;
-		}
-	}
+    .mobile-container {
+        #overlay {
+            padding: $SPACE_VERTICAL $SPACE_HORIZONTAL;
+        }
+    }
 }

@@ -1,7 +1,7 @@
 {
 	"name": "hadron",
-	"version": "2.2.1",
-	"description": "Hadron is a modern and fast Grav Theme and Skeleton for Grav with many other features. Use the Hadron theme on existing websites or when you want to start from scratch. It is customizable, responsive, and has many other great features ready to use.",
+	"version": "3.0.0",
+	"description": "Hadron is more than a modern and customizable Grav theme and skeleton. On the one hand, it is optimized for beginners to quickly create a simple website, but on the other hand, it is also suitable for professionals who want to use Hadron as a foundation for a complex website with self-developed functions.",
 	"homepage": "https://github.com/Crabston/grav-theme-hadron#readme",
 	"bugs": {
 		"url": "https://github.com/Crabston/grav-theme-hadron/issues"

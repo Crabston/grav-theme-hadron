@@ -248,122 +248,110 @@ ADMIN:
           LABEL: übergeordnete Seite
 
 THEME:
-  HADRON:
-    TITLE: Hadron Optionen
-    H5P:
-      TITLE: H5P Setup
-      EMBED_URL:
-        LABEL: H5P Quelle URL einbetten
-        HELP: Gib die URL der Quelle ein, bis, aber nicht einschliesslich, der H5P Content ID.
-        DESCRIPTION: URL der Quelle, bis, aber nicht einschliesslich, der H5P Content ID. Zum Beispiel https://h5p.org/h5p/embed/ oder https://[organization].h5p.com/content/.
-    MENU:
-      TITLE: Menü
-      HIDE_TITLE:
-        LABEL: Verstecke Titel
-        HELP: Versteckt den Titel der Seite in der Navigation
-      DISPLAY_DROPDOWNS:
-        LABEL: Zeige Dropdowns im Menü
-      DISPLAY_CUSTOM_MENUS:
-        LABEL: Zeige benutzerdefinierte Menüs
-        HELP: Definiert, ob benutzerdefinierte Menüeinträge im Menü angezeigt werden.
-      ITEMS:
-        LABEL: Menüeinträge
-        TEXT:
-          LABEL: Text
-          DESCRIPTION: Text für Menüeintrag
-        ICON:
-          LABEL: Icon
-          DESCRIPTION: Font Awesome Icon für Menüeintrag, z.B. 'external-link'
-        URL:
-          LABEL: URL
-          DESCRIPTION: URL für Menüeintrag
-        TARGET:
-          LABEL: Ziel
-          OPTIONS:
-            BLANK: Öffne in einem neuen Fenster / Tab
-            PARENT: Öffne im übergeordneten Fenster
-            TOP: Öffne im Hauptfenster
-            SELF: Öffne im aktuellen Fenster / Tab
-    LANGSWITCHER:
-      TITLE: Language Switcher
+  APPEARANCE:
+    TITLE: Erscheinungsbild
+    THEME_MODE:
+      LABEL: Voreinstellung Designmodus
+      HELP: Standardmässiges Erscheinungsbild der Website, Besucher können diese ändern.
+      OPTIONS:
+        AUTO: Automatisch (Betriebssystem)
+        LIGHT: Hell
+        DARK: Dunkel
+    ACCENT_COLOR:
+      LABEL: Akzentfarbe
+      HELP: Färbt Links und Fokusringe. Leer lassen für die reine monochrome Palette.
+    BRANDING:
+      TITLE: Branding
+      MONOCHROME_LOGO:
+        LABEL: Einfarbiges Logo
+        HELP: Wenn aktiviert, wird das Logo im hellen Modus schwarz und im dunklen Modus weiss angezeigt. Empfohlen nur für Logos in Graustufen.
+      FAVICON:
+        LABEL: Benutzerdefiniertes Favicon
+        HELP: Wird anstelle des Standard Favicons `theme://images/favicon.png` verwendet
+      CUSTOM_LOGO:
+        LABEL: Benutzerdefiniertes Logo
+        HELP: Wird anstelle des Standard Logos `theme://images/grav-logo.svg` verwendet
+      CUSTOM_LOGO_MOBILE:
+        LABEL: Benutzerdefiniertes Logo (Mobile Ansicht)
+    HEADER:
+      TITLE: Header Einstellungen
+      HEADER_FIXED:
+        LABEL: Fixierter Header
+        HELP: Wenn aktiviert, wird der Header oben im Browser fixiert
+      HEADER_ANIMATED:
+        LABEL: Header animieren
+        HELP: Wenn aktiviert, wird der Header beim Scrollen animiert
+      HEADER_TRANSPARENT:
+        LABEL: Transparenter Header (Hero)
+        HELP: Wenn aktiviert, wird der Header auf Hero Seiten transparent angezeigt
+    FOOTER:
+      TITLE: Footer Einstellungen
+      STICKY_FOOTER:
+        LABEL: Fester Footer
+        HELP: Wenn aktiviert, wird der Footer unten im Browser fixiert
+  MENU:
+    TITLE: Menü
+    HIDE_TITLE:
+      LABEL: Titel ausblenden
+      HELP: Versteckt den Seitentitel in der Navigationsleiste
+    DISPLAY_DROPDOWNS:
+      LABEL: Dropdowns im Menü anzeigen
+    DISPLAY_CUSTOM_MENUS:
+      LABEL: Benutzerdefinierte Menüelemente anzeigen
+      HELP: Bestimmt, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.
+    ITEMS:
+      LABEL: Benutzerdefinierte Menüelemente
+      TEXT:
+        LABEL: Text
+        DESCRIPTION: Textbezeichnung für Menüelement.
+      ICON:
+        LABEL: Symbol
+        DESCRIPTION: Font Awesome Symbolname, z.B. 'external-link'.
+      URL:
+        LABEL: URL
+        DESCRIPTION: URL für Menüelement.
+      TARGET:
+        LABEL: Ziel
+        OPTIONS:
+          BLANK: In neuem Fenster öffnen
+          PARENT: Im übergeordneten Frame öffnen
+          TOP: Im Fenster-Body öffnen
+          SELF: In demselben Frame öffnen
+  FEATURES:
+    TITLE: Funktionen
+    ICONS:
+      TITLE: Symbole (Fontawesome)
+      ENABLED:
+        LABEL: Font Awesome 7
+        HELP: Lädt das kostenlose Font Awesome 7 Symbolset.
+      LOCAL:
+        LABEL: Font Awesome lokal bereitstellen
+        HELP: Wenn aktiviert, wird erwartet, dass `css/fontawesome/all.min.css` im Theme vorhanden ist. Ansonsten wird das offizielle CDN verwendet.
+    LANG_SWITCHER:
+      TITLE: Sprachauswahl
       ENABLE:
-        LABEL: Aktiviere  Language Switcher
+        LABEL: Sprachauswahl aktivieren
       DISPLAY:
-        LABEL: Anzeigemodus
+        LABEL: Anzeigestil
         OPTIONS:
           DROPDOWN: Dropdown
           INLINE: Inline
       FORMAT:
         LABEL: Format
         OPTIONS:
-          COMBINED: kombiniert
-          SHORT: kurz
-          LONG: lang
+          COMBINED: Kombiniert
+          SHORT: Kurzform
+          LONG: Name
           ICON: Flagge
-    FONTAWESOME:
-      TITLE: Fontawesome Icons
-      ENABLE_SOLID:
-        LABEL: Aktiviere Solid Icons
-      ENABLE_REGULAR:
-        LABEL: Aktiviere Regular Icons
-      ENABLE_BRAND:
-        LABEL: Aktiviere Brands Icons
-  QUARK:
-    TITLE: Quark Optionen
-    PRODUCTION_MODE:
-      LABEL: Produktionsmodus
-      HELP: Wenn aktiviert, wird Quark mit minimiertem CSS angezeigt
-    GRID_SIZE:
-      LABEL: Grid Grösse
-      HELP: Die maximale Grösse des Themes
-      OPTIONS:
-        NONE: Keine (volle Breite)
-        GRID_XL: Extra Breit
-        GRID_LG: Breit
-        GRID_MD: Mittel
-    HEADER:
-      TITLE: Header Standards
-      INVERT_LOGO:
-        LABEL: Logo invertieren
-        HELP: Wenn aktiviert, wird das Logo auf hellen Hintergründen invertiert. Vorgeschlagen für schwarz / weisse Logos.
-      FAVICON:
-        LABEL: Benutzerdefiniertes Favicon
-        DESCRIPTION: Wird verwendet anstelle des Standard Favicons `theme://images/favicon.png`
-      CUSTOM_LOGO:
-        LABEL: Benutzerdefiniertes Logo
-        DESCRIPTION: Wird verwendet anstelle des Standardlogos `theme://images/grav-logo.svg`
-      CUSTOM_LOGO_MOBILE:
-        LABEL: Mobiles benutzerdefiniertes Logo
-      HEADER_FIXED:
-        LABEL: Fester Header
-        HELP: Wenn aktiviert, wird der Header oben im Browser fixiert
-      HEADER_ANIMATED:
-        LABEL: Header animieren
-        HELP: Wenn aktiviert, wird der Header beim Scrollen animiert
-      HEADER_DARK:
-        LABEL: Dunkler Stil
-        HELP: Wenn aktiviert, wird ein dunkler Stil verwendet
-      HEADER_TRANSPARENT:
-        LABEL: Transparenter Header
-        HELP: Wenn aktiviert, wird der Header transparent
-    FOOTER:
-      TITLE: Footer Standards
-      STICKY_FOOTER:
-        LABEL: Sticky Footer
-        HELP: Wenn aktiviert, wird der Footer am unteren Rand des Browsers fixiert
     BLOG:
-      TITLE: Blog Standards
+      TITLE: Blog Optionen
       BLOG_PAGE:
-        LABEL: Blog Seite
-        HELP: Der Pfad zur Blogseite bei Verwendung der Blog-Seitenleiste
-      HERO_CLASSES:
-        LABEL: Hero Klassen
-        DESCRIPTION: Es gibt mehrere Hero-Klassenoptionen, die hier aufgelistet werden können (durch Leerzeichen getrennt):<br />`text-light`, `text-dark`, `title-h1h2`, `parallax`, `overlay-dark-gradient`, `overlay-light-gradient`, `overlay-dark`, `overlay-light`, `hero-fullscreen`, `hero-large`, `hero-medium`, `hero-small`, `hero-tiny`<br />Bitte konsultiere die [Quark Dokumentation](https://github.com/getgrav/grav-theme-quark#hero-options) für weitere Details.
-    SPECTRE:
-      TITLE: Spectre.css Optionen
-      EXPERIMENTAL:
-        LABEL: Experimentelles CSS
-        HELP: Wenn aktiviert, wird die `spectre-exp.css` Datei eingebunden
-      ICONS:
-        LABEL: Icons CSS
-        HELP: Wenn aktiviert, wird die `spectre-icons.css` Datei eingebunden
+        LABEL: Blog Seitenroute
+        HELP: Die Route zur Blog Seite wenn diese genutzt wird
+    H5P:
+      TITLE: H5P Einrichtung
+      EMBED_URL:
+        LABEL: H5P Einbettungsquellen URL
+        HELP: Gib den den Pfad der Einbettungsquelle bis einschliesslich, aber ohne die H5P Inhalts ID ein.
+        DESCRIPTION: H5P Einbettungsquellen URL Pfad bis, aber nicht einschliesslich der Inhalts-ID. Beispiel, https://h5p.org/h5p/embed/ oder https://[organisation].h5p.com/content/.
+
