@@ -21,7 +21,10 @@ form:not(.login-form) {
     }
 
     @mixin form-field {
+        font-size: 0.9375rem;
+        padding: 0.625rem 0.75rem;
         width: 100%;
+        height: calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);
     }
 
     .form-columns {
