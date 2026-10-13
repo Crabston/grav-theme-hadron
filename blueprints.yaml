@@ -52,16 +52,19 @@ form:
             branding_section:
               type: section
               title: THEME.APPEARANCE.BRANDING.TITLE
-            favicon:
+            custom_favicon:
               type: file
-              label: THEME.APPEARANCE.BRANDING.FAVICON.LABEL
-              help: THEME.APPEARANCE.BRANDING.FAVICON.HELP
+              label: THEME.APPEARANCE.BRANDING.CUSTOM_FAVICON.LABEL
+              help: THEME.APPEARANCE.BRANDING.CUSTOM_FAVICON.HELP
+              filesize: 0.1
               size: large
               destination: 'media/favicon'
               multiple: false
               markdown: true
               accept:
-                - image/*
+                - image/png
+                - image/svg+xml
+                - .ico
             monochrome-logo:
               type: toggle
               label: THEME.APPEARANCE.BRANDING.MONOCHROME_LOGO.LABEL

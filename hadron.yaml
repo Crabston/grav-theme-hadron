@@ -10,7 +10,7 @@ streams:
 theme-mode: auto
 accent-color: '#242424'
 monochrome-logo: false
-favicon:
+custom_favicon:
   user/media/favicon/grav-favicon.svg:
     name: grav-favicon.svg
     type: image/svg+xml

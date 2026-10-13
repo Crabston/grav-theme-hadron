@@ -265,12 +265,12 @@ THEME:
       MONOCHROME_LOGO:
         LABEL: Einfarbiges Logo
         HELP: Wenn aktiviert, wird das Logo im hellen Modus schwarz und im dunklen Modus weiss angezeigt. Empfohlen nur für Logos in Graustufen.
-      FAVICON:
+      CUSTOM_FAVICON:
         LABEL: Benutzerdefiniertes Favicon
-        HELP: Wird anstelle des Standard Favicons `theme://images/favicon.png` verwendet
+        HELP: Ein PNG, SVG oder ICO File, maximal 100 KB. Wird gespeichert in `user/media/favicon`. Die Datei bleibt auch bei Theme Updates erhalten.
       CUSTOM_LOGO:
         LABEL: Benutzerdefiniertes Logo
-        HELP: Wird anstelle des Standard Logos `theme://images/grav-logo.svg` verwendet
+        HELP: Wird anstelle des Standard Logos `user/media/logo/grav-logo.svg` verwendet.
       CUSTOM_LOGO_MOBILE:
         LABEL: Benutzerdefiniertes Logo (Mobile Ansicht)
     HEADER:

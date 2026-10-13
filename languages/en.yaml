@@ -265,12 +265,12 @@ THEME:
       MONOCHROME_LOGO:
         LABEL: Monochrome Logo
         HELP: When enabled, the logo will be black on light mode, and white on dark mode. Recommended only for grayscale logos.
-      FAVICON:
+      CUSTOM_FAVICON:
         LABEL: Custom favicon
-        HELP: Will be used instead of default favicon `theme://images/favicon.png`
+        HELP: A PNG, SVG or ICO file, 100 KB at most. Saved to `user/media/favicon`. The file stays put across theme updates.
       CUSTOM_LOGO:
         LABEL: Custom Logo
-        HELP: Will be used instead of default logo `theme://images/grav-logo.svg`
+        HELP: Will be used instead of default logo `user/media/logo/grav-logo.svg`.
       CUSTOM_LOGO_MOBILE:
         LABEL: Custom Logo (Mobile View)
     HEADER:

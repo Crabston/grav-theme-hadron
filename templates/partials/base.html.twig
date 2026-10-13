@@ -7,6 +7,13 @@
 {% set fa_enabled = theme_var('fontawesome.enabled') %}
 {% set fa_local   = theme_var('fontawesome.local') %}
 
+{# custom favicon #}
+{% set favicon = theme_var('custom_favicon') %}
+{% set favicon_first = (favicon is iterable and favicon|length > 0) ? favicon|first : null %}
+{% set favicon_file = favicon_first.name|default(null) %}
+{% set favicon_url = favicon_file ? url('user://media/favicon/' ~ favicon_file) : null %}
+{% set favicon_type = favicon_url ? ({'svg': 'image/svg+xml', 'ico': 'image/x-icon'}[favicon_file|split('.')|last|lower]|default('image/png')) : 'image/png' %}
+
 {% block head deferred %}
 	<meta charset="utf-8" />
 	<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
@@ -16,16 +23,7 @@
 
 	{% include 'partials/metadata.html.twig' %}
 
-	{# get favicon from theme config if it exists #}
-	{% set favicon = theme_var('favicon') %}
-	{% if favicon %}
-		{% set favicon_file = (favicon|first).name %}
-		{% set file_type = favicon_file|split('.')|last %}
-		<link rel="icon" type="image/{{ file_type }}" href="/{{ (favicon|first).path }}" />
-	{% else %}
-		<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
-	{% endif %}
-
+	<link rel="icon" type="{{ favicon_type }}" href="{{ favicon_url ?: url('theme://images/favicon.png') }}" />
 	<link rel="canonical" href="{{ page.url(true, true) }}" />
 
 	{# Preload the critical latin subsets so headings + body text render in-font on first paint #}
